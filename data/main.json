@@ -146,6 +146,7 @@
     "uw_hyperloop": {
       "company_name": "UW Hyperloop",
       "company_extra": "University of Washington; College of Engineering",
+      "location": "Seattle, WA",
       "titles": [
         {
           "title": "Business Management Team Lead",
@@ -176,6 +177,7 @@
     "uw_cubesat": {
       "company_name": "Lunar CubeSAT Team - Advanced Propulsion Laboratory",
       "company_extra": "University of Washington; Department of Earth and Space Sciences",
+      "location": "Seattle, WA",
       "titles": [
         {
           "title": "Research Assistant; Avionics Team",
@@ -193,6 +195,7 @@
     "zocialgpa": {
       "company_name": "ZocialGPA, Inc.",
       "company_extra": "Startup Company",
+      "location": "Seattle, WA",
       "titles": [
         {
           "title": "Software Engineering Team Lead",
@@ -210,7 +213,38 @@
         "Designed a highly scalable and efficient software ETL stack, building datasets from various social networking platforms including Facebook, Twitter and LinkedIn. Created heuristics for efficient retrieval of this data from large, non-relational databases."
       ]
     },
-    "wso2": {},
-    "mullins_lab": {}
+    "wso2": {
+      "company_name": "WSO2, Inc.",
+      "company_extra": "Apache Stratos Team",
+      "location": "Colombo, Sri Lanka",
+      "titles": [
+        {
+          "title": "Software Engineering Intern",
+          "date_from": "2014-06",
+          "date_to": "2014-09"
+        }
+      ],
+      "description": [
+        "Investigated the viability of alternative hypervisor stacks for eventual integration with the Apache Stratos Platform-as-a-Service (PaaS) framework.",
+        "Conducted isolated integration tests with the CoreOS+Docker (LXC-based) hypervisor stack as an alternative to the existing KVM hypervisor used in Stratos.",
+        "Developed a new user interface for the Stratos Manager Console using the JaggeryJS MVC framework, which was packaged and shipped with Stratos version 4.1.0."
+      ]
+    },
+    "mullins_lab": {
+      "company_name": "Mullins Molecular Retrovirology Laboratory",
+      "company_extra": "University of Washington; Department of Microbiology",
+      "location": "Seattle, WA",
+      "titles": [
+        {
+          "title": "Research Assistant; Scientific Programming",
+          "date_from": "2014-04",
+          "date_to": "2014-08"
+        }
+      ],
+      "description": [
+        "Assisted the Lead Scientific Programmer of the lab in identifying and extracting sequences of mutated genes in human genome sequences, aiding in the creation of targeted retroviral therapies for patients with the Human Immunodeficiency Virus (HIV).",
+        "Created efficient and scalable data traversal algorithms for the ingestion and transformation of large human genome sequences. Utilized Hyperfreq, a tool for Bayesian analysis of APOBEC3G-induced hypermutations to identify sequences of the genome likely to have been mutated."
+      ]
+    }
   }
 }
