@@ -96,18 +96,44 @@
     
 
 
-    <!-- http://rukmal.me/precis#degree_properties -->
+    <!-- http://rukmal.me/precis#commonProperties -->
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#degree_properties">
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#commonProperties"/>
+    
+
+
+    <!-- http://rukmal.me/precis#degreeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#degreeProperties">
         <rdfs:comment>Unique properties for the Degree concept.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://rukmal.me/precis#description_properties -->
+    <!-- http://rukmal.me/precis#descriptionProperties -->
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#description_properties">
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#descriptionProperties">
         <rdfs:comment>Unique properties for the Description concept.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rukmal.me/precis#externalResource -->
+
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#externalResource">
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#commonProperties"/>
+        <rdfs:comment>Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields.</rdfs:comment>
+        <rdfs:label>External resource</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rukmal.me/precis#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#commonProperties"/>
+        <rdfs:comment>Human readable name for the entity; for display.</rdfs:comment>
+        <rdfs:label>Human readable name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -115,7 +141,7 @@
     <!-- http://rukmal.me/precis#hasPriority -->
 
     <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasPriority">
-        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#description_properties"/>
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#descriptionProperties"/>
         <rdfs:comment>Priority level of the description (used for deciding truncation in toolkit). This is automatically set to the position of the string in the input &quot;description&quot; array of descriptions, when data is loaded using the command line tool.</rdfs:comment>
         <rdfs:label>description priority level</rdfs:label>
     </owl:DatatypeProperty>
@@ -125,9 +151,49 @@
     <!-- http://rukmal.me/precis#hasText -->
 
     <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasText">
-        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#description_properties"/>
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#descriptionProperties"/>
         <rdfs:comment>Text of the description. This should be treated as a single &quot;bullet point&quot; on a traditional Resume/CV.</rdfs:comment>
         <rdfs:label>description text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rukmal.me/precis#hasWebsite -->
+
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasWebsite">
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#commonProperties"/>
+        <rdfs:comment>External website of the organization (not used for ontology extension; treat this as user-facing).</rdfs:comment>
+        <rdfs:label>Organization website</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rukmal.me/precis#inCity -->
+
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#inCity">
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#commonProperties"/>
+        <rdfs:comment>The city of the entity.</rdfs:comment>
+        <rdfs:label>City</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rukmal.me/precis#inCountry -->
+
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#inCountry">
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#commonProperties"/>
+        <rdfs:comment>Country of the entity.</rdfs:comment>
+        <rdfs:label>Country</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rukmal.me/precis#inState -->
+
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#inState">
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#commonProperties"/>
+        <rdfs:comment>State of the entity (United States only).</rdfs:comment>
+        <rdfs:label>State</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -135,7 +201,7 @@
     <!-- http://rukmal.me/precis#monthAwarded -->
 
     <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#monthAwarded">
-        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#degree_properties"/>
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#degreeProperties"/>
         <rdfs:comment>The month that the degree was earned.</rdfs:comment>
         <rdfs:label>month awarded</rdfs:label>
     </owl:DatatypeProperty>
@@ -145,7 +211,7 @@
     <!-- http://rukmal.me/precis#yearAwarded -->
 
     <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#yearAwarded">
-        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#degree_properties"/>
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#degreeProperties"/>
         <rdfs:comment>The year that the degree was awarded.</rdfs:comment>
         <rdfs:label>year awarded</rdfs:label>
     </owl:DatatypeProperty>
@@ -253,6 +319,26 @@
     <!-- http://rukmal.me/precis#Organization -->
 
     <owl:Class rdf:about="http://rukmal.me/precis#Organization">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#externalResource"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasWebsite"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organization; this can be a company, university, a specific university department, etc.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organization</rdfs:label>
     </owl:Class>
