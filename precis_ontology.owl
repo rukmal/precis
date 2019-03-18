@@ -98,13 +98,17 @@
 
     <!-- http://rukmal.me/precis#degree_properties -->
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#degree_properties"/>
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#degree_properties">
+        <rdfs:comment>Unique properties for the Degree concept.</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://rukmal.me/precis#description_properties -->
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#description_properties"/>
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#description_properties">
+        <rdfs:comment>Unique properties for the Description concept.</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -112,6 +116,8 @@
 
     <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasPriority">
         <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#description_properties"/>
+        <rdfs:comment>Priority level of the description (used for deciding truncation in toolkit). This is automatically set to the position of the string in the input &quot;description&quot; array of descriptions, when data is loaded using the command line tool.</rdfs:comment>
+        <rdfs:label>description priority level</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -120,6 +126,8 @@
 
     <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasText">
         <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#description_properties"/>
+        <rdfs:comment>Text of the description. This should be treated as a single &quot;bullet point&quot; on a traditional Resume/CV.</rdfs:comment>
+        <rdfs:label>description text</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -222,7 +230,23 @@
 
     <!-- http://rukmal.me/precis#Description -->
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Description"/>
+    <owl:Class rdf:about="http://rukmal.me/precis#Description">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasPriority"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasText"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This description is associated with any other concept, providing a description. It has the capability to track priority levels, which can be used to intelligently truncate a series of descriptions when creating a Resume/CV with the command line toolkit.</rdfs:comment>
+        <rdfs:label>Description for a given item.</rdfs:label>
+    </owl:Class>
     
 
 
