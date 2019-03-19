@@ -324,6 +324,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#inConferenceOrJournal
 :inConferenceOrJournal rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :publicationProperties ;
+                       rdfs:range xsd:string ;
                        rdfs:comment "Conference/Journal name. This will eventually be replaced with a more semantically-correct representation of this information." ;
                        rdfs:label "Conference/Journal Name" .
 
