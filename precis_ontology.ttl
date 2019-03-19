@@ -432,16 +432,27 @@ xsd:gYear rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
+###  http://rukmal.me/precis#Accolade
+:Accolade rdf:type owl:Class .
+
+
 ###  http://rukmal.me/precis#Activity
-:Activity rdf:type owl:Class .
+:Activity rdf:type owl:Class ;
+          rdfs:subClassOf :ActivityType .
+
+
+###  http://rukmal.me/precis#ActivityType
+:ActivityType rdf:type owl:Class .
 
 
 ###  http://rukmal.me/precis#Award
-:Award rdf:type owl:Class .
+:Award rdf:type owl:Class ;
+       rdfs:subClassOf :Accolade .
 
 
 ###  http://rukmal.me/precis#Certification
-:Certification rdf:type owl:Class .
+:Certification rdf:type owl:Class ;
+               rdfs:subClassOf :Accolade .
 
 
 ###  http://rukmal.me/precis#Course
@@ -547,6 +558,10 @@ xsd:gYear rdf:type rdfs:Datatype .
              rdfs:label "Description for a given item" .
 
 
+###  http://rukmal.me/precis#KnowledgeArea
+:KnowledgeArea rdf:type owl:Class .
+
+
 ###  http://rukmal.me/precis#Organization
 :Organization rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -587,12 +602,18 @@ xsd:gYear rdf:type rdfs:Datatype .
  ] .
 
 
+###  http://rukmal.me/precis#Portfolio
+:Portfolio rdf:type owl:Class .
+
+
 ###  http://rukmal.me/precis#Project
-:Project rdf:type owl:Class .
+:Project rdf:type owl:Class ;
+         rdfs:subClassOf :Portfolio .
 
 
 ###  http://rukmal.me/precis#Publication
-:Publication rdf:type owl:Class .
+:Publication rdf:type owl:Class ;
+             rdfs:subClassOf :Portfolio .
 
 
 ###  http://rukmal.me/precis#Skill
@@ -630,8 +651,14 @@ xsd:gYear rdf:type rdfs:Datatype .
             rdfs:label "Skill Group" .
 
 
+###  http://rukmal.me/precis#Subject
+:Subject rdf:type owl:Class ;
+         rdfs:subClassOf :KnowledgeArea .
+
+
 ###  http://rukmal.me/precis#Talk
-:Talk rdf:type owl:Class .
+:Talk rdf:type owl:Class ;
+      rdfs:subClassOf :Portfolio .
 
 
 ###  http://rukmal.me/precis#WorkExperience
