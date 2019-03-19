@@ -692,7 +692,9 @@ xsd:gYear rdf:type rdfs:Datatype .
                              owl:onProperty :hasName ;
                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                              owl:onDataRange xsd:string
-                           ] .
+                           ] ;
+           rdfs:comment "A Portfolio item; this can be a Talk, Publication, Project, etc." ;
+           rdfs:label "Portfolio" .
 
 
 ###  http://rukmal.me/precis#Project
