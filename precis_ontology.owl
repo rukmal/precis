@@ -48,24 +48,52 @@
     
 
 
-    <!-- http://rukmal.me/precis#earnedDegree -->
+    <!-- http://rukmal.me/precis#awardedDegree -->
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#earnedDegree">
+    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#awardedDegree">
         <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#relational_property"/>
-        <owl:inverseOf rdf:resource="http://rukmal.me/precis#fromInstitution"/>
+        <owl:inverseOf rdf:resource="http://rukmal.me/precis#degreeUniversity"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://rukmal.me/precis#Organization"/>
         <rdfs:range rdf:resource="http://rukmal.me/precis#Degree"/>
+        <rdfs:comment>The Degree which was awarded at this organization (should be a pointer to a top-level organization).</rdfs:comment>
+        <rdfs:label>Degree awarded</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#fromInstitution -->
+    <!-- http://rukmal.me/precis#degreeDepartment -->
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#fromInstitution">
+    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#degreeDepartment">
         <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#relational_property"/>
         <rdfs:domain rdf:resource="http://rukmal.me/precis#Degree"/>
         <rdfs:range rdf:resource="http://rukmal.me/precis#Organization"/>
+        <rdfs:comment>Department awarding the degree (eg: &quot;Department of Financial Engineering&quot;, or &quot;Department of Finance and Business Economics&quot;).</rdfs:comment>
+        <rdfs:label>Department awarding the Degree</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rukmal.me/precis#degreeSchool -->
+
+    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#degreeSchool">
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#relational_property"/>
+        <rdfs:domain rdf:resource="http://rukmal.me/precis#Degree"/>
+        <rdfs:range rdf:resource="http://rukmal.me/precis#Organization"/>
+        <rdfs:comment>The School that awards the degree. For example, this would be the &quot;Foster School of Business&quot;, or &quot;College of Arts and Sciences&quot;.</rdfs:comment>
+        <rdfs:label>School awarding the Degree</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rukmal.me/precis#degreeUniversity -->
+
+    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#degreeUniversity">
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#relational_property"/>
+        <rdfs:domain rdf:resource="http://rukmal.me/precis#Degree"/>
+        <rdfs:range rdf:resource="http://rukmal.me/precis#Organization"/>
+        <rdfs:comment>The University (concept: Organization) at which the degree was awarded. This corresponds to the top-level instituion; further object properties exist to specify particular schools/departments. That is, this should point to the organization for the Univesity and not the Department. Eg: awardedAt &apos;University of Washington&apos;; and should NOT be awardedAt &apos;Foster School of Business&apos;.</rdfs:comment>
+        <rdfs:label>Organization awarding the Degree</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -111,10 +139,16 @@
     <!-- http://rukmal.me/precis#commonProperties -->
 
     <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#commonProperties">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Course"/>
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Organization"/>
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Skill"/>
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#SkillGroup"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
+                    <rdf:Description rdf:about="http://rukmal.me/precis#Organization"/>
+                    <rdf:Description rdf:about="http://rukmal.me/precis#Skill"/>
+                    <rdf:Description rdf:about="http://rukmal.me/precis#SkillGroup"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:comment>Common properties to many concepts.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -129,11 +163,56 @@
     
 
 
+    <!-- http://rukmal.me/precis#degreeConcentration -->
+
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#degreeConcentration">
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#degreeProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Concentration of the Degree. For example, &quot;Finance and Business Economics&quot;, or &quot;Computational Finance&quot;. This should point to a DBpedia entity corresponding to the Degree being awarded.</rdfs:comment>
+        <rdfs:label>Degree Concentration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rukmal.me/precis#degreeGPA -->
+
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#degreeGPA">
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#degreeProperties"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>Grade (GPA; 4.0 scale) for the Degree (optional for obvious reasons :)).</rdfs:comment>
+        <rdfs:label>Degree GPA (on a 4.0 scale)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://rukmal.me/precis#degreeProperties -->
 
     <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#degreeProperties">
         <rdfs:domain rdf:resource="http://rukmal.me/precis#Degree"/>
         <rdfs:comment>Unique properties for the Degree concept.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rukmal.me/precis#degreeType -->
+
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#degreeType">
+        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#degreeProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Type of the Degree. For example, &quot;Bachelor of Arts&quot;, or &quot;Master of Science&quot;. This should point to a DBpedia entity corresponding to the Degree being awarded.</rdfs:comment>
+        <rdfs:label>Degree Type</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -383,16 +462,72 @@
     <owl:Class rdf:about="http://rukmal.me/precis#Degree">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#degreeDepartment"/>
+                <owl:someValuesFrom rdf:resource="http://rukmal.me/precis#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#degreeSchool"/>
+                <owl:someValuesFrom rdf:resource="http://rukmal.me/precis#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#degreeUniversity"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://rukmal.me/precis#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#degreeConcentration"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#degreeType"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#inCity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#inState"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://rukmal.me/precis#monthAwarded"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#gMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#gMonth"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://rukmal.me/precis#yearAwarded"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A Degree, which was completed at a specific institution, in a specific school and department. Optional media links to pictures can be included for rendering at the time of presentation. Records the year and month that the degree was (or is expected to be) awarded.</rdfs:comment>
+        <rdfs:label>Degree</rdfs:label>
     </owl:Class>
     
 
@@ -414,7 +549,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>This description is associated with any other concept, providing a description. It has the capability to track priority levels, which can be used to intelligently truncate a series of descriptions when creating a Resume/CV with the command line toolkit.</rdfs:comment>
-        <rdfs:label>Description for a given item.</rdfs:label>
+        <rdfs:label>Description for a given item</rdfs:label>
     </owl:Class>
     
 
