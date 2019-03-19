@@ -36,6 +36,23 @@ xsd:gYear rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://rukmal.me/precis#affiliatedWith
+:affiliatedWith rdf:type owl:ObjectProperty ;
+                owl:inverseOf :hasObject ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :Accolade
+                                            :Portfolio
+                                          )
+                            ] ;
+                rdfs:range [ rdf:type owl:Class ;
+                             owl:unionOf ( :Degree
+                                           :WorkExperience
+                                         )
+                           ] ;
+                rdfs:comment "Affiliation for a Portfolio Instance or Accolade Instance. Maps a given instance to an instance of 'Degree' or 'WorkExperience'." ;
+                rdfs:label "Affiliation" .
+
+
 ###  http://rukmal.me/precis#awardedDegree
 :awardedDegree rdf:type owl:ObjectProperty ;
                owl:inverseOf :degreeUniversity ;
@@ -97,7 +114,26 @@ xsd:gYear rdf:type rdfs:Datatype .
                                             :WorkExperience
                                           )
                             ] ;
-                rdfs:range :Description .
+                rdfs:range :Description ;
+                rdfs:comment "Instance of 'Description', which describes the Thing pointing to it." ;
+                rdfs:label "Description" .
+
+
+###  http://rukmal.me/precis#hasObject
+:hasObject rdf:type owl:ObjectProperty ,
+                    owl:InverseFunctionalProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Degree
+                                       :WorkExperience
+                                     )
+                       ] ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( :Accolade
+                                      :Portfolio
+                                    )
+                      ] ;
+           rdfs:comment "Object that was affiliated with the Thing pointing to it. Here, \"Object\" would be typically a 'Portfolio' or 'Accolade' instance, and \"Thing\" would be a 'Degree' or 'WorkExperience' instance." ;
+           rdfs:label "Constituent Object" .
 
 
 ###  http://rukmal.me/precis#hasParentOrganization
@@ -192,6 +228,14 @@ xsd:gYear rdf:type rdfs:Datatype .
             rdfs:label "Author List" .
 
 
+###  http://rukmal.me/precis#hasCollaborators
+:hasCollaborators rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Portfolio ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "List of Collaborators (Human-readable for now). Will eventually change to a mapping to a Person entity." ;
+                  rdfs:label "Collaborators List" .
+
+
 ###  http://rukmal.me/precis#hasCourseCode
 :hasCourseCode rdf:type owl:DatatypeProperty ;
                rdfs:domain :Course ;
@@ -226,7 +270,11 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasMedia
 :hasMedia rdf:type owl:DatatypeProperty ;
-          rdfs:domain :WorkExperience ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Portfolio
+                                      :WorkExperience
+                                    )
+                      ] ;
           rdfs:range xsd:anyURI ;
           rdfs:comment "Additional media can be included here. For example, it could link to product/team pages, news articles, etc." ;
           rdfs:label "Media" .
@@ -332,6 +380,14 @@ xsd:gYear rdf:type rdfs:Datatype .
            rdfs:label "Country" .
 
 
+###  http://rukmal.me/precis#inMonth
+:inMonth rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Portfolio ;
+         rdfs:range xsd:gMonth ;
+         rdfs:comment "Month the portfolio item was completed." ;
+         rdfs:label "Month of Portfolio Item" .
+
+
 ###  http://rukmal.me/precis#inPublication
 :inPublication rdf:type owl:DatatypeProperty ;
                rdfs:domain :Publication ;
@@ -359,10 +415,10 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#inYear
 :inYear rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Publication ;
+        rdfs:domain :Portfolio ;
         rdfs:range xsd:gYear ;
-        rdfs:comment "Year the publication was published." ;
-        rdfs:label "Publication Year" .
+        rdfs:comment "Year the portfolio item was completed." ;
+        rdfs:label "Year of Portfolio Item" .
 
 
 ###  http://rukmal.me/precis#jobTitle
@@ -595,17 +651,85 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 
 ###  http://rukmal.me/precis#Portfolio
-:Portfolio rdf:type owl:Class .
+:Portfolio rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :affiliatedWith ;
+                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :Degree
+                                                                :WorkExperience
+                                                              )
+                                                ]
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasDescription ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Description
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasMedia ;
+                             owl:someValuesFrom xsd:anyURI
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :inMonth ;
+                             owl:someValuesFrom xsd:gMonth
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :inYear ;
+                             owl:someValuesFrom xsd:gYear
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasWebsite ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:anyURI
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasName ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] .
 
 
 ###  http://rukmal.me/precis#Project
 :Project rdf:type owl:Class ;
-         rdfs:subClassOf :Portfolio .
+         rdfs:subClassOf :Portfolio ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCollaborators ;
+                           owl:someValuesFrom xsd:string
+                         ] .
 
 
 ###  http://rukmal.me/precis#Publication
 :Publication rdf:type owl:Class ;
-             rdfs:subClassOf :Portfolio .
+             rdfs:subClassOf :Portfolio ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasAuthors ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :inConferenceOrJournal ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :inPublication ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :inYear ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:gYear
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasDOI ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:anyURI
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasStatus ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] .
 
 
 ###  http://rukmal.me/precis#Skill
@@ -650,7 +774,16 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#Talk
 :Talk rdf:type owl:Class ;
-      rdfs:subClassOf :Portfolio .
+      rdfs:subClassOf :Portfolio ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasCollaborators ;
+                        owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :inYear ;
+                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:gYear
+                      ] .
 
 
 ###  http://rukmal.me/precis#WorkExperience
