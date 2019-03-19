@@ -65,10 +65,34 @@ xsd:gYear rdf:type rdfs:Datatype .
                   rdfs:label "Organization awarding the Degree" .
 
 
+###  http://rukmal.me/precis#employedAt
+:employedAt rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :relational_property ;
+            rdfs:domain :WorkExperience ;
+            rdfs:range :Organization ;
+            rdfs:comment "Organization where an instance of Work Experience is taking place." ;
+            rdfs:label "Employment Organization" .
+
+
 ###  http://rukmal.me/precis#hasDescription
 :hasDescription rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :relational_property ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :Organization
+                                            :SkillGroup
+                                            :WorkExperience
+                                          )
+                            ] ;
                 rdfs:range :Description .
+
+
+###  http://rukmal.me/precis#hasParentOrganization
+:hasParentOrganization rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :relational_property ;
+                       rdfs:domain :Organization ;
+                       rdfs:range :Organization ;
+                       rdfs:comment "Pointer to a \"parent\" organization instance. For example, the \"Foster School of Business\" hasParentOrganization \"University of Washington\"." ;
+                       rdfs:label "Parent Organization" .
 
 
 ###  http://rukmal.me/precis#relational_property
@@ -150,6 +174,22 @@ xsd:gYear rdf:type rdfs:Datatype .
                        rdfs:comment "Unique properties for the Description concept." .
 
 
+###  http://rukmal.me/precis#endMonth
+:endMonth rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :workExperienceProperties ;
+          rdfs:range xsd:gMonth ;
+          rdfs:comment "End date (month) of the work experience instance." ;
+          rdfs:label "End Date (month)" .
+
+
+###  http://rukmal.me/precis#endYear
+:endYear rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :workExperienceProperties ;
+         rdfs:range xsd:gYear ;
+         rdfs:comment "End date (year) of the work experience instance." ;
+         rdfs:label "End Date (year)" .
+
+
 ###  http://rukmal.me/precis#externalResource
 :externalResource rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :commonProperties ;
@@ -172,6 +212,22 @@ xsd:gYear rdf:type rdfs:Datatype .
                    rdfs:range xsd:string ;
                    rdfs:comment "Code of the department (this would imply that an organization is referenced too). For example: FIN, CFRM, FE, etc." ;
                    rdfs:label "Department code" .
+
+
+###  http://rukmal.me/precis#hasImage
+:hasImage rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :workExperienceProperties ;
+          rdfs:range xsd:anyURI ;
+          rdfs:comment "URL to image related to work experience. Can be used when displaying the information at consumption." ;
+          rdfs:label "Image" .
+
+
+###  http://rukmal.me/precis#hasMedia
+:hasMedia rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :workExperienceProperties ;
+          rdfs:range xsd:anyURI ;
+          rdfs:comment "Additional media can be included here. For example, it could link to product/team pages, news articles, etc." ;
+          rdfs:label "Media" .
 
 
 ###  http://rukmal.me/precis#hasName
@@ -230,12 +286,36 @@ xsd:gYear rdf:type rdfs:Datatype .
          rdfs:label "State" .
 
 
+###  http://rukmal.me/precis#jobTitle
+:jobTitle rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :workExperienceProperties ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Job Title for the work experience instance. Each work experience instance can have multiple job titles. For example, both \"Software Engineering Intern\" and \"Software Engineer\" could be job titles of the same work experience instance." ;
+          rdfs:label "Job Title" .
+
+
 ###  http://rukmal.me/precis#monthAwarded
 :monthAwarded rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf :degreeProperties ;
               rdfs:range xsd:gMonth ;
               rdfs:comment "The month that the degree was earned." ;
               rdfs:label "month awarded" .
+
+
+###  http://rukmal.me/precis#startMonth
+:startMonth rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :workExperienceProperties ;
+            rdfs:range xsd:gMonth ;
+            rdfs:comment "Start date (month) of the work experience instance." ;
+            rdfs:label "Start Date (month)" .
+
+
+###  http://rukmal.me/precis#startYear
+:startYear rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :workExperienceProperties ;
+           rdfs:range xsd:gYear ;
+           rdfs:comment "Start date (year) of the work experience instance." ;
+           rdfs:label "Start Date (year)" .
 
 
 ###  http://rukmal.me/precis#withGrade
@@ -251,6 +331,11 @@ xsd:gYear rdf:type rdfs:Datatype .
                       ] ;
            rdfs:comment "Grade (GPA; 4.0 scale) received in the course (optional for obvious reasons :))." ;
            rdfs:label "Course GPA (on a 4.0 scale)" .
+
+
+###  http://rukmal.me/precis#workExperienceProperties
+:workExperienceProperties rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :WorkExperience .
 
 
 ###  http://rukmal.me/precis#yearAwarded
@@ -383,6 +468,15 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#Organization
 :Organization rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasParentOrganization ;
+                                owl:someValuesFrom :Organization
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasDescription ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Description
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty :externalResource ;
                                 owl:someValuesFrom xsd:anyURI
                               ] ,
@@ -398,6 +492,17 @@ xsd:gYear rdf:type rdfs:Datatype .
                               ] ;
               rdfs:comment "An organization; this can be a company, university, a specific university department, etc." ;
               rdfs:label "Organization" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Organization ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDescription ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Description
+                       ] ;
+   rdfs:comment "This should be used to add an additional descriptive string if necessary. For example, this could be a team name or a descriptive string (eg: \"Startup Company\", etc.)."
+ ] .
 
 
 ###  http://rukmal.me/precis#Project
@@ -463,9 +568,52 @@ xsd:gYear rdf:type rdfs:Datatype .
                                               )
                                 ] ,
                                 [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasDescription ;
+                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :Description
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :employedAt ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :Organization
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasImage ;
+                                  owl:someValuesFrom xsd:anyURI
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasMedia ;
+                                  owl:someValuesFrom xsd:anyURI
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :jobTitle ;
+                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :endMonth ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:gMonth
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :endYear ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:gYear
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty :inCity ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :startMonth ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:gMonth
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :startYear ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:gYear
                                 ] ;
                 rdfs:comment "An instance of 'Work Experience'. This would be an internship/assistantship/etc." ;
                 rdfs:label "Work Experience" .
