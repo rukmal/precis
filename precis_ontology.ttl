@@ -38,7 +38,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#awardedDegree
 :awardedDegree rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :relational_property ;
                owl:inverseOf :degreeUniversity ;
                rdf:type owl:InverseFunctionalProperty ;
                rdfs:domain :Organization ;
@@ -49,7 +48,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#degreeDepartment
 :degreeDepartment rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :relational_property ;
                   rdfs:domain :Degree ;
                   rdfs:range :Organization ;
                   rdfs:comment "Department awarding the degree (eg: \"Department of Financial Engineering\", or \"Department of Finance and Business Economics\")." ;
@@ -58,7 +56,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#degreeSchool
 :degreeSchool rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :relational_property ;
               rdfs:domain :Degree ;
               rdfs:range :Organization ;
               rdfs:comment "The School that awards the degree. For example, this would be the \"Foster School of Business\", or \"College of Arts and Sciences\"." ;
@@ -67,7 +64,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#degreeUniversity
 :degreeUniversity rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :relational_property ;
                   rdfs:domain :Degree ;
                   rdfs:range :Organization ;
                   rdfs:comment "The University (concept: Organization) at which the degree was awarded. This corresponds to the top-level instituion; further object properties exist to specify particular schools/departments. That is, this should point to the organization for the Univesity and not the Department. Eg: awardedAt 'University of Washington'; and should NOT be awardedAt 'Foster School of Business'." ;
@@ -76,7 +72,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#employedAt
 :employedAt rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :relational_property ;
             rdfs:domain :WorkExperience ;
             rdfs:range :Organization ;
             rdfs:comment "Organization where an instance of Work Experience is taking place." ;
@@ -85,7 +80,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasChildOrganization
 :hasChildOrganization rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :relational_property ;
                       owl:inverseOf :hasParentOrganization ;
                       rdf:type owl:InverseFunctionalProperty ;
                       rdfs:domain :Organization ;
@@ -96,7 +90,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasDescription
 :hasDescription rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :relational_property ;
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( :Organization
                                             :Portfolio
@@ -109,20 +102,14 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasParentOrganization
 :hasParentOrganization rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf :relational_property ;
                        rdfs:domain :Organization ;
                        rdfs:range :Organization ;
                        rdfs:comment "Pointer to a \"parent\" organization instance. For example, the \"Foster School of Business\" hasParentOrganization \"University of Washington\"." ;
                        rdfs:label "Parent Organization" .
 
 
-###  http://rukmal.me/precis#relational_property
-:relational_property rdf:type owl:ObjectProperty .
-
-
 ###  http://rukmal.me/precis#taughtAt
 :taughtAt rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :relational_property ;
           rdfs:domain :Course ;
           rdfs:range :Organization ;
           rdfs:comment "The organization at which the course was taught. This is an optional field, but ideally if this is included, the department and course codes should be too." ;
@@ -133,30 +120,8 @@ xsd:gYear rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  http://rukmal.me/precis#commonProperties
-:commonProperties rdf:type owl:DatatypeProperty ;
-                  rdfs:domain [ rdf:type owl:Class ;
-                                owl:unionOf ( :Accolade
-                                              :ActivityType
-                                              :Course
-                                              :Organization
-                                              :Portfolio
-                                              :SkillGroup
-                                              :WorkExperience
-                                            )
-                              ] ;
-                  rdfs:comment "Common properties to many concepts." .
-
-
-###  http://rukmal.me/precis#courseProperties
-:courseProperties rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Course ;
-                  rdfs:comment "Unique properties for the Course concept." .
-
-
 ###  http://rukmal.me/precis#degreeConcentration
 :degreeConcentration rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf :degreeProperties ;
                      rdfs:domain :Degree ;
                      rdfs:range xsd:anyURI ;
                      rdfs:comment "Concentration of the Degree. For example, \"Finance and Business Economics\", or \"Computational Finance\". This should point to a DBpedia entity corresponding to the Degree being awarded." ;
@@ -165,7 +130,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#degreeGPA
 :degreeGPA rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf :degreeProperties ;
            rdfs:domain :Degree ;
            rdfs:range [ rdf:type rdfs:Datatype ;
                         owl:onDatatype xsd:double ;
@@ -179,30 +143,16 @@ xsd:gYear rdf:type rdfs:Datatype .
            rdfs:label "Degree GPA (on a 4.0 scale)" .
 
 
-###  http://rukmal.me/precis#degreeProperties
-:degreeProperties rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Degree ;
-                  rdfs:comment "Unique properties for the Degree concept." .
-
-
 ###  http://rukmal.me/precis#degreeType
 :degreeType rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf :degreeProperties ;
             rdfs:domain :Degree ;
             rdfs:range xsd:anyURI ;
             rdfs:comment "Type of the Degree. For example, \"Bachelor of Arts\", or \"Master of Science\". This should point to a DBpedia entity corresponding to the Degree being awarded." ;
             rdfs:label "Degree Type" .
 
 
-###  http://rukmal.me/precis#descriptionProperties
-:descriptionProperties rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Description ;
-                       rdfs:comment "Unique properties for the Description concept." .
-
-
 ###  http://rukmal.me/precis#endMonth
 :endMonth rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf :workExperienceProperties ;
           rdfs:domain :WorkExperience ;
           rdfs:range xsd:gMonth ;
           rdfs:comment "End date (month) of the work experience instance." ;
@@ -211,7 +161,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#endYear
 :endYear rdf:type owl:DatatypeProperty ;
-         rdfs:subPropertyOf :workExperienceProperties ;
          rdfs:domain :WorkExperience ;
          rdfs:range xsd:gYear ;
          rdfs:comment "End date (year) of the work experience instance." ;
@@ -220,7 +169,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#externalResource
 :externalResource rdf:type owl:DatatypeProperty ;
-                  rdfs:subPropertyOf :commonProperties ;
                   rdfs:domain [ rdf:type owl:Class ;
                                 owl:unionOf ( :Accolade
                                               :ActivityType
@@ -238,7 +186,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasAuthors
 :hasAuthors rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf :publicationProperties ;
             rdfs:domain :Publication ;
             rdfs:range xsd:string ;
             rdfs:comment "List of authors (Human readable for now). This list should mirror the order of authors in the publication. Note that eventually this will be replaced by pointers to individual \"Author\" Classes." ;
@@ -247,7 +194,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasCourseCode
 :hasCourseCode rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf :courseProperties ;
                rdfs:domain :Course ;
                rdfs:range xsd:string ;
                rdfs:comment "Code of the course (this would imply that an organization is referenced too). For example: 420, 690, 069, etc." ;
@@ -256,7 +202,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasDOI
 :hasDOI rdf:type owl:DatatypeProperty ;
-        rdfs:subPropertyOf :publicationProperties ;
         rdfs:domain :Publication ;
         rdfs:range xsd:anyURI ;
         rdfs:comment "Digital Object Identifier (DOI) of the publication. Including this will allow for later expansion if an inference agent is ever added to get more metadata using this." ;
@@ -265,7 +210,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasDepartmentCode
 :hasDepartmentCode rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf :courseProperties ;
                    rdfs:domain :Course ;
                    rdfs:range xsd:string ;
                    rdfs:comment "Code of the department (this would imply that an organization is referenced too). For example: FIN, CFRM, FE, etc." ;
@@ -274,7 +218,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasImage
 :hasImage rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf :workExperienceProperties ;
           rdfs:domain :WorkExperience ;
           rdfs:range xsd:anyURI ;
           rdfs:comment "URL to image related to work experience. Can be used when displaying the information at consumption." ;
@@ -283,7 +226,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasMedia
 :hasMedia rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf :workExperienceProperties ;
           rdfs:domain :WorkExperience ;
           rdfs:range xsd:anyURI ;
           rdfs:comment "Additional media can be included here. For example, it could link to product/team pages, news articles, etc." ;
@@ -292,7 +234,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasName
 :hasName rdf:type owl:DatatypeProperty ;
-         rdfs:subPropertyOf :commonProperties ;
          rdfs:domain [ rdf:type owl:Class ;
                        owl:unionOf ( :Accolade
                                      :ActivityType
@@ -310,7 +251,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasPriority
 :hasPriority rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf :descriptionProperties ;
              rdfs:domain :Description ;
              rdfs:range xsd:nonNegativeInteger ;
              rdfs:comment "Priority level of the description (used for deciding truncation in toolkit). This is automatically set to the position of the string in the input \"description\" array of descriptions, when data is loaded using the command line tool." ;
@@ -319,7 +259,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasStatus
 :hasStatus rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf :publicationProperties ;
            rdfs:domain :Publication ;
            rdfs:range xsd:string ;
            rdfs:comment "Status of the publication. That is, this property should reflect a paper being \"In Progress\", or \"Under Review\"." ;
@@ -328,7 +267,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasText
 :hasText rdf:type owl:DatatypeProperty ;
-         rdfs:subPropertyOf :descriptionProperties ;
          rdfs:domain :Description ;
          rdfs:range xsd:string ;
          rdfs:comment "Text of the description. This should be treated as a single \"bullet point\" on a traditional Resume/CV." ;
@@ -337,7 +275,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#hasWebsite
 :hasWebsite rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf :commonProperties ;
             rdfs:domain [ rdf:type owl:Class ;
                           owl:unionOf ( :Accolade
                                         :ActivityType
@@ -355,7 +292,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#inCity
 :inCity rdf:type owl:DatatypeProperty ;
-        rdfs:subPropertyOf :commonProperties ;
         rdfs:domain [ rdf:type owl:Class ;
                       owl:unionOf ( :Accolade
                                     :ActivityType
@@ -373,7 +309,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#inConferenceOrJournal
 :inConferenceOrJournal rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf :publicationProperties ;
                        rdfs:domain :Publication ;
                        rdfs:range xsd:string ;
                        rdfs:comment "Conference/Journal name. This will eventually be replaced with a more semantically-correct representation of this information." ;
@@ -382,7 +317,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#inCountry
 :inCountry rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf :commonProperties ;
            rdfs:domain [ rdf:type owl:Class ;
                          owl:unionOf ( :Accolade
                                        :ActivityType
@@ -400,7 +334,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#inPublication
 :inPublication rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf :publicationProperties ;
                rdfs:domain :Publication ;
                rdfs:range xsd:string ;
                rdfs:comment "Publication name containing the specific publication. As with the other fields in the 'Publication' concept, this will probably be replaced eventually." ;
@@ -409,7 +342,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#inState
 :inState rdf:type owl:DatatypeProperty ;
-         rdfs:subPropertyOf :commonProperties ;
          rdfs:domain [ rdf:type owl:Class ;
                        owl:unionOf ( :Accolade
                                      :ActivityType
@@ -427,7 +359,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#inYear
 :inYear rdf:type owl:DatatypeProperty ;
-        rdfs:subPropertyOf :publicationProperties ;
         rdfs:domain :Publication ;
         rdfs:range xsd:gYear ;
         rdfs:comment "Year the publication was published." ;
@@ -436,7 +367,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#jobTitle
 :jobTitle rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf :workExperienceProperties ;
           rdfs:domain :WorkExperience ;
           rdfs:range xsd:string ;
           rdfs:comment "Job Title for the work experience instance. Each work experience instance can have multiple job titles. For example, both \"Software Engineering Intern\" and \"Software Engineer\" could be job titles of the same work experience instance." ;
@@ -445,23 +375,14 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#monthAwarded
 :monthAwarded rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf :degreeProperties ;
               rdfs:domain :Degree ;
               rdfs:range xsd:gMonth ;
               rdfs:comment "The month that the degree was earned." ;
               rdfs:label "month awarded" .
 
 
-###  http://rukmal.me/precis#publicationProperties
-:publicationProperties rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Publication ;
-                       rdfs:comment "Note that all properties in this class, and (probably) the whole 'Publication' concept will be replaced with a more semantically-accurate representation of this data. This is temporary cuz I'm lazy." ,
-                                    "Unique properties for the Publication concept." .
-
-
 ###  http://rukmal.me/precis#startMonth
 :startMonth rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf :workExperienceProperties ;
             rdfs:domain :WorkExperience ;
             rdfs:range xsd:gMonth ;
             rdfs:comment "Start date (month) of the work experience instance." ;
@@ -470,7 +391,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#startYear
 :startYear rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf :workExperienceProperties ;
            rdfs:domain :WorkExperience ;
            rdfs:range xsd:gYear ;
            rdfs:comment "Start date (year) of the work experience instance." ;
@@ -479,7 +399,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#withGrade
 :withGrade rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf :courseProperties ;
            rdfs:domain :Course ;
            rdfs:range [ rdf:type rdfs:Datatype ;
                         owl:onDatatype xsd:double ;
@@ -493,15 +412,8 @@ xsd:gYear rdf:type rdfs:Datatype .
            rdfs:label "Course GPA (on a 4.0 scale)" .
 
 
-###  http://rukmal.me/precis#workExperienceProperties
-:workExperienceProperties rdf:type owl:DatatypeProperty ;
-                          rdfs:domain :WorkExperience ;
-                          rdfs:comment "Unique properties for the Work Experience concept." .
-
-
 ###  http://rukmal.me/precis#yearAwarded
 :yearAwarded rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf :degreeProperties ;
              rdfs:domain :Degree ;
              rdfs:range xsd:gYear ;
              rdfs:comment "The year that the degree was awarded." ;
