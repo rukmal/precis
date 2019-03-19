@@ -145,6 +145,26 @@ xsd:gYear rdf:type rdfs:Datatype .
                        rdfs:label "Parent Organization" .
 
 
+###  http://rukmal.me/precis#relatedTo
+:relatedTo rdf:type owl:ObjectProperty ,
+                    owl:SymmetricProperty ,
+                    owl:TransitiveProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Accolade
+                                       :Activity
+                                       :Portfolio
+                                     )
+                       ] ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( :Accolade
+                                      :Activity
+                                      :Portfolio
+                                    )
+                      ] ;
+           rdfs:comment "A related concept. For example, an instance of 'Award' may have a 'Project', or 'Publication' that it is related to, and vice versa." ;
+           rdfs:label "Related Concept" .
+
+
 ###  http://rukmal.me/precis#taughtAt
 :taughtAt rdf:type owl:ObjectProperty ;
           rdfs:domain :Course ;
