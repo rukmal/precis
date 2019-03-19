@@ -79,28 +79,6 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasSkill -->
-
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#hasSkill">
-        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#relational_property"/>
-        <owl:inverseOf rdf:resource="http://rukmal.me/precis#inSkillGroup"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#SkillGroup"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Skill"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://rukmal.me/precis#inSkillGroup -->
-
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#inSkillGroup">
-        <rdfs:subPropertyOf rdf:resource="http://rukmal.me/precis#relational_property"/>
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Skill"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#SkillGroup"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://rukmal.me/precis#relational_property -->
 
     <owl:ObjectProperty rdf:about="http://rukmal.me/precis#relational_property"/>
@@ -398,13 +376,7 @@
     <!-- http://rukmal.me/precis#Skill -->
 
     <owl:Class rdf:about="http://rukmal.me/precis#Skill">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inSkillGroup"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#SkillGroup"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://rukmal.me/precis#SkillGroup"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://rukmal.me/precis#externalResource"/>
@@ -414,7 +386,8 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -432,30 +405,18 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasSkill"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Skill"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://rukmal.me/precis#externalResource"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://rukmal.me/precis#SkillGroup"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget>
+        <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasSkill"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Skill"/>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
-        </owl:annotatedTarget>
-        <rdfs:comment>This assertion is because a &apos;SkillGroup&apos; cannot exist without a &apos;Skill&apos;.</rdfs:comment>
-    </owl:Axiom>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
