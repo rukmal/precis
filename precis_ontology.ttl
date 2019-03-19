@@ -98,7 +98,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#hasChildOrganization
 :hasChildOrganization rdf:type owl:ObjectProperty ;
                       owl:inverseOf :hasParentOrganization ;
-                      rdf:type owl:InverseFunctionalProperty ;
+                      rdf:type owl:TransitiveProperty ;
                       rdfs:domain :Organization ;
                       rdfs:range :Organization ;
                       rdfs:comment "Child organization pointer, inverse of the 'hasParentOrganization' property." ;
@@ -137,7 +137,8 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 
 ###  http://rukmal.me/precis#hasParentOrganization
-:hasParentOrganization rdf:type owl:ObjectProperty ;
+:hasParentOrganization rdf:type owl:ObjectProperty ,
+                                owl:TransitiveProperty ;
                        rdfs:domain :Organization ;
                        rdfs:range :Organization ;
                        rdfs:comment "Pointer to a \"parent\" organization instance. For example, the \"Foster School of Business\" hasParentOrganization \"University of Washington\"." ;
