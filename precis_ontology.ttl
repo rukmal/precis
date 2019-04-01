@@ -145,6 +145,22 @@ xsd:gYear rdf:type rdfs:Datatype .
                        rdfs:label "Parent Organization" .
 
 
+###  http://rukmal.me/precis#hasSubject
+:hasSubject rdf:type owl:ObjectProperty ;
+            owl:inverseOf :inKnowledgeArea ;
+            rdf:type owl:InverseFunctionalProperty ;
+            rdfs:domain :KnowledgeArea ;
+            rdfs:range :Subject ;
+            rdfs:comment "A subject that is a part of a 'KnowledgeArea'." ;
+            rdfs:label "Constituent Subject" .
+
+
+###  http://rukmal.me/precis#inKnowledgeArea
+:inKnowledgeArea rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Subject ;
+                 rdfs:range :KnowledgeArea .
+
+
 ###  http://rukmal.me/precis#relatedTo
 :relatedTo rdf:type owl:ObjectProperty ,
                     owl:SymmetricProperty ,
@@ -633,7 +649,14 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 
 ###  http://rukmal.me/precis#KnowledgeArea
-:KnowledgeArea rdf:type owl:Class .
+:KnowledgeArea rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasSubject ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Subject
+                               ] ;
+               rdfs:comment "Knowledge Area parent group. This would be something along the lines of \"Mathematics\", or \"Computer Science\"." ;
+               rdfs:label "Knowledge Area" .
 
 
 ###  http://rukmal.me/precis#Organization
@@ -797,7 +820,14 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#Subject
 :Subject rdf:type owl:Class ;
-         rdfs:subClassOf :KnowledgeArea .
+         rdfs:subClassOf :KnowledgeArea ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :inKnowledgeArea ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :KnowledgeArea
+                         ] ;
+         rdfs:comment "Specific subject in a Knowledge Area. This would be \"Distributed Systems\" in the Knowledge Area of \"Mathematics\", or \"Real Analysis\" in the \"Mathematics\" Knowledge Area." ;
+         rdfs:label "Specific Subject" .
 
 
 ###  http://rukmal.me/precis#Talk
