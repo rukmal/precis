@@ -651,9 +651,24 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#KnowledgeArea
 :KnowledgeArea rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasDescription ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Description
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasSubject ;
                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onClass :Subject
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :externalResource ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:anyURI
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasText ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
                                ] ;
                rdfs:comment "Knowledge Area parent group. This would be something along the lines of \"Mathematics\", or \"Computer Science\"." ;
                rdfs:label "Knowledge Area" .
