@@ -88,7 +88,8 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 
 ###  http://rukmal.me/precis#employedAt
-:employedAt rdf:type owl:ObjectProperty ;
+:employedAt rdf:type owl:ObjectProperty ,
+                     owl:InverseFunctionalProperty ;
             rdfs:domain :WorkExperience ;
             rdfs:range :Organization ;
             rdfs:comment "Organization where an instance of Work Experience is taking place." ;
@@ -108,7 +109,10 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#hasDescription
 :hasDescription rdf:type owl:ObjectProperty ;
                 rdfs:domain [ rdf:type owl:Class ;
-                              owl:unionOf ( :Organization
+                              owl:unionOf ( :Accolade
+                                            :ActivityType
+                                            :KnowledgeArea
+                                            :Organization
                                             :Portfolio
                                             :SkillGroup
                                             :WorkExperience
@@ -158,7 +162,9 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#inKnowledgeArea
 :inKnowledgeArea rdf:type owl:ObjectProperty ;
                  rdfs:domain :Subject ;
-                 rdfs:range :KnowledgeArea .
+                 rdfs:range :KnowledgeArea ;
+                 rdfs:comment "The knowledge area containing the subject." ;
+                 rdfs:label "Parent Knowledge Area" .
 
 
 ###  http://rukmal.me/precis#relatedTo
@@ -168,13 +174,23 @@ xsd:gYear rdf:type rdfs:Datatype .
            rdfs:domain [ rdf:type owl:Class ;
                          owl:unionOf ( :Accolade
                                        :Activity
+                                       :Course
+                                       :Degree
                                        :Portfolio
+                                       :Skill
+                                       :Subject
+                                       :WorkExperience
                                      )
                        ] ;
            rdfs:range [ rdf:type owl:Class ;
                         owl:unionOf ( :Accolade
                                       :Activity
+                                      :Course
+                                      :Degree
                                       :Portfolio
+                                      :Skill
+                                      :Subject
+                                      :WorkExperience
                                     )
                       ] ;
            rdfs:comment "A related concept. For example, an instance of 'Award' may have a 'Project', or 'Publication' that it is related to, and vice versa." ;
@@ -247,6 +263,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                                               :ActivityType
                                               :Course
                                               :Degree
+                                              :KnowledgeArea
                                               :Organization
                                               :Portfolio
                                               :SkillGroup
@@ -309,7 +326,9 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#hasMedia
 :hasMedia rdf:type owl:DatatypeProperty ;
           rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( :Portfolio
+                        owl:unionOf ( :Accolade
+                                      :ActivityType
+                                      :Portfolio
                                       :WorkExperience
                                     )
                       ] ;
@@ -325,6 +344,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                                      :ActivityType
                                      :Course
                                      :Degree
+                                     :KnowledgeArea
                                      :Organization
                                      :Portfolio
                                      :SkillGroup
@@ -423,7 +443,12 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#inMonth
 :inMonth rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Portfolio ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :Accolade
+                                     :ActivityType
+                                     :Portfolio
+                                   )
+                     ] ;
          rdfs:range xsd:gMonth ;
          rdfs:comment "Month the portfolio item was completed." ;
          rdfs:label "Month of Portfolio Item" .
@@ -457,7 +482,12 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://rukmal.me/precis#inYear
 :inYear rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Portfolio ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :Accolade
+                                    :ActivityType
+                                    :Portfolio
+                                  )
+                    ] ;
         rdfs:range xsd:gYear ;
         rdfs:comment "Year the portfolio item was completed." ;
         rdfs:label "Year of Portfolio Item" .
@@ -523,26 +553,96 @@ xsd:gYear rdf:type rdfs:Datatype .
 #################################################################
 
 ###  http://rukmal.me/precis#Accolade
-:Accolade rdf:type owl:Class .
+:Accolade rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :affiliatedWith ;
+                            owl:someValuesFrom [ rdf:type owl:Class ;
+                                                 owl:unionOf ( :Degree
+                                                               :WorkExperience
+                                                             )
+                                               ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasDescription ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Description
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :externalResource ;
+                            owl:someValuesFrom xsd:anyURI
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasMedia ;
+                            owl:someValuesFrom xsd:anyURI
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :inMonth ;
+                            owl:someValuesFrom xsd:gMonth
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :inYear ;
+                            owl:someValuesFrom xsd:gYear
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasName ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ;
+          rdfs:comment "An accolade. This is either an 'Award' or a 'Certification'." ;
+          rdfs:label "Accolade" .
 
 
 ###  http://rukmal.me/precis#Activity
 :Activity rdf:type owl:Class ;
-          rdfs:subClassOf :ActivityType .
+          rdfs:subClassOf :ActivityType ;
+          rdfs:comment "A specific activity, such as a specific hackathon or volunteering experience." ;
+          rdfs:label "Activity" .
 
 
 ###  http://rukmal.me/precis#ActivityType
-:ActivityType rdf:type owl:Class .
+:ActivityType rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasDescription ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Description
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :externalResource ;
+                                owl:someValuesFrom xsd:anyURI
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasMedia ;
+                                owl:someValuesFrom xsd:anyURI
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :inMonth ;
+                                owl:someValuesFrom xsd:gMonth
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :inYear ;
+                                owl:someValuesFrom xsd:gYear
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasName ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ;
+              rdfs:comment "Type of the activity (typically a larger supergroup), such as \"Hackathon\" or \"Volunteering\"." ;
+              rdfs:label "Activity Type" .
 
 
 ###  http://rukmal.me/precis#Award
 :Award rdf:type owl:Class ;
-       rdfs:subClassOf :Accolade .
+       rdfs:subClassOf :Accolade ;
+       rdfs:comment "An 'Award'; this would correspond to a traditional award, such as a Fellowship or Dean's List." ;
+       rdfs:label "Award" .
 
 
 ###  http://rukmal.me/precis#Certification
 :Certification rdf:type owl:Class ;
-               rdfs:subClassOf :Accolade .
+               rdfs:subClassOf :Accolade ;
+               rdfs:comment "A 'Cerficiation'; this would correspond to a traditional certification, such as a CPR Rating, or the Bloomberg Market Concepts certification." ;
+               rdfs:label "Certification" .
 
 
 ###  http://rukmal.me/precis#Course
@@ -656,17 +756,12 @@ xsd:gYear rdf:type rdfs:Datatype .
                                  owl:onClass :Description
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasSubject ;
-                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                 owl:onClass :Subject
-                               ] ,
-                               [ rdf:type owl:Restriction ;
                                  owl:onProperty :externalResource ;
                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onDataRange xsd:anyURI
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasText ;
+                                 owl:onProperty :hasName ;
                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onDataRange xsd:string
                                ] ;
@@ -837,9 +932,9 @@ xsd:gYear rdf:type rdfs:Datatype .
 :Subject rdf:type owl:Class ;
          rdfs:subClassOf :KnowledgeArea ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty :inKnowledgeArea ;
-                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                           owl:onClass :KnowledgeArea
+                           owl:onProperty :hasName ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
                          ] ;
          rdfs:comment "Specific subject in a Knowledge Area. This would be \"Distributed Systems\" in the Knowledge Area of \"Mathematics\", or \"Real Analysis\" in the \"Mathematics\" Knowledge Area." ;
          rdfs:label "Specific Subject" .
