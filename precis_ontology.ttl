@@ -856,7 +856,9 @@ xsd:gYear rdf:type rdfs:Datatype .
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :hasCollaborators ;
                            owl:someValuesFrom xsd:string
-                         ] .
+                         ] ;
+         rdfs:comment "A project, such as a final year report, or a video produced for a class." ;
+         rdfs:label "Project" .
 
 
 ###  http://rukmal.me/precis#Publication
@@ -890,7 +892,9 @@ xsd:gYear rdf:type rdfs:Datatype .
                                owl:onProperty :hasStatus ;
                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                owl:onDataRange xsd:string
-                             ] .
+                             ] ;
+             rdfs:comment "A publication, typically limited to peer reviewed articles." ;
+             rdfs:label "Publication" .
 
 
 ###  http://rukmal.me/precis#Skill
@@ -951,7 +955,9 @@ xsd:gYear rdf:type rdfs:Datatype .
                         owl:onProperty :inYear ;
                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onDataRange xsd:gYear
-                      ] .
+                      ] ;
+      rdfs:comment "A talk or presentation." ;
+      rdfs:label "Talk" .
 
 
 ###  http://rukmal.me/precis#WorkExperience
