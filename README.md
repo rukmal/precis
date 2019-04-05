@@ -3,7 +3,7 @@
 
 ## Advanced Documentation
 
-Click [here](docs/README.md) to access advanced Precis documentation.
+Click [here](docs/) to access advanced Precis documentation.
 
 ## Links to include in final documentation
 
