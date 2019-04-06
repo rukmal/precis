@@ -6,6 +6,8 @@ This document describes the structure of the Precis ontology. Note that this inf
 
 > **Note 2:** Unless otherwise stated, the `$id` field in JSON schema descriptions is optional. If left blank, the precis toolkit will auto-generate an ID on JSON ingestion. This will also mean that the instance in question will be un-referenceable, as a random ID will be generated upon ingestion.
 
+> **Note 3:** The list of attributes described in the class JSON schema in this document are not exhaustive, and do not *necessarily* imply a required attribute of the given class.
+
 ## Overall Structure
 
 
@@ -28,12 +30,12 @@ No concepts should be instantiated as an *Accolade*, but rather as one of its su
 {
     "$id": "User-defined ID",
     "inMonth": "Month the award was received",
-    "externalResource": ["List of external resources ("],
+    "externalResource": ["List of external resources"],
     "affiliatedWith": "ID of Degree/WorkExperience instance that this award is affiliated with",
-    "hasDescription": ["List of Description instances corresponding to this award"],
+    "hasDescription": ["List of Description objects corresponding to this instance"],
     "hasMedia": ["List of media (URLs) for media related to this instance"],
     "inYear": "Year the award was received",
-    "hasName": "Display name for the award",
+    "hasName": "Name (for human consumption)",
     "relatedTo": "Related instances; can be anything in Precis"
 }
 ```
@@ -48,12 +50,12 @@ For example, this class would encapsulate something like "Dean's List", or "1st 
 {
     "$id": "User-defined ID",
     "inMonth": "Month the certification was received",
-    "externalResource": ["List of external resources ("],
+    "externalResource": ["List of external resources"],
     "affiliatedWith": "ID of Degree/WorkExperience instance that this certification is affiliated with",
-    "hasDescription": ["List of Description instances corresponding to this certification"],
+    "hasDescription": ["List of Description objects corresponding to this instance"],
     "hasMedia": ["List of media (URLs) for media related to this instance"],
     "inYear": "Year the certification was received",
-    "hasName": "Display name for the certification",
+    "hasName": "Name (for human consumption)",
     "relatedTo": "Related instances; can be anything in Precis"
 }
 ```
@@ -68,11 +70,11 @@ For example, this class would encapsulate something like "CPR Certification", or
 {
     "$id": "User-defined ID",
     "inMonth": "Month the certification was received",
-    "externalResource": ["List of external resources ("],
-    "hasDescription": ["List of Description instances corresponding to this certification"],
+    "externalResource": ["List of external resources"],
+    "hasDescription": ["List of Description objects corresponding to this instance"],
     "hasMedia": ["List of media (URLs) for media related to this instance"],
     "inYear": "Year the certification was received",
-    "hasName": "Display name for the certification",
+    "hasName": "Name (for human consumption)",
     "relatedTo": "Related instances; can be anything in Precis"
 }
 ```
@@ -83,6 +85,19 @@ That is, it should be treated as an umbrella class to describe a set of activiti
 
 #### Activity
 
+```json
+{
+    "$id": "User-defined ID",
+    "inMonth": "Month the Activity was completed",
+    "externalResource": ["List of external resources"],
+    "hasDescription": ["List of Description objects corresponding to this instance"],
+    "hasMedia": ["List of media (URLs) for media related to this instance"],
+    "inYear": "Year the Activity was completed",
+    "hasName": "Name (for human consumption)",
+    "relatedTo": "Related instances; can be anything in Precis"
+}
+```
+
 This concept describes a specific *Activity*.
 
 This should be an instance of a specific *ActivityType*. That is, it would be a specific Hackathon (which would in turn be a subclass of the "Hackathon" *ActivityType*).
@@ -90,9 +105,46 @@ This should be an instance of a specific *ActivityType*. That is, it would be a 
 
 ### Course
 
+```js
+{
+    "$id": "User-defined ID",
+    "externalResource": ["List of external resources"],
+    "hasDescription": ["List of Description objects corresponding to this instance"],
+    "hasName": "Name (for human consumption)",
+    "taughtAt": "Precis Organization instance that this course was taught at",
+    "withGrade": "Grade received for this course",
+    "hasWebsite": "Website for the course",
+    "hasDepartmentCode": "Department code (eg: FIN, CSE, etc.)",
+    "hasCourseCode": "Course code (eg: 423, 142, etc.)"
+}
+```
+
+This concept describes a specific *Course*.
+
+As stated in the name, this describes a course. This doesn't necessarily have to be associated with a specific Degeree, which provides flexibility to include things like Coursera/edX courses.
 
 ### Degree
 
+```json
+{
+    "$id": "User-defined ID",
+    "degreeConcentration": "Concentration of the Degree (URI to external concept)",
+    "degreeDepartment": "Precis organization corresponding to the awarding department (eg: Department of Finance/Department of Computer Science)",
+    "degreeGPA": "GPA of the degree (necessarily optional 🙃🔫)",
+    "degreeSchool": "Precis organization corresponding to the awarding School (not University, but rather the College/School housing the Department, eg: School of Business, College of Engineering, etc.)",
+    "degreeType": "Type of the degree (URI to external concept, eg: BA, MS, PhD, etc.)",
+    "degreeUniversity": "Precis organization corresponding to the University (eg: University of Washington, Stevens Institute of Techonlogy, etc.)",
+    "hasName": "Name (for human consumption)",
+    "inCity": "City in which the degree was awarded",
+    "inState": "State [or Country] in which the degree was awarded",
+    "monthAwarded": "Month in which the degree was awarded",
+    "yearAwarded": "Year in which the degree was awarded"
+}
+```
+
+This concept describes a *Degree*.
+
+Contrary to how this is traditionally represented on a CV, think of this as a container, encapsulating a set of organizations that awarded the Degree (i.e. the Department, School/College, and University). In addition to linking all of these related organizations with relevant object relation descriptors, this class also stores traditional information associated with a degree, such as the Degree type, title, etc.
 
 ### Description
 
