@@ -648,6 +648,10 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#Course
 :Course rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasDescription ;
+                          owl:someValuesFrom :Description
+                        ] ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :taughtAt ;
                           owl:someValuesFrom :Organization
                         ] ,
@@ -823,6 +827,10 @@ xsd:gYear rdf:type rdfs:Datatype .
                              owl:onProperty :hasDescription ;
                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                              owl:onClass :Description
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :externalResource ;
+                             owl:someValuesFrom xsd:anyURI
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :hasMedia ;
