@@ -1,0 +1,154 @@
+[
+    {
+        "$type": "WorkExperience",
+        "$id": "we_spacex_ceo",
+        "inState": "CA",
+        "inCity": "Hawthorne",
+        "employedAt": {
+            "$type": "Organization",
+            "$id": "spacex",
+            "externalResource": [
+                "http://dbpedia.org/resource/SpaceX"
+            ],
+            "hasName": "Space Exploration Technologies Corporation",
+            "hasWebsite": "https://www.spacex.com/"
+        },
+        "startMonth": 5,
+        "startYear": 2002,
+        "endMonth": null,
+        "endYear": null,
+        "hasDescription": [
+            {
+                "hasPriority": 1,
+                "hasText": "Launched SpaceX."
+            }
+        ],
+        "hasImage": "",
+        "hasMedia": [
+
+        ],
+        "jobTitle": "Founder, CEO and Lead Designer"
+    },
+    {
+        "$type": "WorkExperience",
+        "$id": "we_tesla_ceo",
+        "inState": "CA",
+        "inCity": "San Mateo",
+        "employedAt": {
+            "$type": "Organization",
+            "$id": "tesla",
+            "externalResource": [
+                "http://dbpedia.org/resource/Tesla_Motors"
+            ],
+            "hasName": "Tesla Motors",
+            "hasWebsite": "https://www.tesla.com/"
+        },
+        "startMonth": "",
+        "startYear": "",
+        "endMonth": "",
+        "endYear": "",
+        "hasDescription": [
+
+        ],
+        "hasImage": "",
+        "hasMedia": [
+
+        ],
+        "jobTitle": "CEO and Product Architect"
+    },
+    {
+        "$type": "Award",
+        "inYear": "2015",
+        "externalResource": [
+            "http://dbpedia.org/resource/IEEE_Honorary_Membership"
+        ],
+        "affiliatedWith": "we_tesla_ceo",
+        "hasName": "IEEE Honorary Membership",
+        "hasDescription": [
+            {
+                "hasText": "Given to people who have rendered meritorious service to humanity in the IEEE's designated fields of interest."
+            }
+        ]
+    },
+    {
+        "$type": "Degree",
+        "$id": "degree_bs_econ",
+        "degreeConcentration": "http://dbpedia.org/resource/Economics",
+        "degreeDepartment": {
+            "$type": "Organization",
+            "$id": "org_upenn_wharton_econ",
+            "hasName": "Department of Business Economics and Public Policy",
+            "hasWebsite": "https://bepp.wharton.upenn.edu/",
+            "hasParentOrganization": {
+                "$type": "Organization",
+                "$id": "org_upenn_wharton",
+                "hasName": "Wharton School",
+                "hasWebsite": "https://www.wharton.upenn.edu/",
+                "hasParentOrganization": {
+                    "$type": "Organization",
+                    "$id": "org_upenn",
+                    "hasName": "University of Pennsylvania",
+                    "hasWebsite": "https://www.upenn.edu/"
+                }
+            }
+        },
+        "degreeSchool": "upenn_wharton",
+        "degreeUniversity": "upenn",
+        "degreeType": "http://dbpedia.org/resource/Bachelor_of_Science",
+        "hasName": "Bachelor of Science in Economics",
+        "inCity": "Philadephia",
+        "inState": "PA",
+        "monthAwarded": 6,
+        "yearAwarded": 1995
+    },
+    {
+        "$type": "Degree",
+        "$id": "degree_bs_physics",
+        "degreeConcentration": "http://dbpedia.org/resource/Physics",
+        "degreeDepartment": {
+            "$type": "Organization",
+            "$id": "org_upenn_physics",
+            "hasName": "Department of Physics and Astronomy",
+            "hasWebsite": "https://www.physics.upenn.edu/",
+            "hasParentOrganization": {
+                "$type": "Organization",
+                "$id": "org_upenn_sas",
+                "hasName": "School of Arts and Science",
+                "hasWebsite": "https://www.sas.upenn.edu/",
+                "hasParentOrganization": "org_upenn"
+            }
+        },
+        "degreeSchool": "org_upenn_sas",
+        "degreeUniversity": "org_upenn",
+        "degreeType": "http://dbpedia.org/resource/Bachelor_of_Science",
+        "hasName": "Bachelor of Science in Physics",
+        "inCity": "Philadelphia",
+        "inState": "PA",
+        "monthAwarded": 6,
+        "yearAwarded": 1995
+    },
+    {
+        "$type": "Project",
+        "$id": "proj_spacex_falcon_heavy",
+        "affiliatedWith": "we_spacex_ceo",
+        "inMonth": 3,
+        "inYear": 2018,
+        "externalResource": "http://dbpedia.org/resource/Falcon_Heavy",
+        "hasDescription": [
+
+        ],
+        "hasWebsite": "https://www.spacex.com/falcon-heavy"
+    },
+    {
+        "$type": "Publication",
+        "$id": "proj_spacex_hyperloop_alpha",
+        "affiliatedWith": "we_spacex_ceo",
+        "inMonth": 8,
+        "inYear": 2013,
+        "externalResource": "http://dbpedia.org/resource/Hyperloop",
+        "hasDescription": [
+
+        ],
+        "hasWebsite": "https://www.spacex.com/sites/spacex/files/hyperloop_alpha.pdf"
+    }
+]
