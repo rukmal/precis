@@ -243,7 +243,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#endMonth
 :endMonth rdf:type owl:DatatypeProperty ;
           rdfs:domain :WorkExperience ;
-          rdfs:range xsd:gMonth ;
+          rdfs:range xsd:int ;
           rdfs:comment "End date (month) of the work experience instance." ;
           rdfs:label "End Date (month)" .
 
@@ -251,7 +251,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#endYear
 :endYear rdf:type owl:DatatypeProperty ;
          rdfs:domain :WorkExperience ;
-         rdfs:range xsd:gYear ;
+         rdfs:range xsd:int ;
          rdfs:comment "End date (year) of the work experience instance." ;
          rdfs:label "End Date (year)" .
 
@@ -449,7 +449,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                                      :Portfolio
                                    )
                      ] ;
-         rdfs:range xsd:gMonth ;
+         rdfs:range xsd:int ;
          rdfs:comment "Month the portfolio item was completed." ;
          rdfs:label "Month of Portfolio Item" .
 
@@ -488,7 +488,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                                     :Portfolio
                                   )
                     ] ;
-        rdfs:range xsd:gYear ;
+        rdfs:range xsd:int ;
         rdfs:comment "Year the portfolio item was completed." ;
         rdfs:label "Year of Portfolio Item" .
 
@@ -504,7 +504,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#monthAwarded
 :monthAwarded rdf:type owl:DatatypeProperty ;
               rdfs:domain :Degree ;
-              rdfs:range xsd:gMonth ;
+              rdfs:range xsd:int ;
               rdfs:comment "The month that the degree was earned." ;
               rdfs:label "month awarded" .
 
@@ -512,7 +512,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#startMonth
 :startMonth rdf:type owl:DatatypeProperty ;
             rdfs:domain :WorkExperience ;
-            rdfs:range xsd:gMonth ;
+            rdfs:range xsd:int ;
             rdfs:comment "Start date (month) of the work experience instance." ;
             rdfs:label "Start Date (month)" .
 
@@ -520,7 +520,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#startYear
 :startYear rdf:type owl:DatatypeProperty ;
            rdfs:domain :WorkExperience ;
-           rdfs:range xsd:gYear ;
+           rdfs:range xsd:int ;
            rdfs:comment "Start date (year) of the work experience instance." ;
            rdfs:label "Start Date (year)" .
 
@@ -543,7 +543,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://rukmal.me/precis#yearAwarded
 :yearAwarded rdf:type owl:DatatypeProperty ;
              rdfs:domain :Degree ;
-             rdfs:range xsd:gYear ;
+             rdfs:range xsd:int ;
              rdfs:comment "The year that the degree was awarded." ;
              rdfs:label "year awarded" .
 
@@ -577,11 +577,11 @@ xsd:gYear rdf:type rdfs:Datatype .
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :inMonth ;
-                            owl:someValuesFrom xsd:gMonth
+                            owl:someValuesFrom xsd:int
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :inYear ;
-                            owl:someValuesFrom xsd:gYear
+                            owl:someValuesFrom xsd:int
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :hasName ;
@@ -616,11 +616,11 @@ xsd:gYear rdf:type rdfs:Datatype .
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :inMonth ;
-                                owl:someValuesFrom xsd:gMonth
+                                owl:someValuesFrom xsd:int
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :inYear ;
-                                owl:someValuesFrom xsd:gYear
+                                owl:someValuesFrom xsd:int
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasName ;
@@ -726,12 +726,12 @@ xsd:gYear rdf:type rdfs:Datatype .
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :monthAwarded ;
                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                          owl:onDataRange xsd:gMonth
+                          owl:onDataRange xsd:int
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :yearAwarded ;
                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                          owl:onDataRange xsd:gYear
+                          owl:onDataRange xsd:int
                         ] ;
         rdfs:comment "A Degree, which was completed at a specific institution, in a specific school and department. Optional media links to pictures can be included for rendering at the time of presentation. Records the year and month that the degree was (or is expected to be) awarded." ;
         rdfs:label "Degree" .
@@ -838,11 +838,11 @@ xsd:gYear rdf:type rdfs:Datatype .
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :inMonth ;
-                             owl:someValuesFrom xsd:gMonth
+                             owl:someValuesFrom xsd:int
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :inYear ;
-                             owl:someValuesFrom xsd:gYear
+                             owl:someValuesFrom xsd:int
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :hasWebsite ;
@@ -889,7 +889,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :inYear ;
                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                               owl:onDataRange xsd:gYear
+                               owl:onDataRange xsd:int
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasDOI ;
@@ -962,7 +962,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :inYear ;
                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onDataRange xsd:gYear
+                        owl:onDataRange xsd:int
                       ] ;
       rdfs:comment "A talk or presentation." ;
       rdfs:label "Talk" .
@@ -1009,12 +1009,12 @@ xsd:gYear rdf:type rdfs:Datatype .
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :endMonth ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                  owl:onDataRange xsd:gMonth
+                                  owl:onDataRange xsd:int
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :endYear ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                  owl:onDataRange xsd:gYear
+                                  owl:onDataRange xsd:int
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :inCity ;
@@ -1024,12 +1024,12 @@ xsd:gYear rdf:type rdfs:Datatype .
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :startMonth ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                  owl:onDataRange xsd:gMonth
+                                  owl:onDataRange xsd:int
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :startYear ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                  owl:onDataRange xsd:gYear
+                                  owl:onDataRange xsd:int
                                 ] ;
                 rdfs:comment "An instance of 'Work Experience'. This would be an internship/assistantship/etc." ;
                 rdfs:label "Work Experience" .
