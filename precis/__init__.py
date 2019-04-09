@@ -10,15 +10,16 @@ ont = get_ontology(config.ont_source).load()
 config.ont = ont
 
 # Extracting ontology object property relations
-obj_property_list = []
-for obj_property in config.ont.object_properties():
-    obj_property_list += [str(obj_property).split('.')[1]]
+object_properties = {}
+for object_property in config.ont.object_properties():
+    object_property_name = str(object_property).split('.')[1] 
+    object_properties[object_property_name] = object_property
 
-# Removing 'hasDescription' from this list, as it has a special handler
-obj_property_list.remove('hasDescription')
+# Removing 'hasDescription' from this dict, as it has a special handler
+del object_properties['hasDescription']
 
 # Binding to config module
-config.obj_properties = obj_property_list
+config.obj_properties = object_properties
 
 
 # Extracting ontology classes and building class -> constructor map
@@ -33,9 +34,10 @@ config.ont_classes = ont_classes
 
 
 # Extracting ontology data properties list
-data_property_list = []
+data_properties = dict()
 for data_property in config.ont.data_properties():
-    data_property_list += [str(data_property).split('.')[1]]
+    data_property_name = str(data_property).split('.')[1]
+    data_properties[data_property_name] = data_property
 
 # Binding to config module
-config.data_properties = data_property_list
+config.data_properties = data_properties

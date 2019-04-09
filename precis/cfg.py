@@ -16,7 +16,7 @@ class config:
     #       are set at runtime when Precis is initialized.
     
     ont: Ontology = None  # Ontology
-    obj_properties: list = []  # Object property list
-    data_properties: list = []  # Data property list
-    ont_classes: dict = {}  # Ontology class constructors
+    object_properties: dict = {}  # Object property map
+    data_properties: dict = {}  # Data property map
+    ont_classes: dict = {}  # Ontology class map
     namespace: Namespace = None  # Namespace for the current ontology
