@@ -9,6 +9,20 @@ import logging
 
 
 class Loader():
+    """This class encapsulated JSON loading functionality. It supports loading
+    a nested JSON representation of the linked data resume, as described in the
+    project README.
+
+    Loader intelligently resolves cross-references in the JSON representation,
+    and correctly handles nested classes. It also fails gracefully, and will
+    complete with warnings unless a fatal error is encountered.
+    
+    Raises:
+        JSONDecodeError -- Raised when the input JSON file is malformatted.
+        FileNotFoundError -- Raised when the input JSON file is not found.
+        TypeError -- Raised when the JSON object is of the incorrect type.
+        ReferenceError -- Raised when an entity is referenced before assignment.
+    """
 
     def __init__(self, ingest_file: str, namespace: str=None):
         # Initialize with file name
@@ -27,14 +41,18 @@ class Loader():
             f = open(file=ingest_file)
             # Loading JSON file
             raw = json.load(f, object_pairs_hook=OrderedDict)
-        except Exception:
-            print('file not found.')
+        except json.decoder.JSONDecodeError as e:
+            logging.error('JSON file is malformed')
+            raise e
+        except FileNotFoundError as e:
+            logging.error('JSON file %s not found')
+            raise e
 
         for instance in raw:
             # Creating ontology class from instance
             self.__processInstance(candidate_object=instance)
         
-        logging.info('Success! Added %i individuals to the Precis ontology.' %\
+        logging.info('Success! Added %i individuals to the Precis ontology' %\
             (len(list(config.ont.individuals()))))
 
     def __processInstance(self, candidate_object: dict) -> ThingClass:
