@@ -21,6 +21,10 @@
             {
                 "hasPriority": 1,
                 "hasText": "Launched SpaceX."
+            },
+            {
+                "hasPriority": 2,
+                "hasText": "Led the development of the first commercially viable reusable orbital class rocket."
             }
         ],
         "hasImage": "",
