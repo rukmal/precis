@@ -19,3 +19,14 @@ obj_property_list.remove('hasDescription')
 
 # Binding to config module
 config.obj_properties = obj_property_list
+
+
+# Extracting ontology classes and building class -> constructor map
+ont_classes = dict()
+for ont_class in config.ont.classes():
+    # Getting class name
+    class_name = str(ont_class).split('.')[1]
+    ont_classes[class_name] = ont_class
+
+# Binding to config module
+config.ont_classes = ont_classes

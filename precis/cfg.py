@@ -14,3 +14,4 @@ class config:
     
     ont = None  # Ontology
     obj_properties = None  # Object property list
+    ont_classes = None  # Ontology class constructors
