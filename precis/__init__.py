@@ -19,7 +19,7 @@ for object_property in config.ont.object_properties():
 del object_properties['hasDescription']
 
 # Binding to config module
-config.obj_properties = object_properties
+config.object_properties = object_properties
 
 
 # Extracting ontology classes and building class -> constructor map
