@@ -33,6 +33,9 @@ class Loader():
         for instance in raw:
             # Creating ontology class from instance
             self.__processInstance(candidate_object=instance)
+        
+        logging.info('Success! Added %i individuals to the Precis ontology.' %\
+            (len(list(config.ont.individuals()))))
 
     def __processInstance(self, candidate_object: dict) -> ThingClass:
         # Empty container for the object to be added
@@ -82,6 +85,16 @@ class Loader():
             # Remove key from the candidate object dictionary
             del candidate_object[data_property]
 
+        # If descriptions exist, process accordingly
+        if 'hasDescription' in candidate_object.keys():
+            self.__handleDescription(
+                obj_id=individual_id,
+                obj_type=individual_type,
+                descr_obj=candidate_object['hasDescription'])
+
+            # Remove key from the candidate object dictionary
+            del candidate_object['hasDescription']
+
         # Verify that all keys in the candidate object were removed, log
         if len(candidate_object.keys()) != 0:
             logging.warn('Keys %s in the object with ID %s are unrecognized and\
@@ -119,7 +132,8 @@ class Loader():
         if config.object_properties[object_property].is_functional_for(config.
             ont_classes[i_type]):
             if isList:
-                message = 'Property %s in the object %s should not be a list' % (object_property, i_id)
+                message = 'Property %s in the object %s should not be a list' %\
+                    (object_property, i_id)
                 logging.error(message)
                 raise Exception(message)
             return ret_obj[0]
@@ -134,8 +148,10 @@ class Loader():
         if config.data_properties[data_property].is_functional_for(config.
             ont_classes[i_type]):
             if type(candidate_property) is list:
-                logging.error('Property %s in the object %s should not be\
-                    a list' % (data_property, i_id))
+                message = 'Property %s in the object %s should not be a list' %\
+                    (data_property, i_id)
+                logging.error(message)
+                raise TypeError(message)
             return candidate_property
         elif type(candidate_property) is not list:
             return [candidate_property]
@@ -143,6 +159,39 @@ class Loader():
             # Already a list, return as-is
             return candidate_property
 
+    def __handleDescription(self, obj_id: str, obj_type: str,
+        descr_obj: object) -> Union[ThingClass, list]:
+        # Cast to list for simplicity, include flag for later
+        isList: bool = type(descr_obj) is list
+        if not isList: descr_obj = [descr_obj]
+        
+        ret_obj = []
+
+        for descr in descr_obj:
+            if 'hasPriority' in descr.keys():
+                priority = descr['hasPriority']
+            else:
+                priority = 0
+            ret_obj.append(config.ont.Description(
+                uuid4(),
+                namespace=config.namespace,
+                hasPriority=[priority],
+                hasText=descr['hasText']
+            ))
+        
+        # Check if functional property w.r.t. current class, if so add as-is
+        # if not cast to list and append (if not list)
+        # See: http://bit.ly/2YY8rzz (search for 'FunctionalProperty')
+        if config.ont.hasDescription.is_functional_for(config
+            .ont_classes[obj_type]):
+            if isList:
+                message = 'Description in the object %s should not be a list' %\
+                    (obj_id)
+                logging.error(message)
+                raise Exception(message)
+            return ret_obj[0]
+        else:
+            return ret_obj
 
     def __findInOntology(self, search_id: str, obj_id: str) -> list:
         # Building complete candidate IRI
@@ -153,9 +202,9 @@ class Loader():
 
         # Ensure existence
         if len(res) == 0:
-            logging.error('Entity %s referenced before assignment in %s.'\
-                % (search_id, obj_id))
-            raise ReferenceError('Entity %s is referenced before assignment in\
-                %s' % (search_id, obj_id))
+            message = 'Entity %s referenced before assignment in %s' %\
+                (search_id, obj_id)
+            logging.error(message)
+            raise ReferenceError(message)
         
         return res[0]
