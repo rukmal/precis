@@ -30,3 +30,12 @@ for ont_class in config.ont.classes():
 
 # Binding to config module
 config.ont_classes = ont_classes
+
+
+# Extracting ontology data properties list
+data_property_list = []
+for data_property in config.ont.data_properties():
+    data_property_list += [str(data_property).split('.')[1]]
+
+# Binding to config module
+config.data_properties = data_property_list
