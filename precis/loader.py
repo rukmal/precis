@@ -16,18 +16,51 @@ class Loader():
     Loader intelligently resolves cross-references in the JSON representation,
     and correctly handles nested classes. It also fails gracefully, and will
     complete with warnings unless a fatal error is encountered.
+
+    The Loader functions by iteratively progressing through each of the objects
+    in the top-level JSONArray, preserving the original order of the objects in
+    the JSON file, and the keys within the objects themselves. This ensures that
+    the user can reliably use nested-definitions of objects, and then use
+    references to those objects later in the same file to establish relations
+    between entities.
+
+    The Loader also enforces object property and data property restrictions from
+    the Precis ontology, enforcing the cardinality of these relations. The
+    Loader will provide user-readable warnings, indicating the ID of the
+    problematic object, and the relevant property that needs to be fixed.
+
+    The Loader achieves this behavior by first iterating over object property
+    relations, and - if a nested object is encountered - it will recursively
+    instantiate the nested classes first, and then insert a reference to the
+    newly created child object in the parent object. If a string is encountered
+    as opposed to a nested object, it will search for the given ID in the
+    ontology, and dynamically insert a reference to the object in the parent
+    object, enabling easy ID-based cross-referencing.
     
     Raises:
-        JSONDecodeError -- Raised when the input JSON file is malformatted.
+        JSONDecodeError -- Raised when the input JSON file is malformed.
         FileNotFoundError -- Raised when the input JSON file is not found.
         TypeError -- Raised when the JSON object is of the incorrect type.
         ReferenceError -- Raised when an entity is referenced before assignment.
     """
 
     def __init__(self, ingest_file: str, namespace: str=None):
-        # Initialize with file name
-        # Iterate through (it will be an array @ top level)
-        # Correctly call class constructors (depending on $type)
+        """Initialization function for the Loader class. This method reads in a
+        JSON file, and iteratively processes each of the objects in the
+        top-level JSONArray.
+        
+        Arguments:
+            ingest_file {str} -- File path of the target JSON file.
+        
+        Keyword Arguments:
+            namespace {str} -- Namespace to be used for the Ontology. A random
+                               namespace is generated if one is not provided
+                               (default: {None}).
+        
+        Raises:
+            JSONDecodeError -- Raised when the input JSON file is malformed.
+            FileNotFoundError -- Raised when the target JSON file is not found.
+        """
         
         # Namespace creation (randomly generated if not explicitly provided)
         if namespace is None:
@@ -40,6 +73,7 @@ class Loader():
             # Attempting to open candidate file
             f = open(file=ingest_file)
             # Loading JSON file
+            # Note: the OrderedDict object hook is to preserve JSONArray order
             raw = json.load(f, object_pairs_hook=OrderedDict)
         except json.decoder.JSONDecodeError as e:
             logging.error('JSON file is malformed')
@@ -49,13 +83,27 @@ class Loader():
             raise e
 
         for instance in raw:
-            # Creating ontology class from instance
+            # Creating ontology class from each instance
             self.__processInstance(candidate_object=instance)
         
-        logging.info('Success! Added %i individuals to the Precis ontology' %\
-            (len(list(config.ont.individuals()))))
+        logging.info('Success! Added %i individuals to the Precis ontology with\
+            base namespace IRI %s' % (len(list(config.ont.individuals())),
+            config.namespace.base_iri))
 
-    def __processInstance(self, candidate_object: dict) -> ThingClass:
+    def __processInstance(self, candidate_object: dict):
+        """Function to instantiate and add a given class instance to the
+        ontology. This iterates through - in order - the object property
+        relations, the data property relations, and finally the description
+        objects.
+        
+        This function intelligently handles nested objects, and manages
+        ID-based references correctly.
+        
+        Arguments:
+            candidate_object {dict} -- Candidate object to be added to
+                                       the ontology.
+        """
+
         # Empty container for the object to be added
         new_individual = dict()
 
@@ -118,8 +166,12 @@ class Loader():
             logging.warn('Keys %s in the object with ID %s are unrecognized and\
                 were ommitted' % (str(candidate_object.keys()), individual_id))
 
+        # Logging
+        logging.info('Adding object with ID %s of type %s' %\
+            (individual_id, individual_type))
+
         # Creating instance by calling class constructor
-        return config.ont_classes[individual_type](
+        config.ont_classes[individual_type](
             individual_id,
             namespace=config.namespace,
             **new_individual
@@ -127,6 +179,30 @@ class Loader():
 
     def __handleObjectProperty(self, object_property: str, i_type: str,
         i_id: str, candidate_obj: object) -> Union[list, ThingClass]:
+        """Function to handle an object property relation, given the type of
+        the parent objct, and the candidate object JSON. This function
+        intelligently introspects the candidate object, and will recursively
+        add a nested JSON object to the ontology, or resolve an ID reference
+        to an existing individual in the ontology.
+        
+        This function also enforces property cardinality restrictions,
+        based on the specific parent object type.
+        
+        Arguments:
+            object_property {str} -- Object property.
+            i_type {str} -- Type of the parent object.
+            i_id {str} -- ID of the parent objectt.
+            candidate_obj {object} -- Candidate object to be added as property.
+        
+        Raises:
+            TypeError -- Raised if the cardinality of the property is incorrect.
+        
+        Returns:
+            Union[list, ThingClass] -- Returns either a ThingClass object of
+                                       the child type, or a list of ThingClass
+                                       objects, depending on the restrictions.
+        """
+
         # Cast to list for simplicty, include flag for later
         isList: bool = type(candidate_obj) is list
         if not isList: candidate_obj = [candidate_obj]
@@ -153,13 +229,36 @@ class Loader():
                 message = 'Property %s in the object %s should not be a list' %\
                     (object_property, i_id)
                 logging.error(message)
-                raise Exception(message)
+                raise TypeError(message)
             return ret_obj[0]
         else:
             return ret_obj
 
     def __handleDataProperty(self, data_property: str, i_type: str, i_id: str,
         candidate_property: object) -> Union[int, str, float, list]:
+        """Function to handle a data property relation, given the type of the
+        parent object, and the candidate property JSON. This function
+        intelligently introspects the candidate object, and will resolve ensure
+        that the type of the candidate property matches the property
+        restriction outlined in the ontology.
+
+        This function also enforces data property cardinality restrictions,
+        based on the specific parent object type.
+        
+        Arguments:
+            data_property {str} -- Data property.
+            i_type {str} -- Type of the parent object.
+            i_id {str} -- ID of the parent object.
+            candidate_property {object} -- Candidate property to be added.
+        
+        Raises:
+            TypeError -- Raised if the cardinality of the property is incorrect.
+        
+        Returns:
+            Union[int, str, float, list] -- Returns one of the listed types,
+                                            depending on the restrictions. 
+        """
+
         # Check if functional property w.r.t. current class, if so add as-is
         # if not cast to list and append (if not list)
         # See: http://bit.ly/2YY8rzz (search for 'FunctionalProperty')
@@ -179,6 +278,25 @@ class Loader():
 
     def __handleDescription(self, obj_id: str, obj_type: str,
         descr_obj: object) -> Union[ThingClass, list]:
+        """Function to handle Description objects. This function will
+        intelligently ensure that the cardinality of the provided descriptions
+        matches the property restriction of the parent object type.
+        
+        Arguments:
+            obj_id {str} -- ID of the parent object.
+            obj_type {str} -- Type of the parent object.
+            descr_obj {object} -- Description object to be added.
+        
+        Raises:
+            TypeError -- Raised if the cardinality of the property is incorrect.
+        
+        Returns:
+            Union[ThingClass, list] -- Returns either a single Description
+                                       ThingClass object, or a list of
+                                       ThingClass objects, based on the
+                                       cardinality restrictions.
+        """
+
         # Cast to list for simplicity, include flag for later
         isList: bool = type(descr_obj) is list
         if not isList: descr_obj = [descr_obj]
@@ -206,12 +324,28 @@ class Loader():
                 message = 'Description in the object %s should not be a list' %\
                     (obj_id)
                 logging.error(message)
-                raise Exception(message)
+                raise TypeError(message)
             return ret_obj[0]
         else:
             return ret_obj
 
-    def __findInOntology(self, search_id: str, obj_id: str) -> list:
+    def __findInOntology(self, search_id: str, obj_id: str) -> ThingClass:
+        """Function to find a specific individual in the current ontology,
+        given a search ID. This function appends the correct base IRI to the
+        search ID, and locates the individual in the current ontology, given
+        that the search ID is valid.
+        
+        Arguments:
+            search_id {str} -- ID to be searched for in the Ontology.
+            obj_id {str} -- ID of the parent (i.e. driving) object.
+        
+        Raises:
+            ReferenceError -- Raised if the search ID does not yield a result.
+        
+        Returns:
+            ThingClass -- ThingClass individual corresponding to search_id.
+        """
+
         # Building complete candidate IRI
         candidate_iri = config.namespace.base_iri + search_id
 
