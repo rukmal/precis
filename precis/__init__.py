@@ -1,5 +1,5 @@
 from .cfg import config
-from .loader import *
+from .loader import Loader
 
 from owlready2 import *
 
