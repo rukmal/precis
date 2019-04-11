@@ -2,8 +2,8 @@ from .cfg import config
 
 from collections import OrderedDict
 from owlready2.entity import ThingClass
-from uuid import uuid4
 from typing import Union
+from uuid import uuid4
 import json
 import logging
 
