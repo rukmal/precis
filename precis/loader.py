@@ -1,6 +1,7 @@
 from .cfg import config
 
 from collections import OrderedDict
+from datetime import datetime
 from io import TextIOWrapper
 from owlready2 import default_world
 from owlready2.entity import ThingClass
@@ -11,6 +12,7 @@ from urllib.parse import urlparse
 from uuid import uuid4
 import json
 import logging
+import re
 
 
 class Loader():
@@ -308,6 +310,15 @@ class Loader():
                                             depending on the restrictions. 
         """
 
+        # Special handler for date-like data properties
+        date_like_properties = ['startDate', 'endDate', 'hasDate']
+        if data_property in date_like_properties:
+            candidate_property = self.__processDateLike(
+                date_like_property=candidate_property,
+                property_name=data_property,
+                i_id=i_id
+            )
+
         # Check if functional property w.r.t. current class, if so add as-is
         # if not cast to list and append (if not list)
         # See: http://bit.ly/2YY8rzz (search for 'FunctionalProperty')
@@ -410,6 +421,49 @@ class Loader():
         
         return res[0]
 
+    def __processDateLike(self, date_like_property: str, property_name: str,
+                          i_id: str) -> datetime:
+        """Function to process a date-like property (i.e. a date string), and
+        to return it as a datetime object to satisfy the object type
+        restriction.
+        
+        Arguments:
+            date_like_property {str} -- Date like string to be processed.
+            property_name {str} -- Name of the data property.
+            i_id {str} -- Parent object ID.
+        
+        Raises:
+            TypeError -- Raised if the type of the date string is incorrect.
+            ValueError -- Raised if the format of the date string is incorrect.
+        
+        Returns:
+            datetime -- Python datetime object corresponding to the date string.
+        """
+
+        # Checking type
+        if type(date_like_property) is not str:
+            message = 'Property %s in the object %s must be a date string' %\
+                (property_name, i_id)
+            logging.error(message)
+            raise TypeError(message)
+        
+        # Extracting date from date string, raise error if malformatted
+        # Note: See https://regexr.com/ for Regex explanation
+        date_regex = '([0-9]{4})-([0-9]{2})-([0-9]{2})'
+        date_match = re.match(pattern=date_regex, string=date_like_property)
+
+        # Raise error if not correct type
+        if not date_match:
+            message = 'Property %s in object %s in malformatted. Must be in the\
+            format YYYY-MM-DD' % (property_name, i_id)
+            logging.error(message)
+            raise ValueError(message)
+        
+        # Build datetime object and return
+        return datetime(year=int(date_match[1]),
+                        month=int(date_match[2]),
+                        day=int(date_match[3]))
+
     def __verifyNamespace(self, candidate_namespace: str):
         """Verification function to check that a given custom namespace is
         a valid URI.
@@ -425,7 +479,7 @@ class Loader():
         # See: http://bit.ly/2GkTdgI
         parsed_url = urlparse(url=candidate_namespace)
 
-        # If any of these are missing, 
+        # If any of these are missing, it is not a valid namespace URI
         if not all([parsed_url.scheme, parsed_url.netloc]):
             message = 'Provided namespace %s is invalid' % candidate_namespace
             logging.error(message)
