@@ -310,7 +310,7 @@ class Loader():
             ret_obj.append(config.ont.Description(
                 uuid4(),
                 namespace=config.namespace,
-                hasPriority=[priority],
+                hasPriority=priority,
                 hasText=descr['hasText']
             ))
         
