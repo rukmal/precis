@@ -16,7 +16,7 @@ class TestLoader(unittest.TestCase):
         f = open('data/sample.json', 'r')
 
         # Testing Precis loader
-        loader = precis.Loader(ingest_file=f, namespace=TestConfig.namespace)
+        loader = precis.Loader(ingest_file=f)
 
         del loader
 
@@ -60,3 +60,19 @@ class TestLoader(unittest.TestCase):
         # Making sure the error is raised
         with self.assertRaises(ValueError):
             precis.Loader(ingest_file=f, namespace=fail_uri)
+
+    def test_getNamespace(self):
+        """Tests that the getter for the namespace works correctly.
+        """
+
+        # Test namespace
+        test_namespace = 'http://rukmal.me/this-is-a-test#'
+
+        # Opening sample JSON file
+        f = open('data/sample.json')
+
+        # Creating loader object
+        loader = precis.Loader(ingest_file=f, namespace=test_namespace)
+
+        # Making sure the returned namespace matches
+        self.assertEqual(test_namespace, loader.getNamespace())
