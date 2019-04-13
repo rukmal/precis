@@ -1,3 +1,5 @@
+from .sparql_queries import SPARQLQueries
+
 from collections import OrderedDict
 from owlready2.namespace import Ontology
 from rdflib import Graph, Namespace
@@ -20,14 +22,23 @@ class OntQuery():
         # - Add flag for temporal ordering (asc/descending)
         # - Change order date variable dyanically if it is 'WorkExperience'
         # - Add check for date in the object type, before searching for it
-        query = prepareQuery("""
-            SELECT ?s
-            WHERE {{
-                ?s rdf:type precis:{c_type} .
-            }}
-        """.format(c_type=c_type), initNs={'precis': self.precis_namespace})
-        
-        res = self.graph.query(query)
 
-        for row in res:
+        # Checking temporal order validity
+        if (temporal_order) and (temporal_order not in ['A', 'D']):
+            message = 'Temporal order must be one of either "A" or "D"'
+            logging.error(message)
+            raise ValueError(message)
+
+        # Dynamically assign query based on type
+        if (temporal_order == 'A'):
+            query = SPARQLQueries.getAllOfTypeAscendingTemporal(c_type=c_type)
+        elif (temporal_order == 'D'):
+            query = SPARQLQueries.getAllOfTypeDescendingTemporal(c_type=c_type)
+        else:
+            query = SPARQLQueries.getAllOfType(c_type=c_type)
+
+        # Execute query
+        results = self.graph.query(query_object=query)
+        
+        for row in results:
             print(row)
