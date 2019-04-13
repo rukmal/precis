@@ -10,12 +10,13 @@ class config:
         '1.1.0': 'https://github.com/rukmal/precis/releases/download/1.1.0/precis_ontology.rdf',
         '1.1.1': 'https://github.com/rukmal/precis/releases/download/1.1.1/precis_ontology.rdf',
         '1.2.0': 'https://github.com/rukmal/precis/releases/download/1.2.0/precis_ontology.rdf',
-        '1.2.1': 'https://github.com/rukmal/precis/releases/download/1.2.1/precis_ontology.rdf'
+        '1.2.1': 'https://github.com/rukmal/precis/releases/download/1.2.1/precis_ontology.rdf',
+        '1.3.0': 'https://github.com/rukmal/precis/releases/download/1.3.0/precis_ontology.rdf'
     }
 
     # Ontology source URL
-    # Currently configured for use with Precis Ontology 1.2.1
-    ont_source = __ont_sources['1.2.1']
+    # Currently configured for use with Precis Ontology 1.3.0
+    ont_source = __ont_sources['1.3.0']
 
     # Ontology base IRI
     ont_base_iri= 'http://rukmal.me/precis#'
