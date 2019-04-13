@@ -16,7 +16,7 @@ import re
 
 
 class Loader():
-    """This class encapsulated JSON loading functionality. It supports loading
+    """This module encapsulates JSON loading functionality. It supports loading
     a nested JSON representation of the linked data resume, as described in the
     project README.
 
