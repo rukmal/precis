@@ -39,10 +39,10 @@ class TestLoader(unittest.TestCase):
         loader.saveToFile(save_location=save_location)
 
         # Making sure file is not empty
-        fileSize = os.stat('data/test.rdf').st_size
+        fileSize = os.stat(save_location).st_size
 
         # Deleting file
-        os.remove('data/test.rdf')
+        os.remove(save_location)
 
         # Check file size
         self.assertTrue(fileSize > 0, 'RDF export did not work correctly.')
