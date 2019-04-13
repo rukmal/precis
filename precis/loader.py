@@ -43,13 +43,6 @@ class Loader():
     as opposed to a nested object, it will search for the given ID in the
     ontology, and dynamically insert a reference to the object in the parent
     object, enabling easy ID-based cross-referencing.
-    
-    Raises:
-        JSONDecodeError -- Raised when the input JSON file is malformed.
-        FileNotFoundError -- Raised when the input JSON file is not found.
-        TypeError -- Raised when the JSON object is of the incorrect type.
-        ReferenceError -- Raised when an entity is referenced before assignment.
-        ValueError -- Raised when the provided namespace is not valid.
     """
 
     def __init__(self, ingest_file: TextIOWrapper, namespace: str=None):
