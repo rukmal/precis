@@ -39,7 +39,7 @@ class OntQuery():
         self.ont = ont
         self.graph = graph
 
-    def findAllOfType(self, c_type: str, temporal_order: str=None) -> list:
+    def getAllOfType(self, c_type: str, temporal_order: str=None) -> list:
         """Function to find all instances of a given class type, providing the
         option for temporally ordering the results in either ascending or
         descending order (using the `hasDate` data property).
@@ -159,5 +159,36 @@ class OntQuery():
         logging.debug('Extracted {0} data fields for individual {1}'.format(
             len(output.keys()), individual_iri
         ))
+
+        return output
+
+    def getAll(self, temporal_order: str=None) -> dict:
+        """Function to get the entire ontology, in a nested dictionary.
+        
+        Keyword Arguments:
+            temporal_order {str} -- Temporal ordering, optional. Must be either
+                                    'A' for ascending (i.e. old to new), or 'D'
+                                    for descending (default: {None}).
+        
+        Raises:
+            ValueError -- Raised when the `temporal_order` is not 'A' or 'D'.
+        
+        Returns:
+            dict -- Ordered (optional) nested dictionary of all individuals in
+                    the given ontology.
+        """
+
+        output = dict()
+
+        # Iterate through list of ontology classes (from config)
+        for c_type in config.ont_classes.keys():
+            # Skip Description objects (blank nodes)
+            if c_type == 'Description': continue
+            
+            # Get all individuals of the given type, bind to output
+            output[c_type] = self.getAllOfType(
+                c_type=c_type,
+                temporal_order=temporal_order
+            )
 
         return output
