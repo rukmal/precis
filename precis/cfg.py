@@ -18,6 +18,9 @@ class config:
     # Currently configured for use with Precis Ontology 1.3.0
     ont_source = __ont_sources['1.3.0']
 
+    # Local ontology location
+    ont_local_source = 'precis_ontology.rdf'
+
     # Ontology base IRI
     ont_base_iri= 'http://rukmal.me/precis#'
 
