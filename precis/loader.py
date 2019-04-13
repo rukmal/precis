@@ -202,7 +202,7 @@ class Loader():
 
         # If descriptions exist, process accordingly
         if 'hasDescription' in candidate_object.keys():
-            self.__handleDescription(
+            new_individual['hasDescription'] = self.__handleDescription(
                 obj_id=individual_id,
                 obj_type=individual_type,
                 descr_obj=candidate_object['hasDescription'])
