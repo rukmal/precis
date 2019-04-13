@@ -1,6 +1,7 @@
 from .cfg import config
 
 from collections import OrderedDict
+from io import TextIOWrapper
 from owlready2.entity import ThingClass
 from typing import Union
 from uuid import uuid4
@@ -44,13 +45,13 @@ class Loader():
         ReferenceError -- Raised when an entity is referenced before assignment.
     """
 
-    def __init__(self, ingest_file: str, namespace: str=None):
+    def __init__(self, ingest_file: TextIOWrapper, namespace: str=None):
         """Initialization function for the Loader class. This method reads in a
         JSON file, and iteratively processes each of the objects in the
         top-level JSONArray.
         
         Arguments:
-            ingest_file {str} -- File path of the target JSON file.
+            ingest_file {TextIOWrapper} -- Target JSON file object.
         
         Keyword Arguments:
             namespace {str} -- Namespace to be used for the Ontology. A random
@@ -70,11 +71,9 @@ class Loader():
             config.namespace = config.ont.get_namespace(namespace)
 
         try:
-            # Attempting to open candidate file
-            f = open(file=ingest_file)
-            # Loading JSON file
+            # Attempting to load JSON file
             # Note: the OrderedDict object hook is to preserve JSONArray order
-            raw = json.load(f, object_pairs_hook=OrderedDict)
+            raw = json.load(ingest_file, object_pairs_hook=OrderedDict)
         except json.decoder.JSONDecodeError as e:
             logging.error('JSON file is malformed')
             raise e
