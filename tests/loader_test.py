@@ -1,3 +1,4 @@
+from test_cfg import TestConfig
 from context import precis
 
 import os
@@ -15,7 +16,9 @@ class TestLoader(unittest.TestCase):
         f = open('data/sample.json', 'r')
 
         # Testing Precis loader
-        loader = precis.Loader(ingest_file=f)
+        loader = precis.Loader(ingest_file=f, namespace=TestConfig.namespace)
+
+        del loader
 
         # No errors, assume loading went well (lol @ this test, I know)
         self.assertTrue(True)
@@ -43,3 +46,17 @@ class TestLoader(unittest.TestCase):
 
         # Check file size
         self.assertTrue(fileSize > 0, 'RDF export did not work correctly.')
+
+    def test_urlValidatorFail(self):
+        """Tests that the provided namespace URI is validated correctly.
+        """
+
+        # Testing that the uri validator fails a poorly formatted uri
+        fail_uri = 'this_is_not_a_valid_uri'
+
+        # Opening sample JSON file
+        f = open('data/sample.json', 'r')
+
+        # Making sure the error is raised
+        with self.assertRaises(ValueError):
+            precis.Loader(ingest_file=f, namespace=fail_uri)

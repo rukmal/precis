@@ -7,6 +7,7 @@ from owlready2.entity import ThingClass
 from owlready2.namespace import Ontology
 from owlready2.rdflib_store import TripleLiteRDFlibGraph
 from typing import Union
+from urllib.parse import urlparse
 from uuid import uuid4
 import json
 import logging
@@ -46,6 +47,7 @@ class Loader():
         FileNotFoundError -- Raised when the input JSON file is not found.
         TypeError -- Raised when the JSON object is of the incorrect type.
         ReferenceError -- Raised when an entity is referenced before assignment.
+        ValueError -- Raised when the provided namespace is not valid.
     """
 
     def __init__(self, ingest_file: TextIOWrapper, namespace: str=None):
@@ -65,12 +67,14 @@ class Loader():
             JSONDecodeError -- Raised when the input JSON file is malformed.
             FileNotFoundError -- Raised when the target JSON file is not found.
         """
-        
+
         # Namespace creation (randomly generated if not explicitly provided)
         if namespace is None:
             config.namespace = config.ont.get_namespace(
                 'http://rukmal.me/precis/%s' % (str(uuid4())))
         else:
+            # Verifying custom namespace
+            self.__verifyNamespace(candidate_namespace=namespace)
             config.namespace = config.ont.get_namespace(namespace)
 
         try:
@@ -394,3 +398,24 @@ class Loader():
             raise ReferenceError(message)
         
         return res[0]
+
+    def __verifyNamespace(self, candidate_namespace: str):
+        """Verification function to check that a given custom namespace is
+        a valid URI.
+        
+        Arguments:
+            candidate_namespace {str} -- Candidate namespace URI to be checked.
+        
+        Raises:
+            ValueError -- Raised when the candidate namespace is not valid.
+        """
+
+        # Validating URL components with urlparse
+        # See: http://bit.ly/2GkTdgI
+        parsed_url = urlparse(url=candidate_namespace)
+
+        # If any of these are missing, 
+        if not all([parsed_url.scheme, parsed_url.netloc]):
+            message = 'Provided namespace %s is invalid' % candidate_namespace
+            logging.error(message)
+            raise ValueError(message)
