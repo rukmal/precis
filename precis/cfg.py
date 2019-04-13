@@ -16,6 +16,9 @@ class config:
     # Currently configured for use with Precis Ontology 1.2.0
     ont_source = __ont_sources['1.2.0']
 
+    # Ontology base IRI
+    ont_base_iri= 'http://rukmal.me/precis#'
+
     # NOTE: The following are set to empty here to help with linting; they
     #       are set at runtime when Precis is initialized.
     
