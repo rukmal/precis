@@ -8,10 +8,10 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://rukmal.me/precis">
-        <owl:versionIRI rdf:resource="http://rukmal.me/precis/1.0.0"/>
+        <owl:versionIRI rdf:resource="http://rukmal.me/precis/1.1.0"/>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8628-6753"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://github.com/rukmal/precis for more.</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0.0</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -172,6 +172,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
                     <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
+                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
                     <rdf:Description rdf:about="http://rukmal.me/precis#KnowledgeArea"/>
                     <rdf:Description rdf:about="http://rukmal.me/precis#Organization"/>
                     <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
@@ -355,24 +356,13 @@
     
 
 
-    <!-- http://rukmal.me/precis#endMonth -->
+    <!-- http://rukmal.me/precis#endDate -->
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#endMonth">
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#endDate">
         <rdfs:domain rdf:resource="http://rukmal.me/precis#WorkExperience"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:comment>End date (month) of the work experience instance.</rdfs:comment>
-        <rdfs:label>End Date (month)</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://rukmal.me/precis#endYear -->
-
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#endYear">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#WorkExperience"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:comment>End date (year) of the work experience instance.</rdfs:comment>
-        <rdfs:label>End Date (year)</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>End date of a WorkExperience.</rdfs:comment>
+        <rdfs:label>endDate</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -442,6 +432,25 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>Digital Object Identifier (DOI) of the publication. Including this will allow for later expansion if an inference agent is ever added to get more metadata using this.</rdfs:comment>
         <rdfs:label>Digital Object Identifier (DOI) of the Publication</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rukmal.me/precis#hasDate -->
+
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
+                    <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
+                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Date of the Portfolio/Accolade/ActivityType.</rdfs:comment>
+        <rdfs:label>Date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -723,24 +732,13 @@
     
 
 
-    <!-- http://rukmal.me/precis#startMonth -->
+    <!-- http://rukmal.me/precis#startDate -->
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#startMonth">
+    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#startDate">
         <rdfs:domain rdf:resource="http://rukmal.me/precis#WorkExperience"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:comment>Start date (month) of the work experience instance.</rdfs:comment>
-        <rdfs:label>Start Date (month)</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://rukmal.me/precis#startYear -->
-
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#startYear">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#WorkExperience"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:comment>Start date (year) of the work experience instance.</rdfs:comment>
-        <rdfs:label>Start Date (year)</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Start date of a WorkExperience.</rdfs:comment>
+        <rdfs:label>Start date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -821,20 +819,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://rukmal.me/precis#hasMedia"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inMonth"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inYear"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -878,20 +870,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://rukmal.me/precis#hasMedia"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inMonth"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inYear"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1199,20 +1185,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://rukmal.me/precis#hasMedia"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inMonth"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inYear"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1263,6 +1243,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDate"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://rukmal.me/precis#inConferenceOrJournal"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1273,13 +1260,6 @@
                 <owl:onProperty rdf:resource="http://rukmal.me/precis#inPublication"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inYear"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1382,9 +1362,9 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inYear"/>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDate"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A talk or presentation.</rdfs:comment>
@@ -1447,16 +1427,9 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#endMonth"/>
+                <owl:onProperty rdf:resource="http://rukmal.me/precis#endDate"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#endYear"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1464,20 +1437,6 @@
                 <owl:onProperty rdf:resource="http://rukmal.me/precis#inCity"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#startMonth"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#startYear"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>An instance of &apos;Work Experience&apos;. This would be an internship/assistantship/etc.</rdfs:comment>
