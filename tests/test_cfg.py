@@ -7,3 +7,4 @@ class TestConfig():
 
     sample_json_data = 'data/sample.json'  # Sample JSON (Musk resume)
     sample_rdf_data = 'data/sample.rdf'  # Sample RDF (Musk resume)
+    test_save_location = 'data/test.rdf'  # Location to save test file

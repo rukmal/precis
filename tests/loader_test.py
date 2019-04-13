@@ -13,7 +13,7 @@ class TestLoader(unittest.TestCase):
         """
 
         # Opening sample JSON file
-        f = open('data/sample.json', 'r')
+        f = open(TestConfig.sample_json_data, 'r')
 
         # Testing Precis loader
         loader = precis.Loader(ingest_file=f)
@@ -29,20 +29,19 @@ class TestLoader(unittest.TestCase):
         """
 
         # Opening sample JSON file
-        f = open('data/sample.json', 'r')
+        f = open(TestConfig.sample_json_data, 'r')
 
         # Instantiating loader
         loader = precis.Loader(ingest_file=f)
 
         # Saving completed ontology to file
-        save_location = 'data/test.rdf'
-        loader.saveToFile(save_location=save_location)
+        loader.saveToFile(save_location=TestConfig.test_save_location)
 
         # Making sure file is not empty
-        fileSize = os.stat(save_location).st_size
+        fileSize = os.stat(TestConfig.test_save_location).st_size
 
         # Deleting file
-        os.remove(save_location)
+        os.remove(TestConfig.test_save_location)
 
         # Check file size
         self.assertTrue(fileSize > 0, 'RDF export did not work correctly.')
@@ -55,7 +54,7 @@ class TestLoader(unittest.TestCase):
         fail_uri = 'this_is_not_a_valid_uri'
 
         # Opening sample JSON file
-        f = open('data/sample.json', 'r')
+        f = open(TestConfig.sample_json_data, 'r')
 
         # Making sure the error is raised
         with self.assertRaises(ValueError):
@@ -69,7 +68,7 @@ class TestLoader(unittest.TestCase):
         test_namespace = 'http://rukmal.me/this-is-a-test#'
 
         # Opening sample JSON file
-        f = open('data/sample.json')
+        f = open(TestConfig.sample_json_data, 'r')
 
         # Creating loader object
         loader = precis.Loader(ingest_file=f, namespace=test_namespace)
