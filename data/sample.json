@@ -13,10 +13,7 @@
             "hasName": "Space Exploration Technologies Corporation",
             "hasWebsite": "https://www.spacex.com/"
         },
-        "startMonth": 5,
-        "startYear": 2002,
-        "endMonth": null,
-        "endYear": null,
+        "startDate": "2002-05-01",
         "hasDescription": [
             {
                 "hasPriority": 1,
@@ -44,10 +41,7 @@
             "hasName": "Tesla Motors",
             "hasWebsite": "https://www.tesla.com/"
         },
-        "startMonth": "",
-        "startYear": "",
-        "endMonth": "",
-        "endYear": "",
+        "startDate": "2003-01-01",
         "hasDescription": [
 
         ],
@@ -100,8 +94,7 @@
         "hasName": "Bachelor of Science in Economics",
         "inCity": "Philadephia",
         "inState": "PA",
-        "monthAwarded": 6,
-        "yearAwarded": 1995
+        "hasDate": "1995-06-01"
     },
     {
         "$type": "Degree",
@@ -126,15 +119,13 @@
         "hasName": "Bachelor of Science in Physics",
         "inCity": "Philadelphia",
         "inState": "PA",
-        "monthAwarded": 6,
-        "yearAwarded": 1995
+        "hasDate": "1995-06-01"
     },
     {
         "$type": "Project",
         "$id": "proj_spacex_falcon_heavy",
         "affiliatedWith": "we_spacex_ceo",
-        "inMonth": 3,
-        "inYear": 2018,
+        "hasDate": "2018-02-06",
         "externalResource": "http://dbpedia.org/resource/Falcon_Heavy",
         "hasDescription": [
 
@@ -145,8 +136,7 @@
         "$type": "Publication",
         "$id": "proj_spacex_hyperloop_alpha",
         "affiliatedWith": "we_spacex_ceo",
-        "inMonth": 8,
-        "inYear": 2013,
+        "hasDate": "2013-08-16",
         "externalResource": "http://dbpedia.org/resource/Hyperloop",
         "hasDescription": [
 
