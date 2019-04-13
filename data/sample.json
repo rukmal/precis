@@ -54,7 +54,7 @@
     {
         "$type": "Award",
         "$id": "award:ieee",
-        "inYear": "2015",
+        "hasDate": "2015-01-01",
         "externalResource": [
             "http://dbpedia.org/resource/IEEE_Honorary_Membership"
         ],
@@ -145,5 +145,16 @@
         "hasWebsite": "https://www.spacex.com/sites/spacex/files/hyperloop_alpha.pdf",
         "hasName": "Hyperloop Alpha",
         "relatedTo": "award:ieee"
+    },
+    {
+        "$type": "SkillGroup",
+        "$id": "sg:programming",
+        "hasName": "Programming Languages"
+    },
+    {
+        "$type": "Skill",
+        "$id": "sk:python",
+        "hasName": "Python",
+        "inSkillGroup": "sg:programming"
     }
 ]
