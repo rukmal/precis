@@ -2,8 +2,8 @@ import logging
 import os
 import sys
 
-# Setting logging level to 'INFO' for the debugger
-logging.getLogger().setLevel(logging.INFO)
+# Setting logging level to 'DEBUG' for the debugger
+logging.getLogger().setLevel(logging.DEBUG)
 
 try:
     import precis
