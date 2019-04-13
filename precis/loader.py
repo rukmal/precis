@@ -311,7 +311,7 @@ class Loader():
         """
 
         # Special handler for date-like data properties
-        date_like_properties = ['startDate', 'endDate', 'hasDate']
+        date_like_properties = ['hasDate', 'endDate']
         if data_property in date_like_properties:
             candidate_property = self.__processDateLike(
                 date_like_property=candidate_property,
