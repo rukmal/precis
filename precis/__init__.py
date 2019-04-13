@@ -1,5 +1,6 @@
 from .cfg import config
 from .loader import Loader
+from .templater import TemplateDriver
 
 from owlready2 import *
 
