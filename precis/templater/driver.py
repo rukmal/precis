@@ -1,4 +1,4 @@
-from .query import OntQuery
+from .. import OntQuery
 
 from collections import OrderedDict
 from rdflib.plugins.sparql import prepareQuery

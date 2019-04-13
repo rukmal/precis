@@ -15,7 +15,11 @@ class OntQuery():
         self.precis_namespace = Namespace(self.ont.base_iri)
         self.inst_namespace = Namespace(namespace)
 
-    def findOfType(self, c_type: str) -> OrderedDict:
+    def findOfType(self, c_type: str, temporal_order: str=None) -> OrderedDict:
+        # To do:
+        # - Add flag for temporal ordering (asc/descending)
+        # - Change order date variable dyanically if it is 'WorkExperience'
+        # - Add check for date in the object type, before searching for it
         query = prepareQuery("""
             SELECT ?s
             WHERE {{
