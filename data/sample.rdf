@@ -1117,13 +1117,13 @@
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/</hasWebsite>
 </Organization>
 
-<Description rdf:about="http://rukmal.me/precis/musk#6f844f1d-6682-4627-8af3-d608bc94e97b">
+<Description rdf:about="http://rukmal.me/precis/musk#3a35d8d2-d62f-4d88-b75e-25b7d4324864">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Launched SpaceX.</hasText>
 </Description>
 
-<Description rdf:about="http://rukmal.me/precis/musk#5fb890dc-0d89-47b7-b2db-056dd9a463d2">
+<Description rdf:about="http://rukmal.me/precis/musk#45b0c795-e0aa-42ee-b5b1-f49b6fc203f8">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Led the development of the first commercially viable reusable orbital class rocket.</hasText>
@@ -1132,8 +1132,8 @@
 <WorkExperience rdf:about="http://rukmal.me/precis/musk#we_spacex_ceo">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <employedAt rdf:resource="http://rukmal.me/precis/musk#spacex"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/musk#5fb890dc-0d89-47b7-b2db-056dd9a463d2"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/musk#6f844f1d-6682-4627-8af3-d608bc94e97b"/>
+  <hasDescription rdf:resource="http://rukmal.me/precis/musk#45b0c795-e0aa-42ee-b5b1-f49b6fc203f8"/>
+  <hasDescription rdf:resource="http://rukmal.me/precis/musk#3a35d8d2-d62f-4d88-b75e-25b7d4324864"/>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-05-01T00:00:00</hasDate>
   <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasImage>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Founder, CEO and Lead Designer</hasName>
@@ -1158,7 +1158,7 @@
   <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</inState>
 </WorkExperience>
 
-<Description rdf:about="http://rukmal.me/precis/musk#2bef5989-c590-4343-9a41-e5e541eb8a24">
+<Description rdf:about="http://rukmal.me/precis/musk#38daab4a-5e29-4d79-a4be-9de4e9131d7e">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Given to people who have rendered meritorious service to humanity in the IEEE's designated fields of interest.</hasText>
@@ -1167,7 +1167,7 @@
 <Award rdf:about="http://rukmal.me/precis/musk#award:ieee">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <affiliatedWith rdf:resource="http://rukmal.me/precis/musk#we_tesla_ceo"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/musk#2bef5989-c590-4343-9a41-e5e541eb8a24"/>
+  <hasDescription rdf:resource="http://rukmal.me/precis/musk#38daab4a-5e29-4d79-a4be-9de4e9131d7e"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/IEEE_Honorary_Membership</externalResource>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEEE Honorary Membership</hasName>
 </Award>
@@ -1237,14 +1237,17 @@
   <affiliatedWith rdf:resource="http://rukmal.me/precis/musk#we_spacex_ceo"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Falcon_Heavy</externalResource>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-06T00:00:00</hasDate>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Falcon Heavy Rocket</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/falcon-heavy</hasWebsite>
 </Project>
 
 <Publication rdf:about="http://rukmal.me/precis/musk#proj_spacex_hyperloop_alpha">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <affiliatedWith rdf:resource="http://rukmal.me/precis/musk#we_spacex_ceo"/>
+  <relatedTo rdf:resource="http://rukmal.me/precis/musk#award:ieee"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Hyperloop</externalResource>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-08-16T00:00:00</hasDate>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperloop Alpha</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/sites/spacex/files/hyperloop_alpha.pdf</hasWebsite>
 </Publication>
 

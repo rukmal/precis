@@ -130,7 +130,8 @@
         "hasDescription": [
 
         ],
-        "hasWebsite": "https://www.spacex.com/falcon-heavy"
+        "hasWebsite": "https://www.spacex.com/falcon-heavy",
+        "hasName": "Falcon Heavy Rocket"
     },
     {
         "$type": "Publication",
@@ -141,6 +142,8 @@
         "hasDescription": [
 
         ],
-        "hasWebsite": "https://www.spacex.com/sites/spacex/files/hyperloop_alpha.pdf"
+        "hasWebsite": "https://www.spacex.com/sites/spacex/files/hyperloop_alpha.pdf",
+        "hasName": "Hyperloop Alpha",
+        "relatedTo": "award:ieee"
     }
 ]
