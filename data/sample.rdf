@@ -1137,30 +1137,30 @@
   <rdfs:label>Talk</rdfs:label>
 </owl:Class>
 
-<Organization rdf:about="http://rukmal.me/this-is-a-test#spacex">
+<Organization rdf:about="http://rukmal.me/precis/musk#spacex">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/SpaceX</externalResource>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Space Exploration Technologies Corporation</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/</hasWebsite>
 </Organization>
 
-<Description rdf:about="http://rukmal.me/this-is-a-test#ac81bf0b-fe7d-4128-bebd-f2bea20b1f06">
+<Description rdf:about="http://rukmal.me/precis/musk#01255ae4-602b-42ba-88ad-9263319b9b9d">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Launched SpaceX.</hasText>
 </Description>
 
-<Description rdf:about="http://rukmal.me/this-is-a-test#5aef5dc6-6cd2-4818-9ff6-aa5357f01938">
+<Description rdf:about="http://rukmal.me/precis/musk#50cb36b2-2f49-4945-903f-c64babf0c2d5">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Led the development of the first commercially viable reusable orbital class rocket.</hasText>
 </Description>
 
-<WorkExperience rdf:about="http://rukmal.me/this-is-a-test#we_spacex_ceo">
+<WorkExperience rdf:about="http://rukmal.me/precis/musk#we_spacex_ceo">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <employedAt rdf:resource="http://rukmal.me/this-is-a-test#spacex"/>
-  <hasDescription rdf:resource="http://rukmal.me/this-is-a-test#5aef5dc6-6cd2-4818-9ff6-aa5357f01938"/>
-  <hasDescription rdf:resource="http://rukmal.me/this-is-a-test#ac81bf0b-fe7d-4128-bebd-f2bea20b1f06"/>
+  <employedAt rdf:resource="http://rukmal.me/precis/musk#spacex"/>
+  <hasDescription rdf:resource="http://rukmal.me/precis/musk#50cb36b2-2f49-4945-903f-c64babf0c2d5"/>
+  <hasDescription rdf:resource="http://rukmal.me/precis/musk#01255ae4-602b-42ba-88ad-9263319b9b9d"/>
   <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasImage>
   <inCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hawthorne</inCity>
   <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</inState>
@@ -1168,16 +1168,16 @@
   <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-05-01T00:00:00</startDate>
 </WorkExperience>
 
-<Organization rdf:about="http://rukmal.me/this-is-a-test#tesla">
+<Organization rdf:about="http://rukmal.me/precis/musk#tesla">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Tesla_Motors</externalResource>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tesla Motors</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.tesla.com/</hasWebsite>
 </Organization>
 
-<WorkExperience rdf:about="http://rukmal.me/this-is-a-test#we_tesla_ceo">
+<WorkExperience rdf:about="http://rukmal.me/precis/musk#we_tesla_ceo">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <employedAt rdf:resource="http://rukmal.me/this-is-a-test#tesla"/>
+  <employedAt rdf:resource="http://rukmal.me/precis/musk#tesla"/>
   <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasImage>
   <inCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">San Mateo</inCity>
   <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</inState>
@@ -1185,46 +1185,46 @@
   <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-01-01T00:00:00</startDate>
 </WorkExperience>
 
-<Description rdf:about="http://rukmal.me/this-is-a-test#7920dc91-3b68-4e38-9527-fd31a7b238ad">
+<Description rdf:about="http://rukmal.me/precis/musk#d96eb1fe-069d-4bf1-9bc4-95b261c477ac">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Given to people who have rendered meritorious service to humanity in the IEEE's designated fields of interest.</hasText>
 </Description>
 
-<Award rdf:about="http://rukmal.me/this-is-a-test#award:ieee">
+<Award rdf:about="http://rukmal.me/precis/musk#award:ieee">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <affiliatedWith rdf:resource="http://rukmal.me/this-is-a-test#we_tesla_ceo"/>
-  <hasDescription rdf:resource="http://rukmal.me/this-is-a-test#7920dc91-3b68-4e38-9527-fd31a7b238ad"/>
+  <affiliatedWith rdf:resource="http://rukmal.me/precis/musk#we_tesla_ceo"/>
+  <hasDescription rdf:resource="http://rukmal.me/precis/musk#d96eb1fe-069d-4bf1-9bc4-95b261c477ac"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/IEEE_Honorary_Membership</externalResource>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEEE Honorary Membership</hasName>
   <inYear rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</inYear>
 </Award>
 
-<Organization rdf:about="http://rukmal.me/this-is-a-test#org_upenn">
+<Organization rdf:about="http://rukmal.me/precis/musk#org_upenn">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">University of Pennsylvania</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.upenn.edu/</hasWebsite>
 </Organization>
 
-<Organization rdf:about="http://rukmal.me/this-is-a-test#org_upenn_wharton">
+<Organization rdf:about="http://rukmal.me/precis/musk#org_upenn_wharton">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/this-is-a-test#org_upenn"/>
+  <hasParentOrganization rdf:resource="http://rukmal.me/precis/musk#org_upenn"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wharton School</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wharton.upenn.edu/</hasWebsite>
 </Organization>
 
-<Organization rdf:about="http://rukmal.me/this-is-a-test#org_upenn_wharton_econ">
+<Organization rdf:about="http://rukmal.me/precis/musk#org_upenn_wharton_econ">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/this-is-a-test#org_upenn_wharton"/>
+  <hasParentOrganization rdf:resource="http://rukmal.me/precis/musk#org_upenn_wharton"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department of Business Economics and Public Policy</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://bepp.wharton.upenn.edu/</hasWebsite>
 </Organization>
 
-<Degree rdf:about="http://rukmal.me/this-is-a-test#degree_bs_econ">
+<Degree rdf:about="http://rukmal.me/precis/musk#degree_bs_econ">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <degreeUniversity rdf:resource="http://rukmal.me/this-is-a-test#org_upenn"/>
-  <degreeDepartment rdf:resource="http://rukmal.me/this-is-a-test#org_upenn_wharton_econ"/>
-  <degreeSchool rdf:resource="http://rukmal.me/this-is-a-test#org_upenn_wharton"/>
+  <degreeUniversity rdf:resource="http://rukmal.me/precis/musk#org_upenn"/>
+  <degreeDepartment rdf:resource="http://rukmal.me/precis/musk#org_upenn_wharton_econ"/>
+  <degreeSchool rdf:resource="http://rukmal.me/precis/musk#org_upenn_wharton"/>
   <degreeConcentration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Economics</degreeConcentration>
   <degreeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Bachelor_of_Science</degreeType>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-06-01T00:00:00</hasDate>
@@ -1233,25 +1233,25 @@
   <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</inState>
 </Degree>
 
-<Organization rdf:about="http://rukmal.me/this-is-a-test#org_upenn_sas">
+<Organization rdf:about="http://rukmal.me/precis/musk#org_upenn_sas">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/this-is-a-test#org_upenn"/>
+  <hasParentOrganization rdf:resource="http://rukmal.me/precis/musk#org_upenn"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">School of Arts and Science</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.sas.upenn.edu/</hasWebsite>
 </Organization>
 
-<Organization rdf:about="http://rukmal.me/this-is-a-test#org_upenn_physics">
+<Organization rdf:about="http://rukmal.me/precis/musk#org_upenn_physics">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/this-is-a-test#org_upenn_sas"/>
+  <hasParentOrganization rdf:resource="http://rukmal.me/precis/musk#org_upenn_sas"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department of Physics and Astronomy</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.physics.upenn.edu/</hasWebsite>
 </Organization>
 
-<Degree rdf:about="http://rukmal.me/this-is-a-test#degree_bs_physics">
+<Degree rdf:about="http://rukmal.me/precis/musk#degree_bs_physics">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <degreeUniversity rdf:resource="http://rukmal.me/this-is-a-test#org_upenn"/>
-  <degreeDepartment rdf:resource="http://rukmal.me/this-is-a-test#org_upenn_physics"/>
-  <degreeSchool rdf:resource="http://rukmal.me/this-is-a-test#org_upenn_sas"/>
+  <degreeUniversity rdf:resource="http://rukmal.me/precis/musk#org_upenn"/>
+  <degreeDepartment rdf:resource="http://rukmal.me/precis/musk#org_upenn_physics"/>
+  <degreeSchool rdf:resource="http://rukmal.me/precis/musk#org_upenn_sas"/>
   <degreeConcentration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Physics</degreeConcentration>
   <degreeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Bachelor_of_Science</degreeType>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-06-01T00:00:00</hasDate>
@@ -1260,295 +1260,17 @@
   <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</inState>
 </Degree>
 
-<Project rdf:about="http://rukmal.me/this-is-a-test#proj_spacex_falcon_heavy">
+<Project rdf:about="http://rukmal.me/precis/musk#proj_spacex_falcon_heavy">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <affiliatedWith rdf:resource="http://rukmal.me/this-is-a-test#we_spacex_ceo"/>
+  <affiliatedWith rdf:resource="http://rukmal.me/precis/musk#we_spacex_ceo"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Falcon_Heavy</externalResource>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-06T00:00:00</hasDate>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/falcon-heavy</hasWebsite>
 </Project>
 
-<Publication rdf:about="http://rukmal.me/this-is-a-test#proj_spacex_hyperloop_alpha">
+<Publication rdf:about="http://rukmal.me/precis/musk#proj_spacex_hyperloop_alpha">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <affiliatedWith rdf:resource="http://rukmal.me/this-is-a-test#we_spacex_ceo"/>
-  <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Hyperloop</externalResource>
-  <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-08-16T00:00:00</hasDate>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/sites/spacex/files/hyperloop_alpha.pdf</hasWebsite>
-</Publication>
-
-<Organization rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#spacex">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/SpaceX</externalResource>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Space Exploration Technologies Corporation</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/</hasWebsite>
-</Organization>
-
-<Description rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#5d5959e0-2bef-485d-b3f9-bb4acc8a2407">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasPriority>
-  <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Launched SpaceX.</hasText>
-</Description>
-
-<Description rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#57e8c5d0-ddf5-4fa2-b2cc-e29767abc6ed">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasPriority>
-  <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Led the development of the first commercially viable reusable orbital class rocket.</hasText>
-</Description>
-
-<WorkExperience rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#we_spacex_ceo">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <employedAt rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#spacex"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#5d5959e0-2bef-485d-b3f9-bb4acc8a2407"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#57e8c5d0-ddf5-4fa2-b2cc-e29767abc6ed"/>
-  <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasImage>
-  <inCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hawthorne</inCity>
-  <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</inState>
-  <jobTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Founder, CEO and Lead Designer</jobTitle>
-  <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-05-01T00:00:00</startDate>
-</WorkExperience>
-
-<Organization rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#tesla">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Tesla_Motors</externalResource>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tesla Motors</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.tesla.com/</hasWebsite>
-</Organization>
-
-<WorkExperience rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#we_tesla_ceo">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <employedAt rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#tesla"/>
-  <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasImage>
-  <inCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">San Mateo</inCity>
-  <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</inState>
-  <jobTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CEO and Product Architect</jobTitle>
-  <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-01-01T00:00:00</startDate>
-</WorkExperience>
-
-<Description rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#e7af3585-e762-4d13-9eb3-c5fc5798444e">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPriority>
-  <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Given to people who have rendered meritorious service to humanity in the IEEE's designated fields of interest.</hasText>
-</Description>
-
-<Award rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#award:ieee">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <affiliatedWith rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#we_tesla_ceo"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#e7af3585-e762-4d13-9eb3-c5fc5798444e"/>
-  <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/IEEE_Honorary_Membership</externalResource>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEEE Honorary Membership</hasName>
-  <inYear rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</inYear>
-</Award>
-
-<Organization rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">University of Pennsylvania</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.upenn.edu/</hasWebsite>
-</Organization>
-
-<Organization rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn_wharton">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn"/>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wharton School</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wharton.upenn.edu/</hasWebsite>
-</Organization>
-
-<Organization rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn_wharton_econ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn_wharton"/>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department of Business Economics and Public Policy</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://bepp.wharton.upenn.edu/</hasWebsite>
-</Organization>
-
-<Degree rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#degree_bs_econ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <degreeUniversity rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn"/>
-  <degreeDepartment rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn_wharton_econ"/>
-  <degreeSchool rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn_wharton"/>
-  <degreeConcentration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Economics</degreeConcentration>
-  <degreeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Bachelor_of_Science</degreeType>
-  <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-06-01T00:00:00</hasDate>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor of Science in Economics</hasName>
-  <inCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philadephia</inCity>
-  <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</inState>
-</Degree>
-
-<Organization rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn_sas">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn"/>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">School of Arts and Science</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.sas.upenn.edu/</hasWebsite>
-</Organization>
-
-<Organization rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn_physics">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn_sas"/>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department of Physics and Astronomy</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.physics.upenn.edu/</hasWebsite>
-</Organization>
-
-<Degree rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#degree_bs_physics">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <degreeUniversity rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn"/>
-  <degreeDepartment rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn_physics"/>
-  <degreeSchool rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#org_upenn_sas"/>
-  <degreeConcentration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Physics</degreeConcentration>
-  <degreeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Bachelor_of_Science</degreeType>
-  <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-06-01T00:00:00</hasDate>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor of Science in Physics</hasName>
-  <inCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philadelphia</inCity>
-  <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</inState>
-</Degree>
-
-<Project rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#proj_spacex_falcon_heavy">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <affiliatedWith rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#we_spacex_ceo"/>
-  <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Falcon_Heavy</externalResource>
-  <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-06T00:00:00</hasDate>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/falcon-heavy</hasWebsite>
-</Project>
-
-<Publication rdf:about="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#proj_spacex_hyperloop_alpha">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <affiliatedWith rdf:resource="http://rukmal.me/precis/eaa04921-7984-499d-ac49-c7c25c7396c1#we_spacex_ceo"/>
-  <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Hyperloop</externalResource>
-  <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-08-16T00:00:00</hasDate>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/sites/spacex/files/hyperloop_alpha.pdf</hasWebsite>
-</Publication>
-
-<Organization rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#spacex">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/SpaceX</externalResource>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Space Exploration Technologies Corporation</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/</hasWebsite>
-</Organization>
-
-<Description rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#2145cb21-f520-48af-8d23-be69b9516328">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasPriority>
-  <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Launched SpaceX.</hasText>
-</Description>
-
-<Description rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#8adcc9d4-5fd2-475e-adfb-ab3f618d86b0">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasPriority>
-  <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Led the development of the first commercially viable reusable orbital class rocket.</hasText>
-</Description>
-
-<WorkExperience rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#we_spacex_ceo">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <employedAt rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#spacex"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#8adcc9d4-5fd2-475e-adfb-ab3f618d86b0"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#2145cb21-f520-48af-8d23-be69b9516328"/>
-  <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasImage>
-  <inCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hawthorne</inCity>
-  <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</inState>
-  <jobTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Founder, CEO and Lead Designer</jobTitle>
-  <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-05-01T00:00:00</startDate>
-</WorkExperience>
-
-<Organization rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#tesla">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Tesla_Motors</externalResource>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tesla Motors</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.tesla.com/</hasWebsite>
-</Organization>
-
-<WorkExperience rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#we_tesla_ceo">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <employedAt rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#tesla"/>
-  <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasImage>
-  <inCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">San Mateo</inCity>
-  <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</inState>
-  <jobTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CEO and Product Architect</jobTitle>
-  <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-01-01T00:00:00</startDate>
-</WorkExperience>
-
-<Description rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#fabde060-52f7-4fac-9a4b-e2e33169a225">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPriority>
-  <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Given to people who have rendered meritorious service to humanity in the IEEE's designated fields of interest.</hasText>
-</Description>
-
-<Award rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#award:ieee">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <affiliatedWith rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#we_tesla_ceo"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#fabde060-52f7-4fac-9a4b-e2e33169a225"/>
-  <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/IEEE_Honorary_Membership</externalResource>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEEE Honorary Membership</hasName>
-  <inYear rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</inYear>
-</Award>
-
-<Organization rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">University of Pennsylvania</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.upenn.edu/</hasWebsite>
-</Organization>
-
-<Organization rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn_wharton">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn"/>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wharton School</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wharton.upenn.edu/</hasWebsite>
-</Organization>
-
-<Organization rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn_wharton_econ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn_wharton"/>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department of Business Economics and Public Policy</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://bepp.wharton.upenn.edu/</hasWebsite>
-</Organization>
-
-<Degree rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#degree_bs_econ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <degreeUniversity rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn"/>
-  <degreeDepartment rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn_wharton_econ"/>
-  <degreeSchool rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn_wharton"/>
-  <degreeConcentration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Economics</degreeConcentration>
-  <degreeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Bachelor_of_Science</degreeType>
-  <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-06-01T00:00:00</hasDate>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor of Science in Economics</hasName>
-  <inCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philadephia</inCity>
-  <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</inState>
-</Degree>
-
-<Organization rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn_sas">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn"/>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">School of Arts and Science</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.sas.upenn.edu/</hasWebsite>
-</Organization>
-
-<Organization rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn_physics">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn_sas"/>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department of Physics and Astronomy</hasName>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.physics.upenn.edu/</hasWebsite>
-</Organization>
-
-<Degree rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#degree_bs_physics">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <degreeUniversity rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn"/>
-  <degreeDepartment rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn_physics"/>
-  <degreeSchool rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#org_upenn_sas"/>
-  <degreeConcentration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Physics</degreeConcentration>
-  <degreeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Bachelor_of_Science</degreeType>
-  <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-06-01T00:00:00</hasDate>
-  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor of Science in Physics</hasName>
-  <inCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philadelphia</inCity>
-  <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</inState>
-</Degree>
-
-<Project rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#proj_spacex_falcon_heavy">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <affiliatedWith rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#we_spacex_ceo"/>
-  <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Falcon_Heavy</externalResource>
-  <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-06T00:00:00</hasDate>
-  <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/falcon-heavy</hasWebsite>
-</Project>
-
-<Publication rdf:about="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#proj_spacex_hyperloop_alpha">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <affiliatedWith rdf:resource="http://rukmal.me/precis/3cee4665-38d8-4a12-b566-5b276d0ffaa4#we_spacex_ceo"/>
+  <affiliatedWith rdf:resource="http://rukmal.me/precis/musk#we_spacex_ceo"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Hyperloop</externalResource>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-08-16T00:00:00</hasDate>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/sites/spacex/files/hyperloop_alpha.pdf</hasWebsite>
