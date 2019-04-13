@@ -13,7 +13,7 @@
             "hasName": "Space Exploration Technologies Corporation",
             "hasWebsite": "https://www.spacex.com/"
         },
-        "startDate": "2002-05-01",
+        "hasDate": "2002-05-01",
         "hasDescription": [
             {
                 "hasPriority": 1,
@@ -41,7 +41,7 @@
             "hasName": "Tesla Motors",
             "hasWebsite": "https://www.tesla.com/"
         },
-        "startDate": "2003-01-01",
+        "hasDate": "2003-01-01",
         "hasDescription": [
 
         ],
