@@ -2,7 +2,10 @@ from .cfg import config
 
 from collections import OrderedDict
 from io import TextIOWrapper
+from owlready2 import default_world
 from owlready2.entity import ThingClass
+from owlready2.namespace import Ontology
+from owlready2.rdflib_store import TripleLiteRDFlibGraph
 from typing import Union
 from uuid import uuid4
 import json
@@ -88,6 +91,38 @@ class Loader():
         logging.info('Success! Added %i individuals to the Precis ontology with\
             base namespace IRI %s' % (len(list(config.ont.individuals())),
             config.namespace.base_iri))
+
+    def getOntology(self) -> Ontology:
+        """Function to get the ontology as an owlready2 ontology.
+        
+        Returns:
+            Ontology -- Built ontology with the loaded information.
+        """
+
+        return config.namespace.ontology
+    
+    def getRDFLibGraph(self) -> TripleLiteRDFlibGraph:
+        """Function to get the rdflib graph representation of the ontology.
+        
+        Returns:
+            TripleLiteRDFlibGraph -- RDFlib compatible graph.
+        """
+
+        return default_world.as_rdflib_graph()
+    
+    def saveToFile(self, save_location: str):
+        """Function to save the built ontology to an RDF/XML file.
+        
+        Arguments:
+            save_location {str} -- Location to save the file.
+        """
+
+        # Attempting to save to file, throw exception if not
+        try:
+            config.namespace.ontology.save(file=save_location, format='rdfxml')
+        except:
+            logging.error('Ontology could not be saved to %s' % save_location)
+            raise
 
     def __processInstance(self, candidate_object: dict):
         """Function to instantiate and add a given class instance to the
