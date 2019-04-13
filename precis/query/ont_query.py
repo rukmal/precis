@@ -141,11 +141,14 @@ class OntQuery():
                 iri=objectprop_iri).python_name
             # Getting Python object of value, and appending orgname (optionally)
             value = [result[1].toPython()]
-            # If it has orgname, append to result
             if result[2]:
+                # If it has orgname, append to result and nest list
                 value.append(result[2].toPython())
-            # Adding to output dictionary (append to array if multiple)
-            output.setdefault(objectprop_name, []).append(value)
+                # Adding to output dictionary (append to array if multiple)
+                output.setdefault(objectprop_name, []).append(value)
+            else:
+                # No org name, do not nest list
+                output.setdefault(objectprop_name, []).append(value[0])
 
         # Extracting all description text for the given individual
         descr_query = SPARQLQueries.getOrderedDescriptionText(
