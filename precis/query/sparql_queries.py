@@ -57,8 +57,13 @@ class SPARQLQueries():
         return prepareQuery("""
             SELECT DISTINCT ?s
             WHERE {{
-                ?s rdf:type precis:{c_type} .
-                ?s precis:hasDate ?date .
+                {{
+                    ?s rdf:type precis:{c_type} .
+                }}
+                OPTIONAL
+                {{
+                    ?s precis:hasDate ?date .
+                }}
             }}
             ORDER BY ?date
             """.format(c_type=c_type),
@@ -82,8 +87,13 @@ class SPARQLQueries():
         return prepareQuery("""
             SELECT DISTINCT ?s
             WHERE {{
-                ?s rdf:type precis:{c_type} .
-                ?s precis:hasDate ?date .
+                {{
+                    ?s rdf:type precis:{c_type} .
+                }}
+                OPTIONAL
+                {{
+                    ?s precis:hasDate ?date .
+                }}
             }}
             ORDER BY DESC(?date)
             """.format(c_type=c_type),
