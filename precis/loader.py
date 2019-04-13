@@ -127,6 +127,17 @@ class Loader():
         except:
             logging.error('Ontology could not be saved to %s' % save_location)
             raise
+    
+    def getNamespace(self) -> str:
+        """Function to retrieve the namespace of the created ontology. This is
+        (obviously) most useful in the case that a custom namespace is not
+        provided, and a randomly-generated namespace is used instead.
+        
+        Returns:
+            str -- Namespace of the created ontology.
+        """
+
+        return config.namespace.base_iri
 
     def __processInstance(self, candidate_object: dict):
         """Function to instantiate and add a given class instance to the
