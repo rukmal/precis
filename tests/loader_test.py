@@ -1,5 +1,6 @@
 from context import precis
 
+import os
 
 import unittest
 
@@ -14,6 +15,31 @@ class TestLoader(unittest.TestCase):
         f = open('data/sample.json', 'r')
 
         # Testing Precis loader
-        test = precis.Loader(ingest_file=f)
+        loader = precis.Loader(ingest_file=f)
 
+        # No errors, assume loading went well (lol @ this test, I know)
         self.assertTrue(True)
+
+    def test_ontologyExport(self):
+        """Verifies that the ontology can be loaded, returned and saved
+        to a file. Deletes the file after verifying it exists, and is not empty.
+        """
+
+        # Opening sample JSON file
+        f = open('data/sample.json', 'r')
+
+        # Instantiating loader
+        loader = precis.Loader(ingest_file=f)
+
+        # Saving completed ontology to file
+        save_location = 'data/test.rdf'
+        loader.saveToFile(save_location=save_location)
+
+        # Making sure file is not empty
+        fileSize = os.stat('data/test.rdf').st_size
+
+        # Deleting file
+        os.remove('data/test.rdf')
+
+        # Check file size
+        self.assertTrue(fileSize > 0, 'RDF export did not work correctly.')
