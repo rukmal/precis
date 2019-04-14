@@ -65,7 +65,7 @@ class TestLoader(unittest.TestCase):
         """
 
         # Test namespace
-        test_namespace = 'http://rukmal.me/this-is-a-test#'
+        test_namespace = 'http://precis.rukmal.me/ontology/this-is-a-test/'
 
         # Opening sample JSON file
         f = open(TestConfig.sample_json_data, 'r')
