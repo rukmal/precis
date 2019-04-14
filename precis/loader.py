@@ -66,7 +66,7 @@ class Loader():
         # Namespace creation (randomly generated if not explicitly provided)
         if namespace is None:
             config.namespace = config.ont.get_namespace(
-                'http://rukmal.me/precis/%s' % (str(uuid4())))
+                'http://rukmal.me/precis/{0}'.format(str(uuid4())))
         else:
             # Verifying custom namespace
             self.__verifyNamespace(candidate_namespace=namespace)
@@ -76,20 +76,22 @@ class Loader():
             # Attempting to load JSON file
             # Note: the OrderedDict object hook is to preserve JSONArray order
             raw = json.load(ingest_file, object_pairs_hook=OrderedDict)
-        except json.decoder.JSONDecodeError as e:
+        except json.decoder.JSONDecodeError:
             logging.error('JSON file is malformed')
-            raise e
-        except FileNotFoundError as e:
-            logging.error('JSON file %s not found')
-            raise e
+            raise
+        except FileNotFoundError:
+            logging.error('JSON file {0} not found'.format(ingest_file.name))
+            raise
 
         for instance in raw:
             # Creating ontology class from each instance
             self.__processInstance(candidate_object=instance)
         
-        logging.info('Success! Added %i individuals to the Precis ontology with\
-            base namespace IRI %s' % (len(list(config.ont.individuals())),
-            config.namespace.base_iri))
+        logging.info("""Success! Added {0} individuals to the Precis ontology
+            with base namespace IRI {1}""".format(
+                len(list(config.ont.individuals())),
+                config.namespace.base_iri)
+            )
 
     def getOntology(self) -> Ontology:
         """Function to get the ontology as an owlready2 ontology.
@@ -120,7 +122,8 @@ class Loader():
         try:
             config.namespace.ontology.save(file=save_location, format='rdfxml')
         except:
-            logging.error('Ontology could not be saved to %s' % save_location)
+            logging.error('Ontology could not be saved to {0}'.format(
+                save_location))
             raise
     
     def getNamespace(self) -> str:
@@ -152,10 +155,16 @@ class Loader():
         new_individual = dict()
 
         # Isolating type and id, removing from dictionary
-        individual_id = candidate_object['$id']
-        del candidate_object['$id']
-        individual_type = candidate_object['$type']
-        del candidate_object['$type']
+        try:
+            individual_id = candidate_object['$id']
+            del candidate_object['$id']
+            individual_type = candidate_object['$type']
+            del candidate_object['$type']
+        except KeyError:
+            message = 'Missing required key "$type" or "$id$ in {0}'.format(
+                candidate_object)
+            logging.error(message)
+            raise KeyError(message)
 
         # Isolating list of object properties (if any exist)
         # Note: Explicit loop is necessary here to preserve order
@@ -207,12 +216,14 @@ class Loader():
 
         # Verify that all keys in the candidate object were removed, log
         if len(candidate_object.keys()) != 0:
-            logging.warn('Keys %s in the object with ID %s are unrecognized and\
-                were ommitted' % (str(candidate_object.keys()), individual_id))
+            logging.warn("""Keys {0} in the object with ID {1} are unrecognized
+                and were ommitted""".format(
+                    str(candidate_object.keys()), individual_id
+            ))
 
         # Logging
-        logging.info('Adding object with ID %s of type %s' %\
-            (individual_id, individual_type))
+        logging.debug('Adding object with ID {0} of type {1}'.format(
+            individual_id, individual_type))
 
         # Creating instance by calling class constructor
         config.ont_classes[individual_type](
@@ -270,8 +281,8 @@ class Loader():
         if config.object_properties[object_property].is_functional_for(config.
             ont_classes[i_type]):
             if isList:
-                message = 'Property %s in the object %s should not be a list' %\
-                    (object_property, i_id)
+                message = 'Property {0} in the object {1} should not be a list'\
+                    .format(object_property, i_id)
                 logging.error(message)
                 raise TypeError(message)
             return ret_obj[0]
@@ -318,8 +329,8 @@ class Loader():
         if config.data_properties[data_property].is_functional_for(config.
             ont_classes[i_type]):
             if type(candidate_property) is list:
-                message = 'Property %s in the object %s should not be a list' %\
-                    (data_property, i_id)
+                message = 'Property {0} in the object {1} should not be a list'\
+                    .format(data_property, i_id)
                 logging.error(message)
                 raise TypeError(message)
             return candidate_property
@@ -374,8 +385,8 @@ class Loader():
         if config.ont.hasDescription.is_functional_for(config
             .ont_classes[obj_type]):
             if isList:
-                message = 'Description in the object %s should not be a list' %\
-                    (obj_id)
+                message = 'Description in the object {0} should not be a list'\
+                    .format(obj_id)
                 logging.error(message)
                 raise TypeError(message)
             return ret_obj[0]
@@ -407,8 +418,8 @@ class Loader():
 
         # Ensure existence
         if len(res) == 0:
-            message = 'Entity %s referenced before assignment in %s' %\
-                (search_id, obj_id)
+            message = 'Entity {0} referenced before assignment in {1}'.format(
+                search_id, obj_id)
             logging.error(message)
             raise ReferenceError(message)
         
@@ -435,8 +446,8 @@ class Loader():
 
         # Checking type
         if type(date_like_property) is not str:
-            message = 'Property %s in the object %s must be a date string' %\
-                (property_name, i_id)
+            message = 'Property {0} in the object {1} must be a date string'\
+                .format(property_name, i_id)
             logging.error(message)
             raise TypeError(message)
         
@@ -447,8 +458,8 @@ class Loader():
 
         # Raise error if not correct type
         if not date_match:
-            message = 'Property %s in object %s in malformatted. Must be in the\
-            format YYYY-MM-DD' % (property_name, i_id)
+            message = """Property {0} in object {1} in malformatted. Must be
+                in the format YYYY-MM-DD""".format(property_name, i_id)
             logging.error(message)
             raise ValueError(message)
         
@@ -474,6 +485,7 @@ class Loader():
 
         # If any of these are missing, it is not a valid namespace URI
         if not all([parsed_url.scheme, parsed_url.netloc]):
-            message = 'Provided namespace %s is invalid' % candidate_namespace
+            message = 'Provided namespace {0} is invalid'.format(
+                candidate_namespace)
             logging.error(message)
             raise ValueError(message)
