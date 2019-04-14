@@ -20,13 +20,11 @@ class config:
     # Currently configured for use with Precis Ontology 1.4.0
     ont_source = __ont_sources['1.4.0']
 
-    # Ontology base IRI
-    ont_base_iri= 'http://rukmal.me/precis#'
-
     # NOTE: The following are set to empty here to help with linting; they
     #       are set at runtime when Precis is initialized.
     
     ont: Ontology = None  # Ontology
+    ont_base_iri: str = None  # Ontology base IRI
     object_properties: dict = {}  # Object property map
     data_properties: dict = {}  # Data property map
     ont_classes: dict = {}  # Ontology class map

@@ -66,7 +66,7 @@ class Loader():
         # Namespace creation (randomly generated if not explicitly provided)
         if namespace is None:
             config.namespace = config.ont.get_namespace(
-                'http://rukmal.me/precis/{0}'.format(str(uuid4())))
+                ''.join([config.ont_base_iri, str(uuid4())]))
         else:
             # Verifying custom namespace
             self.__verifyNamespace(candidate_namespace=namespace)

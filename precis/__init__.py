@@ -1,7 +1,4 @@
 from .cfg import config
-from .loader import Loader
-from .query import OntQuery
-from .templater import TemplateDriver
 
 from owlready2 import *
 
@@ -10,6 +7,9 @@ ont = get_ontology(config.ont_source).load()
 
 # Binding to config module
 config.ont = ont
+
+# Binding base IRI to config
+config.ont_base_iri = config.ont.base_iri
 
 # Extracting ontology object property relations
 object_properties = {}
@@ -43,3 +43,8 @@ for data_property in config.ont.data_properties():
 
 # Binding to config module
 config.data_properties = data_properties
+
+# Importing Precis modules
+from .loader import Loader
+from .query import OntQuery
+from .templater import TemplateDriver
