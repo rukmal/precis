@@ -149,12 +149,84 @@
     {
         "$type": "SkillGroup",
         "$id": "sg:programming",
-        "hasName": "Programming Languages"
+        "hasName": "Programming Languages",
+        "hasSkill": [
+            {
+                "$type": "Skill",
+                "$id": "sk:R",
+                "hasName": "R Language"
+            },
+            {
+                "$type": "Skill",
+                "$id": "sk:python",
+                "hasName": "Python"
+            }
+        ]
     },
     {
-        "$type": "Skill",
-        "$id": "sk:python",
-        "hasName": "Python",
-        "inSkillGroup": "sg:programming"
+        "$type": "KnowledgeArea",
+        "$id": "ka:cs",
+        "hasName": "Computer Science",
+        "hasSubject": [
+            {
+                "$id": "sub:sci_comp",
+                "$type": "Subject",
+                "hasName": "Scientific Computing"
+            },
+            {
+                "$id": "sub:data_structures",
+                "$type": "Subject",
+                "hasName": "Data Structures"
+            }
+        ]
+    },
+    {
+        "$type": "ActivityType",
+        "$id": "ac_type:rec_sports",
+        "hasName": "Recreational Sports",
+        "hasActivity": [
+            {
+                "$type": "Activity",
+                "$id": "ac:basketball",
+                "hasName": "Basketball"
+            },
+            {
+                "$type": "Activity",
+                "$id": "ac:hiking",
+                "hasName": "Outdoor Hiking"
+            }
+        ]
+    },
+    {
+        "$type": "ActivityType",
+        "$id": "ac_type:debauchery",
+        "hasName": "Debauchery",
+        "hasActivity": [
+            {
+                "$type": "Activity",
+                "$id": "ac:drinking",
+                "hasName": "Casual Alcoholism"
+            },
+            {
+                "$type": "Activity",
+                "$id": "ac:420",
+                "hasName": "420 blazing it with Joe Rogan",
+                "hasMedia": "https://www.youtube.com/watch?v=Dr450QamBOU"
+            }
+        ]
+    },
+    {
+        "$type": "Course",
+        "$id": "course:econ201",
+        "hasName": "Introduction to Macroeconomics",
+        "hasDepartmentCode": "ECON",
+        "hasCourseCode": "201",
+        "withGrade": 3.9,
+        "hasDescription": [
+            {
+                "hasText": "Sophomore-level introduction to Macroeconomics"
+            }
+        ],
+        "taughtAt": "org_upenn_wharton"
     }
 ]
