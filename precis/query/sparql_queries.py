@@ -163,6 +163,11 @@ class SPARQLQueries():
                                 ?o precis:degreeUniversity ?org .
                                 ?org precis:hasName ?orgname .
                             }}
+                            UNION
+                            {{
+                                ?o precis:hasParentOrganization ?org .
+                                ?org precis:hasName ?orgname .
+                            }}
                         }}
                     }}
                 }}
