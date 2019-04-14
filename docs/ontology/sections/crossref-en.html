@@ -1,0 +1,2114 @@
+<html><h2 id="crossreference" class="list">Cross reference for Precis Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Precis Ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+      </li>
+      <li>
+         <a href="#Activity" title="http://rukmal.me/precis#Activity">Activity</a>
+      </li>
+      <li>
+         <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+      </li>
+      <li>
+         <a href="#Award" title="http://rukmal.me/precis#Award">Award</a>
+      </li>
+      <li>
+         <a href="#Certification" title="http://rukmal.me/precis#Certification">Certification</a>
+      </li>
+      <li>
+         <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+      </li>
+      <li>
+         <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+      </li>
+      <li>
+         <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+      </li>
+      <li>
+         <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+      </li>
+      <li>
+         <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+      </li>
+      <li>
+         <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+      </li>
+      <li>
+         <a href="#Project" title="http://rukmal.me/precis#Project">Project</a>
+      </li>
+      <li>
+         <a href="#Publication" title="http://rukmal.me/precis#Publication">Publication</a>
+      </li>
+      <li>
+         <a href="#Skill" title="http://rukmal.me/precis#Skill">Skill</a>
+      </li>
+      <li>
+         <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+      </li>
+      <li>
+         <a href="#Subject" title="http://rukmal.me/precis#Subject">Specific Subject</a>
+      </li>
+      <li>
+         <a href="#Talk" title="http://rukmal.me/precis#Talk">Talk</a>
+      </li>
+      <li>
+         <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+      </li>
+   </ul>
+   <div class="entity" id="Accolade">
+      <h3>Accolade<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Accolade</p>
+      <div class="comment">
+         <span class="markdown">An accolade. This is either an 'Award' or a 'Certification'.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Award" title="http://rukmal.me/precis#Award">Award</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Certification" title="http://rukmal.me/precis#Certification">Certification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Activity">
+      <h3>Activity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Activity</p>
+      <div class="comment">
+         <span class="markdown">A specific activity, such as a specific hackathon or volunteering experience.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#inActivityType" title="http://rukmal.me/precis#inActivityType">Parent Activity Type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasActivity" title="http://rukmal.me/precis#hasActivity">Constituent Activity</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ActivityType">
+      <h3>Activity Type<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#ActivityType</p>
+      <div class="comment">
+         <span class="markdown">Type of the activity (typically a larger supergroup), such as "Hackathon" or "Volunteering".</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Activity" title="http://rukmal.me/precis#Activity">Activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasActivity" title="http://rukmal.me/precis#hasActivity">Constituent Activity</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#inActivityType" title="http://rukmal.me/precis#inActivityType">Parent Activity Type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Award">
+      <h3>Award<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Award</p>
+      <div class="comment">
+         <span class="markdown">An 'Award'; this would correspond to a traditional award, such as a Fellowship or Dean's List.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Certification">
+      <h3>Certification<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Certification</p>
+      <div class="comment">
+         <span class="markdown">A 'Cerficiation'; this would correspond to a traditional certification, such as a CPR Rating, or the Bloomberg Market Concepts certification.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Course">
+      <h3>Course<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Course</p>
+      <div class="comment">
+         <span class="markdown">A course. This would typically be an item that is included in the "Relevant Coursework" section of a Resume/CV.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#withGrade" title="http://rukmal.me/precis#withGrade">Course GPA (on a 4.0 scale)</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCourseCode" title="http://rukmal.me/precis#hasCourseCode">Course code</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDepartmentCode" title="http://rukmal.me/precis#hasDepartmentCode">Department code</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#taughtAt" title="http://rukmal.me/precis#taughtAt">Organization which taught the course</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Degree">
+      <h3>Degree<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Degree</p>
+      <div class="comment">
+         <span class="markdown">A Degree, which was completed at a specific institution, in a specific school and department. Optional media links to pictures can be included for rendering at the time of presentation. Records the year and month that the degree was (or is expected to be) awarded.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#degreeConcentration" title="http://rukmal.me/precis#degreeConcentration">Degree Concentration</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#degreeGPA" title="http://rukmal.me/precis#degreeGPA">Degree GPA (on a 4.0 scale)</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#degreeType" title="http://rukmal.me/precis#degreeType">Degree Type</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#degreeDepartment" title="http://rukmal.me/precis#degreeDepartment">Department awarding the Degree</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#degreeUniversity" title="http://rukmal.me/precis#degreeUniversity">Organization awarding the Degree</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#degreeSchool" title="http://rukmal.me/precis#degreeSchool">School awarding the Degree</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#awardedDegree" title="http://rukmal.me/precis#awardedDegree">Degree awarded</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Description">
+      <h3>Description for a given item<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Description</p>
+      <div class="comment">
+         <span class="markdown">This description is associated with any other concept, providing a description. It has the capability to track priority levels, which can be used to intelligently truncate a series of descriptions when creating a Resume/CV with the command line toolkit.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasPriority" title="http://rukmal.me/precis#hasPriority">description priority level</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasText" title="http://rukmal.me/precis#hasText">description text</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasDescription" title="http://rukmal.me/precis#hasDescription">Description</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="KnowledgeArea">
+      <h3>Knowledge Area<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#KnowledgeArea</p>
+      <div class="comment">
+         <span class="markdown">Knowledge Area parent group. This would be something along the lines of "Mathematics", or "Computer Science".</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Subject" title="http://rukmal.me/precis#Subject">Specific Subject</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasSubject" title="http://rukmal.me/precis#hasSubject">Constituent Subject</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#inKnowledgeArea" title="http://rukmal.me/precis#inKnowledgeArea">Parent Knowledge Area</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Organization">
+      <h3>Organization<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Organization</p>
+      <div class="comment">
+         <span class="markdown">An organization; this can be a company, university, a specific university department, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasChildOrganization" title="http://rukmal.me/precis#hasChildOrganization">Child Organization</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#awardedDegree" title="http://rukmal.me/precis#awardedDegree">Degree awarded</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasParentOrganization" title="http://rukmal.me/precis#hasParentOrganization">Parent Organization</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasChildOrganization" title="http://rukmal.me/precis#hasChildOrganization">Child Organization</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#degreeDepartment" title="http://rukmal.me/precis#degreeDepartment">Department awarding the Degree</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#employedAt" title="http://rukmal.me/precis#employedAt">Employment Organization</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#degreeUniversity" title="http://rukmal.me/precis#degreeUniversity">Organization awarding the Degree</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#taughtAt" title="http://rukmal.me/precis#taughtAt">Organization which taught the course</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasParentOrganization" title="http://rukmal.me/precis#hasParentOrganization">Parent Organization</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#degreeSchool" title="http://rukmal.me/precis#degreeSchool">School awarding the Degree</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Portfolio">
+      <h3>Portfolio<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Portfolio</p>
+      <div class="comment">
+         <span class="markdown">A Portfolio item; this can be a Talk, Publication, Project, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Project" title="http://rukmal.me/precis#Project">Project</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Publication" title="http://rukmal.me/precis#Publication">Publication</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Talk" title="http://rukmal.me/precis#Talk">Talk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasCollaborators" title="http://rukmal.me/precis#hasCollaborators">Collaborators List</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Project">
+      <h3>Project<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Project</p>
+      <div class="comment">
+         <span class="markdown">A project, such as a final year report, or a video produced for a class.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Publication">
+      <h3>Publication<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Publication</p>
+      <div class="comment">
+         <span class="markdown">A publication, typically limited to peer reviewed articles.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasAuthors" title="http://rukmal.me/precis#hasAuthors">Author List</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#inConferenceOrJournal" title="http://rukmal.me/precis#inConferenceOrJournal">Conference/Journal Name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDOI" title="http://rukmal.me/precis#hasDOI">Digital Object Identifier (DOI) of the Publication</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#inPublication" title="http://rukmal.me/precis#inPublication">Publication Name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasStatus" title="http://rukmal.me/precis#hasStatus">Publication Status</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Skill">
+      <h3>Skill<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Skill</p>
+      <div class="comment">
+         <span class="markdown">An individual skill. Each skill belongs to a specific SkillGroup. For example; "Python", "R", and "Java" would all be skills, in the "Programming Languages" SkillGroup.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#inSkillGroup" title="http://rukmal.me/precis#inSkillGroup">Parent SkillGroup</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSkill" title="http://rukmal.me/precis#hasSkill">Constituent Skill</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SkillGroup">
+      <h3>Skill Group<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#SkillGroup</p>
+      <div class="comment">
+         <span class="markdown">A Skill Group. This group can contain one or more Skills. For example, "Python", "R", and "Java" would all be in the "Programming Languages" Skill Group.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Skill" title="http://rukmal.me/precis#Skill">Skill</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasSkill" title="http://rukmal.me/precis#hasSkill">Constituent Skill</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#inSkillGroup" title="http://rukmal.me/precis#inSkillGroup">Parent SkillGroup</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Subject">
+      <h3>Specific Subject<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Subject</p>
+      <div class="comment">
+         <span class="markdown">Specific subject in a Knowledge Area. This would be "Distributed Systems" in the Knowledge Area of "Mathematics", or "Real Analysis" in the "Mathematics" Knowledge Area.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#inKnowledgeArea" title="http://rukmal.me/precis#inKnowledgeArea">Parent Knowledge Area</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSubject" title="http://rukmal.me/precis#hasSubject">Constituent Subject</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Talk">
+      <h3>Talk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#Talk</p>
+      <div class="comment">
+         <span class="markdown">A talk or presentation.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WorkExperience">
+      <h3>Work Experience<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#WorkExperience</p>
+      <div class="comment">
+         <span class="markdown">An instance of 'Work Experience'. This would be an internship/assistantship/etc.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#employedAt" title="http://rukmal.me/precis#employedAt">Employment Organization</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasImage" title="http://rukmal.me/precis#hasImage">Image</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#affiliatedWith" title="http://rukmal.me/precis#affiliatedWith">Affiliation</a>
+      </li>
+      <li>
+         <a href="#hasChildOrganization" title="http://rukmal.me/precis#hasChildOrganization">Child Organization</a>
+      </li>
+      <li>
+         <a href="#hasActivity" title="http://rukmal.me/precis#hasActivity">Constituent Activity</a>
+      </li>
+      <li>
+         <a href="#hasObject" title="http://rukmal.me/precis#hasObject">Constituent Object</a>
+      </li>
+      <li>
+         <a href="#hasSkill" title="http://rukmal.me/precis#hasSkill">Constituent Skill</a>
+      </li>
+      <li>
+         <a href="#hasSubject" title="http://rukmal.me/precis#hasSubject">Constituent Subject</a>
+      </li>
+      <li>
+         <a href="#awardedDegree" title="http://rukmal.me/precis#awardedDegree">Degree awarded</a>
+      </li>
+      <li>
+         <a href="#degreeDepartment" title="http://rukmal.me/precis#degreeDepartment">Department awarding the Degree</a>
+      </li>
+      <li>
+         <a href="#hasDescription" title="http://rukmal.me/precis#hasDescription">Description</a>
+      </li>
+      <li>
+         <a href="#employedAt" title="http://rukmal.me/precis#employedAt">Employment Organization</a>
+      </li>
+      <li>
+         <a href="#degreeUniversity" title="http://rukmal.me/precis#degreeUniversity">Organization awarding the Degree</a>
+      </li>
+      <li>
+         <a href="#taughtAt" title="http://rukmal.me/precis#taughtAt">Organization which taught the course</a>
+      </li>
+      <li>
+         <a href="#inActivityType" title="http://rukmal.me/precis#inActivityType">Parent Activity Type</a>
+      </li>
+      <li>
+         <a href="#inKnowledgeArea" title="http://rukmal.me/precis#inKnowledgeArea">Parent Knowledge Area</a>
+      </li>
+      <li>
+         <a href="#hasParentOrganization" title="http://rukmal.me/precis#hasParentOrganization">Parent Organization</a>
+      </li>
+      <li>
+         <a href="#inSkillGroup" title="http://rukmal.me/precis#inSkillGroup">Parent SkillGroup</a>
+      </li>
+      <li>
+         <a href="#relatedTo" title="http://rukmal.me/precis#relatedTo">Related Concept</a>
+      </li>
+      <li>
+         <a href="#degreeSchool" title="http://rukmal.me/precis#degreeSchool">School awarding the Degree</a>
+      </li>
+   </ul>
+   <div class="entity" id="affiliatedWith">
+      <h3>Affiliation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#affiliatedWith</p>
+      <div class="comment">
+         <span class="markdown">Affiliation for a Portfolio Instance or Accolade Instance. Maps a given instance to an instance of 'Degree' or 'WorkExperience'.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasObject" title="http://rukmal.me/precis#hasObject">Constituent Object</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasChildOrganization">
+      <h3>Child Organization<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasChildOrganization</p>
+      <div class="comment">
+         <span class="markdown">Child organization pointer, inverse of the 'hasParentOrganization' property.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> transitive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasParentOrganization" title="http://rukmal.me/precis#hasParentOrganization">Parent Organization</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasActivity">
+      <h3>Constituent Activity<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasActivity</p>
+      <div class="comment">
+         <span class="markdown">An 'Activity' that is a part of an 'ActivityType'.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Activity" title="http://rukmal.me/precis#Activity">Activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#inActivityType" title="http://rukmal.me/precis#inActivityType">Parent Activity Type</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasObject">
+      <h3>Constituent Object<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasObject</p>
+      <div class="comment">
+         <span class="markdown">Object that was affiliated with the Thing pointing to it. Here, "Object" would be typically a 'Portfolio' or 'Accolade' instance, and "Thing" would be a 'Degree' or 'WorkExperience' instance.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#affiliatedWith" title="http://rukmal.me/precis#affiliatedWith">Affiliation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSkill">
+      <h3>Constituent Skill<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasSkill</p>
+      <div class="comment">
+         <span class="markdown">A skill that is a part of a 'SkillGroup'.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Skill" title="http://rukmal.me/precis#Skill">Skill</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#inSkillGroup" title="http://rukmal.me/precis#inSkillGroup">Parent SkillGroup</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSubject">
+      <h3>Constituent Subject<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasSubject</p>
+      <div class="comment">
+         <span class="markdown">A subject that is a part of a 'KnowledgeArea'.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Subject" title="http://rukmal.me/precis#Subject">Specific Subject</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#inKnowledgeArea" title="http://rukmal.me/precis#inKnowledgeArea">Parent Knowledge Area</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="awardedDegree">
+      <h3>Degree awarded<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#awardedDegree</p>
+      <div class="comment">
+         <span class="markdown">The Degree which was awarded at this organization (should be a pointer to a top-level organization).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#degreeUniversity" title="http://rukmal.me/precis#degreeUniversity">Organization awarding the Degree</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="degreeDepartment">
+      <h3>Department awarding the Degree<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#degreeDepartment</p>
+      <div class="comment">
+         <span class="markdown">Department awarding the degree (eg: "Department of Financial Engineering", or "Department of Finance and Business Economics").</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDescription">
+      <h3>Description<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasDescription</p>
+      <div class="comment">
+         <span class="markdown">Instance of 'Description', which describes the Thing pointing to it.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="employedAt">
+      <h3>Employment Organization<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#employedAt</p>
+      <div class="comment">
+         <span class="markdown">Organization where an instance of Work Experience is taking place.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="degreeUniversity">
+      <h3>Organization awarding the Degree<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#degreeUniversity</p>
+      <div class="comment">
+         <span class="markdown">The University (concept: Organization) at which the degree was awarded. This corresponds to the top-level instituion; further object properties exist to specify particular schools/departments. That is, this should point to the organization for the Univesity and not the Department. Eg: awardedAt 'University of Washington'; and should NOT be awardedAt 'Foster School of Business'.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#awardedDegree" title="http://rukmal.me/precis#awardedDegree">Degree awarded</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="taughtAt">
+      <h3>Organization which taught the course<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#taughtAt</p>
+      <div class="comment">
+         <span class="markdown">The organization at which the course was taught. This is an optional field, but ideally if this is included, the department and course codes should be too.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inActivityType">
+      <h3>Parent Activity Type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#inActivityType</p>
+      <div class="comment">
+         <span class="markdown">The ActivityType containing the Activity.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Activity" title="http://rukmal.me/precis#Activity">Activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasActivity" title="http://rukmal.me/precis#hasActivity">Constituent Activity</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inKnowledgeArea">
+      <h3>Parent Knowledge Area<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#inKnowledgeArea</p>
+      <div class="comment">
+         <span class="markdown">The knowledge area containing the subject.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Subject" title="http://rukmal.me/precis#Subject">Specific Subject</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSubject" title="http://rukmal.me/precis#hasSubject">Constituent Subject</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasParentOrganization">
+      <h3>Parent Organization<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasParentOrganization</p>
+      <div class="comment">
+         <span class="markdown">Pointer to a "parent" organization instance. For example, the "Foster School of Business" hasParentOrganization "University of Washington".</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> transitive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasChildOrganization" title="http://rukmal.me/precis#hasChildOrganization">Child Organization</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inSkillGroup">
+      <h3>Parent SkillGroup<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#inSkillGroup</p>
+      <div class="comment">
+         <span class="markdown">The SkillGroup containing the Skill.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Skill" title="http://rukmal.me/precis#Skill">Skill</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSkill" title="http://rukmal.me/precis#hasSkill">Constituent Skill</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="relatedTo">
+      <h3>Related Concept<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#relatedTo</p>
+      <div class="comment">
+         <span class="markdown">A related concept. For example, an instance of 'Award' may have a 'Project', or 'Publication' that it is related to, and vice versa.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> symmetric, transitive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Activity" title="http://rukmal.me/precis#Activity">Activity</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Skill" title="http://rukmal.me/precis#Skill">Skill</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Subject" title="http://rukmal.me/precis#Subject">Specific Subject</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Activity" title="http://rukmal.me/precis#Activity">Activity</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Skill" title="http://rukmal.me/precis#Skill">Skill</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Subject" title="http://rukmal.me/precis#Subject">Specific Subject</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="degreeSchool">
+      <h3>School awarding the Degree<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#degreeSchool</p>
+      <div class="comment">
+         <span class="markdown">The School that awards the degree. For example, this would be the "Foster School of Business", or "College of Arts and Sciences".</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasAuthors" title="http://rukmal.me/precis#hasAuthors">Author List</a>
+      </li>
+      <li>
+         <a href="#inCity" title="http://rukmal.me/precis#inCity">City</a>
+      </li>
+      <li>
+         <a href="#hasCollaborators" title="http://rukmal.me/precis#hasCollaborators">Collaborators List</a>
+      </li>
+      <li>
+         <a href="#inConferenceOrJournal" title="http://rukmal.me/precis#inConferenceOrJournal">Conference/Journal Name</a>
+      </li>
+      <li>
+         <a href="#inCountry" title="http://rukmal.me/precis#inCountry">Country</a>
+      </li>
+      <li>
+         <a href="#hasCourseCode" title="http://rukmal.me/precis#hasCourseCode">Course code</a>
+      </li>
+      <li>
+         <a href="#withGrade" title="http://rukmal.me/precis#withGrade">Course GPA (on a 4.0 scale)</a>
+      </li>
+      <li>
+         <a href="#hasDate" title="http://rukmal.me/precis#hasDate">Date</a>
+      </li>
+      <li>
+         <a href="#degreeConcentration" title="http://rukmal.me/precis#degreeConcentration">Degree Concentration</a>
+      </li>
+      <li>
+         <a href="#degreeGPA" title="http://rukmal.me/precis#degreeGPA">Degree GPA (on a 4.0 scale)</a>
+      </li>
+      <li>
+         <a href="#degreeType" title="http://rukmal.me/precis#degreeType">Degree Type</a>
+      </li>
+      <li>
+         <a href="#hasDepartmentCode" title="http://rukmal.me/precis#hasDepartmentCode">Department code</a>
+      </li>
+      <li>
+         <a href="#hasPriority" title="http://rukmal.me/precis#hasPriority">description priority level</a>
+      </li>
+      <li>
+         <a href="#hasText" title="http://rukmal.me/precis#hasText">description text</a>
+      </li>
+      <li>
+         <a href="#hasDOI" title="http://rukmal.me/precis#hasDOI">Digital Object Identifier (DOI) of the Publication</a>
+      </li>
+      <li>
+         <a href="#endDate" title="http://rukmal.me/precis#endDate">endDate</a>
+      </li>
+      <li>
+         <a href="#hasWebsite" title="http://rukmal.me/precis#hasWebsite">Entity website</a>
+      </li>
+      <li>
+         <a href="#externalResource" title="http://rukmal.me/precis#externalResource">External resource</a>
+      </li>
+      <li>
+         <a href="#hasName" title="http://rukmal.me/precis#hasName">Human readable name</a>
+      </li>
+      <li>
+         <a href="#hasImage" title="http://rukmal.me/precis#hasImage">Image</a>
+      </li>
+      <li>
+         <a href="#hasMedia" title="http://rukmal.me/precis#hasMedia">Media</a>
+      </li>
+      <li>
+         <a href="#inPublication" title="http://rukmal.me/precis#inPublication">Publication Name</a>
+      </li>
+      <li>
+         <a href="#hasStatus" title="http://rukmal.me/precis#hasStatus">Publication Status</a>
+      </li>
+      <li>
+         <a href="#inState" title="http://rukmal.me/precis#inState">State</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasAuthors">
+      <h3>Author List<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasAuthors</p>
+      <div class="comment">
+         <span class="markdown">List of authors (Human readable for now). This list should mirror the order of authors in the publication. Note that eventually this will be replaced by pointers to individual "Author" Classes.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Publication" title="http://rukmal.me/precis#Publication">Publication</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inCity">
+      <h3>City<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#inCity</p>
+      <div class="comment">
+         <span class="markdown">The city of the entity.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCollaborators">
+      <h3>Collaborators List<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasCollaborators</p>
+      <div class="comment">
+         <span class="markdown">List of Collaborators (Human-readable for now). Will eventually change to a mapping to a Person entity.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inConferenceOrJournal">
+      <h3>Conference/Journal Name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#inConferenceOrJournal</p>
+      <div class="comment">
+         <span class="markdown">Conference/Journal name. This will eventually be replaced with a more semantically-correct representation of this information.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Publication" title="http://rukmal.me/precis#Publication">Publication</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inCountry">
+      <h3>Country<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#inCountry</p>
+      <div class="comment">
+         <span class="markdown">Country of the entity.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCourseCode">
+      <h3>Course code<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasCourseCode</p>
+      <div class="comment">
+         <span class="markdown">Code of the course (this would imply that an organization is referenced too). For example: 420, 690, 069, etc.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="withGrade">
+      <h3>Course GPA (on a 4.0 scale)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#withGrade</p>
+      <div class="comment">
+         <span class="markdown">Grade (GPA; 4.0 scale) received in the course (optional for obvious reasons :)).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd/>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDate">
+      <h3>Date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasDate</p>
+      <div class="comment">
+         <span class="markdown">Date of the instance. This implies "startDate" when a range is given with "endDate".</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="degreeConcentration">
+      <h3>Degree Concentration<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#degreeConcentration</p>
+      <div class="comment">
+         <span class="markdown">Concentration of the Degree. For example, "Finance and Business Economics", or "Computational Finance". This should point to a DBpedia entity corresponding to the Degree being awarded.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="degreeGPA">
+      <h3>Degree GPA (on a 4.0 scale)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#degreeGPA</p>
+      <div class="comment">
+         <span class="markdown">Grade (GPA; 4.0 scale) for the Degree (optional for obvious reasons :)).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd/>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="degreeType">
+      <h3>Degree Type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#degreeType</p>
+      <div class="comment">
+         <span class="markdown">Type of the Degree. For example, "Bachelor of Arts", or "Master of Science". This should point to a DBpedia entity corresponding to the Degree being awarded.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDepartmentCode">
+      <h3>Department code<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasDepartmentCode</p>
+      <div class="comment">
+         <span class="markdown">Code of the department (this would imply that an organization is referenced too). For example: FIN, CFRM, FE, etc.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPriority">
+      <h3>description priority level<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasPriority</p>
+      <div class="comment">
+         <span class="markdown">Priority level of the description (used for deciding truncation in toolkit). This is automatically set to the position of the string in the input "description" array of descriptions, when data is loaded using the command line tool.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasText">
+      <h3>description text<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasText</p>
+      <div class="comment">
+         <span class="markdown">Text of the description. This should be treated as a single "bullet point" on a traditional Resume/CV.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Description" title="http://rukmal.me/precis#Description">Description for a given item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDOI">
+      <h3>Digital Object Identifier (DOI) of the Publication<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasDOI</p>
+      <div class="comment">
+         <span class="markdown">Digital Object Identifier (DOI) of the publication. Including this will allow for later expansion if an inference agent is ever added to get more metadata using this.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Publication" title="http://rukmal.me/precis#Publication">Publication</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="endDate">
+      <h3>endDate<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#endDate</p>
+      <div class="comment">
+         <span class="markdown">End date of a Instance. When this is included, the 'hasDate' data property corresponds to the start date.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasWebsite">
+      <h3>Entity website<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasWebsite</p>
+      <div class="comment">
+         <span class="markdown">External website of the entity (not used for ontology extension; treat this as user-facing).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="externalResource">
+      <h3>External resource<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#externalResource</p>
+      <div class="comment">
+         <span class="markdown">Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasName">
+      <h3>Human readable name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasName</p>
+      <div class="comment">
+         <span class="markdown">Human readable name for the entity; for display. This is the primary descriptive string for the instance it is mapped to; that is, for 'WorkExperience' it would be the job title, and for 'Publication' it would be the publication title.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#KnowledgeArea" title="http://rukmal.me/precis#KnowledgeArea">Knowledge Area</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasImage">
+      <h3>Image<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasImage</p>
+      <div class="comment">
+         <span class="markdown">URL to image related to work experience. Can be used when displaying the information at consumption.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasMedia">
+      <h3>Media<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasMedia</p>
+      <div class="comment">
+         <span class="markdown">Additional media can be included here. For example, it could link to product/team pages, news articles, etc.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inPublication">
+      <h3>Publication Name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#inPublication</p>
+      <div class="comment">
+         <span class="markdown">Publication name containing the specific publication. As with the other fields in the 'Publication' concept, this will probably be replaced eventually.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Publication" title="http://rukmal.me/precis#Publication">Publication</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasStatus">
+      <h3>Publication Status<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#hasStatus</p>
+      <div class="comment">
+         <span class="markdown">Status of the publication. That is, this property should reflect a paper being "In Progress", or "Under Review".</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Publication" title="http://rukmal.me/precis#Publication">Publication</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inState">
+      <h3>State<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rukmal.me/precis#inState</p>
+      <div class="comment">
+         <span class="markdown">State of the entity (United States only).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Accolade" title="http://rukmal.me/precis#Accolade">Accolade</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ActivityType" title="http://rukmal.me/precis#ActivityType">Activity Type</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Course" title="http://rukmal.me/precis#Course">Course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Degree" title="http://rukmal.me/precis#Degree">Degree</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Organization" title="http://rukmal.me/precis#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Portfolio" title="http://rukmal.me/precis#Portfolio">Portfolio</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#SkillGroup" title="http://rukmal.me/precis#SkillGroup">Skill Group</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkExperience" title="http://rukmal.me/precis#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</html>
