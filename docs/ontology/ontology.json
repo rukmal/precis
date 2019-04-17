@@ -3,9 +3,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     } ]
   } ]
 }, {
@@ -13,19 +13,19 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#ActivityType"
+      "@id" : "http://precis.rukmal.me/ontology#ActivityType"
     }, {
-      "@id" : "http://rukmal.me/precis#Course"
+      "@id" : "http://precis.rukmal.me/ontology#Course"
     }, {
-      "@id" : "http://rukmal.me/precis#Organization"
+      "@id" : "http://precis.rukmal.me/ontology#Organization"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#SkillGroup"
+      "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -33,21 +33,21 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#ActivityType"
+      "@id" : "http://precis.rukmal.me/ontology#ActivityType"
     }, {
-      "@id" : "http://rukmal.me/precis#Course"
+      "@id" : "http://precis.rukmal.me/ontology#Course"
     }, {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#Organization"
+      "@id" : "http://precis.rukmal.me/ontology#Organization"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#SkillGroup"
+      "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -79,7 +79,7 @@
   "@id" : "_:genid122",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#affiliatedWith"
+    "@id" : "http://precis.rukmal.me/ontology#affiliatedWith"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "_:genid123"
@@ -89,9 +89,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -102,16 +102,16 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#Description"
+    "@id" : "http://precis.rukmal.me/ontology#Description"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDescription"
+    "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ]
 }, {
   "@id" : "_:genid127",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#externalResource"
+    "@id" : "http://precis.rukmal.me/ontology#externalResource"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -120,7 +120,7 @@
   "@id" : "_:genid128",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasMedia"
+    "@id" : "http://precis.rukmal.me/ontology#hasMedia"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -136,7 +136,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDate"
+    "@id" : "http://precis.rukmal.me/ontology#hasDate"
   } ]
 }, {
   "@id" : "_:genid130",
@@ -145,7 +145,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasName"
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -159,10 +159,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#ActivityType"
+    "@id" : "http://precis.rukmal.me/ontology#ActivityType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#inActivityType"
+    "@id" : "http://precis.rukmal.me/ontology#inActivityType"
   } ]
 }, {
   "@id" : "_:genid132",
@@ -172,10 +172,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#Activity"
+    "@id" : "http://precis.rukmal.me/ontology#Activity"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasActivity"
+    "@id" : "http://precis.rukmal.me/ontology#hasActivity"
   } ]
 }, {
   "@id" : "_:genid133",
@@ -185,16 +185,16 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#Description"
+    "@id" : "http://precis.rukmal.me/ontology#Description"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDescription"
+    "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ]
 }, {
   "@id" : "_:genid134",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#endDate"
+    "@id" : "http://precis.rukmal.me/ontology#endDate"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -203,7 +203,7 @@
   "@id" : "_:genid135",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#externalResource"
+    "@id" : "http://precis.rukmal.me/ontology#externalResource"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -212,7 +212,7 @@
   "@id" : "_:genid136",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDate"
+    "@id" : "http://precis.rukmal.me/ontology#hasDate"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -221,7 +221,7 @@
   "@id" : "_:genid137",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasMedia"
+    "@id" : "http://precis.rukmal.me/ontology#hasMedia"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -233,7 +233,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasName"
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -243,25 +243,25 @@
   "@id" : "_:genid139",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDescription"
+    "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://rukmal.me/precis#Description"
+    "@id" : "http://precis.rukmal.me/ontology#Description"
   } ]
 }, {
   "@id" : "_:genid140",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#taughtAt"
+    "@id" : "http://precis.rukmal.me/ontology#taughtAt"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
   "@id" : "_:genid141",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#endDate"
+    "@id" : "http://precis.rukmal.me/ontology#endDate"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -270,7 +270,7 @@
   "@id" : "_:genid142",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasCourseCode"
+    "@id" : "http://precis.rukmal.me/ontology#hasCourseCode"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -279,7 +279,7 @@
   "@id" : "_:genid143",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDate"
+    "@id" : "http://precis.rukmal.me/ontology#hasDate"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -288,7 +288,7 @@
   "@id" : "_:genid144",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDepartmentCode"
+    "@id" : "http://precis.rukmal.me/ontology#hasDepartmentCode"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -297,7 +297,7 @@
   "@id" : "_:genid145",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#withGrade"
+    "@id" : "http://precis.rukmal.me/ontology#withGrade"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
@@ -309,7 +309,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasName"
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -322,7 +322,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasWebsite"
+    "@id" : "http://precis.rukmal.me/ontology#hasWebsite"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -332,19 +332,19 @@
   "@id" : "_:genid148",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#degreeDepartment"
+    "@id" : "http://precis.rukmal.me/ontology#degreeDepartment"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
   "@id" : "_:genid149",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#degreeSchool"
+    "@id" : "http://precis.rukmal.me/ontology#degreeSchool"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
   "@id" : "_:genid150",
@@ -354,16 +354,16 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#degreeUniversity"
+    "@id" : "http://precis.rukmal.me/ontology#degreeUniversity"
   } ]
 }, {
   "@id" : "_:genid151",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#degreeConcentration"
+    "@id" : "http://precis.rukmal.me/ontology#degreeConcentration"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -372,7 +372,7 @@
   "@id" : "_:genid152",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#degreeGPA"
+    "@id" : "http://precis.rukmal.me/ontology#degreeGPA"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
@@ -381,7 +381,7 @@
   "@id" : "_:genid153",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#degreeType"
+    "@id" : "http://precis.rukmal.me/ontology#degreeType"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -393,7 +393,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDate"
+    "@id" : "http://precis.rukmal.me/ontology#hasDate"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -406,7 +406,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasName"
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -419,7 +419,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#inCity"
+    "@id" : "http://precis.rukmal.me/ontology#inCity"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -432,7 +432,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#inState"
+    "@id" : "http://precis.rukmal.me/ontology#inState"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -445,7 +445,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasText"
+    "@id" : "http://precis.rukmal.me/ontology#hasText"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -462,16 +462,16 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasPriority"
+    "@id" : "http://precis.rukmal.me/ontology#hasPriority"
   } ]
 }, {
   "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -482,10 +482,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#Description"
+    "@id" : "http://precis.rukmal.me/ontology#Description"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDescription"
+    "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ]
 }, {
   "@id" : "_:genid161",
@@ -495,10 +495,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#Subject"
+    "@id" : "http://precis.rukmal.me/ontology#Subject"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasSubject"
+    "@id" : "http://precis.rukmal.me/ontology#hasSubject"
   } ]
 }, {
   "@id" : "_:genid162",
@@ -511,7 +511,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#externalResource"
+    "@id" : "http://precis.rukmal.me/ontology#externalResource"
   } ]
 }, {
   "@id" : "_:genid163",
@@ -520,7 +520,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasName"
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -530,10 +530,10 @@
   "@id" : "_:genid164",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasParentOrganization"
+    "@id" : "http://precis.rukmal.me/ontology#hasParentOrganization"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
   "@id" : "_:genid165",
@@ -543,10 +543,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#Description"
+    "@id" : "http://precis.rukmal.me/ontology#Description"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDescription"
+    "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ]
 }, {
   "@id" : "_:genid166",
@@ -558,7 +558,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "_:genid165"
@@ -567,7 +567,7 @@
   "@id" : "_:genid167",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#externalResource"
+    "@id" : "http://precis.rukmal.me/ontology#externalResource"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -579,7 +579,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasName"
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -592,7 +592,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasWebsite"
+    "@id" : "http://precis.rukmal.me/ontology#hasWebsite"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -602,7 +602,7 @@
   "@id" : "_:genid170",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#affiliatedWith"
+    "@id" : "http://precis.rukmal.me/ontology#affiliatedWith"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "_:genid171"
@@ -612,9 +612,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -625,16 +625,16 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#Description"
+    "@id" : "http://precis.rukmal.me/ontology#Description"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDescription"
+    "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ]
 }, {
   "@id" : "_:genid175",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#endDate"
+    "@id" : "http://precis.rukmal.me/ontology#endDate"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -643,7 +643,7 @@
   "@id" : "_:genid176",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#externalResource"
+    "@id" : "http://precis.rukmal.me/ontology#externalResource"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -652,7 +652,7 @@
   "@id" : "_:genid177",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasMedia"
+    "@id" : "http://precis.rukmal.me/ontology#hasMedia"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -668,7 +668,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDate"
+    "@id" : "http://precis.rukmal.me/ontology#hasDate"
   } ]
 }, {
   "@id" : "_:genid179",
@@ -681,7 +681,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasWebsite"
+    "@id" : "http://precis.rukmal.me/ontology#hasWebsite"
   } ]
 }, {
   "@id" : "_:genid180",
@@ -690,7 +690,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasName"
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -700,7 +700,7 @@
   "@id" : "_:genid181",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasCollaborators"
+    "@id" : "http://precis.rukmal.me/ontology#hasCollaborators"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -712,7 +712,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasAuthors"
+    "@id" : "http://precis.rukmal.me/ontology#hasAuthors"
   } ]
 }, {
   "@id" : "_:genid183",
@@ -721,7 +721,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#inConferenceOrJournal"
+    "@id" : "http://precis.rukmal.me/ontology#inConferenceOrJournal"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -734,7 +734,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#inPublication"
+    "@id" : "http://precis.rukmal.me/ontology#inPublication"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -751,7 +751,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDOI"
+    "@id" : "http://precis.rukmal.me/ontology#hasDOI"
   } ]
 }, {
   "@id" : "_:genid186",
@@ -764,7 +764,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasStatus"
+    "@id" : "http://precis.rukmal.me/ontology#hasStatus"
   } ]
 }, {
   "@id" : "_:genid187",
@@ -774,16 +774,16 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#SkillGroup"
+    "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#inSkillGroup"
+    "@id" : "http://precis.rukmal.me/ontology#inSkillGroup"
   } ]
 }, {
   "@id" : "_:genid188",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#externalResource"
+    "@id" : "http://precis.rukmal.me/ontology#externalResource"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -795,7 +795,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasName"
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -806,19 +806,19 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     } ]
   } ]
 }, {
   "@id" : "_:genid190",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDescription"
+    "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://rukmal.me/precis#Description"
+    "@id" : "http://precis.rukmal.me/ontology#Description"
   } ]
 }, {
   "@id" : "_:genid191",
@@ -828,16 +828,16 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#Skill"
+    "@id" : "http://precis.rukmal.me/ontology#Skill"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasSkill"
+    "@id" : "http://precis.rukmal.me/ontology#hasSkill"
   } ]
 }, {
   "@id" : "_:genid192",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#externalResource"
+    "@id" : "http://precis.rukmal.me/ontology#externalResource"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -849,7 +849,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasName"
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -863,10 +863,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#KnowledgeArea"
+    "@id" : "http://precis.rukmal.me/ontology#KnowledgeArea"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#inKnowledgeArea"
+    "@id" : "http://precis.rukmal.me/ontology#inKnowledgeArea"
   } ]
 }, {
   "@id" : "_:genid195",
@@ -879,13 +879,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasName"
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ]
 }, {
   "@id" : "_:genid196",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasCollaborators"
+    "@id" : "http://precis.rukmal.me/ontology#hasCollaborators"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -901,7 +901,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDate"
+    "@id" : "http://precis.rukmal.me/ontology#hasDate"
   } ]
 }, {
   "@id" : "_:genid198",
@@ -920,7 +920,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#inState"
+    "@id" : "http://precis.rukmal.me/ontology#inState"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -933,7 +933,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#inCountry"
+    "@id" : "http://precis.rukmal.me/ontology#inCountry"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -947,19 +947,19 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#Description"
+    "@id" : "http://precis.rukmal.me/ontology#Description"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDescription"
+    "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ]
 }, {
   "@id" : "_:genid204",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#employedAt"
+    "@id" : "http://precis.rukmal.me/ontology#employedAt"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -969,7 +969,7 @@
   "@id" : "_:genid205",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#endDate"
+    "@id" : "http://precis.rukmal.me/ontology#endDate"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -978,7 +978,7 @@
   "@id" : "_:genid206",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasImage"
+    "@id" : "http://precis.rukmal.me/ontology#hasImage"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -987,7 +987,7 @@
   "@id" : "_:genid207",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasMedia"
+    "@id" : "http://precis.rukmal.me/ontology#hasMedia"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -999,7 +999,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasDate"
+    "@id" : "http://precis.rukmal.me/ontology#hasDate"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1012,7 +1012,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#hasName"
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1025,7 +1025,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rukmal.me/precis#inCity"
+    "@id" : "http://precis.rukmal.me/ontology#inCity"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1036,25 +1036,25 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#ActivityType"
+      "@id" : "http://precis.rukmal.me/ontology#ActivityType"
     }, {
-      "@id" : "http://rukmal.me/precis#Course"
+      "@id" : "http://precis.rukmal.me/ontology#Course"
     }, {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#Description"
+      "@id" : "http://precis.rukmal.me/ontology#Description"
     }, {
-      "@id" : "http://rukmal.me/precis#KnowledgeArea"
+      "@id" : "http://precis.rukmal.me/ontology#KnowledgeArea"
     }, {
-      "@id" : "http://rukmal.me/precis#Organization"
+      "@id" : "http://precis.rukmal.me/ontology#Organization"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#SkillGroup"
+      "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -1062,21 +1062,21 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#Activity"
+      "@id" : "http://precis.rukmal.me/ontology#Activity"
     }, {
-      "@id" : "http://rukmal.me/precis#Course"
+      "@id" : "http://precis.rukmal.me/ontology#Course"
     }, {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#Skill"
+      "@id" : "http://precis.rukmal.me/ontology#Skill"
     }, {
-      "@id" : "http://rukmal.me/precis#Subject"
+      "@id" : "http://precis.rukmal.me/ontology#Subject"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -1084,21 +1084,21 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#Activity"
+      "@id" : "http://precis.rukmal.me/ontology#Activity"
     }, {
-      "@id" : "http://rukmal.me/precis#Course"
+      "@id" : "http://precis.rukmal.me/ontology#Course"
     }, {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#Skill"
+      "@id" : "http://precis.rukmal.me/ontology#Skill"
     }, {
-      "@id" : "http://rukmal.me/precis#Subject"
+      "@id" : "http://precis.rukmal.me/ontology#Subject"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -1106,9 +1106,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -1141,13 +1141,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#ActivityType"
+      "@id" : "http://precis.rukmal.me/ontology#ActivityType"
     }, {
-      "@id" : "http://rukmal.me/precis#Course"
+      "@id" : "http://precis.rukmal.me/ontology#Course"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -1155,23 +1155,23 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#ActivityType"
+      "@id" : "http://precis.rukmal.me/ontology#ActivityType"
     }, {
-      "@id" : "http://rukmal.me/precis#Course"
+      "@id" : "http://precis.rukmal.me/ontology#Course"
     }, {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#KnowledgeArea"
+      "@id" : "http://precis.rukmal.me/ontology#KnowledgeArea"
     }, {
-      "@id" : "http://rukmal.me/precis#Organization"
+      "@id" : "http://precis.rukmal.me/ontology#Organization"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#SkillGroup"
+      "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -1179,17 +1179,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#ActivityType"
+      "@id" : "http://precis.rukmal.me/ontology#ActivityType"
     }, {
-      "@id" : "http://rukmal.me/precis#Course"
+      "@id" : "http://precis.rukmal.me/ontology#Course"
     }, {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -1197,13 +1197,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#ActivityType"
+      "@id" : "http://precis.rukmal.me/ontology#ActivityType"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -1211,21 +1211,21 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#ActivityType"
+      "@id" : "http://precis.rukmal.me/ontology#ActivityType"
     }, {
-      "@id" : "http://rukmal.me/precis#Course"
+      "@id" : "http://precis.rukmal.me/ontology#Course"
     }, {
-      "@id" : "http://rukmal.me/precis#KnowledgeArea"
+      "@id" : "http://precis.rukmal.me/ontology#KnowledgeArea"
     }, {
-      "@id" : "http://rukmal.me/precis#Organization"
+      "@id" : "http://precis.rukmal.me/ontology#Organization"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#SkillGroup"
+      "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -1233,23 +1233,23 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#ActivityType"
+      "@id" : "http://precis.rukmal.me/ontology#ActivityType"
     }, {
-      "@id" : "http://rukmal.me/precis#Course"
+      "@id" : "http://precis.rukmal.me/ontology#Course"
     }, {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#KnowledgeArea"
+      "@id" : "http://precis.rukmal.me/ontology#KnowledgeArea"
     }, {
-      "@id" : "http://rukmal.me/precis#Organization"
+      "@id" : "http://precis.rukmal.me/ontology#Organization"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#SkillGroup"
+      "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -1257,21 +1257,21 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#ActivityType"
+      "@id" : "http://precis.rukmal.me/ontology#ActivityType"
     }, {
-      "@id" : "http://rukmal.me/precis#Course"
+      "@id" : "http://precis.rukmal.me/ontology#Course"
     }, {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#Organization"
+      "@id" : "http://precis.rukmal.me/ontology#Organization"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#SkillGroup"
+      "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
@@ -1279,43 +1279,72 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rukmal.me/precis#Accolade"
+      "@id" : "http://precis.rukmal.me/ontology#Accolade"
     }, {
-      "@id" : "http://rukmal.me/precis#ActivityType"
+      "@id" : "http://precis.rukmal.me/ontology#ActivityType"
     }, {
-      "@id" : "http://rukmal.me/precis#Course"
+      "@id" : "http://precis.rukmal.me/ontology#Course"
     }, {
-      "@id" : "http://rukmal.me/precis#Degree"
+      "@id" : "http://precis.rukmal.me/ontology#Degree"
     }, {
-      "@id" : "http://rukmal.me/precis#Organization"
+      "@id" : "http://precis.rukmal.me/ontology#Organization"
     }, {
-      "@id" : "http://rukmal.me/precis#Portfolio"
+      "@id" : "http://precis.rukmal.me/ontology#Portfolio"
     }, {
-      "@id" : "http://rukmal.me/precis#SkillGroup"
+      "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
     }, {
-      "@id" : "http://rukmal.me/precis#WorkExperience"
+      "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
     } ]
   } ]
 }, {
-  "@id" : "http://purl.org/dc/elements/1.1/creator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://rukmal.me/precis",
+  "@id" : "http://precis.rukmal.me/ontology",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/abstract" : [ {
+    "@value" : "The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.\n\nCurrently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences."
+  } ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@id" : "https://orcid.org/0000-0002-8628-6753"
+    "@value" : "Rukmal Weerawarana"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "Precis Ontology"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2019-04-07T00:00:00"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "http://rukmal.me"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2019-04-17T00:00:00"
+  } ],
+  "http://purl.org/ontology/bibo/doi" : [ {
+    "@id" : "http://purl.org/precis"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "precis"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "http://precis.rukmal.me/ontology"
+  } ],
+  "http://schema.org/license" : [ {
+    "@id" : "https://github.com/rukmal/precis/blob/master/LICENSE"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://github.com/rukmal/precis for more."
+    "@value" : "The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.\n\nCurrently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences."
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "https://github.com/rukmal/precis/releases/download/1.4.0/precis_ontology.rdf"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://rukmal.me/precis/1.4.0"
+    "@id" : "http://precis.rukmal.me/ontology/1.5.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "1.4.0"
+    "@value" : "1.5.0"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Accolade",
+  "@id" : "http://precis.rukmal.me/ontology#Accolade",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An accolade. This is either an 'Award' or a 'Certification'."
@@ -1337,7 +1366,7 @@
     "@id" : "_:genid130"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Activity",
+  "@id" : "http://precis.rukmal.me/ontology#Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A specific activity, such as a specific hackathon or volunteering experience."
@@ -1346,12 +1375,12 @@
     "@value" : "Activity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rukmal.me/precis#ActivityType"
+    "@id" : "http://precis.rukmal.me/ontology#ActivityType"
   }, {
     "@id" : "_:genid131"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#ActivityType",
+  "@id" : "http://precis.rukmal.me/ontology#ActivityType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Type of the activity (typically a larger supergroup), such as \"Hackathon\" or \"Volunteering\"."
@@ -1375,7 +1404,7 @@
     "@id" : "_:genid138"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Award",
+  "@id" : "http://precis.rukmal.me/ontology#Award",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An 'Award'; this would correspond to a traditional award, such as a Fellowship or Dean's List."
@@ -1384,10 +1413,10 @@
     "@value" : "Award"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rukmal.me/precis#Accolade"
+    "@id" : "http://precis.rukmal.me/ontology#Accolade"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Certification",
+  "@id" : "http://precis.rukmal.me/ontology#Certification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A 'Cerficiation'; this would correspond to a traditional certification, such as a CPR Rating, or the Bloomberg Market Concepts certification."
@@ -1396,10 +1425,10 @@
     "@value" : "Certification"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rukmal.me/precis#Accolade"
+    "@id" : "http://precis.rukmal.me/ontology#Accolade"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Course",
+  "@id" : "http://precis.rukmal.me/ontology#Course",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A course. This would typically be an item that is included in the \"Relevant Coursework\" section of a Resume/CV."
@@ -1427,7 +1456,7 @@
     "@id" : "_:genid147"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Degree",
+  "@id" : "http://precis.rukmal.me/ontology#Degree",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Degree, which was completed at a specific institution, in a specific school and department. Optional media links to pictures can be included for rendering at the time of presentation. Records the year and month that the degree was (or is expected to be) awarded."
@@ -1457,7 +1486,7 @@
     "@id" : "_:genid157"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Description",
+  "@id" : "http://precis.rukmal.me/ontology#Description",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This description is associated with any other concept, providing a description. It has the capability to track priority levels, which can be used to intelligently truncate a series of descriptions when creating a Resume/CV with the command line toolkit."
@@ -1471,7 +1500,7 @@
     "@id" : "_:genid159"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#KnowledgeArea",
+  "@id" : "http://precis.rukmal.me/ontology#KnowledgeArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Knowledge Area parent group. This would be something along the lines of \"Mathematics\", or \"Computer Science\"."
@@ -1489,7 +1518,7 @@
     "@id" : "_:genid163"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Organization",
+  "@id" : "http://precis.rukmal.me/ontology#Organization",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An organization; this can be a company, university, a specific university department, etc."
@@ -1509,7 +1538,7 @@
     "@id" : "_:genid169"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Portfolio",
+  "@id" : "http://precis.rukmal.me/ontology#Portfolio",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Portfolio item; this can be a Talk, Publication, Project, etc."
@@ -1535,7 +1564,7 @@
     "@id" : "_:genid180"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Project",
+  "@id" : "http://precis.rukmal.me/ontology#Project",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A project, such as a final year report, or a video produced for a class."
@@ -1544,12 +1573,12 @@
     "@value" : "Project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rukmal.me/precis#Portfolio"
+    "@id" : "http://precis.rukmal.me/ontology#Portfolio"
   }, {
     "@id" : "_:genid181"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Publication",
+  "@id" : "http://precis.rukmal.me/ontology#Publication",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A publication, typically limited to peer reviewed articles."
@@ -1558,7 +1587,7 @@
     "@value" : "Publication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rukmal.me/precis#Portfolio"
+    "@id" : "http://precis.rukmal.me/ontology#Portfolio"
   }, {
     "@id" : "_:genid182"
   }, {
@@ -1571,7 +1600,7 @@
     "@id" : "_:genid186"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Skill",
+  "@id" : "http://precis.rukmal.me/ontology#Skill",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An individual skill. Each skill belongs to a specific SkillGroup. For example; \"Python\", \"R\", and \"Java\" would all be skills, in the \"Programming Languages\" SkillGroup."
@@ -1580,7 +1609,7 @@
     "@value" : "Skill"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rukmal.me/precis#SkillGroup"
+    "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
   }, {
     "@id" : "_:genid187"
   }, {
@@ -1589,7 +1618,7 @@
     "@id" : "_:genid189"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#SkillGroup",
+  "@id" : "http://precis.rukmal.me/ontology#SkillGroup",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Skill Group. This group can contain one or more Skills. For example, \"Python\", \"R\", and \"Java\" would all be in the \"Programming Languages\" Skill Group."
@@ -1607,7 +1636,7 @@
     "@id" : "_:genid193"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Subject",
+  "@id" : "http://precis.rukmal.me/ontology#Subject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Specific subject in a Knowledge Area. This would be \"Distributed Systems\" in the Knowledge Area of \"Mathematics\", or \"Real Analysis\" in the \"Mathematics\" Knowledge Area."
@@ -1616,14 +1645,14 @@
     "@value" : "Specific Subject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rukmal.me/precis#KnowledgeArea"
+    "@id" : "http://precis.rukmal.me/ontology#KnowledgeArea"
   }, {
     "@id" : "_:genid194"
   }, {
     "@id" : "_:genid195"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#Talk",
+  "@id" : "http://precis.rukmal.me/ontology#Talk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A talk or presentation."
@@ -1632,14 +1661,14 @@
     "@value" : "Talk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rukmal.me/precis#Portfolio"
+    "@id" : "http://precis.rukmal.me/ontology#Portfolio"
   }, {
     "@id" : "_:genid196"
   }, {
     "@id" : "_:genid197"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#WorkExperience",
+  "@id" : "http://precis.rukmal.me/ontology#WorkExperience",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An instance of 'Work Experience'. This would be an internship/assistantship/etc."
@@ -1667,7 +1696,7 @@
     "@id" : "_:genid210"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#affiliatedWith",
+  "@id" : "http://precis.rukmal.me/ontology#affiliatedWith",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Affiliation for a Portfolio Instance or Accolade Instance. Maps a given instance to an instance of 'Degree' or 'WorkExperience'."
@@ -1682,34 +1711,34 @@
     "@id" : "_:genid4"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://rukmal.me/precis#hasObject"
+    "@id" : "http://precis.rukmal.me/ontology#hasObject"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#awardedDegree",
+  "@id" : "http://precis.rukmal.me/ontology#awardedDegree",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The Degree which was awarded at this organization (should be a pointer to a top-level organization)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Degree awarded"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#Degree"
+    "@id" : "http://precis.rukmal.me/ontology#Degree"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://rukmal.me/precis#degreeUniversity"
+    "@id" : "http://precis.rukmal.me/ontology#degreeUniversity"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#degreeConcentration",
+  "@id" : "http://precis.rukmal.me/ontology#degreeConcentration",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Concentration of the Degree. For example, \"Finance and Business Economics\", or \"Computational Finance\". This should point to a DBpedia entity corresponding to the Degree being awarded."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Degree"
+    "@id" : "http://precis.rukmal.me/ontology#Degree"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Degree Concentration"
@@ -1718,28 +1747,28 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#degreeDepartment",
+  "@id" : "http://precis.rukmal.me/ontology#degreeDepartment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Department awarding the degree (eg: \"Department of Financial Engineering\", or \"Department of Finance and Business Economics\")."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Degree"
+    "@id" : "http://precis.rukmal.me/ontology#Degree"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Department awarding the Degree"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#degreeGPA",
+  "@id" : "http://precis.rukmal.me/ontology#degreeGPA",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Grade (GPA; 4.0 scale) for the Degree (optional for obvious reasons :))."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Degree"
+    "@id" : "http://precis.rukmal.me/ontology#Degree"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Degree GPA (on a 4.0 scale)"
@@ -1748,28 +1777,28 @@
     "@id" : "_:genid40"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#degreeSchool",
+  "@id" : "http://precis.rukmal.me/ontology#degreeSchool",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The School that awards the degree. For example, this would be the \"Foster School of Business\", or \"College of Arts and Sciences\"."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Degree"
+    "@id" : "http://precis.rukmal.me/ontology#Degree"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "School awarding the Degree"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#degreeType",
+  "@id" : "http://precis.rukmal.me/ontology#degreeType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Type of the Degree. For example, \"Bachelor of Arts\", or \"Master of Science\". This should point to a DBpedia entity corresponding to the Degree being awarded."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Degree"
+    "@id" : "http://precis.rukmal.me/ontology#Degree"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Degree Type"
@@ -1778,37 +1807,37 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#degreeUniversity",
+  "@id" : "http://precis.rukmal.me/ontology#degreeUniversity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The University (concept: Organization) at which the degree was awarded. This corresponds to the top-level instituion; further object properties exist to specify particular schools/departments. That is, this should point to the organization for the Univesity and not the Department. Eg: awardedAt 'University of Washington'; and should NOT be awardedAt 'Foster School of Business'."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Degree"
+    "@id" : "http://precis.rukmal.me/ontology#Degree"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Organization awarding the Degree"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#employedAt",
+  "@id" : "http://precis.rukmal.me/ontology#employedAt",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Organization where an instance of Work Experience is taking place."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#WorkExperience"
+    "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Employment Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#endDate",
+  "@id" : "http://precis.rukmal.me/ontology#endDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "End date of a Instance. When this is included, the 'hasDate' data property corresponds to the start date."
@@ -1823,7 +1852,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#externalResource",
+  "@id" : "http://precis.rukmal.me/ontology#externalResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields."
@@ -1838,31 +1867,31 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasActivity",
+  "@id" : "http://precis.rukmal.me/ontology#hasActivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An 'Activity' that is a part of an 'ActivityType'."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#ActivityType"
+    "@id" : "http://precis.rukmal.me/ontology#ActivityType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Constituent Activity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#Activity"
+    "@id" : "http://precis.rukmal.me/ontology#Activity"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://rukmal.me/precis#inActivityType"
+    "@id" : "http://precis.rukmal.me/ontology#inActivityType"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasAuthors",
+  "@id" : "http://precis.rukmal.me/ontology#hasAuthors",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "List of authors (Human readable for now). This list should mirror the order of authors in the publication. Note that eventually this will be replaced by pointers to individual \"Author\" Classes."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Publication"
+    "@id" : "http://precis.rukmal.me/ontology#Publication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Author List"
@@ -1871,31 +1900,31 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasChildOrganization",
+  "@id" : "http://precis.rukmal.me/ontology#hasChildOrganization",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Child organization pointer, inverse of the 'hasParentOrganization' property."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Child Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://rukmal.me/precis#hasParentOrganization"
+    "@id" : "http://precis.rukmal.me/ontology#hasParentOrganization"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasCollaborators",
+  "@id" : "http://precis.rukmal.me/ontology#hasCollaborators",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "List of Collaborators (Human-readable for now). Will eventually change to a mapping to a Person entity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Portfolio"
+    "@id" : "http://precis.rukmal.me/ontology#Portfolio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Collaborators List"
@@ -1904,13 +1933,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasCourseCode",
+  "@id" : "http://precis.rukmal.me/ontology#hasCourseCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Code of the course (this would imply that an organization is referenced too). For example: 420, 690, 069, etc."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Course"
+    "@id" : "http://precis.rukmal.me/ontology#Course"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Course code"
@@ -1919,13 +1948,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasDOI",
+  "@id" : "http://precis.rukmal.me/ontology#hasDOI",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Digital Object Identifier (DOI) of the publication. Including this will allow for later expansion if an inference agent is ever added to get more metadata using this."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Publication"
+    "@id" : "http://precis.rukmal.me/ontology#Publication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Digital Object Identifier (DOI) of the Publication"
@@ -1934,7 +1963,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasDate",
+  "@id" : "http://precis.rukmal.me/ontology#hasDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Date of the instance. This implies \"startDate\" when a range is given with \"endDate\"."
@@ -1949,13 +1978,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasDepartmentCode",
+  "@id" : "http://precis.rukmal.me/ontology#hasDepartmentCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Code of the department (this would imply that an organization is referenced too). For example: FIN, CFRM, FE, etc."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Course"
+    "@id" : "http://precis.rukmal.me/ontology#Course"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Department code"
@@ -1964,7 +1993,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasDescription",
+  "@id" : "http://precis.rukmal.me/ontology#hasDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Instance of 'Description', which describes the Thing pointing to it."
@@ -1976,16 +2005,16 @@
     "@value" : "Description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#Description"
+    "@id" : "http://precis.rukmal.me/ontology#Description"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasImage",
+  "@id" : "http://precis.rukmal.me/ontology#hasImage",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "URL to image related to work experience. Can be used when displaying the information at consumption."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#WorkExperience"
+    "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Image"
@@ -1994,7 +2023,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasMedia",
+  "@id" : "http://precis.rukmal.me/ontology#hasMedia",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Additional media can be included here. For example, it could link to product/team pages, news articles, etc."
@@ -2009,7 +2038,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasName",
+  "@id" : "http://precis.rukmal.me/ontology#hasName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Human readable name for the entity; for display. This is the primary descriptive string for the instance it is mapped to; that is, for 'WorkExperience' it would be the job title, and for 'Publication' it would be the publication title."
@@ -2024,7 +2053,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasObject",
+  "@id" : "http://precis.rukmal.me/ontology#hasObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Object that was affiliated with the Thing pointing to it. Here, \"Object\" would be typically a 'Portfolio' or 'Accolade' instance, and \"Thing\" would be a 'Degree' or 'WorkExperience' instance."
@@ -2039,28 +2068,28 @@
     "@id" : "_:genid19"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasParentOrganization",
+  "@id" : "http://precis.rukmal.me/ontology#hasParentOrganization",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Pointer to a \"parent\" organization instance. For example, the \"Foster School of Business\" hasParentOrganization \"University of Washington\"."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Parent Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasPriority",
+  "@id" : "http://precis.rukmal.me/ontology#hasPriority",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Priority level of the description (used for deciding truncation in toolkit). This is automatically set to the position of the string in the input \"description\" array of descriptions, when data is loaded using the command line tool."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Description"
+    "@id" : "http://precis.rukmal.me/ontology#Description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "description priority level"
@@ -2069,31 +2098,31 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasSkill",
+  "@id" : "http://precis.rukmal.me/ontology#hasSkill",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A skill that is a part of a 'SkillGroup'."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#SkillGroup"
+    "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Constituent Skill"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#Skill"
+    "@id" : "http://precis.rukmal.me/ontology#Skill"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://rukmal.me/precis#inSkillGroup"
+    "@id" : "http://precis.rukmal.me/ontology#inSkillGroup"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasStatus",
+  "@id" : "http://precis.rukmal.me/ontology#hasStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Status of the publication. That is, this property should reflect a paper being \"In Progress\", or \"Under Review\"."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Publication"
+    "@id" : "http://precis.rukmal.me/ontology#Publication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Publication Status"
@@ -2102,31 +2131,31 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasSubject",
+  "@id" : "http://precis.rukmal.me/ontology#hasSubject",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A subject that is a part of a 'KnowledgeArea'."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#KnowledgeArea"
+    "@id" : "http://precis.rukmal.me/ontology#KnowledgeArea"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Constituent Subject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#Subject"
+    "@id" : "http://precis.rukmal.me/ontology#Subject"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://rukmal.me/precis#inKnowledgeArea"
+    "@id" : "http://precis.rukmal.me/ontology#inKnowledgeArea"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasText",
+  "@id" : "http://precis.rukmal.me/ontology#hasText",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Text of the description. This should be treated as a single \"bullet point\" on a traditional Resume/CV."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Description"
+    "@id" : "http://precis.rukmal.me/ontology#Description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "description text"
@@ -2135,7 +2164,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#hasWebsite",
+  "@id" : "http://precis.rukmal.me/ontology#hasWebsite",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "External website of the entity (not used for ontology extension; treat this as user-facing)."
@@ -2150,22 +2179,22 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#inActivityType",
+  "@id" : "http://precis.rukmal.me/ontology#inActivityType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The ActivityType containing the Activity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Activity"
+    "@id" : "http://precis.rukmal.me/ontology#Activity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Parent Activity Type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#ActivityType"
+    "@id" : "http://precis.rukmal.me/ontology#ActivityType"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#inCity",
+  "@id" : "http://precis.rukmal.me/ontology#inCity",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The city of the entity."
@@ -2180,13 +2209,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#inConferenceOrJournal",
+  "@id" : "http://precis.rukmal.me/ontology#inConferenceOrJournal",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Conference/Journal name. This will eventually be replaced with a more semantically-correct representation of this information."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Publication"
+    "@id" : "http://precis.rukmal.me/ontology#Publication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Conference/Journal Name"
@@ -2195,7 +2224,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#inCountry",
+  "@id" : "http://precis.rukmal.me/ontology#inCountry",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Country of the entity."
@@ -2210,28 +2239,28 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#inKnowledgeArea",
+  "@id" : "http://precis.rukmal.me/ontology#inKnowledgeArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The knowledge area containing the subject."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Subject"
+    "@id" : "http://precis.rukmal.me/ontology#Subject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Parent Knowledge Area"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#KnowledgeArea"
+    "@id" : "http://precis.rukmal.me/ontology#KnowledgeArea"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#inPublication",
+  "@id" : "http://precis.rukmal.me/ontology#inPublication",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Publication name containing the specific publication. As with the other fields in the 'Publication' concept, this will probably be replaced eventually."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Publication"
+    "@id" : "http://precis.rukmal.me/ontology#Publication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Publication Name"
@@ -2240,22 +2269,22 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#inSkillGroup",
+  "@id" : "http://precis.rukmal.me/ontology#inSkillGroup",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The SkillGroup containing the Skill."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Skill"
+    "@id" : "http://precis.rukmal.me/ontology#Skill"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Parent SkillGroup"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#SkillGroup"
+    "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#inState",
+  "@id" : "http://precis.rukmal.me/ontology#inState",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "State of the entity (United States only)."
@@ -2270,7 +2299,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#relatedTo",
+  "@id" : "http://precis.rukmal.me/ontology#relatedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A related concept. For example, an instance of 'Award' may have a 'Project', or 'Publication' that it is related to, and vice versa."
@@ -2285,28 +2314,28 @@
     "@id" : "_:genid31"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#taughtAt",
+  "@id" : "http://precis.rukmal.me/ontology#taughtAt",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The organization at which the course was taught. This is an optional field, but ideally if this is included, the department and course codes should be too."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Course"
+    "@id" : "http://precis.rukmal.me/ontology#Course"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Organization which taught the course"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://rukmal.me/precis#Organization"
+    "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
-  "@id" : "http://rukmal.me/precis#withGrade",
+  "@id" : "http://precis.rukmal.me/ontology#withGrade",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Grade (GPA; 4.0 scale) received in the course (optional for obvious reasons :))."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rukmal.me/precis#Course"
+    "@id" : "http://precis.rukmal.me/ontology#Course"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Course GPA (on a 4.0 scale)"
@@ -2315,9 +2344,48 @@
     "@id" : "_:genid117"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/elements/1.1/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/ontology/bibo/doi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/2001/XMLSchema#gMonth",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#gYear",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]

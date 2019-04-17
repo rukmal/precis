@@ -1,17 +1,35 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://rukmal.me/precis#"
-     xml:base="http://rukmal.me/precis"
+<rdf:RDF xmlns="http://precis.rukmal.me/ontology#"
+     xml:base="http://precis.rukmal.me/ontology"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://rukmal.me/precis">
-        <owl:versionIRI rdf:resource="http://rukmal.me/precis/1.4.0"/>
-        <dc:creator rdf:resource="https://orcid.org/0000-0002-8628-6753"/>
-        <rdfs:comment>The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://github.com/rukmal/precis for more.</rdfs:comment>
-        <owl:versionInfo>1.4.0</owl:versionInfo>
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="http://precis.rukmal.me/ontology">
+        <owl:versionIRI rdf:resource="http://precis.rukmal.me/ontology/1.5.0"/>
+        <dc:abstract>The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.
+
+Currently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.</dc:abstract>
+        <dc:creator>Rukmal Weerawarana</dc:creator>
+        <dc:title>Precis Ontology</dc:title>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-07T00:00:00</terms:created>
+        <terms:creator rdf:resource="http://rukmal.me"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-17T00:00:00</terms:modified>
+        <bibo:doi rdf:resource="http://purl.org/precis"/>
+        <vann:preferredNamespacePrefix>precis</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://precis.rukmal.me/ontology</vann:preferredNamespaceUri>
+        <schema:license rdf:resource="https://github.com/rukmal/precis/blob/master/LICENSE"/>
+        <rdfs:comment>The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.
+
+Currently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.</rdfs:comment>
+        <owl:priorVersion rdf:resource="https://github.com/rukmal/precis/releases/download/1.4.0/precis_ontology.rdf"/>
+        <owl:versionInfo>1.5.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -28,10 +46,94 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/doi -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/doi"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://schema.org/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/creator"/>
+    
+
+
+    <!-- http://schema.org/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/description"/>
+    
+
+
+    <!-- http://schema.org/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/license"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#priorVersion -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#priorVersion"/>
     
 
 
@@ -73,24 +175,24 @@
     
 
 
-    <!-- http://rukmal.me/precis#affiliatedWith -->
+    <!-- http://precis.rukmal.me/ontology#affiliatedWith -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#affiliatedWith">
-        <owl:inverseOf rdf:resource="http://rukmal.me/precis#hasObject"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#affiliatedWith">
+        <owl:inverseOf rdf:resource="http://precis.rukmal.me/ontology#hasObject"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -100,136 +202,136 @@
     
 
 
-    <!-- http://rukmal.me/precis#awardedDegree -->
+    <!-- http://precis.rukmal.me/ontology#awardedDegree -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#awardedDegree">
-        <owl:inverseOf rdf:resource="http://rukmal.me/precis#degreeUniversity"/>
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Organization"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Degree"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#awardedDegree">
+        <owl:inverseOf rdf:resource="http://precis.rukmal.me/ontology#degreeUniversity"/>
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#Degree"/>
         <rdfs:comment>The Degree which was awarded at this organization (should be a pointer to a top-level organization).</rdfs:comment>
         <rdfs:label>Degree awarded</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#degreeDepartment -->
+    <!-- http://precis.rukmal.me/ontology#degreeDepartment -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#degreeDepartment">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Degree"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Organization"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#degreeDepartment">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Degree"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
         <rdfs:comment>Department awarding the degree (eg: &quot;Department of Financial Engineering&quot;, or &quot;Department of Finance and Business Economics&quot;).</rdfs:comment>
         <rdfs:label>Department awarding the Degree</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#degreeSchool -->
+    <!-- http://precis.rukmal.me/ontology#degreeSchool -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#degreeSchool">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Degree"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Organization"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#degreeSchool">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Degree"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
         <rdfs:comment>The School that awards the degree. For example, this would be the &quot;Foster School of Business&quot;, or &quot;College of Arts and Sciences&quot;.</rdfs:comment>
         <rdfs:label>School awarding the Degree</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#degreeUniversity -->
+    <!-- http://precis.rukmal.me/ontology#degreeUniversity -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#degreeUniversity">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Degree"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Organization"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#degreeUniversity">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Degree"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
         <rdfs:comment>The University (concept: Organization) at which the degree was awarded. This corresponds to the top-level instituion; further object properties exist to specify particular schools/departments. That is, this should point to the organization for the Univesity and not the Department. Eg: awardedAt &apos;University of Washington&apos;; and should NOT be awardedAt &apos;Foster School of Business&apos;.</rdfs:comment>
         <rdfs:label>Organization awarding the Degree</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#employedAt -->
+    <!-- http://precis.rukmal.me/ontology#employedAt -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#employedAt">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#WorkExperience"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Organization"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#employedAt">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#WorkExperience"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
         <rdfs:comment>Organization where an instance of Work Experience is taking place.</rdfs:comment>
         <rdfs:label>Employment Organization</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#hasActivity -->
+    <!-- http://precis.rukmal.me/ontology#hasActivity -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#hasActivity">
-        <owl:inverseOf rdf:resource="http://rukmal.me/precis#inActivityType"/>
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#ActivityType"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Activity"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#hasActivity">
+        <owl:inverseOf rdf:resource="http://precis.rukmal.me/ontology#inActivityType"/>
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#ActivityType"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#Activity"/>
         <rdfs:comment>An &apos;Activity&apos; that is a part of an &apos;ActivityType&apos;.</rdfs:comment>
         <rdfs:label>Constituent Activity</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#hasChildOrganization -->
+    <!-- http://precis.rukmal.me/ontology#hasChildOrganization -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#hasChildOrganization">
-        <owl:inverseOf rdf:resource="http://rukmal.me/precis#hasParentOrganization"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#hasChildOrganization">
+        <owl:inverseOf rdf:resource="http://precis.rukmal.me/ontology#hasParentOrganization"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Organization"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Organization"/>
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
         <rdfs:comment>Child organization pointer, inverse of the &apos;hasParentOrganization&apos; property.</rdfs:comment>
         <rdfs:label>Child Organization</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#hasDescription -->
+    <!-- http://precis.rukmal.me/ontology#hasDescription -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#hasDescription">
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#hasDescription">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#KnowledgeArea"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Organization"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#SkillGroup"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#ActivityType"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Course"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#KnowledgeArea"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Organization"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#SkillGroup"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Description"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#Description"/>
         <rdfs:comment>Instance of &apos;Description&apos;, which describes the Thing pointing to it.</rdfs:comment>
         <rdfs:label>Description</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#hasObject -->
+    <!-- http://precis.rukmal.me/ontology#hasObject -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#hasObject">
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#hasObject">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -239,112 +341,112 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasParentOrganization -->
+    <!-- http://precis.rukmal.me/ontology#hasParentOrganization -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#hasParentOrganization">
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#hasParentOrganization">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Organization"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Organization"/>
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
         <rdfs:comment>Pointer to a &quot;parent&quot; organization instance. For example, the &quot;Foster School of Business&quot; hasParentOrganization &quot;University of Washington&quot;.</rdfs:comment>
         <rdfs:label>Parent Organization</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#hasSkill -->
+    <!-- http://precis.rukmal.me/ontology#hasSkill -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#hasSkill">
-        <owl:inverseOf rdf:resource="http://rukmal.me/precis#inSkillGroup"/>
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#SkillGroup"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Skill"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#hasSkill">
+        <owl:inverseOf rdf:resource="http://precis.rukmal.me/ontology#inSkillGroup"/>
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#SkillGroup"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#Skill"/>
         <rdfs:comment>A skill that is a part of a &apos;SkillGroup&apos;.</rdfs:comment>
         <rdfs:label>Constituent Skill</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#hasSubject -->
+    <!-- http://precis.rukmal.me/ontology#hasSubject -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#hasSubject">
-        <owl:inverseOf rdf:resource="http://rukmal.me/precis#inKnowledgeArea"/>
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#KnowledgeArea"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Subject"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#hasSubject">
+        <owl:inverseOf rdf:resource="http://precis.rukmal.me/ontology#inKnowledgeArea"/>
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#KnowledgeArea"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#Subject"/>
         <rdfs:comment>A subject that is a part of a &apos;KnowledgeArea&apos;.</rdfs:comment>
         <rdfs:label>Constituent Subject</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#inActivityType -->
+    <!-- http://precis.rukmal.me/ontology#inActivityType -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#inActivityType">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Activity"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#ActivityType"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#inActivityType">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Activity"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#ActivityType"/>
         <rdfs:comment>The ActivityType containing the Activity.</rdfs:comment>
         <rdfs:label>Parent Activity Type</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#inKnowledgeArea -->
+    <!-- http://precis.rukmal.me/ontology#inKnowledgeArea -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#inKnowledgeArea">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Subject"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#KnowledgeArea"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#inKnowledgeArea">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Subject"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#KnowledgeArea"/>
         <rdfs:comment>The knowledge area containing the subject.</rdfs:comment>
         <rdfs:label>Parent Knowledge Area</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#inSkillGroup -->
+    <!-- http://precis.rukmal.me/ontology#inSkillGroup -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#inSkillGroup">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Skill"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#SkillGroup"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#inSkillGroup">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Skill"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#SkillGroup"/>
         <rdfs:comment>The SkillGroup containing the Skill.</rdfs:comment>
         <rdfs:label>Parent SkillGroup</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://rukmal.me/precis#relatedTo -->
+    <!-- http://precis.rukmal.me/ontology#relatedTo -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#relatedTo">
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#relatedTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Activity"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Skill"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Subject"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Activity"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Course"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Skill"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Subject"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Activity"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Skill"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Subject"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Activity"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Course"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Skill"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Subject"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -354,12 +456,12 @@
     
 
 
-    <!-- http://rukmal.me/precis#taughtAt -->
+    <!-- http://precis.rukmal.me/ontology#taughtAt -->
 
 
-    <owl:ObjectProperty rdf:about="http://rukmal.me/precis#taughtAt">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Course"/>
-        <rdfs:range rdf:resource="http://rukmal.me/precis#Organization"/>
+    <owl:ObjectProperty rdf:about="http://precis.rukmal.me/ontology#taughtAt">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Course"/>
+        <rdfs:range rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
         <rdfs:comment>The organization at which the course was taught. This is an optional field, but ideally if this is included, the department and course codes should be too.</rdfs:comment>
         <rdfs:label>Organization which taught the course</rdfs:label>
     </owl:ObjectProperty>
@@ -378,11 +480,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#degreeConcentration -->
+    <!-- http://precis.rukmal.me/ontology#degreeConcentration -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#degreeConcentration">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Degree"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#degreeConcentration">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Degree"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>Concentration of the Degree. For example, &quot;Finance and Business Economics&quot;, or &quot;Computational Finance&quot;. This should point to a DBpedia entity corresponding to the Degree being awarded.</rdfs:comment>
         <rdfs:label>Degree Concentration</rdfs:label>
@@ -390,11 +492,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#degreeGPA -->
+    <!-- http://precis.rukmal.me/ontology#degreeGPA -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#degreeGPA">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Degree"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#degreeGPA">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Degree"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -414,11 +516,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#degreeType -->
+    <!-- http://precis.rukmal.me/ontology#degreeType -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#degreeType">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Degree"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#degreeType">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Degree"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>Type of the Degree. For example, &quot;Bachelor of Arts&quot;, or &quot;Master of Science&quot;. This should point to a DBpedia entity corresponding to the Degree being awarded.</rdfs:comment>
         <rdfs:label>Degree Type</rdfs:label>
@@ -426,17 +528,17 @@
     
 
 
-    <!-- http://rukmal.me/precis#endDate -->
+    <!-- http://precis.rukmal.me/ontology#endDate -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#endDate">
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#endDate">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#ActivityType"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Course"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -447,22 +549,22 @@
     
 
 
-    <!-- http://rukmal.me/precis#externalResource -->
+    <!-- http://precis.rukmal.me/ontology#externalResource -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#externalResource">
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#externalResource">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#KnowledgeArea"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Organization"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#SkillGroup"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#ActivityType"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Course"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#KnowledgeArea"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Organization"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#SkillGroup"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -473,11 +575,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasAuthors -->
+    <!-- http://precis.rukmal.me/ontology#hasAuthors -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasAuthors">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Publication"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasAuthors">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>List of authors (Human readable for now). This list should mirror the order of authors in the publication. Note that eventually this will be replaced by pointers to individual &quot;Author&quot; Classes.</rdfs:comment>
         <rdfs:label>Author List</rdfs:label>
@@ -485,11 +587,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasCollaborators -->
+    <!-- http://precis.rukmal.me/ontology#hasCollaborators -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasCollaborators">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Portfolio"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasCollaborators">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Portfolio"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>List of Collaborators (Human-readable for now). Will eventually change to a mapping to a Person entity.</rdfs:comment>
         <rdfs:label>Collaborators List</rdfs:label>
@@ -497,11 +599,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasCourseCode -->
+    <!-- http://precis.rukmal.me/ontology#hasCourseCode -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasCourseCode">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Course"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasCourseCode">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Course"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Code of the course (this would imply that an organization is referenced too). For example: 420, 690, 069, etc.</rdfs:comment>
         <rdfs:label>Course code</rdfs:label>
@@ -509,11 +611,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasDOI -->
+    <!-- http://precis.rukmal.me/ontology#hasDOI -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasDOI">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Publication"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasDOI">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>Digital Object Identifier (DOI) of the publication. Including this will allow for later expansion if an inference agent is ever added to get more metadata using this.</rdfs:comment>
         <rdfs:label>Digital Object Identifier (DOI) of the Publication</rdfs:label>
@@ -521,19 +623,19 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasDate -->
+    <!-- http://precis.rukmal.me/ontology#hasDate -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasDate">
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasDate">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#ActivityType"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Course"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -544,11 +646,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasDepartmentCode -->
+    <!-- http://precis.rukmal.me/ontology#hasDepartmentCode -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasDepartmentCode">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Course"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasDepartmentCode">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Course"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Code of the department (this would imply that an organization is referenced too). For example: FIN, CFRM, FE, etc.</rdfs:comment>
         <rdfs:label>Department code</rdfs:label>
@@ -556,11 +658,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasImage -->
+    <!-- http://precis.rukmal.me/ontology#hasImage -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasImage">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#WorkExperience"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasImage">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#WorkExperience"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>URL to image related to work experience. Can be used when displaying the information at consumption.</rdfs:comment>
         <rdfs:label>Image</rdfs:label>
@@ -568,17 +670,17 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasMedia -->
+    <!-- http://precis.rukmal.me/ontology#hasMedia -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasMedia">
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasMedia">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#ActivityType"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -589,22 +691,22 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasName -->
+    <!-- http://precis.rukmal.me/ontology#hasName -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasName">
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasName">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#KnowledgeArea"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Organization"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#SkillGroup"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#ActivityType"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Course"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#KnowledgeArea"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Organization"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#SkillGroup"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -615,11 +717,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasPriority -->
+    <!-- http://precis.rukmal.me/ontology#hasPriority -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasPriority">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Description"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasPriority">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Description"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
         <rdfs:comment>Priority level of the description (used for deciding truncation in toolkit). This is automatically set to the position of the string in the input &quot;description&quot; array of descriptions, when data is loaded using the command line tool.</rdfs:comment>
         <rdfs:label>description priority level</rdfs:label>
@@ -627,11 +729,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasStatus -->
+    <!-- http://precis.rukmal.me/ontology#hasStatus -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasStatus">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Publication"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasStatus">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Status of the publication. That is, this property should reflect a paper being &quot;In Progress&quot;, or &quot;Under Review&quot;.</rdfs:comment>
         <rdfs:label>Publication Status</rdfs:label>
@@ -639,11 +741,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasText -->
+    <!-- http://precis.rukmal.me/ontology#hasText -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasText">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Description"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasText">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Description"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Text of the description. This should be treated as a single &quot;bullet point&quot; on a traditional Resume/CV.</rdfs:comment>
         <rdfs:label>description text</rdfs:label>
@@ -651,21 +753,21 @@
     
 
 
-    <!-- http://rukmal.me/precis#hasWebsite -->
+    <!-- http://precis.rukmal.me/ontology#hasWebsite -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#hasWebsite">
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#hasWebsite">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Organization"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#SkillGroup"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#ActivityType"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Course"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Organization"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#SkillGroup"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -676,21 +778,21 @@
     
 
 
-    <!-- http://rukmal.me/precis#inCity -->
+    <!-- http://precis.rukmal.me/ontology#inCity -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#inCity">
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#inCity">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Organization"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#SkillGroup"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#ActivityType"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Course"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Organization"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#SkillGroup"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -701,11 +803,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#inConferenceOrJournal -->
+    <!-- http://precis.rukmal.me/ontology#inConferenceOrJournal -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#inConferenceOrJournal">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Publication"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#inConferenceOrJournal">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Conference/Journal name. This will eventually be replaced with a more semantically-correct representation of this information.</rdfs:comment>
         <rdfs:label>Conference/Journal Name</rdfs:label>
@@ -713,20 +815,20 @@
     
 
 
-    <!-- http://rukmal.me/precis#inCountry -->
+    <!-- http://precis.rukmal.me/ontology#inCountry -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#inCountry">
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#inCountry">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Organization"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#SkillGroup"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#ActivityType"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Course"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Organization"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#SkillGroup"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -737,11 +839,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#inPublication -->
+    <!-- http://precis.rukmal.me/ontology#inPublication -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#inPublication">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Publication"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#inPublication">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Publication name containing the specific publication. As with the other fields in the &apos;Publication&apos; concept, this will probably be replaced eventually.</rdfs:comment>
         <rdfs:label>Publication Name</rdfs:label>
@@ -749,21 +851,21 @@
     
 
 
-    <!-- http://rukmal.me/precis#inState -->
+    <!-- http://precis.rukmal.me/ontology#inState -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#inState">
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#inState">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Organization"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#SkillGroup"/>
-                    <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#ActivityType"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Course"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Organization"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#SkillGroup"/>
+                    <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -774,11 +876,11 @@
     
 
 
-    <!-- http://rukmal.me/precis#withGrade -->
+    <!-- http://precis.rukmal.me/ontology#withGrade -->
 
 
-    <owl:DatatypeProperty rdf:about="http://rukmal.me/precis#withGrade">
-        <rdfs:domain rdf:resource="http://rukmal.me/precis#Course"/>
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#withGrade">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#Course"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -810,18 +912,18 @@
     
 
 
-    <!-- http://rukmal.me/precis#Accolade -->
+    <!-- http://precis.rukmal.me/ontology#Accolade -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Accolade">
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Accolade">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#affiliatedWith"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#affiliatedWith"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-                            <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+                            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -829,33 +931,33 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDescription"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDescription"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Description"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#Description"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#externalResource"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#externalResource"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasMedia"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasMedia"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDate"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDate"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -866,16 +968,16 @@
     
 
 
-    <!-- http://rukmal.me/precis#Activity -->
+    <!-- http://precis.rukmal.me/ontology#Activity -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Activity">
-        <rdfs:subClassOf rdf:resource="http://rukmal.me/precis#ActivityType"/>
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Activity">
+        <rdfs:subClassOf rdf:resource="http://precis.rukmal.me/ontology#ActivityType"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inActivityType"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#inActivityType"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#ActivityType"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#ActivityType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A specific activity, such as a specific hackathon or volunteering experience.</rdfs:comment>
@@ -884,51 +986,51 @@
     
 
 
-    <!-- http://rukmal.me/precis#ActivityType -->
+    <!-- http://precis.rukmal.me/ontology#ActivityType -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#ActivityType">
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#ActivityType">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasActivity"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasActivity"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Activity"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#Activity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDescription"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDescription"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Description"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#Description"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#endDate"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#endDate"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#externalResource"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#externalResource"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDate"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDate"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasMedia"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasMedia"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -939,84 +1041,84 @@
     
 
 
-    <!-- http://rukmal.me/precis#Award -->
+    <!-- http://precis.rukmal.me/ontology#Award -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Award">
-        <rdfs:subClassOf rdf:resource="http://rukmal.me/precis#Accolade"/>
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Award">
+        <rdfs:subClassOf rdf:resource="http://precis.rukmal.me/ontology#Accolade"/>
         <rdfs:comment>An &apos;Award&apos;; this would correspond to a traditional award, such as a Fellowship or Dean&apos;s List.</rdfs:comment>
         <rdfs:label>Award</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://rukmal.me/precis#Certification -->
+    <!-- http://precis.rukmal.me/ontology#Certification -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Certification">
-        <rdfs:subClassOf rdf:resource="http://rukmal.me/precis#Accolade"/>
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Certification">
+        <rdfs:subClassOf rdf:resource="http://precis.rukmal.me/ontology#Accolade"/>
         <rdfs:comment>A &apos;Cerficiation&apos;; this would correspond to a traditional certification, such as a CPR Rating, or the Bloomberg Market Concepts certification.</rdfs:comment>
         <rdfs:label>Certification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://rukmal.me/precis#Course -->
+    <!-- http://precis.rukmal.me/ontology#Course -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Course">
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Course">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDescription"/>
-                <owl:someValuesFrom rdf:resource="http://rukmal.me/precis#Description"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDescription"/>
+                <owl:someValuesFrom rdf:resource="http://precis.rukmal.me/ontology#Description"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#taughtAt"/>
-                <owl:someValuesFrom rdf:resource="http://rukmal.me/precis#Organization"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#taughtAt"/>
+                <owl:someValuesFrom rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#endDate"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#endDate"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasCourseCode"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasCourseCode"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDate"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDate"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDepartmentCode"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDepartmentCode"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#withGrade"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#withGrade"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasWebsite"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasWebsite"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
@@ -1027,71 +1129,71 @@
     
 
 
-    <!-- http://rukmal.me/precis#Degree -->
+    <!-- http://precis.rukmal.me/ontology#Degree -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Degree">
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Degree">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#degreeDepartment"/>
-                <owl:someValuesFrom rdf:resource="http://rukmal.me/precis#Organization"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#degreeDepartment"/>
+                <owl:someValuesFrom rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#degreeSchool"/>
-                <owl:someValuesFrom rdf:resource="http://rukmal.me/precis#Organization"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#degreeSchool"/>
+                <owl:someValuesFrom rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#degreeUniversity"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#degreeUniversity"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Organization"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#degreeConcentration"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#degreeConcentration"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#degreeGPA"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#degreeGPA"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#degreeType"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#degreeType"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDate"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDate"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inCity"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#inCity"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inState"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#inState"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -1102,20 +1204,20 @@
     
 
 
-    <!-- http://rukmal.me/precis#Description -->
+    <!-- http://precis.rukmal.me/ontology#Description -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Description">
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Description">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasText"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasText"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasPriority"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasPriority"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
             </owl:Restriction>
@@ -1126,34 +1228,34 @@
     
 
 
-    <!-- http://rukmal.me/precis#KnowledgeArea -->
+    <!-- http://precis.rukmal.me/ontology#KnowledgeArea -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#KnowledgeArea">
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#KnowledgeArea">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDescription"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDescription"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Description"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#Description"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasSubject"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasSubject"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Subject"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#Subject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#externalResource"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#externalResource"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -1164,39 +1266,39 @@
     
 
 
-    <!-- http://rukmal.me/precis#Organization -->
+    <!-- http://precis.rukmal.me/ontology#Organization -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Organization">
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Organization">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasParentOrganization"/>
-                <owl:someValuesFrom rdf:resource="http://rukmal.me/precis#Organization"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasParentOrganization"/>
+                <owl:someValuesFrom rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDescription"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDescription"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Description"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#Description"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#externalResource"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#externalResource"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasWebsite"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasWebsite"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
@@ -1205,13 +1307,13 @@
         <rdfs:label>Organization</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://rukmal.me/precis#Organization"/>
+        <owl:annotatedSource rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDescription"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDescription"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Description"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#Description"/>
             </owl:Restriction>
         </owl:annotatedTarget>
         <rdfs:comment>This should be used to add an additional descriptive string if necessary. For example, this could be a team name or a descriptive string (eg: &quot;Startup Company&quot;, etc.).</rdfs:comment>
@@ -1219,18 +1321,18 @@
     
 
 
-    <!-- http://rukmal.me/precis#Portfolio -->
+    <!-- http://precis.rukmal.me/ontology#Portfolio -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Portfolio">
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Portfolio">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#affiliatedWith"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#affiliatedWith"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-                            <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+                            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+                            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -1238,46 +1340,46 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDescription"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDescription"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Description"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#Description"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#endDate"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#endDate"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#externalResource"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#externalResource"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasMedia"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasMedia"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDate"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDate"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasWebsite"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasWebsite"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -1288,14 +1390,14 @@
     
 
 
-    <!-- http://rukmal.me/precis#Project -->
+    <!-- http://precis.rukmal.me/ontology#Project -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Project">
-        <rdfs:subClassOf rdf:resource="http://rukmal.me/precis#Portfolio"/>
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Project">
+        <rdfs:subClassOf rdf:resource="http://precis.rukmal.me/ontology#Portfolio"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasCollaborators"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasCollaborators"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1305,41 +1407,41 @@
     
 
 
-    <!-- http://rukmal.me/precis#Publication -->
+    <!-- http://precis.rukmal.me/ontology#Publication -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Publication">
-        <rdfs:subClassOf rdf:resource="http://rukmal.me/precis#Portfolio"/>
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Publication">
+        <rdfs:subClassOf rdf:resource="http://precis.rukmal.me/ontology#Portfolio"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasAuthors"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasAuthors"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inConferenceOrJournal"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#inConferenceOrJournal"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inPublication"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#inPublication"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDOI"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDOI"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasStatus"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasStatus"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -1350,27 +1452,27 @@
     
 
 
-    <!-- http://rukmal.me/precis#Skill -->
+    <!-- http://precis.rukmal.me/ontology#Skill -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Skill">
-        <rdfs:subClassOf rdf:resource="http://rukmal.me/precis#SkillGroup"/>
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Skill">
+        <rdfs:subClassOf rdf:resource="http://precis.rukmal.me/ontology#SkillGroup"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inSkillGroup"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#inSkillGroup"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#SkillGroup"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#SkillGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#externalResource"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#externalResource"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -1381,32 +1483,32 @@
     
 
 
-    <!-- http://rukmal.me/precis#SkillGroup -->
+    <!-- http://precis.rukmal.me/ontology#SkillGroup -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#SkillGroup">
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#SkillGroup">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDescription"/>
-                <owl:someValuesFrom rdf:resource="http://rukmal.me/precis#Description"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDescription"/>
+                <owl:someValuesFrom rdf:resource="http://precis.rukmal.me/ontology#Description"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasSkill"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasSkill"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Skill"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#Skill"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#externalResource"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#externalResource"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -1417,21 +1519,21 @@
     
 
 
-    <!-- http://rukmal.me/precis#Subject -->
+    <!-- http://precis.rukmal.me/ontology#Subject -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Subject">
-        <rdfs:subClassOf rdf:resource="http://rukmal.me/precis#KnowledgeArea"/>
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Subject">
+        <rdfs:subClassOf rdf:resource="http://precis.rukmal.me/ontology#KnowledgeArea"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inKnowledgeArea"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#inKnowledgeArea"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#KnowledgeArea"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#KnowledgeArea"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasName"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -1442,20 +1544,20 @@
     
 
 
-    <!-- http://rukmal.me/precis#Talk -->
+    <!-- http://precis.rukmal.me/ontology#Talk -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#Talk">
-        <rdfs:subClassOf rdf:resource="http://rukmal.me/precis#Portfolio"/>
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#Talk">
+        <rdfs:subClassOf rdf:resource="http://precis.rukmal.me/ontology#Portfolio"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasCollaborators"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasCollaborators"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDate"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDate"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
@@ -1466,20 +1568,20 @@
     
 
 
-    <!-- http://rukmal.me/precis#WorkExperience -->
+    <!-- http://precis.rukmal.me/ontology#WorkExperience -->
 
 
-    <owl:Class rdf:about="http://rukmal.me/precis#WorkExperience">
+    <owl:Class rdf:about="http://precis.rukmal.me/ontology#WorkExperience">
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://rukmal.me/precis#inCountry"/>
+                        <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#inCountry"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://rukmal.me/precis#inState"/>
+                        <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#inState"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
@@ -1488,53 +1590,53 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDescription"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDescription"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Description"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#Description"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#employedAt"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#employedAt"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://rukmal.me/precis#Organization"/>
+                <owl:onClass rdf:resource="http://precis.rukmal.me/ontology#Organization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#endDate"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#endDate"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasImage"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasImage"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasMedia"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasMedia"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasDate"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasDate"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#hasName"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rukmal.me/precis#inCity"/>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#inCity"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -1557,16 +1659,16 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://rukmal.me/precis#Accolade"/>
-            <rdf:Description rdf:about="http://rukmal.me/precis#ActivityType"/>
-            <rdf:Description rdf:about="http://rukmal.me/precis#Course"/>
-            <rdf:Description rdf:about="http://rukmal.me/precis#Degree"/>
-            <rdf:Description rdf:about="http://rukmal.me/precis#Description"/>
-            <rdf:Description rdf:about="http://rukmal.me/precis#KnowledgeArea"/>
-            <rdf:Description rdf:about="http://rukmal.me/precis#Organization"/>
-            <rdf:Description rdf:about="http://rukmal.me/precis#Portfolio"/>
-            <rdf:Description rdf:about="http://rukmal.me/precis#SkillGroup"/>
-            <rdf:Description rdf:about="http://rukmal.me/precis#WorkExperience"/>
+            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Accolade"/>
+            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#ActivityType"/>
+            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Course"/>
+            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Degree"/>
+            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Description"/>
+            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#KnowledgeArea"/>
+            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Organization"/>
+            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#Portfolio"/>
+            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#SkillGroup"/>
+            <rdf:Description rdf:about="http://precis.rukmal.me/ontology#WorkExperience"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

@@ -1,23 +1,85 @@
-@prefix : <http://rukmal.me/precis#> .
+@prefix : <http://precis.rukmal.me/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://rukmal.me/precis> .
+@base <http://precis.rukmal.me/ontology> .
 
-<http://rukmal.me/precis> rdf:type owl:Ontology ;
-                           owl:versionIRI <http://rukmal.me/precis/1.4.0> ;
-                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-8628-6753> ;
-                           rdfs:comment "The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://github.com/rukmal/precis for more." ;
-                           owl:versionInfo "1.4.0" .
+<http://precis.rukmal.me/ontology> rdf:type owl:Ontology ;
+                                    owl:versionIRI <http://precis.rukmal.me/ontology/1.5.0> ;
+                                    <http://purl.org/dc/elements/1.1/abstract> """The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.
+
+Currently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.""" ;
+                                    <http://purl.org/dc/elements/1.1/creator> "Rukmal Weerawarana" ;
+                                    <http://purl.org/dc/elements/1.1/title> "Precis Ontology" ;
+                                    <http://purl.org/dc/terms/created> "2019-04-07T00:00:00"^^xsd:dateTime ;
+                                    <http://purl.org/dc/terms/creator> <http://rukmal.me> ;
+                                    <http://purl.org/dc/terms/modified> "2019-04-17T00:00:00"^^xsd:dateTime ;
+                                    <http://purl.org/ontology/bibo/doi> <http://purl.org/precis> ;
+                                    <http://purl.org/vocab/vann/preferredNamespacePrefix> "precis" ;
+                                    <http://purl.org/vocab/vann/preferredNamespaceUri> "http://precis.rukmal.me/ontology" ;
+                                    <http://schema.org/license> <https://github.com/rukmal/precis/blob/master/LICENSE> ;
+                                    rdfs:comment """The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.
+
+Currently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.""" ;
+                                    owl:priorVersion <https://github.com/rukmal/precis/releases/download/1.4.0/precis_ontology.rdf> ;
+                                    owl:versionInfo "1.5.0" .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/doi
+<http://purl.org/ontology/bibo/doi> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/creator
+<http://schema.org/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/description
+<http://schema.org/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/license
+<http://schema.org/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#priorVersion
+owl:priorVersion rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -36,7 +98,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://rukmal.me/precis#affiliatedWith
+###  http://precis.rukmal.me/ontology#affiliatedWith
 :affiliatedWith rdf:type owl:ObjectProperty ;
                 owl:inverseOf :hasObject ;
                 rdfs:domain [ rdf:type owl:Class ;
@@ -53,7 +115,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                 rdfs:label "Affiliation" .
 
 
-###  http://rukmal.me/precis#awardedDegree
+###  http://precis.rukmal.me/ontology#awardedDegree
 :awardedDegree rdf:type owl:ObjectProperty ;
                owl:inverseOf :degreeUniversity ;
                rdfs:domain :Organization ;
@@ -62,7 +124,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                rdfs:label "Degree awarded" .
 
 
-###  http://rukmal.me/precis#degreeDepartment
+###  http://precis.rukmal.me/ontology#degreeDepartment
 :degreeDepartment rdf:type owl:ObjectProperty ;
                   rdfs:domain :Degree ;
                   rdfs:range :Organization ;
@@ -70,7 +132,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                   rdfs:label "Department awarding the Degree" .
 
 
-###  http://rukmal.me/precis#degreeSchool
+###  http://precis.rukmal.me/ontology#degreeSchool
 :degreeSchool rdf:type owl:ObjectProperty ;
               rdfs:domain :Degree ;
               rdfs:range :Organization ;
@@ -78,7 +140,7 @@ xsd:gYear rdf:type rdfs:Datatype .
               rdfs:label "School awarding the Degree" .
 
 
-###  http://rukmal.me/precis#degreeUniversity
+###  http://precis.rukmal.me/ontology#degreeUniversity
 :degreeUniversity rdf:type owl:ObjectProperty ;
                   rdfs:domain :Degree ;
                   rdfs:range :Organization ;
@@ -86,7 +148,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                   rdfs:label "Organization awarding the Degree" .
 
 
-###  http://rukmal.me/precis#employedAt
+###  http://precis.rukmal.me/ontology#employedAt
 :employedAt rdf:type owl:ObjectProperty ;
             rdfs:domain :WorkExperience ;
             rdfs:range :Organization ;
@@ -94,7 +156,7 @@ xsd:gYear rdf:type rdfs:Datatype .
             rdfs:label "Employment Organization" .
 
 
-###  http://rukmal.me/precis#hasActivity
+###  http://precis.rukmal.me/ontology#hasActivity
 :hasActivity rdf:type owl:ObjectProperty ;
              owl:inverseOf :inActivityType ;
              rdfs:domain :ActivityType ;
@@ -103,7 +165,7 @@ xsd:gYear rdf:type rdfs:Datatype .
              rdfs:label "Constituent Activity" .
 
 
-###  http://rukmal.me/precis#hasChildOrganization
+###  http://precis.rukmal.me/ontology#hasChildOrganization
 :hasChildOrganization rdf:type owl:ObjectProperty ;
                       owl:inverseOf :hasParentOrganization ;
                       rdf:type owl:TransitiveProperty ;
@@ -113,7 +175,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                       rdfs:label "Child Organization" .
 
 
-###  http://rukmal.me/precis#hasDescription
+###  http://precis.rukmal.me/ontology#hasDescription
 :hasDescription rdf:type owl:ObjectProperty ;
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( :Accolade
@@ -131,7 +193,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                 rdfs:label "Description" .
 
 
-###  http://rukmal.me/precis#hasObject
+###  http://precis.rukmal.me/ontology#hasObject
 :hasObject rdf:type owl:ObjectProperty ;
            rdfs:domain [ rdf:type owl:Class ;
                          owl:unionOf ( :Degree
@@ -147,7 +209,7 @@ xsd:gYear rdf:type rdfs:Datatype .
            rdfs:label "Constituent Object" .
 
 
-###  http://rukmal.me/precis#hasParentOrganization
+###  http://precis.rukmal.me/ontology#hasParentOrganization
 :hasParentOrganization rdf:type owl:ObjectProperty ,
                                 owl:TransitiveProperty ;
                        rdfs:domain :Organization ;
@@ -156,7 +218,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                        rdfs:label "Parent Organization" .
 
 
-###  http://rukmal.me/precis#hasSkill
+###  http://precis.rukmal.me/ontology#hasSkill
 :hasSkill rdf:type owl:ObjectProperty ;
           owl:inverseOf :inSkillGroup ;
           rdfs:domain :SkillGroup ;
@@ -165,7 +227,7 @@ xsd:gYear rdf:type rdfs:Datatype .
           rdfs:label "Constituent Skill" .
 
 
-###  http://rukmal.me/precis#hasSubject
+###  http://precis.rukmal.me/ontology#hasSubject
 :hasSubject rdf:type owl:ObjectProperty ;
             owl:inverseOf :inKnowledgeArea ;
             rdfs:domain :KnowledgeArea ;
@@ -174,7 +236,7 @@ xsd:gYear rdf:type rdfs:Datatype .
             rdfs:label "Constituent Subject" .
 
 
-###  http://rukmal.me/precis#inActivityType
+###  http://precis.rukmal.me/ontology#inActivityType
 :inActivityType rdf:type owl:ObjectProperty ;
                 rdfs:domain :Activity ;
                 rdfs:range :ActivityType ;
@@ -182,7 +244,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                 rdfs:label "Parent Activity Type" .
 
 
-###  http://rukmal.me/precis#inKnowledgeArea
+###  http://precis.rukmal.me/ontology#inKnowledgeArea
 :inKnowledgeArea rdf:type owl:ObjectProperty ;
                  rdfs:domain :Subject ;
                  rdfs:range :KnowledgeArea ;
@@ -190,7 +252,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                  rdfs:label "Parent Knowledge Area" .
 
 
-###  http://rukmal.me/precis#inSkillGroup
+###  http://precis.rukmal.me/ontology#inSkillGroup
 :inSkillGroup rdf:type owl:ObjectProperty ;
               rdfs:domain :Skill ;
               rdfs:range :SkillGroup ;
@@ -198,7 +260,7 @@ xsd:gYear rdf:type rdfs:Datatype .
               rdfs:label "Parent SkillGroup" .
 
 
-###  http://rukmal.me/precis#relatedTo
+###  http://precis.rukmal.me/ontology#relatedTo
 :relatedTo rdf:type owl:ObjectProperty ,
                     owl:SymmetricProperty ,
                     owl:TransitiveProperty ;
@@ -228,7 +290,7 @@ xsd:gYear rdf:type rdfs:Datatype .
            rdfs:label "Related Concept" .
 
 
-###  http://rukmal.me/precis#taughtAt
+###  http://precis.rukmal.me/ontology#taughtAt
 :taughtAt rdf:type owl:ObjectProperty ;
           rdfs:domain :Course ;
           rdfs:range :Organization ;
@@ -240,7 +302,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  http://rukmal.me/precis#degreeConcentration
+###  http://precis.rukmal.me/ontology#degreeConcentration
 :degreeConcentration rdf:type owl:DatatypeProperty ;
                      rdfs:domain :Degree ;
                      rdfs:range xsd:anyURI ;
@@ -248,7 +310,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                      rdfs:label "Degree Concentration" .
 
 
-###  http://rukmal.me/precis#degreeGPA
+###  http://precis.rukmal.me/ontology#degreeGPA
 :degreeGPA rdf:type owl:DatatypeProperty ;
            rdfs:domain :Degree ;
            rdfs:range [ rdf:type rdfs:Datatype ;
@@ -263,7 +325,7 @@ xsd:gYear rdf:type rdfs:Datatype .
            rdfs:label "Degree GPA (on a 4.0 scale)" .
 
 
-###  http://rukmal.me/precis#degreeType
+###  http://precis.rukmal.me/ontology#degreeType
 :degreeType rdf:type owl:DatatypeProperty ;
             rdfs:domain :Degree ;
             rdfs:range xsd:anyURI ;
@@ -271,7 +333,7 @@ xsd:gYear rdf:type rdfs:Datatype .
             rdfs:label "Degree Type" .
 
 
-###  http://rukmal.me/precis#endDate
+###  http://precis.rukmal.me/ontology#endDate
 :endDate rdf:type owl:DatatypeProperty ;
          rdfs:domain [ rdf:type owl:Class ;
                        owl:unionOf ( :ActivityType
@@ -285,7 +347,7 @@ xsd:gYear rdf:type rdfs:Datatype .
          rdfs:label "endDate" .
 
 
-###  http://rukmal.me/precis#externalResource
+###  http://precis.rukmal.me/ontology#externalResource
 :externalResource rdf:type owl:DatatypeProperty ;
                   rdfs:domain [ rdf:type owl:Class ;
                                 owl:unionOf ( :Accolade
@@ -304,7 +366,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                   rdfs:label "External resource" .
 
 
-###  http://rukmal.me/precis#hasAuthors
+###  http://precis.rukmal.me/ontology#hasAuthors
 :hasAuthors rdf:type owl:DatatypeProperty ;
             rdfs:domain :Publication ;
             rdfs:range xsd:string ;
@@ -312,7 +374,7 @@ xsd:gYear rdf:type rdfs:Datatype .
             rdfs:label "Author List" .
 
 
-###  http://rukmal.me/precis#hasCollaborators
+###  http://precis.rukmal.me/ontology#hasCollaborators
 :hasCollaborators rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Portfolio ;
                   rdfs:range xsd:string ;
@@ -320,7 +382,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                   rdfs:label "Collaborators List" .
 
 
-###  http://rukmal.me/precis#hasCourseCode
+###  http://precis.rukmal.me/ontology#hasCourseCode
 :hasCourseCode rdf:type owl:DatatypeProperty ;
                rdfs:domain :Course ;
                rdfs:range xsd:string ;
@@ -328,7 +390,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                rdfs:label "Course code" .
 
 
-###  http://rukmal.me/precis#hasDOI
+###  http://precis.rukmal.me/ontology#hasDOI
 :hasDOI rdf:type owl:DatatypeProperty ;
         rdfs:domain :Publication ;
         rdfs:range xsd:anyURI ;
@@ -336,7 +398,7 @@ xsd:gYear rdf:type rdfs:Datatype .
         rdfs:label "Digital Object Identifier (DOI) of the Publication" .
 
 
-###  http://rukmal.me/precis#hasDate
+###  http://precis.rukmal.me/ontology#hasDate
 :hasDate rdf:type owl:DatatypeProperty ;
          rdfs:domain [ rdf:type owl:Class ;
                        owl:unionOf ( :Accolade
@@ -352,7 +414,7 @@ xsd:gYear rdf:type rdfs:Datatype .
          rdfs:label "Date" .
 
 
-###  http://rukmal.me/precis#hasDepartmentCode
+###  http://precis.rukmal.me/ontology#hasDepartmentCode
 :hasDepartmentCode rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Course ;
                    rdfs:range xsd:string ;
@@ -360,7 +422,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                    rdfs:label "Department code" .
 
 
-###  http://rukmal.me/precis#hasImage
+###  http://precis.rukmal.me/ontology#hasImage
 :hasImage rdf:type owl:DatatypeProperty ;
           rdfs:domain :WorkExperience ;
           rdfs:range xsd:anyURI ;
@@ -368,7 +430,7 @@ xsd:gYear rdf:type rdfs:Datatype .
           rdfs:label "Image" .
 
 
-###  http://rukmal.me/precis#hasMedia
+###  http://precis.rukmal.me/ontology#hasMedia
 :hasMedia rdf:type owl:DatatypeProperty ;
           rdfs:domain [ rdf:type owl:Class ;
                         owl:unionOf ( :Accolade
@@ -382,7 +444,7 @@ xsd:gYear rdf:type rdfs:Datatype .
           rdfs:label "Media" .
 
 
-###  http://rukmal.me/precis#hasName
+###  http://precis.rukmal.me/ontology#hasName
 :hasName rdf:type owl:DatatypeProperty ;
          rdfs:domain [ rdf:type owl:Class ;
                        owl:unionOf ( :Accolade
@@ -401,7 +463,7 @@ xsd:gYear rdf:type rdfs:Datatype .
          rdfs:label "Human readable name" .
 
 
-###  http://rukmal.me/precis#hasPriority
+###  http://precis.rukmal.me/ontology#hasPriority
 :hasPriority rdf:type owl:DatatypeProperty ;
              rdfs:domain :Description ;
              rdfs:range xsd:nonNegativeInteger ;
@@ -409,7 +471,7 @@ xsd:gYear rdf:type rdfs:Datatype .
              rdfs:label "description priority level" .
 
 
-###  http://rukmal.me/precis#hasStatus
+###  http://precis.rukmal.me/ontology#hasStatus
 :hasStatus rdf:type owl:DatatypeProperty ;
            rdfs:domain :Publication ;
            rdfs:range xsd:string ;
@@ -417,7 +479,7 @@ xsd:gYear rdf:type rdfs:Datatype .
            rdfs:label "Publication Status" .
 
 
-###  http://rukmal.me/precis#hasText
+###  http://precis.rukmal.me/ontology#hasText
 :hasText rdf:type owl:DatatypeProperty ;
          rdfs:domain :Description ;
          rdfs:range xsd:string ;
@@ -425,7 +487,7 @@ xsd:gYear rdf:type rdfs:Datatype .
          rdfs:label "description text" .
 
 
-###  http://rukmal.me/precis#hasWebsite
+###  http://precis.rukmal.me/ontology#hasWebsite
 :hasWebsite rdf:type owl:DatatypeProperty ;
             rdfs:domain [ rdf:type owl:Class ;
                           owl:unionOf ( :Accolade
@@ -443,7 +505,7 @@ xsd:gYear rdf:type rdfs:Datatype .
             rdfs:label "Entity website" .
 
 
-###  http://rukmal.me/precis#inCity
+###  http://precis.rukmal.me/ontology#inCity
 :inCity rdf:type owl:DatatypeProperty ;
         rdfs:domain [ rdf:type owl:Class ;
                       owl:unionOf ( :Accolade
@@ -461,7 +523,7 @@ xsd:gYear rdf:type rdfs:Datatype .
         rdfs:label "City" .
 
 
-###  http://rukmal.me/precis#inConferenceOrJournal
+###  http://precis.rukmal.me/ontology#inConferenceOrJournal
 :inConferenceOrJournal rdf:type owl:DatatypeProperty ;
                        rdfs:domain :Publication ;
                        rdfs:range xsd:string ;
@@ -469,7 +531,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                        rdfs:label "Conference/Journal Name" .
 
 
-###  http://rukmal.me/precis#inCountry
+###  http://precis.rukmal.me/ontology#inCountry
 :inCountry rdf:type owl:DatatypeProperty ;
            rdfs:domain [ rdf:type owl:Class ;
                          owl:unionOf ( :Accolade
@@ -486,7 +548,7 @@ xsd:gYear rdf:type rdfs:Datatype .
            rdfs:label "Country" .
 
 
-###  http://rukmal.me/precis#inPublication
+###  http://precis.rukmal.me/ontology#inPublication
 :inPublication rdf:type owl:DatatypeProperty ;
                rdfs:domain :Publication ;
                rdfs:range xsd:string ;
@@ -494,7 +556,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                rdfs:label "Publication Name" .
 
 
-###  http://rukmal.me/precis#inState
+###  http://precis.rukmal.me/ontology#inState
 :inState rdf:type owl:DatatypeProperty ;
          rdfs:domain [ rdf:type owl:Class ;
                        owl:unionOf ( :Accolade
@@ -512,7 +574,7 @@ xsd:gYear rdf:type rdfs:Datatype .
          rdfs:label "State" .
 
 
-###  http://rukmal.me/precis#withGrade
+###  http://precis.rukmal.me/ontology#withGrade
 :withGrade rdf:type owl:DatatypeProperty ;
            rdfs:domain :Course ;
            rdfs:range [ rdf:type rdfs:Datatype ;
@@ -531,7 +593,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://rukmal.me/precis#Accolade
+###  http://precis.rukmal.me/ontology#Accolade
 :Accolade rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :affiliatedWith ;
@@ -568,7 +630,7 @@ xsd:gYear rdf:type rdfs:Datatype .
           rdfs:label "Accolade" .
 
 
-###  http://rukmal.me/precis#Activity
+###  http://precis.rukmal.me/ontology#Activity
 :Activity rdf:type owl:Class ;
           rdfs:subClassOf :ActivityType ,
                           [ rdf:type owl:Restriction ;
@@ -580,7 +642,7 @@ xsd:gYear rdf:type rdfs:Datatype .
           rdfs:label "Activity" .
 
 
-###  http://rukmal.me/precis#ActivityType
+###  http://precis.rukmal.me/ontology#ActivityType
 :ActivityType rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasActivity ;
@@ -617,21 +679,21 @@ xsd:gYear rdf:type rdfs:Datatype .
               rdfs:label "Activity Type" .
 
 
-###  http://rukmal.me/precis#Award
+###  http://precis.rukmal.me/ontology#Award
 :Award rdf:type owl:Class ;
        rdfs:subClassOf :Accolade ;
        rdfs:comment "An 'Award'; this would correspond to a traditional award, such as a Fellowship or Dean's List." ;
        rdfs:label "Award" .
 
 
-###  http://rukmal.me/precis#Certification
+###  http://precis.rukmal.me/ontology#Certification
 :Certification rdf:type owl:Class ;
                rdfs:subClassOf :Accolade ;
                rdfs:comment "A 'Cerficiation'; this would correspond to a traditional certification, such as a CPR Rating, or the Bloomberg Market Concepts certification." ;
                rdfs:label "Certification" .
 
 
-###  http://rukmal.me/precis#Course
+###  http://precis.rukmal.me/ontology#Course
 :Course rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty :hasDescription ;
@@ -675,7 +737,7 @@ xsd:gYear rdf:type rdfs:Datatype .
         rdfs:label "Course" .
 
 
-###  http://rukmal.me/precis#Degree
+###  http://precis.rukmal.me/ontology#Degree
 :Degree rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty :degreeDepartment ;
@@ -726,7 +788,7 @@ xsd:gYear rdf:type rdfs:Datatype .
         rdfs:label "Degree" .
 
 
-###  http://rukmal.me/precis#Description
+###  http://precis.rukmal.me/ontology#Description
 :Description rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty :hasText ;
@@ -742,7 +804,7 @@ xsd:gYear rdf:type rdfs:Datatype .
              rdfs:label "Description for a given item" .
 
 
-###  http://rukmal.me/precis#KnowledgeArea
+###  http://precis.rukmal.me/ontology#KnowledgeArea
 :KnowledgeArea rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasDescription ;
@@ -768,7 +830,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                rdfs:label "Knowledge Area" .
 
 
-###  http://rukmal.me/precis#Organization
+###  http://precis.rukmal.me/ontology#Organization
 :Organization rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasParentOrganization ;
@@ -808,7 +870,7 @@ xsd:gYear rdf:type rdfs:Datatype .
  ] .
 
 
-###  http://rukmal.me/precis#Portfolio
+###  http://precis.rukmal.me/ontology#Portfolio
 :Portfolio rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :affiliatedWith ;
@@ -854,7 +916,7 @@ xsd:gYear rdf:type rdfs:Datatype .
            rdfs:label "Portfolio" .
 
 
-###  http://rukmal.me/precis#Project
+###  http://precis.rukmal.me/ontology#Project
 :Project rdf:type owl:Class ;
          rdfs:subClassOf :Portfolio ,
                          [ rdf:type owl:Restriction ;
@@ -865,7 +927,7 @@ xsd:gYear rdf:type rdfs:Datatype .
          rdfs:label "Project" .
 
 
-###  http://rukmal.me/precis#Publication
+###  http://precis.rukmal.me/ontology#Publication
 :Publication rdf:type owl:Class ;
              rdfs:subClassOf :Portfolio ,
                              [ rdf:type owl:Restriction ;
@@ -896,7 +958,7 @@ xsd:gYear rdf:type rdfs:Datatype .
              rdfs:label "Publication" .
 
 
-###  http://rukmal.me/precis#Skill
+###  http://precis.rukmal.me/ontology#Skill
 :Skill rdf:type owl:Class ;
        rdfs:subClassOf :SkillGroup ,
                        [ rdf:type owl:Restriction ;
@@ -917,7 +979,7 @@ xsd:gYear rdf:type rdfs:Datatype .
        rdfs:label "Skill" .
 
 
-###  http://rukmal.me/precis#SkillGroup
+###  http://precis.rukmal.me/ontology#SkillGroup
 :SkillGroup rdf:type owl:Class ;
             rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty :hasDescription ;
@@ -941,7 +1003,7 @@ xsd:gYear rdf:type rdfs:Datatype .
             rdfs:label "Skill Group" .
 
 
-###  http://rukmal.me/precis#Subject
+###  http://precis.rukmal.me/ontology#Subject
 :Subject rdf:type owl:Class ;
          rdfs:subClassOf :KnowledgeArea ,
                          [ rdf:type owl:Restriction ;
@@ -958,7 +1020,7 @@ xsd:gYear rdf:type rdfs:Datatype .
          rdfs:label "Specific Subject" .
 
 
-###  http://rukmal.me/precis#Talk
+###  http://precis.rukmal.me/ontology#Talk
 :Talk rdf:type owl:Class ;
       rdfs:subClassOf :Portfolio ,
                       [ rdf:type owl:Restriction ;
@@ -974,7 +1036,7 @@ xsd:gYear rdf:type rdfs:Datatype .
       rdfs:label "Talk" .
 
 
-###  http://rukmal.me/precis#WorkExperience
+###  http://precis.rukmal.me/ontology#WorkExperience
 :WorkExperience rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Class ;
                                   owl:unionOf ( [ rdf:type owl:Restriction ;
