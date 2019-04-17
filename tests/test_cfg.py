@@ -8,3 +8,7 @@ class TestConfig():
     sample_json_data = 'data/sample.json'  # Sample JSON (Musk resume)
     sample_rdf_data = 'data/sample.rdf'  # Sample RDF (Musk resume)
     test_save_location = 'data/test.rdf'  # Location to save test file
+
+    # Templating tests
+    template_folder = 'templates/'
+    template_cv = 'templates/curriculum_vitae'
