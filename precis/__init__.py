@@ -48,3 +48,4 @@ config.data_properties = data_properties
 from .loader import Loader
 from .query import OntQuery
 from .templater import TemplateDriver
+from . import templating

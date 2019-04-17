@@ -1,7 +1,7 @@
 from owlready2.namespace import Namespace, Ontology
 
 
-class config:
+class config():
 
     # Precis ontology versions
     __ont_sources = {
@@ -30,3 +30,19 @@ class config:
     data_properties: dict = {}  # Data property map
     ont_classes: dict = {}  # Ontology class map
     namespace: Namespace = None  # Namespace for the current ontology
+
+
+    # Templating Stuff
+
+    # Template folder (relative to top-level package import)
+    template_folder = './templates'
+
+    # Template file names
+    template_files = {
+        'config': 'template_config.yml',
+        'template': 'template.tex.j2'
+    }
+
+    # Required template configuration fields
+    template_config_required = ['full_name', 'description', 'author',
+        'required_input']
