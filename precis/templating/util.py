@@ -3,7 +3,7 @@ from ..cfg import config
 from jinja2 import Environment, TemplateSyntaxError
 import os
 import logging
-import yaml
+from yaml import load as yaml_load, SafeLoader
 
 
 def listAllTemplateFolders() -> list:
@@ -76,7 +76,8 @@ def validateTemplate(template_folder: str):
 
     # Checking template configuration validity
     with open(template_config_file) as f:
-        template_config_attrs = set(yaml.load(stream=f).keys())
+        template_config_attrs = set(yaml_load(stream=f, Loader=SafeLoader)\
+            .keys())
         if not set(config.template_config_required).issubset(
             template_config_attrs):
             message = """Template configuration files {0} is invalid.
