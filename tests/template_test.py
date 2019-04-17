@@ -7,10 +7,10 @@ import unittest
 class TestTemplate(unittest.TestCase):
     
     def test_validateTemplate(self):
-        # precis.templating.util.validateTemplate(
-        #     template_folder=TestConfig.template_cv
-        # )
-        pass
+        precis.templating.Template(
+            template_folder=TestConfig.template_cv
+        )
+        self.assertTrue(True)
 
     def test_validateAllTemplates(self):
         """Function to validate all templates in the `templates` folder.

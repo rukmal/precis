@@ -1,9 +1,9 @@
 from ..cfg import config
 
 from jinja2 import Environment, TemplateSyntaxError
+from yaml import load as yaml_load, SafeLoader
 import os
 import logging
-from yaml import load as yaml_load, SafeLoader
 
 
 def listAllTemplateFolders() -> list:
