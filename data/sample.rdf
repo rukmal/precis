@@ -3,18 +3,60 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xml:base="http://rukmal.me/precis"
-         xmlns="http://rukmal.me/precis#"
-         xmlns:x_1.1="http://purl.org/dc/elements/1.1/">
+         xml:base="http://precis.rukmal.me/ontology"
+         xmlns="http://precis.rukmal.me/ontology#"
+         xmlns:term="http://purl.org/dc/terms/"
+         xmlns:bibo="http://purl.org/ontology/bibo/"
+         xmlns:sche="http://schema.org/"
+         xmlns:x_1.1="http://purl.org/dc/elements/1.1/"
+         xmlns:vann="http://purl.org/vocab/vann/">
 
-<owl:Ontology rdf:about="http://rukmal.me/precis">
-  <owl:versionIRI rdf:resource="http://rukmal.me/precis/1.4.0"/>
-  <x_1.1:creator rdf:resource="https://orcid.org/0000-0002-8628-6753"/>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://github.com/rukmal/precis for more.</rdfs:comment>
-  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.4.0</owl:versionInfo>
+<owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#priorVersion"/>
+
+<owl:Ontology rdf:about="http://precis.rukmal.me/ontology">
+  <owl:priorVersion rdf:resource="https://github.com/rukmal/precis/releases/download/1.4.0/precis_ontology.rdf"/>
+  <owl:versionIRI rdf:resource="http://precis.rukmal.me/ontology/1.5.0"/>
+  <term:creator rdf:resource="http://rukmal.me"/>
+  <bibo:doi rdf:resource="http://purl.org/precis"/>
+  <sche:license rdf:resource="https://github.com/rukmal/precis/blob/master/LICENSE"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.
+
+Currently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.</rdfs:comment>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.5.0</owl:versionInfo>
+  <x_1.1:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.
+
+Currently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.</x_1.1:abstract>
+  <x_1.1:creator>Rukmal Weerawarana</x_1.1:creator>
+  <x_1.1:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Precis Ontology</x_1.1:title>
+  <term:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-07T00:00:00</term:created>
+  <term:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-17T00:00:00</term:modified>
+  <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">precis</vann:preferredNamespacePrefix>
+  <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://precis.rukmal.me/ontology</vann:preferredNamespaceUri>
 </owl:Ontology>
 
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
+
 <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/doi"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+
+<owl:AnnotationProperty rdf:about="http://schema.org/license"/>
+
+<owl:AnnotationProperty rdf:about="http://schema.org/creator"/>
+
+<owl:AnnotationProperty rdf:about="http://schema.org/description"/>
 
 <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gMonth"/>
 
@@ -1178,30 +1220,30 @@
   <rdfs:label>Talk</rdfs:label>
 </owl:Class>
 
-<Organization rdf:about="http://rukmal.me/precis/musk#spacex">
+<Organization rdf:about="http://precis.rukmal.me/ontology/musk#spacex">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/SpaceX</externalResource>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Space Exploration Technologies Corporation</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/</hasWebsite>
 </Organization>
 
-<Description rdf:about="http://rukmal.me/precis/musk#db39e02a-bb6a-4f6c-8f67-fe5e4ffd70e1">
+<Description rdf:about="http://precis.rukmal.me/ontology/musk#a240bccf-d6b9-4c32-b31a-c777e5c7d3cb">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Launched SpaceX.</hasText>
 </Description>
 
-<Description rdf:about="http://rukmal.me/precis/musk#0569c89b-8bbf-4bbb-b93a-61b481567b9c">
+<Description rdf:about="http://precis.rukmal.me/ontology/musk#79e3f971-be5d-46a5-bd67-983e4b1f4bef">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Led the development of the first commercially viable reusable orbital class rocket.</hasText>
 </Description>
 
-<WorkExperience rdf:about="http://rukmal.me/precis/musk#we_spacex_ceo">
+<WorkExperience rdf:about="http://precis.rukmal.me/ontology/musk#we_spacex_ceo">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <employedAt rdf:resource="http://rukmal.me/precis/musk#spacex"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/musk#0569c89b-8bbf-4bbb-b93a-61b481567b9c"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/musk#db39e02a-bb6a-4f6c-8f67-fe5e4ffd70e1"/>
+  <employedAt rdf:resource="http://precis.rukmal.me/ontology/musk#spacex"/>
+  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#a240bccf-d6b9-4c32-b31a-c777e5c7d3cb"/>
+  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#79e3f971-be5d-46a5-bd67-983e4b1f4bef"/>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-05-01T00:00:00</hasDate>
   <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasImage>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Founder, CEO and Lead Designer</hasName>
@@ -1209,16 +1251,16 @@
   <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</inState>
 </WorkExperience>
 
-<Organization rdf:about="http://rukmal.me/precis/musk#tesla">
+<Organization rdf:about="http://precis.rukmal.me/ontology/musk#tesla">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Tesla_Motors</externalResource>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tesla Motors</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.tesla.com/</hasWebsite>
 </Organization>
 
-<WorkExperience rdf:about="http://rukmal.me/precis/musk#we_tesla_ceo">
+<WorkExperience rdf:about="http://precis.rukmal.me/ontology/musk#we_tesla_ceo">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <employedAt rdf:resource="http://rukmal.me/precis/musk#tesla"/>
+  <employedAt rdf:resource="http://precis.rukmal.me/ontology/musk#tesla"/>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-01-01T00:00:00</hasDate>
   <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasImage>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CEO and Product Architect</hasName>
@@ -1226,46 +1268,46 @@
   <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</inState>
 </WorkExperience>
 
-<Description rdf:about="http://rukmal.me/precis/musk#f99cbf0e-9ddb-470e-aa98-3f597d988164">
+<Description rdf:about="http://precis.rukmal.me/ontology/musk#537e7848-5e0f-4015-bd5c-a7dc2949a29d">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Given to people who have rendered meritorious service to humanity in the IEEE's designated fields of interest.</hasText>
 </Description>
 
-<Award rdf:about="http://rukmal.me/precis/musk#award:ieee">
+<Award rdf:about="http://precis.rukmal.me/ontology/musk#award:ieee">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <affiliatedWith rdf:resource="http://rukmal.me/precis/musk#we_tesla_ceo"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/musk#f99cbf0e-9ddb-470e-aa98-3f597d988164"/>
+  <affiliatedWith rdf:resource="http://precis.rukmal.me/ontology/musk#we_tesla_ceo"/>
+  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#537e7848-5e0f-4015-bd5c-a7dc2949a29d"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/IEEE_Honorary_Membership</externalResource>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-01-01T00:00:00</hasDate>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEEE Honorary Membership</hasName>
 </Award>
 
-<Organization rdf:about="http://rukmal.me/precis/musk#org_upenn">
+<Organization rdf:about="http://precis.rukmal.me/ontology/musk#org_upenn">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">University of Pennsylvania</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.upenn.edu/</hasWebsite>
 </Organization>
 
-<Organization rdf:about="http://rukmal.me/precis/musk#org_upenn_wharton">
+<Organization rdf:about="http://precis.rukmal.me/ontology/musk#org_upenn_wharton">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/precis/musk#org_upenn"/>
+  <hasParentOrganization rdf:resource="http://precis.rukmal.me/ontology/musk#org_upenn"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wharton School</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wharton.upenn.edu/</hasWebsite>
 </Organization>
 
-<Organization rdf:about="http://rukmal.me/precis/musk#org_upenn_wharton_econ">
+<Organization rdf:about="http://precis.rukmal.me/ontology/musk#org_upenn_wharton_econ">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/precis/musk#org_upenn_wharton"/>
+  <hasParentOrganization rdf:resource="http://precis.rukmal.me/ontology/musk#org_upenn_wharton"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department of Business Economics and Public Policy</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://bepp.wharton.upenn.edu/</hasWebsite>
 </Organization>
 
-<Degree rdf:about="http://rukmal.me/precis/musk#degree_bs_econ">
+<Degree rdf:about="http://precis.rukmal.me/ontology/musk#degree_bs_econ">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <degreeUniversity rdf:resource="http://rukmal.me/precis/musk#org_upenn"/>
-  <degreeDepartment rdf:resource="http://rukmal.me/precis/musk#org_upenn_wharton_econ"/>
-  <degreeSchool rdf:resource="http://rukmal.me/precis/musk#org_upenn_wharton"/>
+  <degreeUniversity rdf:resource="http://precis.rukmal.me/ontology/musk#org_upenn"/>
+  <degreeDepartment rdf:resource="http://precis.rukmal.me/ontology/musk#org_upenn_wharton_econ"/>
+  <degreeSchool rdf:resource="http://precis.rukmal.me/ontology/musk#org_upenn_wharton"/>
   <degreeConcentration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Economics</degreeConcentration>
   <degreeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Bachelor_of_Science</degreeType>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-06-01T00:00:00</hasDate>
@@ -1274,25 +1316,25 @@
   <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</inState>
 </Degree>
 
-<Organization rdf:about="http://rukmal.me/precis/musk#org_upenn_sas">
+<Organization rdf:about="http://precis.rukmal.me/ontology/musk#org_upenn_sas">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/precis/musk#org_upenn"/>
+  <hasParentOrganization rdf:resource="http://precis.rukmal.me/ontology/musk#org_upenn"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">School of Arts and Science</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.sas.upenn.edu/</hasWebsite>
 </Organization>
 
-<Organization rdf:about="http://rukmal.me/precis/musk#org_upenn_physics">
+<Organization rdf:about="http://precis.rukmal.me/ontology/musk#org_upenn_physics">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasParentOrganization rdf:resource="http://rukmal.me/precis/musk#org_upenn_sas"/>
+  <hasParentOrganization rdf:resource="http://precis.rukmal.me/ontology/musk#org_upenn_sas"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department of Physics and Astronomy</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.physics.upenn.edu/</hasWebsite>
 </Organization>
 
-<Degree rdf:about="http://rukmal.me/precis/musk#degree_bs_physics">
+<Degree rdf:about="http://precis.rukmal.me/ontology/musk#degree_bs_physics">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <degreeUniversity rdf:resource="http://rukmal.me/precis/musk#org_upenn"/>
-  <degreeDepartment rdf:resource="http://rukmal.me/precis/musk#org_upenn_physics"/>
-  <degreeSchool rdf:resource="http://rukmal.me/precis/musk#org_upenn_sas"/>
+  <degreeUniversity rdf:resource="http://precis.rukmal.me/ontology/musk#org_upenn"/>
+  <degreeDepartment rdf:resource="http://precis.rukmal.me/ontology/musk#org_upenn_physics"/>
+  <degreeSchool rdf:resource="http://precis.rukmal.me/ontology/musk#org_upenn_sas"/>
   <degreeConcentration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Physics</degreeConcentration>
   <degreeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Bachelor_of_Science</degreeType>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-06-01T00:00:00</hasDate>
@@ -1301,104 +1343,104 @@
   <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</inState>
 </Degree>
 
-<Project rdf:about="http://rukmal.me/precis/musk#proj_spacex_falcon_heavy">
+<Project rdf:about="http://precis.rukmal.me/ontology/musk#proj_spacex_falcon_heavy">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <affiliatedWith rdf:resource="http://rukmal.me/precis/musk#we_spacex_ceo"/>
+  <affiliatedWith rdf:resource="http://precis.rukmal.me/ontology/musk#we_spacex_ceo"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Falcon_Heavy</externalResource>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-06T00:00:00</hasDate>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Falcon Heavy Rocket</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/falcon-heavy</hasWebsite>
 </Project>
 
-<Publication rdf:about="http://rukmal.me/precis/musk#proj_spacex_hyperloop_alpha">
+<Publication rdf:about="http://precis.rukmal.me/ontology/musk#proj_spacex_hyperloop_alpha">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <affiliatedWith rdf:resource="http://rukmal.me/precis/musk#we_spacex_ceo"/>
-  <relatedTo rdf:resource="http://rukmal.me/precis/musk#award:ieee"/>
+  <affiliatedWith rdf:resource="http://precis.rukmal.me/ontology/musk#we_spacex_ceo"/>
+  <relatedTo rdf:resource="http://precis.rukmal.me/ontology/musk#award:ieee"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Hyperloop</externalResource>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-08-16T00:00:00</hasDate>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperloop Alpha</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/sites/spacex/files/hyperloop_alpha.pdf</hasWebsite>
 </Publication>
 
-<Skill rdf:about="http://rukmal.me/precis/musk#sk:R">
+<Skill rdf:about="http://precis.rukmal.me/ontology/musk#sk:R">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R Language</hasName>
 </Skill>
 
-<Skill rdf:about="http://rukmal.me/precis/musk#sk:python">
+<Skill rdf:about="http://precis.rukmal.me/ontology/musk#sk:python">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</hasName>
 </Skill>
 
-<SkillGroup rdf:about="http://rukmal.me/precis/musk#sg:programming">
+<SkillGroup rdf:about="http://precis.rukmal.me/ontology/musk#sg:programming">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSkill rdf:resource="http://rukmal.me/precis/musk#sk:python"/>
-  <hasSkill rdf:resource="http://rukmal.me/precis/musk#sk:R"/>
+  <hasSkill rdf:resource="http://precis.rukmal.me/ontology/musk#sk:R"/>
+  <hasSkill rdf:resource="http://precis.rukmal.me/ontology/musk#sk:python"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programming Languages</hasName>
 </SkillGroup>
 
-<Subject rdf:about="http://rukmal.me/precis/musk#sub:sci_comp">
+<Subject rdf:about="http://precis.rukmal.me/ontology/musk#sub:sci_comp">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific Computing</hasName>
 </Subject>
 
-<Subject rdf:about="http://rukmal.me/precis/musk#sub:data_structures">
+<Subject rdf:about="http://precis.rukmal.me/ontology/musk#sub:data_structures">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Structures</hasName>
 </Subject>
 
-<KnowledgeArea rdf:about="http://rukmal.me/precis/musk#ka:cs">
+<KnowledgeArea rdf:about="http://precis.rukmal.me/ontology/musk#ka:cs">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSubject rdf:resource="http://rukmal.me/precis/musk#sub:sci_comp"/>
-  <hasSubject rdf:resource="http://rukmal.me/precis/musk#sub:data_structures"/>
+  <hasSubject rdf:resource="http://precis.rukmal.me/ontology/musk#sub:sci_comp"/>
+  <hasSubject rdf:resource="http://precis.rukmal.me/ontology/musk#sub:data_structures"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Science</hasName>
 </KnowledgeArea>
 
-<Activity rdf:about="http://rukmal.me/precis/musk#ac:basketball">
+<Activity rdf:about="http://precis.rukmal.me/ontology/musk#ac:basketball">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basketball</hasName>
 </Activity>
 
-<Activity rdf:about="http://rukmal.me/precis/musk#ac:hiking">
+<Activity rdf:about="http://precis.rukmal.me/ontology/musk#ac:hiking">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outdoor Hiking</hasName>
 </Activity>
 
-<ActivityType rdf:about="http://rukmal.me/precis/musk#ac_type:rec_sports">
+<ActivityType rdf:about="http://precis.rukmal.me/ontology/musk#ac_type:rec_sports">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasActivity rdf:resource="http://rukmal.me/precis/musk#ac:hiking"/>
-  <hasActivity rdf:resource="http://rukmal.me/precis/musk#ac:basketball"/>
+  <hasActivity rdf:resource="http://precis.rukmal.me/ontology/musk#ac:hiking"/>
+  <hasActivity rdf:resource="http://precis.rukmal.me/ontology/musk#ac:basketball"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recreational Sports</hasName>
 </ActivityType>
 
-<Activity rdf:about="http://rukmal.me/precis/musk#ac:drinking">
+<Activity rdf:about="http://precis.rukmal.me/ontology/musk#ac:drinking">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casual Alcoholism</hasName>
 </Activity>
 
-<Activity rdf:about="http://rukmal.me/precis/musk#ac:420">
+<Activity rdf:about="http://precis.rukmal.me/ontology/musk#ac:420">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasMedia rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=Dr450QamBOU</hasMedia>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">420 blazing it with Joe Rogan</hasName>
 </Activity>
 
-<ActivityType rdf:about="http://rukmal.me/precis/musk#ac_type:debauchery">
+<ActivityType rdf:about="http://precis.rukmal.me/ontology/musk#ac_type:debauchery">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasActivity rdf:resource="http://rukmal.me/precis/musk#ac:420"/>
-  <hasActivity rdf:resource="http://rukmal.me/precis/musk#ac:drinking"/>
+  <hasActivity rdf:resource="http://precis.rukmal.me/ontology/musk#ac:420"/>
+  <hasActivity rdf:resource="http://precis.rukmal.me/ontology/musk#ac:drinking"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Debauchery</hasName>
 </ActivityType>
 
-<Description rdf:about="http://rukmal.me/precis/musk#0fe9ffb1-d7ee-4fd0-bfb0-ffb49f6c5984">
+<Description rdf:about="http://precis.rukmal.me/ontology/musk#48617e7a-df93-4dc8-861c-3768f7127610">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sophomore-level introduction to Macroeconomics</hasText>
 </Description>
 
-<Course rdf:about="http://rukmal.me/precis/musk#course:econ201">
+<Course rdf:about="http://precis.rukmal.me/ontology/musk#course:econ201">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDescription rdf:resource="http://rukmal.me/precis/musk#0fe9ffb1-d7ee-4fd0-bfb0-ffb49f6c5984"/>
-  <taughtAt rdf:resource="http://rukmal.me/precis/musk#org_upenn_wharton"/>
+  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#48617e7a-df93-4dc8-861c-3768f7127610"/>
+  <taughtAt rdf:resource="http://precis.rukmal.me/ontology/musk#org_upenn_wharton"/>
   <hasCourseCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">201</hasCourseCode>
   <hasDepartmentCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECON</hasDepartmentCode>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Macroeconomics</hasName>

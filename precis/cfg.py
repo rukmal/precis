@@ -13,12 +13,13 @@ class config:
         '1.2.0': 'https://github.com/rukmal/precis/releases/download/1.2.0/precis_ontology.rdf',
         '1.2.1': 'https://github.com/rukmal/precis/releases/download/1.2.1/precis_ontology.rdf',
         '1.3.0': 'https://github.com/rukmal/precis/releases/download/1.3.0/precis_ontology.rdf',
-        '1.4.0': 'https://github.com/rukmal/precis/releases/download/1.4.0/precis_ontology.rdf'
+        '1.4.0': 'https://github.com/rukmal/precis/releases/download/1.4.0/precis_ontology.rdf',
+        '1.5.0': 'https://github.com/rukmal/precis/releases/download/1.5.0/precis_ontology.rdf'
     }
 
     # Ontology source URL
-    # Currently configured for use with Precis Ontology 1.4.0
-    ont_source = __ont_sources['1.4.0']
+    # Currently configured for use with Precis Ontology 1.5.0
+    ont_source = __ont_sources['1.5.0']
 
     # NOTE: The following are set to empty here to help with linting; they
     #       are set at runtime when Precis is initialized.
