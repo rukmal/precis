@@ -1,0 +1,12 @@
+full_name: 'Curriculum Vitae'
+description: 'This is a template for a standard Curriculum Vitae.'
+author: 'Rukmal Weerawarana'
+required_input:
+    - 'full_name'
+    - 'address_line_1'
+    - 'address_city_state'
+    - 'address_zip'
+    - 'address_country'
+    - 'phone'
+    - 'email'
+    - 'website'
