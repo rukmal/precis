@@ -35,7 +35,7 @@ class config():
     # Templating Stuff
 
     # Template folder (relative to top-level package import)
-    template_folder = './templates'
+    templates_folder = './templates'
 
     # Template file names
     template_files = {
@@ -45,4 +45,4 @@ class config():
 
     # Required template configuration fields
     template_config_required = ['full_name', 'description', 'author',
-        'required_input']
+                                'required_input']

@@ -6,11 +6,28 @@ import logging
 import yaml
 
 
-def listAllTemplates() -> list:
-    # List all folders
-    # Validate each one
-    # Give names of valid templates (maybe dict?)
-    pass
+def listAllTemplateFolders() -> list:
+    """Function to list all template folders in the project templates directory.
+    
+    This function intentionally does not validate the templates, but rather just
+    returns candidate template folders for speed.
+    
+    Returns:
+        list -- List of template folders.
+    """
+
+    # List to store output
+    available_template_folders = []
+
+    # Iterating through files in the templates folder
+    for f in os.listdir(path=config.templates_folder):
+        # Appending to templates folder to get full path
+        f_path = os.path.join(config.templates_folder, f)
+        # Check if directory, if so append to the list
+        if os.path.isdir(f_path):
+            available_template_folders += [f_path]
+
+    return available_template_folders
 
 
 def validateTemplate(template_folder: str):
@@ -51,7 +68,7 @@ def validateTemplate(template_folder: str):
         try:
             env = Environment()
             env.parse(source=f.read())
-            logging.debug('Template {0} validated'.format(template_file))
+            logging.debug('Template Jinja {0} validated'.format(template_file))
         except TemplateSyntaxError:
             message = 'Template file {0} is invalid'.format(template_file)
             logging.error(message)
@@ -70,5 +87,8 @@ def validateTemplate(template_folder: str):
                 )
             logging.error(message)
             raise AttributeError(message)
+        else:
+            logging.debug('Template configuration {0} validated'.format(
+                template_config_file))
 
     logging.debug('Validated template in {0}'.format(template_folder))
