@@ -54,8 +54,8 @@ def validateTemplate(template_folder: str):
 
     # Verifying template has required files
     if not set(config.template_files.values()).issubset(template_file_set):
-        message = """Template is invalid; files {0} are required for a valid
-            template.""".format(
+        message = 'Template is invalid; files {0} are required for a valid\
+            template'.format(
                 list(config.template_files.values()))
         logging.error(message)
         raise FileNotFoundError(message)
@@ -90,8 +90,8 @@ def validateTemplate(template_folder: str):
 
         if not set(config.template_config_required).issubset(
             template_config_attrs):
-            message = """Template configuration files {0} is invalid.
-            Missing attributes {1}""".format(
+            message = 'Template configuration files {0} is invalid.\
+            Missing attributes {1}'.format(
                     template_config_file,
                     set(config.template_config_required).
                         difference(template_config_attrs)

@@ -87,8 +87,8 @@ class Loader():
             # Creating ontology class from each instance
             self.__processInstance(candidate_object=instance)
         
-        logging.info("""Success! Added {0} individuals to the Precis ontology
-            with base namespace IRI {1}""".format(
+        logging.info('Success! Added {0} individuals to the Precis ontology\
+            with base namespace IRI {1}'.format(
                 len(list(config.ont.individuals())),
                 config.namespace.base_iri)
             )
@@ -216,8 +216,8 @@ class Loader():
 
         # Verify that all keys in the candidate object were removed, log
         if len(candidate_object.keys()) != 0:
-            logging.warn("""Keys {0} in the object with ID {1} are unrecognized
-                and were ommitted""".format(
+            logging.warn('Keys {0} in the object with ID {1} are unrecognized\
+                and were ommitted'.format(
                     str(candidate_object.keys()), individual_id
             ))
 
@@ -458,8 +458,8 @@ class Loader():
 
         # Raise error if not correct type
         if not date_match:
-            message = """Property {0} in object {1} in malformatted. Must be
-                in the format YYYY-MM-DD""".format(property_name, i_id)
+            message = 'Property {0} in object {1} in malformatted. Must be\
+                in the format YYYY-MM-DD'.format(property_name, i_id)
             logging.error(message)
             raise ValueError(message)
         
