@@ -91,7 +91,7 @@ def validateTemplate(template_folder: str):
         if not set(config.template_config_required).issubset(
             template_config_attrs):
             message = 'Template configuration files {0} is invalid.\
-            Missing attributes {1}'.format(
+                Missing attributes {1}'.format(
                     template_config_file,
                     set(config.template_config_required).
                         difference(template_config_attrs)

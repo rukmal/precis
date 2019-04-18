@@ -1,3 +1,3 @@
 from . import util
 from .driver import TemplateDriver
-from .template import Template
+from .template import PrecisTemplate

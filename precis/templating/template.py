@@ -1,13 +1,13 @@
 from . import util
 from ..cfg import config
 
-from jinja2 import Environment, TemplateSyntaxError
+from jinja2 import Environment, FileSystemLoader, TemplateSyntaxError
 from yaml import load as yaml_load, SafeLoader
 import logging
 import os
 
 
-class Template():
+class PrecisTemplate():
     """This module encapsulates template functionality.
 
     Given a template folder, it verifies the validity of the template, by
@@ -45,6 +45,15 @@ class Template():
             self.template_config = yaml_load(stream=f, Loader=SafeLoader)
             logging.debug('Loaded template configuration file {0}'.format(
                 f.name))
+
+        # Setting up Jinja2 environment and template
+        # See: http://bit.ly/2VTzOcb
+        self.env = Environment(loader=FileSystemLoader(
+                searchpath=template_folder
+            ), **config.jinja_env_config)
+        self.template = self.env.get_template(
+                name=config.template_files['template']
+            )
 
     def getTemplateConfiguration(self) -> dict:
         """Function to get the complete template configuration.
@@ -101,6 +110,15 @@ class Template():
         
         return set(self.template_config['required_classes'])
 
-    def render(self, render_data: dict):
-        # render the template here
-        pass
+    def renderTemplate(self, render_data: dict) -> str:
+        """Function to render the template file, given rendering data pusuant
+        to the restrictions in the template configuration file.
+        
+        Arguments:
+            render_data {dict} -- Data for the template.
+        
+        Returns:
+            str -- Rendered template.
+        """
+
+        return self.template.render(render_data)

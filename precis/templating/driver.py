@@ -1,4 +1,4 @@
-from .template import Template
+from .template import PrecisTemplate
 from .. import OntQuery
 from ..cfg import config
 
@@ -19,7 +19,7 @@ class TemplateDriver():
     the content of the template configuration.
     """
     
-    def __init__(self, template: Template, user_ont: Ontology,
+    def __init__(self, template: PrecisTemplate, user_ont: Ontology,
                  user_graph: Graph, user_prefs: TextIOWrapper):
         """TemplateDriver initialization method. Validates user preferences
         against the supplied ontology, and against the template configuration.
@@ -46,6 +46,9 @@ class TemplateDriver():
             ValueError -- Raised when an invalid ordering scheme is specified.
         """
         
+        # Binding class variables
+        self.template = template
+
         # Parsing user preferences, saving to class variable
         try:
             self.user_prefs = yaml_load(stream=user_prefs, Loader=SafeLoader)
@@ -58,9 +61,10 @@ class TemplateDriver():
 
         # Checking all attributes required by the template are present in
         # user configuration file
-        if not template.getRequiredInput().issubset(self.user_prefs_attrs):
+        if not self.template.getRequiredInput().issubset(self.user_prefs_attrs):
             message = 'Required user preferences {0} are missing'.format(
-                template.getRequiredInput().difference(self.user_prefs_attrs))
+                self.template.getRequiredInput().difference(
+                self.user_prefs_attrs))
             logging.error(message)
             raise AttributeError(message)
         
@@ -80,7 +84,7 @@ class TemplateDriver():
         self.user_data = dict()
 
         # Extracting template data from the ontology
-        for ont_class in template.getRequiredClasses():
+        for ont_class in self.template.getRequiredClasses():
             # Isolating order override (if any)
             if ont_class in order_overrides.keys():
                 order = order_overrides[ont_class]
@@ -104,11 +108,21 @@ class TemplateDriver():
             self.user_data[ont_class] = class_invds
         
         # Appending required fields from user preferences to user data
-        for field in template.getRequiredInput():
+        for field in self.template.getRequiredInput():
             self.user_data[field] = self.user_prefs[field]
 
         logging.info('Successfully built user data object for template\
             rendering with {0} fields'.format(len(self.user_data.keys())))
+
+    def buildTemplate(self) -> str:
+        """Function to build the template, using data constructed from the
+        ontology and user preferences.
+        
+        Returns:
+            str -- Built template.
+        """
+
+        return self.template.renderTemplate(render_data=self.user_data)
 
     def __getItemOverrides(self) -> dict:
         """Function to get specific item overrides, in a dictionary of the form
