@@ -1,6 +1,8 @@
 from test_cfg import TestConfig
 from context import precis
 
+from owlready2 import get_ontology
+
 import unittest
 
 
@@ -30,3 +32,26 @@ class TestTemplate(unittest.TestCase):
 
         # If no errors, we passed
         self.assertTrue(True)
+
+    def test_templateDriver(self):
+        """Function to test the TemplateDriver functionality of the templating
+        engine. Validates that the 'cv' template can be rendered.
+        """
+
+        # Importing CV template
+        cv_template = precis.templating.Template(
+            template_folder=TestConfig.template_cv
+        )
+
+        # Loading user ontology
+        user_ont = get_ontology(TestConfig.sample_rdf_data)
+
+        # Loading user preferences (for the template)
+        user_prefs = open(TestConfig.template_prefs, 'r')
+
+        # Instantiating template driver
+        driver = precis.templating.TemplateDriver(
+            template=cv_template,
+            user_data=user_ont,
+            user_prefs=user_prefs
+        )

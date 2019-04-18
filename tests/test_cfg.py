@@ -12,3 +12,4 @@ class TestConfig():
     # Templating tests
     template_folder = 'templates/'
     template_cv = 'templates/curriculum_vitae'
+    template_prefs = 'data/sample_cv_prefs.yml'
