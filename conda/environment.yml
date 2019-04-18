@@ -19,6 +19,7 @@ dependencies:
   - python=3.7.2
   - python.app=2
   - readline=7.0
+  - rope=0.12.0
   - setuptools=40.8.0
   - sqlite=3.27.2
   - tk=8.6.8
@@ -30,13 +31,16 @@ dependencies:
     - cycler==0.10.0
     - decorator==4.4.0
     - isodate==0.6.0
+    - jinja2==2.10.1
     - kiwisolver==1.0.1
+    - markupsafe==1.1.1
     - matplotlib==3.0.3
     - networkx==2.2
     - numpy==1.16.2
     - owlready2==0.14
     - pyparsing==2.3.1
     - python-dateutil==2.8.0
+    - pyyaml==5.1
     - rdflib==4.2.2
     - six==1.12.0
 
