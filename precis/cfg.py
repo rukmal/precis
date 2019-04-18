@@ -58,5 +58,7 @@ class config():
     # See: http://bit.ly/2VP4bR6
     jinja_env_config = {
         'block_start_string': '((*',
-        'block_end_string': '*))'
+        'block_end_string': '*))',
+        'variable_start_string': '(*',
+        'variable_end_string': '*)'
     }

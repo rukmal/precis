@@ -60,4 +60,5 @@ class TestTemplate(unittest.TestCase):
             user_prefs=user_prefs
         )
 
-        print(driver.buildTemplate())
+        with open(TestConfig.template_cv_out, 'w') as f:
+            f.write(driver.buildTemplate())
