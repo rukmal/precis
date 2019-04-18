@@ -66,12 +66,10 @@ class OntQuery():
         # Empty list to store output (naturally preserves order of course)
         output = list()
 
-        # Valid order options
-        valid_order = ['chron_A', 'chron_D', 'alphabetical_A', 'alphabetical_D']
-
         # Ensuring order selection is valid (if one is provided)
-        if (order) and (order not in valid_order):
-            message = 'Order must be one of {0}'.format(valid_order)
+        if (order) and (order not in config.valid_order_options):
+            message = 'Order must be one of {0}'.format(
+                config.valid_order_options)
             logging.error(message)
             raise ValueError(message)
 

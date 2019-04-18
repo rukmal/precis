@@ -31,6 +31,9 @@ class config():
     ont_classes: dict = {}  # Ontology class map
     namespace: Namespace = None  # Namespace for the current ontology
 
+    # Valid ordering options
+    valid_order_options = ['chron_A', 'chron_D', 'alphabetical_A',
+                           'alphabetical_D']
 
     # Templating Stuff
 
@@ -46,3 +49,4 @@ class config():
     # Required template configuration fields
     template_config_required = ['full_name', 'description', 'author',
                                 'required_input', 'required_classes']
+
