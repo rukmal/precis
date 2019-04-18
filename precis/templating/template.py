@@ -91,6 +91,16 @@ class Template():
 
         return set(self.template_config['required_input'])
 
+    def getRequiredClasses(self) -> set:
+        """Function to get the required ontology classes required by
+        the template.
+        
+        Returns:
+            set -- Classes required by the template.
+        """
+        
+        return set(self.template_config['required_classes'])
+
     def render(self, render_data: dict):
         # render the template here
         pass
