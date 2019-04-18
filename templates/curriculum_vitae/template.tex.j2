@@ -1,0 +1,63 @@
+\documentclass[10pt, letterpaper]{letter}
+
+% Package Imports
+%----------------
+
+\usepackage[T1]{fontenc}  % Expanded font encoding
+\usepackage{geometry}  % Page geometry (margins, etc.)
+\usepackage{helvet}  % Helvetica font
+\usepackage{multirow}  % Multirow table
+\usepackage{tabularx}  % Advanced tables
+
+% Configuration
+%--------------
+
+% Page margins
+\geometry{top=.25in,
+          bottom=.25in,
+          left=.5in,
+          right=.5in}
+
+% Document font
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+    % CV Header - Name, address, website and email
+    %---------------------------------------------
+    \centerline{\huge (* full_name *)}
+
+    \vspace{.2em}
+
+    \centerline{(* email *) $\bullet$ (* website *) $\bullet$ (* phone *)}
+
+    \noindent\rule{\linewidth}{.2em}
+
+
+    % Education
+    %---------------------------------------------
+    {\large EDUCATION}
+
+    \begin{tabularx}{\textwidth}{X r}
+        ((* for deg_group in Degree|groupby('degreeUniversity') *))
+            \textbf{(* deg_group.grouper[0] *)} & \textbf{(* deg_group.list[0].inCity[0] *), (* deg_group.list[0].inState[0] *)} \\
+            ((* for deg in deg_group.list *))
+                \quad (* deg.hasName[0] *) & (* deg.hasDate[0].strftime('%b \'%y') *) \\
+                ((* for org in deg.degreeDepartment[0] *))
+                    \qquad \textit{(* org *)} & \\
+                ((* endfor *))
+                \vspace{.01em}
+            ((* endfor *))
+        ((* endfor *))    
+    \end{tabularx}
+
+    ((* for deg_group in Degree|groupby('degreeUniversity') *))
+        \textbf{(* deg_group.grouper *)}
+        ((* for deg in deg_group.list *))
+            (* deg *)
+        ((* endfor *))
+    ((* endfor *))
+
+
+
+\end{document}
+
