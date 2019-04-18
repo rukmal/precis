@@ -2,8 +2,9 @@ from ..cfg import config
 
 from jinja2 import Environment, TemplateSyntaxError
 from yaml import load as yaml_load, SafeLoader
-import os
+from yaml.parser import ParserError
 import logging
+import os
 
 
 def listAllTemplateFolders() -> list:
@@ -44,6 +45,8 @@ def validateTemplate(template_folder: str):
                           have the required attributes.
         FileNotFoundError -- Raised when the necessary files composing a
                              template are not found.
+        ParserError -- Raised when the template configuration file has
+                       malformed YAML syntax.
         TemplateSyntaxError -- Raised when the Jinja template is invalid.
     """
 
@@ -76,8 +79,15 @@ def validateTemplate(template_folder: str):
 
     # Checking template configuration validity
     with open(template_config_file) as f:
-        template_config_attrs = set(yaml_load(stream=f, Loader=SafeLoader)\
-            .keys())
+        try:
+            template_config_attrs = set(yaml_load(stream=f, Loader=SafeLoader)\
+                .keys())
+        except ParserError:
+            message = 'Template configuration file {0} is invalid'.format(
+                f.name)
+            logging.error(message)
+            raise
+
         if not set(config.template_config_required).issubset(
             template_config_attrs):
             message = """Template configuration files {0} is invalid.
