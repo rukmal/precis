@@ -50,3 +50,13 @@ class config():
     template_config_required = ['full_name', 'description', 'author',
                                 'required_input', 'required_classes']
 
+    # Jinja2 Environment special configuration
+    # This change has no functional effect on the program; just on the syntax
+    # used in the template, and is to enable better syntax highlighting in
+    # VSCode (the default block start and end strings, '{%' and '%}' don't play
+    # well with LaTeX highlighting as '%' is the line comment character).
+    # See: http://bit.ly/2VP4bR6
+    jinja_env_config = {
+        'block_start_string': '((*',
+        'block_end_string': '*))'
+    }
