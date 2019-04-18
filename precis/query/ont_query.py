@@ -39,7 +39,7 @@ class OntQuery():
         self.ont = ont
         self.graph = graph
 
-    def getAllOfType(self, c_type: str, temporal_order: str=None) -> list:
+    def getAllOfType(self, c_type: str, order: str=None) -> list:
         """Function to find all instances of a given class type, providing the
         option for temporally ordering the results in either ascending or
         descending order (using the `hasDate` data property).
@@ -48,12 +48,15 @@ class OntQuery():
             c_type {str} -- Target class type (i.e. 'Degree', 'Course', etc.).
         
         Keyword Arguments:
-            temporal_order {str} -- Temporal ordering, optional. Must be either
-                                    'A' for ascending (i.e. old to new), or 'D'
-                                    for descending (default: {None}).
+            order {str} -- Ordering, optional. Must be either 'chron_A',
+                           'chron_D', 'alphabetical_A', or 'alphabetical_D', for
+                           ascending and descending chronological order, and
+                           ascending and descending alphabetical order,
+                           respecitvely (default: {None}).
         
         Raises:
-            ValueError -- Raised when the `temporal_order` is not 'A' or 'D'.
+            ValueError -- Raised when the `order` is not 'chron_A', 'chron_D',
+                          'alphabetical_A', or 'alphabetical_D'.
         
         Returns:
             list -- Ordered (optional) list of all instances of `c_type`, with
@@ -63,16 +66,19 @@ class OntQuery():
         # Empty list to store output (naturally preserves order of course)
         output = list()
 
-        # Checking temporal order validity
-        if (temporal_order) and (temporal_order not in ['A', 'D']):
-            message = 'Temporal order must be one of either "A" or "D"'
+        # Valid order options
+        valid_order = ['chron_A', 'chron_D', 'alphabetical_A', 'alphabetical_D']
+
+        # Ensuring order selection is valid (if one is provided)
+        if (order) and (order not in valid_order):
+            message = 'Order must be one of {0}'.format(valid_order)
             logging.error(message)
             raise ValueError(message)
 
         # Dynamically assign query based on type
-        if (temporal_order == 'A'):
+        if (order == 'chron_A'):
             query = SPARQLQueries.getAllOfTypeAscendingTemporal(c_type=c_type)
-        elif (temporal_order == 'D'):
+        elif (order == 'chron_D'):
             query = SPARQLQueries.getAllOfTypeDescendingTemporal(c_type=c_type)
         else:
             query = SPARQLQueries.getAllOfType(c_type=c_type)
@@ -165,16 +171,19 @@ class OntQuery():
 
         return output
 
-    def getAll(self, temporal_order: str=None) -> dict:
+    def getAll(self, order: str=None) -> dict:
         """Function to get the entire ontology, in a nested dictionary.
-        
+
         Keyword Arguments:
-            temporal_order {str} -- Temporal ordering, optional. Must be either
-                                    'A' for ascending (i.e. old to new), or 'D'
-                                    for descending (default: {None}).
+            order {str} -- Ordering, optional. Must be either 'chron_A',
+                           'chron_D', 'alphabetical_A', or 'alphabetical_D', for
+                           ascending and descending chronological order, and
+                           ascending and descending alphabetical order,
+                           respecitvely (default: {None}).
         
         Raises:
-            ValueError -- Raised when the `temporal_order` is not 'A' or 'D'.
+            ValueError -- Raised when the `order` is not 'chron_A', 'chron_D',
+                          'alphabetical_A', or 'alphabetical_D'.
         
         Returns:
             dict -- Ordered (optional) nested dictionary of all individuals in
@@ -191,7 +200,7 @@ class OntQuery():
             # Get all individuals of the given type, bind to output
             output[c_type] = self.getAllOfType(
                 c_type=c_type,
-                temporal_order=temporal_order
+                order=order
             )
 
         return output
