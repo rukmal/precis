@@ -10,3 +10,13 @@ required_input:
     - 'phone'
     - 'email'
     - 'website'
+required_classes:
+    - 'Degree'
+    - 'WorkExperience'
+    - 'Publication'
+    - 'KnowledgeArea'
+    - 'SkillGroup'
+    - 'Project'
+    - 'Award'
+    - 'Certification'
+    - 'ActivityType'

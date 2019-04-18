@@ -45,4 +45,4 @@ class config():
 
     # Required template configuration fields
     template_config_required = ['full_name', 'description', 'author',
-                                'required_input']
+                                'required_input', 'required_classes']
