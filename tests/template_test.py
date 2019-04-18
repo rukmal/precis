@@ -1,7 +1,7 @@
 from test_cfg import TestConfig
 from context import precis
 
-from owlready2 import get_ontology
+from owlready2 import default_world, get_ontology
 
 import unittest
 
@@ -9,7 +9,7 @@ import unittest
 class TestTemplate(unittest.TestCase):
     
     def test_validateTemplate(self):
-        precis.templating.Template(
+        precis.templating.PrecisTemplate(
             template_folder=TestConfig.template_cv
         )
         self.assertTrue(True)
@@ -39,12 +39,15 @@ class TestTemplate(unittest.TestCase):
         """
 
         # Importing CV template
-        cv_template = precis.templating.Template(
+        cv_template = precis.templating.PrecisTemplate(
             template_folder=TestConfig.template_cv
         )
 
         # Loading user ontology
-        user_ont = get_ontology(TestConfig.sample_rdf_data)
+        user_ont = get_ontology(TestConfig.sample_rdf_data).load()
+        
+        # Casting to RDFLib graph (for template driver)
+        user_graph = default_world.as_rdflib_graph()
 
         # Loading user preferences (for the template)
         user_prefs = open(TestConfig.template_prefs, 'r')
@@ -52,6 +55,9 @@ class TestTemplate(unittest.TestCase):
         # Instantiating template driver
         driver = precis.templating.TemplateDriver(
             template=cv_template,
-            user_data=user_ont,
+            user_ont=user_ont,
+            user_graph=user_graph,
             user_prefs=user_prefs
         )
+
+        print(driver.buildTemplate())
