@@ -8,7 +8,26 @@ import os
 
 
 class Template():
+    """This module encapsulates template functionality.
+
+    Given a template folder, it verifies the validity of the template, by
+    evaluating that the Jinja is valid, and that the template configuration
+    has the required attributes (outlined in main precis configuration, cfg.py).
+
+    Furthermore, this class also provides getters to access the complete
+    configuration for a template, and provides functionality to render the
+    underlying template, given user data.
+    """
+
     def __init__(self, template_folder: str):
+        """Template initialization method. Validates a candidate template, given
+        its folder path. Binds necessary data to class variables to enable
+        getter functionality.
+        
+        Arguments:
+            template_folder {str} -- Path to the template folder.
+        """
+
         # Validating candidate template
         util.validateTemplate(template_folder=template_folder)
         logging.debug('Successfully validated template in {0}'.format(
@@ -63,15 +82,14 @@ class Template():
 
         return self.template_config['author']
 
-    def getIncludedClasses(self) -> list:
-        """Function to get the included classes (from the Precis ontology) used
-        in the template.
+    def getRequiredInput(self) -> set:
+        """Function to get the required user input needed by the template.
         
         Returns:
-            list -- Classes (from Precis Ontology) included in the template.
+            set -- Required fields to be provided in the user preferences.
         """
 
-        return self.template_config['required_input']
+        return set(self.template_config['required_input'])
 
     def render(self, render_data: dict):
         # render the template here
