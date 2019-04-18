@@ -167,7 +167,7 @@ class OntQuery():
             # Appending to description list (ordered)
             output.setdefault('hasDescription', []).append(descr_text)
 
-        logging.debug('Extracted {0} data fields for individual {1}'.format(
+        logging.debug('Queried {0} data fields for individual {1}'.format(
             len(output.keys()), individual_iri
         ))
 
