@@ -13,8 +13,8 @@ class OntQuery():
 
     It enables data extraction from the Ontology by class type (i.e. 'Degree',
     'Course', 'WorkExperience', etc.), and provides additional functionality to
-    order results by time. This is particularly useful for obtaining a list of
-    chronologically-ordered 'WorkExperience's, for example.
+    order results by time, and alphabetically. This is particularly useful for
+    obtaining a list of chronologically-ordered 'WorkExperience's, for example.
 
     OntQuery uses a combination of SQPARQL queries (encapsulated in the
     SPARQLQueries module), and owlready2-enabled graph traversal to enable this
@@ -80,6 +80,10 @@ class OntQuery():
             query = SPARQLQueries.getAllOfTypeAscendingTemporal(c_type=c_type)
         elif (order == 'chron_D'):
             query = SPARQLQueries.getAllOfTypeDescendingTemporal(c_type=c_type)
+        elif (order == 'alphabetical_A'):
+            query = SPARQLQueries.getAllOfTypeAlphabeticalAsc(c_type=c_type)
+        elif (order == 'alphabetical_D'):
+            query = SPARQLQueries.getAllOfTypeAlphabeticalDesc(c_type=c_type)
         else:
             query = SPARQLQueries.getAllOfType(c_type=c_type)
 

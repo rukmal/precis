@@ -51,8 +51,8 @@ class SPARQLQueries():
             Query -- Prepared query.
         """
 
-        logging.debug("""Preparing query to extract instances of type {0} in\
-            ascending temporal order""".format(c_type))
+        logging.debug('Preparing query to extract instances of type {0} in\
+            ascending temporal order'.format(c_type))
 
         return prepareQuery("""
             SELECT DISTINCT ?s
@@ -81,8 +81,8 @@ class SPARQLQueries():
             Query -- Prepared query.
         """
 
-        logging.debug("""Preparing query to extract instances of type {0} in\
-            descending temporal order""".format(c_type))
+        logging.debug('Preparing query to extract instances of type {0} in\
+            descending temporal order'.format(c_type))
 
         return prepareQuery("""
             SELECT DISTINCT ?s
@@ -96,6 +96,56 @@ class SPARQLQueries():
                 }}
             }}
             ORDER BY DESC(?date)
+            """.format(c_type=c_type),
+            initNs=self.initN)
+
+    @classmethod
+    def getAllOfTypeAlphabeticalAsc(self, c_type: str) -> Query:
+        """Function to get all instances of a given type in ascending
+        alphabetical order (based on `hasName` property).
+        
+        Arguments:
+            c_type {str} -- Target type (eg: 'Degree', 'WorkExperience', etc.).
+        
+        Returns:
+            Query -- Prepared query.
+        """
+
+        logging.debug('Preparing query to extract instances of type {0} in\
+            ascending alphabetical order'.format(c_type))
+        
+        return prepareQuery("""
+            SELECT DISTINCT ?s
+            WHERE {{
+                ?s rdf:type precis:{c_type} .
+                ?s precis:hasName ?name .
+            }}
+            ORDER BY ASC(UCASE(STR(?name)))
+            """.format(c_type=c_type),
+            initNs=self.initN)
+
+    @classmethod
+    def getAllOfTypeAlphabeticalDesc(self, c_type: str) -> Query:
+        """Function to get all instances of a given type in descending
+        alphabetical order (based on `hasName` property).
+        
+        Arguments:
+            c_type {str} -- Target type (eg: 'Degree', 'WorkExperience', etc.).
+        
+        Returns:
+            Query -- Prepared query.
+        """
+
+        logging.debug('Preparing query to extract instances of type {0} in\
+            descending alphabetical order'.format(c_type))
+        
+        return prepareQuery("""
+            SELECT DISTINCT ?s
+            WHERE {{
+                ?s rdf:type precis:{c_type} .
+                ?s precis:hasName ?name .
+            }}
+            ORDER BY DESC(UCASE(STR(?name)))
             """.format(c_type=c_type),
             initNs=self.initN)
 
@@ -143,6 +193,9 @@ class SPARQLQueries():
             Query -- Prepared query.
         """
 
+        logging.debug('Preparing query to get object properties for {0}'.format(
+            target_iri))
+
         return prepareQuery("""
                 SELECT DISTINCT ?p ?name ?orgname
                 WHERE {{
@@ -186,6 +239,9 @@ class SPARQLQueries():
         Returns:
             Query -- Prepared query.
         """
+
+        logging.debug('Preparing description query for individual {0}'.format(
+            target_iri))
 
         return prepareQuery("""
                 SELECT DISTINCT ?text
