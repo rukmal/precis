@@ -158,6 +158,24 @@ class OntQuery():
                 # No org name, do not nest list
                 output.setdefault(objectprop_name, []).append(value[0])
 
+        # Extracting all individuals that indicated they were 'affiliatedWith'
+        # the current individual 
+        affiliated_query = SPARQLQueries.getAffiliated(
+            target_iri=individual_iri
+        )
+        for result in self.graph.query(query_object=affiliated_query):
+            # Creating dictionary to store formatted result
+            affiliated_res = dict()
+            # Isolating result IRI
+            affiliated_iri = result[0].toPython()
+            # Isolating result type
+            affiliated_res['type'] = result[1].toPython()
+            # Isolating result name
+            affiliated_res['hasName'] = self.ont.search_one(iri=affiliated_iri)\
+                .hasName
+            # Appending to global output object
+            output.setdefault('affiliated', []).append(affiliated_res)
+
         # Extracting all description text for the given individual
         descr_query = SPARQLQueries.getOrderedDescriptionText(
             target_iri=individual_iri

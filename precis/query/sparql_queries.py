@@ -253,3 +253,28 @@ class SPARQLQueries():
                 ORDER BY ?priority
             """.format(target_iri=target_iri),
             initNs=self.initN)
+
+    @classmethod
+    def getAffiliated(self, target_iri: str) -> Query:
+        """SPARQL query to get instances that have listed the current
+        `target_iri` as an `affiliatedWith` instance.
+        
+        Arguments:
+            target_iri {str} -- Target instance IRI.
+        
+        Returns:
+            Query -- Prepared query.
+        """
+
+        logging.debug('Preparing affiliated with query for individual {0}'.\
+            format(target_iri))
+
+        return prepareQuery("""
+            SELECT DISTINCT ?related ?label
+            WHERE {{
+                ?related precis:affiliatedWith <{target_iri}> .
+                ?related rdf:type ?type .
+                ?type rdfs:label ?label .
+            }}
+            """.format(target_iri=target_iri),
+            initNs=self.initN)
