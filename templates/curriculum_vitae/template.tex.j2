@@ -29,7 +29,13 @@
 \newcommand{\highlightcolor}{RoyalBlue}
 
 % Section title
-\newcommand{\sectionTitle}[1]{ \vspace{1em} \raggedright{ \color{\highlightcolor} \large \textbf{ \uppercase{ #1}}}}
+\newcommand{\sectionTitle}[1]{ \vspace{1em} \raggedright{ \color{\highlightcolor} \large \textbf{\uppercase{ #1}}}}
+
+% No indentation
+\setlength{\parindent}{0pt}
+
+% Table width
+\newcommand{\tablarxwidth}{\textwidth}
 
 % Jinja Macros
 %--------------
@@ -104,7 +110,7 @@
 
     % Iterating over degrees
     ((* for deg in Degree *))
-        \begin{tabularx}{\textwidth}{X r}
+        \begin{tabularx}{\tablarxwidth}{X r}
             % First line - degree title and date
             \textbf{(* deg.hasName[0] *)} & \textbf{(* formatDate(deg.hasDate[0]) *)} \\
             % Degree university and location
@@ -131,7 +137,7 @@
     \sectionTitle{Work Experience}
 
     ((* for we in WorkExperience *))
-        \begin{tabularx}{\textwidth}{X r}
+        \begin{tabularx}{\tablarxwidth}{X r}
             % First line - job title and location
             \textbf{(* we.hasName[0] *)} & \textbf{(* we.inCity[0] ~ ', ' ~ stateOrCountry(we) *)} \\
             % Main employment organization and date range
@@ -167,7 +173,7 @@
 
     ((* for kg in KnowledgeArea *))
         % iterating over knowledge areas
-        \begin{tabularx}{\textwidth}{X}
+        \begin{tabularx}{\tablarxwidth}{X}
             % first line - knowldge area name in bold
             \textbf{(* kg.hasName[0] *)} \\
             % listing all constituent subjects
