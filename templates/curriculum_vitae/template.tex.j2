@@ -9,6 +9,7 @@
 \usepackage{hyperref}  % Hyperlinks
 \usepackage{multirow}  % Multirow table
 \usepackage[defaultsans]{opensans}  % Opensans font
+\usepackage[document]{ragged2e}  % Text alignment
 \usepackage{tabularx}  % Advanced tables
 \usepackage[svgnames]{xcolor}  % Colors
 
@@ -28,7 +29,7 @@
 \newcommand{\highlightcolor}{RoyalBlue}
 
 % Section title
-\newcommand{\sectionTitle}[1]{ \vspace{1em} { \color{\highlightcolor} \large \textbf{ \uppercase{ #1}}}}
+\newcommand{\sectionTitle}[1]{ \vspace{1em} \raggedright{ \color{\highlightcolor} \large \textbf{ \uppercase{ #1}}}}
 
 % Jinja Macros
 %--------------
@@ -65,6 +66,18 @@
 % Currently cleans: '$'
 ((*- macro cleanText(text) *))
     (* text|replace('$', '\$') *)
+((*- endmacro *))
+
+
+% List the contents of a nested list of lists with a delimiter
+((*- macro printListofLists(list, delimit) *))
+    ((*- for l in list *))
+        ((*- if loop.last *))
+            (* l[0] *)
+        ((*- else *))
+            (* l[0] ~ delimit *)
+        ((*- endif *))
+    ((*- endfor *))
 ((*- endmacro *))
 
 
@@ -127,6 +140,10 @@
             ((* for parent_orgset in we.employedAt *))
                 \textit{(* parent_orgset[1:]|join('; ') *)} & \\
             ((* endfor *))
+            % Other job titles
+            ((* if we.otherTitles is defined *))
+                Other Titles: (* we.otherTitles|join(', ') *) & \\
+            ((* endif *))
         \end{tabularx}
         \vspace{-1em}
         % descriptions
@@ -136,5 +153,27 @@
             ((* endfor *))
         \end{itemize}
     ((* endfor *))
+
+    % Publications
+    %---------------------------------------------
+
+    % Talks
+    %---------------------------------------------
+
+    % Knowledge Areas
+    %---------------------------------------------
+
+    \sectionTitle{Selected Knowledge Areas}
+
+    \begin{tabularx}{\textwidth}{X}
+        % iterating over knowledge areas
+        ((* for kg in KnowledgeArea *))
+            % first line - knowldge area name in bold
+            \textbf{(* kg.hasName[0] *)} \\
+            % listing all constituent subjects
+            (* printListofLists(kg.hasSubject, ', ') *) \\
+        ((* endfor *))
+    \end{tabularx}
+
 \end{document}
 
