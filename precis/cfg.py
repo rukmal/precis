@@ -1,4 +1,5 @@
 from owlready2.namespace import Namespace, Ontology
+import os
 
 
 class config():
@@ -38,7 +39,8 @@ class config():
     # Templating Stuff
 
     # Template folder (relative to top-level package import)
-    templates_folder = './templates'
+    current_folder = os.path.dirname(os.path.realpath(__file__))
+    templates_folder = os.path.join(current_folder, '../templates/')
 
     # Template file names
     template_files = {

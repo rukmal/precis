@@ -9,8 +9,8 @@
 \usepackage{multirow}  % Multirow table
 \usepackage{tabularx}  % Advanced tables
 
-% Configuration
-%--------------
+% LaTeX Configuration
+%---------------------
 
 % Page margins
 \geometry{top=.25in,
@@ -21,12 +21,39 @@
 % Document font
 \renewcommand{\familydefault}{\sfdefault}
 
+% Jinja Macros
+%--------------
+
+% Get state or country (state takes preference)
+((*- macro stateOrCountry(topObj) *))
+    ((*- if topObj.inState is defined *))
+        (* topObj.inState[0] *)
+    ((*- elif topObj.inCountry is defined *))
+        (* topObj.inCountry[0] *)
+   ((*- endif *)) 
+((*- endmacro *))
+
+% Format date (to MMM 'YY, eg: "May '19"')
+((*- macro formatDate(dateObj) *))
+    (* dateObj.strftime('%b ‘%y') *)
+((*- endmacro *))
+
+% Get date range
+((*- macro dateRange(topObj) *))
+    ((*- if topObj.endDate is defined *))
+        (* formatDate(topObj.hasDate[0]) ~ ' - ' ~ formatDate(topObj.endDate[0]) *)
+    ((*- else *))
+        (* formatDate(topObj.hasDate[0]) ~ ' - Present' *)
+    ((*- endif *))
+((*- endmacro *))
+
+
 \begin{document}
     % CV Header - Name, address, website and email
     %---------------------------------------------
     \centerline{\huge (* full_name *)}
 
-    \vspace{.2em}
+    \vspace{.5em}
 
     \centerline{(* email *) $\bullet$ (* website *) $\bullet$ (* phone *)}
 
@@ -39,25 +66,33 @@
 
     \begin{tabularx}{\textwidth}{X r}
         ((* for deg_group in Degree|groupby('degreeUniversity') *))
-            \textbf{(* deg_group.grouper[0] *)} & \textbf{(* deg_group.list[0].inCity[0] *), (* deg_group.list[0].inState[0] *)} \\
+            \textbf{(* deg_group.grouper[0] *)} & \textbf{(* deg_group.list[0].inCity[0] ~ ', ' ~ stateOrCountry(deg_group.list[0]) *)} \\
             ((* for deg in deg_group.list *))
-                \quad (* deg.hasName[0] *) & (* deg.hasDate[0].strftime('%b \'%y') *) \\
-                ((* for org in deg.degreeDepartment[0] *))
-                    \qquad \textit{(* org *)} & \\
-                ((* endfor *))
-                \vspace{.01em}
+                \quad (* deg.hasName[0] *) & (* formatDate(deg.hasDate[0]) *) \\
+                \quad \textit{(* deg.degreeDepartment[0]|join('; ') *)} & \\
+                ((* if deg.degreeGPA is defined *))
+                    \quad GPA (4.0 Scale): (* deg.degreeGPA[0] *) & \\
+                ((* endif *))
+                \vspace{0.001em}
             ((* endfor *))
+            \vspace{0.5em}
         ((* endfor *))    
     \end{tabularx}
 
-    ((* for deg_group in Degree|groupby('degreeUniversity') *))
-        \textbf{(* deg_group.grouper *)}
-        ((* for deg in deg_group.list *))
-            (* deg *)
+    % Work Experience
+    %---------------------------------------------
+    {\large WORK EXPERIENCE}
+
+    \begin{tabularx}{\textwidth}{X r}
+        ((* for we in WorkExperience *))
+            \textbf{(* we.employedAt[0] *)} & \textbf{(* we.inCity[0] ~ ', ' ~ stateOrCountry(we) *)} \\
+            (* we.hasName[0] *) & (* dateRange(we) *) \\
+            ((* for desc in we.hasDescription *))
+                \multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{(* desc *) } \\
+            ((* endfor *))
         ((* endfor *))
-    ((* endfor *))
-
-
+    \end{tabularx}
+    
 
 \end{document}
 

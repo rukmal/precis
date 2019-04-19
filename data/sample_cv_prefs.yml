@@ -7,8 +7,8 @@ phone: '(800) 613-8840'
 email: 'elonmuskoffice@teslamotors.com'
 website: 'tesla.com'
 order_overrides:
-  WorkExperience: 'chron_A'
-  Award: 'chron_D'
+  WorkExperience: 'chron_D'
+  Award: 'chron_A'
   SkillGroup: 'alphabetical_A'
   KnowledgeArea: 'alphabetical_D'
 item_overrides:
