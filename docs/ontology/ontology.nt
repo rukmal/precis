@@ -1,18 +1,18 @@
 <http://precis.rukmal.me/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://precis.rukmal.me/ontology> <http://www.w3.org/2002/07/owl#versionIRI> <http://precis.rukmal.me/ontology/1.5.0> .
+<http://precis.rukmal.me/ontology> <http://www.w3.org/2002/07/owl#versionIRI> <http://precis.rukmal.me/ontology/1.5.1> .
 <http://precis.rukmal.me/ontology> <http://purl.org/dc/elements/1.1/abstract> "The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.\n\nCurrently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences." .
 <http://precis.rukmal.me/ontology> <http://purl.org/dc/elements/1.1/creator> "Rukmal Weerawarana" .
 <http://precis.rukmal.me/ontology> <http://purl.org/dc/elements/1.1/title> "Precis Ontology" .
 <http://precis.rukmal.me/ontology> <http://purl.org/dc/terms/created> "2019-04-07T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://precis.rukmal.me/ontology> <http://purl.org/dc/terms/creator> <http://rukmal.me> .
-<http://precis.rukmal.me/ontology> <http://purl.org/dc/terms/modified> "2019-04-17T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://precis.rukmal.me/ontology> <http://purl.org/dc/terms/modified> "2019-04-19T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://precis.rukmal.me/ontology> <http://purl.org/ontology/bibo/doi> <http://purl.org/precis> .
 <http://precis.rukmal.me/ontology> <http://purl.org/vocab/vann/preferredNamespacePrefix> "precis" .
 <http://precis.rukmal.me/ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://precis.rukmal.me/ontology" .
 <http://precis.rukmal.me/ontology> <http://schema.org/license> <https://github.com/rukmal/precis/blob/master/LICENSE> .
 <http://precis.rukmal.me/ontology> <http://www.w3.org/2000/01/rdf-schema#comment> "The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.\n\nCurrently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences." .
-<http://precis.rukmal.me/ontology> <http://www.w3.org/2002/07/owl#priorVersion> <https://github.com/rukmal/precis/releases/download/1.4.0/precis_ontology.rdf> .
-<http://precis.rukmal.me/ontology> <http://www.w3.org/2002/07/owl#versionInfo> "1.5.0" .
+<http://precis.rukmal.me/ontology> <http://www.w3.org/2002/07/owl#priorVersion> <https://github.com/rukmal/precis/releases/download/1.5.0/precis_ontology.rdf> .
+<http://precis.rukmal.me/ontology> <http://www.w3.org/2002/07/owl#versionInfo> "1.5.1" .
 # 
 # 
 # #################################################################
@@ -719,6 +719,13 @@ _:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 <http://precis.rukmal.me/ontology#inState> <http://www.w3.org/2000/01/rdf-schema#comment> "State of the entity (United States only)." .
 <http://precis.rukmal.me/ontology#inState> <http://www.w3.org/2000/01/rdf-schema#label> "State" .
 # 
+# http://precis.rukmal.me/ontology#otherTitles
+<http://precis.rukmal.me/ontology#otherTitles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://precis.rukmal.me/ontology#otherTitles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://precis.rukmal.me/ontology#WorkExperience> .
+<http://precis.rukmal.me/ontology#otherTitles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://precis.rukmal.me/ontology#otherTitles> <http://www.w3.org/2000/01/rdf-schema#comment> "'Other' job titles; this property should be specified in addition to the main 'hasName' property, and is considered peripheral information." .
+<http://precis.rukmal.me/ontology#otherTitles> <http://www.w3.org/2000/01/rdf-schema#label> "Other Titles" .
+# 
 # http://precis.rukmal.me/ontology#withGrade
 <http://precis.rukmal.me/ontology#withGrade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://precis.rukmal.me/ontology#withGrade> <http://www.w3.org/2000/01/rdf-schema#domain> <http://precis.rukmal.me/ontology#Course> .
@@ -1217,19 +1224,23 @@ _:genid207 <http://www.w3.org/2002/07/owl#onProperty> <http://precis.rukmal.me/o
 _:genid207 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://precis.rukmal.me/ontology#WorkExperience> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid208 .
 _:genid208 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid208 <http://www.w3.org/2002/07/owl#onProperty> <http://precis.rukmal.me/ontology#hasDate> .
-_:genid208 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid208 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid208 <http://www.w3.org/2002/07/owl#onProperty> <http://precis.rukmal.me/ontology#otherTitles> .
+_:genid208 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://precis.rukmal.me/ontology#WorkExperience> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid209 .
 _:genid209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid209 <http://www.w3.org/2002/07/owl#onProperty> <http://precis.rukmal.me/ontology#hasName> .
+_:genid209 <http://www.w3.org/2002/07/owl#onProperty> <http://precis.rukmal.me/ontology#hasDate> .
 _:genid209 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid209 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid209 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://precis.rukmal.me/ontology#WorkExperience> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid210 .
 _:genid210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid210 <http://www.w3.org/2002/07/owl#onProperty> <http://precis.rukmal.me/ontology#inCity> .
+_:genid210 <http://www.w3.org/2002/07/owl#onProperty> <http://precis.rukmal.me/ontology#hasName> .
 _:genid210 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid210 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://precis.rukmal.me/ontology#WorkExperience> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid211 .
+_:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid211 <http://www.w3.org/2002/07/owl#onProperty> <http://precis.rukmal.me/ontology#inCity> .
+_:genid211 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid211 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://precis.rukmal.me/ontology#WorkExperience> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of 'Work Experience'. This would be an internship/assistantship/etc." .
 <http://precis.rukmal.me/ontology#WorkExperience> <http://www.w3.org/2000/01/rdf-schema#label> "Work Experience" .
 # 
@@ -1242,37 +1253,37 @@ _:genid210 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/X
 # #################################################################
 # 
 # 
-_:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid211 <http://www.w3.org/2002/07/owl#members> _:genid221 .
+_:genid212 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid212 <http://www.w3.org/2002/07/owl#members> _:genid222 .
+_:genid222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#Accolade> .
+_:genid222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid221 .
 _:genid221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#Accolade> .
+_:genid221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#ActivityType> .
 _:genid221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid220 .
 _:genid220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#ActivityType> .
+_:genid220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#Course> .
 _:genid220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid219 .
 _:genid219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#Course> .
+_:genid219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#Degree> .
 _:genid219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid218 .
 _:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#Degree> .
+_:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#Description> .
 _:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid217 .
 _:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#Description> .
+_:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#KnowledgeArea> .
 _:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid216 .
 _:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#KnowledgeArea> .
+_:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#Organization> .
 _:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid215 .
 _:genid215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#Organization> .
+_:genid215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#Portfolio> .
 _:genid215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid214 .
 _:genid214 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid214 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#Portfolio> .
+_:genid214 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#SkillGroup> .
 _:genid214 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid213 .
 _:genid213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#SkillGroup> .
-_:genid213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid212 .
-_:genid212 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid212 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#WorkExperience> .
-_:genid212 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://precis.rukmal.me/ontology#WorkExperience> .
+_:genid213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

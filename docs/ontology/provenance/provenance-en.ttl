@@ -1,11 +1,12 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-<http://precis.rukmal.me/ontology/1.5.0> a prov:Entity;
+<http://precis.rukmal.me/ontology/1.5.1> a prov:Entity;
 	 dc:title "Precis Ontology";
 	 prov:wasAttributedTo <http://rukmal.me>;
 	 dc:creator <http://rukmal.me>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
-	 prov:wasRevisionOf <https://github.com/rukmal/precis/releases/download/1.4.0/precis_ontology.rdf>;
-	 prov:wasGeneratedAt "2019-04-17T00:00:00";
+	 prov:specializationOf <http://precis.rukmal.me/ontology/1.5.1>;
+	 prov:wasRevisionOf <https://github.com/rukmal/precis/releases/download/1.5.0/precis_ontology.rdf>;
+	 prov:wasGeneratedAt "2019-04-19T00:00:00";
 .

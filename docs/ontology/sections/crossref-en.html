@@ -637,6 +637,7 @@ This section provides details for each class and property defined by Precis Onto
          <dd>
             <a href="#employedAt" title="http://precis.rukmal.me/ontology#employedAt">Employment Organization</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasImage" title="http://precis.rukmal.me/ontology#hasImage">Image</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#otherTitles" title="http://precis.rukmal.me/ontology#otherTitles">Other Titles</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -1382,6 +1383,9 @@ This section provides details for each class and property defined by Precis Onto
          <a href="#hasMedia" title="http://precis.rukmal.me/ontology#hasMedia">Media</a>
       </li>
       <li>
+         <a href="#otherTitles" title="http://precis.rukmal.me/ontology#otherTitles">Other Titles</a>
+      </li>
+      <li>
          <a href="#inPublication" title="http://precis.rukmal.me/ontology#inPublication">Publication Name</a>
       </li>
       <li>
@@ -2029,6 +2033,30 @@ This section provides details for each class and property defined by Precis Onto
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="otherTitles">
+      <h3>Other Titles<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://precis.rukmal.me/ontology#otherTitles</p>
+      <div class="comment">
+         <span class="markdown">'Other' job titles; this property should be specified in addition to the main 'hasName' property, and is considered peripheral information.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkExperience" title="http://precis.rukmal.me/ontology#WorkExperience">Work Experience</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>

@@ -995,24 +995,20 @@
 }, {
   "@id" : "_:genid208",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://precis.rukmal.me/ontology#hasDate"
+    "@id" : "http://precis.rukmal.me/ontology#otherTitles"
   } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "_:genid209",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://precis.rukmal.me/ontology#hasName"
+    "@id" : "http://precis.rukmal.me/ontology#hasDate"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1025,7 +1021,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://precis.rukmal.me/ontology#inCity"
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1033,6 +1029,19 @@
   } ]
 }, {
   "@id" : "_:genid211",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://precis.rukmal.me/ontology#inCity"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid212",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -1317,7 +1326,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2019-04-17T00:00:00"
+    "@value" : "2019-04-19T00:00:00"
   } ],
   "http://purl.org/ontology/bibo/doi" : [ {
     "@id" : "http://purl.org/precis"
@@ -1335,13 +1344,13 @@
     "@value" : "The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.\n\nCurrently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences."
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@id" : "https://github.com/rukmal/precis/releases/download/1.4.0/precis_ontology.rdf"
+    "@id" : "https://github.com/rukmal/precis/releases/download/1.5.0/precis_ontology.rdf"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://precis.rukmal.me/ontology/1.5.0"
+    "@id" : "http://precis.rukmal.me/ontology/1.5.1"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "1.5.0"
+    "@value" : "1.5.1"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#Accolade",
@@ -1694,6 +1703,8 @@
     "@id" : "_:genid209"
   }, {
     "@id" : "_:genid210"
+  }, {
+    "@id" : "_:genid211"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#affiliatedWith",
@@ -2294,6 +2305,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "State"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://precis.rukmal.me/ontology#otherTitles",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "'Other' job titles; this property should be specified in addition to the main 'hasName' property, and is considered peripheral information."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://precis.rukmal.me/ontology#WorkExperience"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Other Titles"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
