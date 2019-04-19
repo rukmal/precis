@@ -35,7 +35,7 @@
 \setlength{\parindent}{0pt}
 
 % Table width
-\newcommand{\tablarxwidth}{\textwidth}
+\newcommand{\tabularxwidth}{\textwidth}
 
 % Jinja Macros
 %--------------
@@ -110,7 +110,7 @@
 
     % Iterating over degrees
     ((* for deg in Degree *))
-        \begin{tabularx}{\tablarxwidth}{X r}
+        \begin{tabularx}{\tabularxwidth}{X r}
             % First line - degree title and date
             \textbf{(* deg.hasName[0] *)} & \textbf{(* formatDate(deg.hasDate[0]) *)} \\
             % Degree university and location
@@ -137,7 +137,7 @@
     \sectionTitle{Work Experience}
 
     ((* for we in WorkExperience *))
-        \begin{tabularx}{\tablarxwidth}{X r}
+        \begin{tabularx}{\tabularxwidth}{X r}
             % First line - job title and location
             \textbf{(* we.hasName[0] *)} & \textbf{(* we.inCity[0] ~ ', ' ~ stateOrCountry(we) *)} \\
             % Main employment organization and date range
@@ -173,7 +173,7 @@
 
     ((* for kg in KnowledgeArea *))
         % iterating over knowledge areas
-        \begin{tabularx}{\tablarxwidth}{X}
+        \begin{tabularx}{\tabularxwidth}{X}
             % first line - knowldge area name in bold
             \textbf{(* kg.hasName[0] *)} \\
             % listing all constituent subjects
