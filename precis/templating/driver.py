@@ -38,7 +38,8 @@ class TemplateDriver():
     
         Raises:
             AttributeError -- Raised when a attribute required by the template
-                            configuration is missing from the user preferences.
+                              configuration is missing from the user prefs, or
+                              if invalid class names are used.
             KeyError -- Raised when an invalid class type or class ID is used in
                         preferences that does not exist in the user ontology.
             ParserError -- Raised when the user preferences has malformed
@@ -169,6 +170,7 @@ class TemplateDriver():
         user preferences.
         
         Raises:
+            AttributeError -- Raised if an invalid class name is specified.
             ValueError -- Raised if an invalid order override is specified.
         
         Returns:
@@ -179,6 +181,17 @@ class TemplateDriver():
         if 'order_overrides' not in self.user_prefs_attrs:
             return {}
         
+        # Isolating invalid classes
+        invalid_classes = set(self.user_prefs['order_overrides']).difference(
+            set(config.ont_classes.keys()))
+
+        # Raise exception if there are any invalid classes
+        if len(invalid_classes) > 0:
+            message = 'Order override class {0} is not valid'.format(
+                invalid_classes)
+            logging.error(message)
+            raise AttributeError(message)
+
         # Iterate through order overrides, and ensure they are valid
         for order_override in self.user_prefs['order_overrides']:
             override_type = self.user_prefs['order_overrides'][order_override]
