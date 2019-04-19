@@ -93,7 +93,7 @@
 
     \vspace{.5em}
 
-    {\color{\highlightcolor} \centerline{(* email *) $\bullet$ (* website *) $\bullet$ (* phone *)} }
+    {\color{\highlightcolor} \centerline{(* email *) $\; \bullet \;$ (* website *) $\; \bullet \;$ (* phone *)} }
 
     \noindent{\rule{\linewidth}{.2em}}
 
@@ -165,15 +165,21 @@
 
     \sectionTitle{Selected Knowledge Areas}
 
-    \begin{tabularx}{\textwidth}{X}
+    ((* for kg in KnowledgeArea *))
         % iterating over knowledge areas
-        ((* for kg in KnowledgeArea *))
+        \begin{tabularx}{\textwidth}{X}
             % first line - knowldge area name in bold
             \textbf{(* kg.hasName[0] *)} \\
             % listing all constituent subjects
             (* printListofLists(kg.hasSubject, ', ') *) \\
-        ((* endfor *))
-    \end{tabularx}
+        \end{tabularx}
+
+        % add vspace if not last line
+        ((* if not loop.last *))
+            \vspace{-.5em}
+        ((* endif *))
+
+    ((* endfor *))
 
 \end{document}
 
