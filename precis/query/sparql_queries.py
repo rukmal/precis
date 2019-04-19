@@ -218,10 +218,15 @@ class SPARQLQueries():
                             }}
                             UNION
                             {{
-                                ?o precis:hasParentOrganization ?org .
-                                ?org precis:hasName ?orgname .
-                                ?org precis:hasParentOrganization ?parentOrg .
-                                ?parentOrg precis:hasName ?parentOrgName .
+                                {{
+                                    ?o precis:hasParentOrganization ?org .
+                                    ?org precis:hasName ?orgname .
+                                }}
+                                OPTIONAL
+                                {{
+                                    ?org precis:hasParentOrganization ?parentOrg .
+                                    ?parentOrg precis:hasName ?parentOrgName .
+                                }}
                             }}
                         }}
                     }}
