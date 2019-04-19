@@ -12,7 +12,7 @@
      xmlns:schema="http://schema.org/"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://precis.rukmal.me/ontology">
-        <owl:versionIRI rdf:resource="http://precis.rukmal.me/ontology/1.5.0"/>
+        <owl:versionIRI rdf:resource="http://precis.rukmal.me/ontology/1.5.1"/>
         <dc:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.
 
 Currently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.</dc:abstract>
@@ -20,7 +20,7 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Precis Ontology</dc:title>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-07T00:00:00</dcterms:created>
         <dcterms:creator rdf:resource="http://rukmal.me"/>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-17T00:00:00</dcterms:modified>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-19T00:00:00</dcterms:modified>
         <bibo:doi rdf:resource="http://purl.org/precis"/>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">precis</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://precis.rukmal.me/ontology</vann:preferredNamespaceUri>
@@ -28,8 +28,8 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.
 
 Currently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.</rdfs:comment>
-        <owl:priorVersion rdf:resource="https://github.com/rukmal/precis/releases/download/1.4.0/precis_ontology.rdf"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.5.0</owl:versionInfo>
+        <owl:priorVersion rdf:resource="https://github.com/rukmal/precis/releases/download/1.5.0/precis_ontology.rdf"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.5.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -816,6 +816,17 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
     
 
 
+    <!-- http://precis.rukmal.me/ontology#otherTitles -->
+
+    <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#otherTitles">
+        <rdfs:domain rdf:resource="http://precis.rukmal.me/ontology#WorkExperience"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&apos;Other&apos; job titles; this property should be specified in addition to the main &apos;hasName&apos; property, and is considered peripheral information.</rdfs:comment>
+        <rdfs:label>Other Titles</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://precis.rukmal.me/ontology#withGrade -->
 
     <owl:DatatypeProperty rdf:about="http://precis.rukmal.me/ontology#withGrade">
@@ -1538,6 +1549,12 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#hasMedia"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://precis.rukmal.me/ontology#otherTitles"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
