@@ -3,9 +3,10 @@
 % Package Imports
 %----------------
 
+\usepackage{enumitem}  % Advanced list settings
 \usepackage[T1]{fontenc}  % Expanded font encoding
 \usepackage{geometry}  % Page geometry (margins, etc.)
-\usepackage{helvet}  % Helvetica font
+\usepackage[defaultsans]{opensans}  % Helvetica font
 \usepackage{multirow}  % Multirow table
 \usepackage{tabularx}  % Advanced tables
 
@@ -21,6 +22,9 @@
 % Document font
 \renewcommand{\familydefault}{\sfdefault}
 
+% Section title
+\newcommand{\sectionTitle}[1]{ \vspace{1em} {\large \uppercase{ #1}} }
+
 % Jinja Macros
 %--------------
 
@@ -31,6 +35,11 @@
     ((*- elif topObj.inCountry is defined *))
         (* topObj.inCountry[0] *)
    ((*- endif *)) 
+((*- endmacro *))
+
+% Get location in "City, State/Country" format
+((*- macro getLocation(topObj) *))
+    (* topObj.inCity[0] ~ ', ' ~ stateOrCountry(topObj) *)
 ((*- endmacro *))
 
 % Format date (to MMM 'YY, eg: "May '19"')
@@ -47,6 +56,10 @@
     ((*- endif *))
 ((*- endmacro *))
 
+% Expand a list of objects, chaining 'hasName' together with comma delimiter
+((*- macro expandNames(topObj) *))
+    (* topObj|join(', ', attribute='hasName') *)
+((*- endmacro *))
 
 \begin{document}
     % CV Header - Name, address, website and email
@@ -62,37 +75,54 @@
 
     % Education
     %---------------------------------------------
-    {\large EDUCATION}
+    \sectionTitle{Education}
 
-    \begin{tabularx}{\textwidth}{X r}
-        ((* for deg_group in Degree|groupby('degreeUniversity') *))
-            \textbf{(* deg_group.grouper[0] *)} & \textbf{(* deg_group.list[0].inCity[0] ~ ', ' ~ stateOrCountry(deg_group.list[0]) *)} \\
-            ((* for deg in deg_group.list *))
-                \quad (* deg.hasName[0] *) & (* formatDate(deg.hasDate[0]) *) \\
-                \quad \textit{(* deg.degreeDepartment[0]|join('; ') *)} & \\
-                ((* if deg.degreeGPA is defined *))
-                    \quad GPA (4.0 Scale): (* deg.degreeGPA[0] *) & \\
-                ((* endif *))
-                \vspace{0.001em}
-            ((* endfor *))
-            \vspace{0.5em}
-        ((* endfor *))    
-    \end{tabularx}
+    % Iterating over degrees
+    ((* for deg in Degree *))
+        \begin{tabularx}{\textwidth}{X r}
+            % First line - degree title and date
+            \textbf{(* deg.hasName[0] *)} & \textbf{(* formatDate(deg.hasDate[0]) *)} \\
+            % Degree university and location
+            \quad (* deg.degreeUniversity[0][0] *) & (* getLocation(deg) *) \\
+            % Degree school and department
+            \quad (* deg.degreeSchool[0][0] ~ ' (' ~ deg.degreeDepartment[0][0] ~ ')' *) & \\
+            % Degree GPA (if any)
+            ((* if deg.degreeGPA is defined *))
+                \quad \textit{GPA (4.0 Scale): (* deg.degreeGPA[0] *)} & \\
+            ((* endif *))
+            % Degree awards (if any)
+            ((* if deg.affiliated is defined *))
+                ((* for group in deg.affiliated|groupby('type') *))
+                    ((* if group.grouper == 'Award' *))
+                        \quad \textit{Awards: (* expandNames(group.list) *)} & \\
+                    ((* endif *))
+                ((* endfor *))
+            ((* endif *))
+        \end{tabularx}
+    ((* endfor *))
 
     % Work Experience
     %---------------------------------------------
-    {\large WORK EXPERIENCE}
+    \sectionTitle{Work Experience}
 
-    \begin{tabularx}{\textwidth}{X r}
-        ((* for we in WorkExperience *))
-            \textbf{(* we.employedAt[0] *)} & \textbf{(* we.inCity[0] ~ ', ' ~ stateOrCountry(we) *)} \\
-            (* we.hasName[0] *) & (* dateRange(we) *) \\
-            ((* for desc in we.hasDescription *))
-                \multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{(* desc *) } \\
+    ((* for we in WorkExperience *))
+        \begin{tabularx}{\textwidth}{X r}
+            % First line - job title and location
+            \textbf{(* we.hasName[0] *)} & \textbf{(* we.inCity[0] ~ ', ' ~ stateOrCountry(we) *)} \\
+            % Main employment organization and date range
+            (* we.employedAt[0][0] *) & (* dateRange(we) *) \\
+            % Parent organizations
+            ((* for parent_orgset in we.employedAt *))
+                \textit{(* parent_orgset[1:]|join('; ') *)} & \\
             ((* endfor *))
-        ((* endfor *))
-    \end{tabularx}
-    
-
+        \end{tabularx}
+        \vspace{-1em}
+        % descriptions
+        \begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt]
+            ((* for desc in we.hasDescription *))
+                \item (* desc *)
+            ((* endfor *))
+        \end{itemize}
+    ((* endfor *))
 \end{document}
 
