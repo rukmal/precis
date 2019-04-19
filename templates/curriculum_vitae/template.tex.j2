@@ -137,27 +137,34 @@
     \sectionTitle{Work Experience}
 
     ((* for we in WorkExperience *))
+    % Put in minipage to prevent mid-entry pagebreak
+    \begin{minipage}{\tabularxwidth}
+
         \begin{tabularx}{\tabularxwidth}{X r}
             % First line - job title and location
             \textbf{(* we.hasName[0] *)} & \textbf{(* we.inCity[0] ~ ', ' ~ stateOrCountry(we) *)} \\
             % Main employment organization and date range
             (* we.employedAt[0][0] *) & (* dateRange(we) *) \\
-            % Parent organizations
-            ((* for parent_orgset in we.employedAt *))
-                \textit{(* parent_orgset[1:]|join('; ') *)} & \\
-            ((* endfor *))
+            % Parent organizations (if any)
+            ((* if we.employedAt[0]|length > 1 *))
+                ((* for parent_orgset in we.employedAt *))
+                    \textit{(* parent_orgset[1:]|join('; ') *)} & \\
+                ((* endfor *))
+            ((* endif *))
             % Other job titles
             ((* if we.otherTitles is defined *))
                 Other Titles: (* we.otherTitles|join(', ') *) & \\
             ((* endif *))
         \end{tabularx}
-        \vspace{-1em}
+
         % descriptions
-        \begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt]
+        \begin{itemize}[noitemsep, topsep=3pt, parsep=0pt, partopsep=0pt]
             ((* for desc in we.hasDescription *))
                 \item (* cleanText(desc) *)
             ((* endfor *))
         \end{itemize}
+
+    \end{minipage}
     ((* endfor *))
 
     % Publications
