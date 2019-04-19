@@ -197,7 +197,7 @@ class SPARQLQueries():
             target_iri))
 
         return prepareQuery("""
-                SELECT DISTINCT ?p ?name ?orgname
+                SELECT DISTINCT ?p ?name ?orgname ?parentOrgName
                 WHERE {{
                     <{target_iri}> ?p ?o .
                     ?p rdf:type owl:ObjectProperty .
@@ -220,6 +220,8 @@ class SPARQLQueries():
                             {{
                                 ?o precis:hasParentOrganization ?org .
                                 ?org precis:hasName ?orgname .
+                                ?org precis:hasParentOrganization ?parentOrg .
+                                ?parentOrg precis:hasName ?parentOrgName .
                             }}
                         }}
                     }}

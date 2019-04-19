@@ -147,19 +147,14 @@ class OntQuery():
             objectprop_iri = result[0].toPython()
             objectprop_name = self.ont.search_one(
                 iri=objectprop_iri).python_name
-            # Getting Python object of value, and appending orgname (optionally)
-            value = [result[1].toPython()]
-            if result[2]:
-                # If it has orgname, append to result and nest list
-                value.append(result[2].toPython())
-                # Adding to output dictionary (append to array if multiple)
-                output.setdefault(objectprop_name, []).append(value)
-            else:
-                # No org name, do not nest list
-                output.setdefault(objectprop_name, []).append(value[0])
+            # Building list of nested object property chain
+            objectprop_chain = [i.toPython() for i in result[1:]
+                if i is not None]
+            # Append object property chain to global output object list
+            output.setdefault(objectprop_name, []).append(objectprop_chain)
 
         # Extracting all individuals that indicated they were 'affiliatedWith'
-        # the current individual 
+        # the current individual
         affiliated_query = SPARQLQueries.getAffiliated(
             target_iri=individual_iri
         )
