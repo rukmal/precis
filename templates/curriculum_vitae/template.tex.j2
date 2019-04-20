@@ -95,7 +95,7 @@
 \begin{document}
     % CV Header - Name, address, website and email
     %---------------------------------------------
-    \centerline{ \color{\highlightcolor} \huge (* full_name *)}
+    \centerline{ \color{\highlightcolor} \huge \textbf{(* full_name *)}}
 
     \vspace{.5em}
 
@@ -119,13 +119,13 @@
             \quad (* deg.degreeSchool[0][0] ~ ' (' ~ deg.degreeDepartment[0][0] ~ ')' *) & \\
             % Degree GPA (if any)
             ((* if deg.degreeGPA is defined *))
-                \quad \textit{GPA (4.0 Scale): (* deg.degreeGPA[0] *)} & \\
+                \quad \textit{GPA (4.0 Scale):} (* deg.degreeGPA[0] *) & \\
             ((* endif *))
             % Degree awards (if any)
             ((* if deg.affiliated is defined *))
                 ((* for group in deg.affiliated|groupby('type') *))
                     ((* if group.grouper == 'Award' *))
-                        \quad \textit{Awards: (* expandNames(group.list) *)} & \\
+                        \quad \textit{Awards:} (* expandNames(group.list) *) & \\
                     ((* endif *))
                 ((* endfor *))
             ((* endif *))
