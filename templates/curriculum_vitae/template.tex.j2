@@ -194,5 +194,27 @@
 
     ((* endfor *))
 
+
+    % Skills and Technologies
+    %---------------------------------------------
+
+    \sectionTitle{Skills and Technologies}
+
+    ((* for sg in SkillGroup *))
+        % iterating over knowledge areas
+        \begin{tabularx}{\tabularxwidth}{X}
+            % first line - knowldge area name in bold
+            \textbf{(* sg.hasName[0] *)} \\
+            % listing all constituent subjects
+            (* printListofLists(sg.hasSkill, ', ') *) \\
+        \end{tabularx}
+
+        % add vspace if not last line
+        ((* if not loop.last *))
+            \vspace{-.5em}
+        ((* endif *))
+
+    ((* endfor *))
+
 \end{document}
 
