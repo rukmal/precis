@@ -86,6 +86,13 @@
     ((*- endfor *))
 ((*- endmacro *))
 
+% Only print title if it exists
+((*- macro titleIfExists(title, titleText) *))
+    ((*- if title|length > 0 *))
+        \sectionTitle{(* titleText *)}
+    ((*- endif *))
+((*- endmacro *))
+
 
 % Expand a list of objects, chaining 'hasName' together with comma delimiter
 ((*- macro expandNames(topObj) *))
@@ -106,7 +113,7 @@
 
     % Education
     %---------------------------------------------
-    \sectionTitle{Education}
+    (* titleIfExists(Degree, 'Education') *)
 
     % Iterating over degrees
     ((* for deg in Degree *))
@@ -134,7 +141,7 @@
 
     % Work Experience
     %---------------------------------------------
-    \sectionTitle{Work Experience}
+    (* titleIfExists(WorkExperience, 'Work Experience') *)
 
     ((* for we in WorkExperience *))
     % Put in minipage to prevent mid-entry pagebreak
@@ -176,7 +183,7 @@
     % Knowledge Areas
     %---------------------------------------------
 
-    \sectionTitle{Selected Knowledge Areas}
+    (* titleIfExists(KnowledgeArea, 'Selected Knowledge Areas') *)
 
     ((* for kg in KnowledgeArea *))
         % iterating over knowledge areas
@@ -198,7 +205,7 @@
     % Skills and Technologies
     %---------------------------------------------
 
-    \sectionTitle{Skills and Technologies}
+    (* titleIfExists(SkillGroup, 'Skills and Technologies') *)
 
     ((* for sg in SkillGroup *))
         % iterating over knowledge areas
