@@ -1,4 +1,4 @@
-\documentclass[10pt, letterpaper]{letter}
+\documentclass[10pt, letterpaper]{article}
 
 % Package Imports
 %----------------
@@ -11,6 +11,7 @@
 \usepackage[defaultsans]{opensans}  % Opensans font
 \usepackage[document]{ragged2e}  % Text alignment
 \usepackage{tabularx}  % Advanced tables
+\usepackage{titlesec}  % Title formatting
 \usepackage[svgnames]{xcolor}  % Colors
 
 % LaTeX Configuration
@@ -29,7 +30,12 @@
 \newcommand{\highlightcolor}{RoyalBlue}
 
 % Section title
-\newcommand{\sectionTitle}[1]{ \vspace{1em} \raggedright{ \color{\highlightcolor} \large \textbf{\uppercase{ #1}}}}
+\newcommand{\sectionTitle}[1]{ \vspace{1em} \raggedright{ \color{\highlightcolor} \large \textbf{\uppercase{ #1}}} \vspace{1em} }
+
+% Reformat section
+\titleformat{\section}[block]
+{\color{\highlightcolor} \Large \bf \scshape }
+{}{0em}{}
 
 % No indentation
 \setlength{\parindent}{0pt}
@@ -97,7 +103,7 @@
 % Only print title if it exists
 ((*- macro titleIfExists(title, titleText) *))
     ((*- if title|length > 0 *))
-        \sectionTitle{(* titleText *)}
+        \section{(* titleText *)}
     ((*- endif *))
 ((*- endmacro *))
 
@@ -153,6 +159,12 @@
                 ((* endfor *))
             ((* endif *))
         \end{tabularx}
+
+        % Add vertical space if not last iteration
+        ((* if not loop.last *))
+            \vspace{.5em}
+        ((* endif *))
+
     ((* endfor *))
 
     % Work Experience
@@ -187,6 +199,11 @@
                 \item (* cleanText(desc) *)
             ((* endfor *))
         \end{itemize}
+
+        % Add vertical space if not last iteration
+        ((* if not loop.last *))
+            \vspace{.5em}
+        ((* endif *))
 
     \end{minipage}
     ((* endfor *))
@@ -236,6 +253,11 @@
             ((* endfor *))
         \end{itemize}
 
+        % Add vertical space if not last iteration
+        ((* if not loop.last *))
+            \vspace{.5em}
+        ((* endif *))
+
         \end{minipage}
     ((* endfor *))
 
@@ -244,7 +266,6 @@
 
     % Knowledge Areas
     %---------------------------------------------
-    \pagebreak
 
     (* titleIfExists(KnowledgeArea, 'Selected Knowledge Areas') *)
 
@@ -257,9 +278,9 @@
             (* printListofLists(kg.hasSubject, ', ') *) \\
         \end{tabularx}
 
-        % add vspace if not last line
+        % Add vertical space if not last iteration
         ((* if not loop.last *))
-            \vspace{-.5em}
+            \vspace{.5em}
         ((* endif *))
 
     ((* endfor *))
@@ -279,9 +300,9 @@
             (* printListofLists(sg.hasSkill, ', ') *) \\
         \end{tabularx}
 
-        % add vspace if not last line
+        % Add vertical space if not last iteration
         ((* if not loop.last *))
-            \vspace{-.5em}
+            \vspace{.5em}
         ((* endif *))
 
     ((* endfor *))
