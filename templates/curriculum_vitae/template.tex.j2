@@ -1,4 +1,4 @@
-\documentclass[10pt, letterpaper]{article}
+\documentclass[10pt]{article}
 
 % Package Imports
 %----------------
@@ -23,8 +23,12 @@
           left=.5in,
           right=.5in}
 
-% Document font
+% Document font size
+\newcommand{\cvfontsize}{9}
+
+% Document font stuff
 \renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\normalsize}{\fontsize{\cvfontsize}{\baselineskip}\selectfont}
 
 % Highlight color
 \newcommand{\highlightcolor}{RoyalBlue}
