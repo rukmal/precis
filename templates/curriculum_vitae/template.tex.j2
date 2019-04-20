@@ -37,6 +37,14 @@
 % Table width
 \newcommand{\tabularxwidth}{\textwidth}
 
+% Link formatting
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+
 % Jinja Macros
 %--------------
 
@@ -99,6 +107,13 @@
     (* topObj|join(', ', attribute='hasName') *)
 ((*- endmacro *))
 
+% Format a portfolio date (i.e. just the year)
+((*- macro formatPortfolioDate(topObj) *))
+    ((*- if topObj.hasDate is defined *))
+        (* topObj.hasDate[0].strftime('%Y') *)
+    ((*- endif *))
+((*- endmacro *))
+
 \begin{document}
     % CV Header - Name, address, website and email
     %---------------------------------------------
@@ -113,6 +128,7 @@
 
     % Education
     %---------------------------------------------
+
     (* titleIfExists(Degree, 'Education') *)
 
     % Iterating over degrees
@@ -141,6 +157,7 @@
 
     % Work Experience
     %---------------------------------------------
+
     (* titleIfExists(WorkExperience, 'Work Experience') *)
 
     ((* for we in WorkExperience *))
@@ -177,11 +194,57 @@
     % Publications
     %---------------------------------------------
 
+    (* titleIfExists(Publication, 'Publications') *)
+
+    ((* for pub in Publication *))
+        \begin{minipage}{\tabularxwidth}
+        \begin{tabularx}{\tabularxwidth}{X}
+            % Nested tabular to handle title and date in same column
+            {
+                \begin{tabularx}{\tabularxwidth}{@{}X r}
+                    % Prefix with the current status (if any)
+                    ((*- if pub.hasStatus is defined *))
+                        \textit{(* '(' ~ pub.hasStatus[0] ~ ') ' *)}
+                    ((*- endif *))
+                    % Publication title
+                    \textbf{(* pub.hasName[0] *)} &
+                    % Date on the right
+                    \textbf{(* formatPortfolioDate(pub) *)} \\
+                \end{tabularx}
+            } \\
+            % Authors
+            (* pub.hasAuthors[0] *) \\
+
+            % NOTE: Assuming that both publication & conference/journal exists if one does
+            ((* if (pub.hasPublication is defined) and (pub.hasPublication[0]|length > 0) *))
+                \textit{(* pub.inPublication[0] ~ '; ' ~ pub.inConferenceOrJounral[0] *)} \\
+            ((* endif *))
+            % Printing website (if exists)
+            ((* if pub.hasWebsite is defined *))
+                \url{(* pub.hasWebsite[0] *)} \\
+            ((* endif *))
+            % Printing DOI (if exists)
+            ((* if pub.hasDOI is defined *))
+                (* pub.hasDOI[0] *) \\
+            ((* endif *))
+        \end{tabularx}
+
+        % descriptions
+        \begin{itemize}[noitemsep, topsep=3pt, parsep=0pt, partopsep=0pt]
+            ((* for desc in pub.hasDescription *))
+                \item (* cleanText(desc) *)
+            ((* endfor *))
+        \end{itemize}
+
+        \end{minipage}
+    ((* endfor *))
+
     % Talks
     %---------------------------------------------
 
     % Knowledge Areas
     %---------------------------------------------
+    \pagebreak
 
     (* titleIfExists(KnowledgeArea, 'Selected Knowledge Areas') *)
 
