@@ -92,7 +92,8 @@
 
 % List the contents of a nested list of lists with a delimiter
 ((*- macro printListofLists(list, delimit) *))
-    ((*- for l in list *))
+    ((* set sorted_list = list|sort *))
+    ((*- for l in sorted_list *))
         ((*- if loop.last *))
             (* l[0] *)
         ((*- else *))
