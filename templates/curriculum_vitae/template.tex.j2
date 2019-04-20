@@ -29,9 +29,6 @@
 % Highlight color
 \newcommand{\highlightcolor}{RoyalBlue}
 
-% Section title
-\newcommand{\sectionTitle}[1]{ \vspace{1em} \raggedright{ \color{\highlightcolor} \large \textbf{\uppercase{ #1}}} \vspace{1em} }
-
 % Reformat section
 \titleformat{\section}[block]
 {\color{\highlightcolor} \Large \bf \scshape }
@@ -232,6 +229,7 @@
             % Authors
             (* pub.hasAuthors[0] *) \\
 
+            % TODO: This part can be improved in the future
             % NOTE: Assuming that both publication & conference/journal exists if one does
             ((* if (pub.hasPublication is defined) and (pub.hasPublication[0]|length > 0) *))
                 \textit{(* pub.inPublication[0] ~ '; ' ~ pub.inConferenceOrJounral[0] *)} \\
@@ -305,6 +303,56 @@
             \vspace{.5em}
         ((* endif *))
 
+    ((* endfor *))
+
+
+    % Awards and Certifications
+    %---------------------------------------------
+
+    \pagebreak[3]
+
+    % Only print title if any of either exists
+    ((* set award_cert_count = (Award|length + Certification|length) *))
+
+    ((*- if award_cert_count > 0 *))
+        \section{Awards and Certifications}
+    ((*- endif *))
+
+    % Global counter (over both award and certification; for spacing insertion)
+    ((* set counter = 1 *))
+
+    ((* for current_class in [Award, Certification] *))
+        ((* for aw_cert in current_class *))
+            \begin{minipage}{\tabularxwidth}
+            % iterating over awards and certifications
+            \begin{tabularx}{\tabularxwidth}{X}
+                % Nested tabular to handle title and date in same column
+                {
+                    \begin{tabularx}{\tabularxwidth}{@{}X r}
+                        % Award/Certification name
+                        \textbf{(* aw_cert.hasName[0] *)} &
+                        % Date on the right
+                        \textbf{(* formatPortfolioDate(aw_cert) *)} \\
+                    \end{tabularx}
+                } \\
+                % Link
+                \url{(* aw_cert.hasWebsite[0] *)} \\
+                % descriptions
+                ((* for desc in aw_cert.hasDescription *))
+                    (* cleanText(desc) *) \\
+                ((* endfor *))
+            \end{tabularx}
+
+            % Add vertical space if not last iteration
+            ((* if (counter < award_cert_count) *))
+                \vspace{.5em}
+            ((* endif *))
+
+            % Increment counter
+            ((* set counter = counter + 1 *))
+
+            \end{minipage}
+        ((* endfor *))
     ((* endfor *))
 
 \end{document}
