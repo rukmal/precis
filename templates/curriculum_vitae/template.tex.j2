@@ -7,6 +7,7 @@
 \usepackage[T1]{fontenc}  % Expanded font encoding
 \usepackage{geometry}  % Page geometry (margins, etc.)
 \usepackage{hyperref}  % Hyperlinks
+\usepackage[none]{hyphenat}  % Hyphenation settings
 \usepackage{multirow}  % Multirow table
 \usepackage[defaultsans]{opensans}  % Opensans font
 \usepackage[document]{ragged2e}  % Text alignment
@@ -145,7 +146,7 @@
             % First line - degree title and date
             \textbf{(* deg.hasName[0] *)} & \textbf{(* formatDate(deg.hasDate[0]) *)} \\
             % Degree university and location
-            \quad (* deg.degreeUniversity[0][0] *) & (* getLocation(deg) *) \\
+            \quad \textcolor{\highlightcolor}{(* deg.degreeUniversity[0][0] *)} & (* getLocation(deg) *) \\
             % Degree school and department
             \quad (* deg.degreeSchool[0][0] ~ ' (' ~ deg.degreeDepartment[0][0] ~ ')' *) & \\
             % Degree GPA (if any)
@@ -182,7 +183,7 @@
             % First line - job title and location
             \textbf{(* we.hasName[0] *)} & \textbf{(* we.inCity[0] ~ ', ' ~ stateOrCountry(we) *)} \\
             % Main employment organization and date range
-            (* we.employedAt[0][0] *) & (* dateRange(we) *) \\
+            \textcolor{\highlightcolor}{(* we.employedAt[0][0] *)} & (* dateRange(we) *) \\
             % Parent organizations (if any)
             ((* if we.employedAt[0]|length > 1 *))
                 ((* for parent_orgset in we.employedAt *))
@@ -317,6 +318,7 @@
     \pagebreak[3]
 
     % Only print title if any of either exists
+    % This is done differently because of the double-section thing
     ((* set award_cert_count = (Award|length + Certification|length) *))
 
     ((*- if award_cert_count > 0 *))
@@ -359,6 +361,31 @@
             \end{minipage}
         ((* endfor *))
     ((* endfor *))
+
+
+
+    % Activities
+    %---------------------------------------------
+
+    % Title only if exists
+    (* titleIfExists(ActivityType, 'Activities') *)
+
+    % Iterating over activity types
+    ((* for act_type in ActivityType *))
+        \begin{tabularx}{\tabularxwidth}{X}
+            % First line - activity type name in bold
+            \textbf{(* act_type.hasName[0] *)} \\
+            % Listing all constituent activities
+            (* printListofLists(act_type.hasActivity, ', ') *) \\
+        \end{tabularx}
+
+        % Add vertical space if not last iteration
+        ((* if not loop.last *))
+            \vspace{.5em}
+        ((* endif *))
+
+    ((* endfor *))
+
 
 \end{document}
 
