@@ -14,22 +14,22 @@
 <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#priorVersion"/>
 
 <owl:Ontology rdf:about="http://precis.rukmal.me/ontology">
-  <owl:priorVersion rdf:resource="https://github.com/rukmal/precis/releases/download/1.4.0/precis_ontology.rdf"/>
-  <owl:versionIRI rdf:resource="http://precis.rukmal.me/ontology/1.5.0"/>
+  <owl:priorVersion rdf:resource="https://github.com/rukmal/precis/releases/download/1.5.0/precis_ontology.rdf"/>
+  <owl:versionIRI rdf:resource="http://precis.rukmal.me/ontology/1.5.1"/>
   <term:creator rdf:resource="http://rukmal.me"/>
   <bibo:doi rdf:resource="http://purl.org/precis"/>
   <sche:license rdf:resource="https://github.com/rukmal/precis/blob/master/LICENSE"/>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.
 
 Currently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.</rdfs:comment>
-  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.5.0</owl:versionInfo>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.5.1</owl:versionInfo>
   <x_1.1:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.
 
 Currently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.</x_1.1:abstract>
   <x_1.1:creator>Rukmal Weerawarana</x_1.1:creator>
   <x_1.1:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Precis Ontology</x_1.1:title>
   <term:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-07T00:00:00</term:created>
-  <term:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-17T00:00:00</term:modified>
+  <term:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-19T00:00:00</term:modified>
   <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">precis</vann:preferredNamespacePrefix>
   <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://precis.rukmal.me/ontology</vann:preferredNamespaceUri>
 </owl:Ontology>
@@ -337,6 +337,12 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
     <owl:Restriction>
       <owl:onProperty rdf:resource="#hasMedia"/>
       <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#otherTitles"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:Restriction>
   </rdfs:subClassOf>
   <rdfs:subClassOf>
@@ -1147,6 +1153,13 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
   <rdfs:label>State</rdfs:label>
 </owl:DatatypeProperty>
 
+<owl:DatatypeProperty rdf:about="#otherTitles">
+  <rdfs:domain rdf:resource="#WorkExperience"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:comment>'Other' job titles; this property should be specified in addition to the main 'hasName' property, and is considered peripheral information.</rdfs:comment>
+  <rdfs:label>Other Titles</rdfs:label>
+</owl:DatatypeProperty>
+
 <owl:DatatypeProperty rdf:about="#withGrade">
   <rdfs:domain rdf:resource="#Course"/>
   <rdfs:range>
@@ -1227,13 +1240,13 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/</hasWebsite>
 </Organization>
 
-<Description rdf:about="http://precis.rukmal.me/ontology/musk#a240bccf-d6b9-4c32-b31a-c777e5c7d3cb">
+<Description rdf:about="http://precis.rukmal.me/ontology/musk#a48540fc-b2ed-4acf-8467-56e48cc907b9">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Launched SpaceX.</hasText>
 </Description>
 
-<Description rdf:about="http://precis.rukmal.me/ontology/musk#79e3f971-be5d-46a5-bd67-983e4b1f4bef">
+<Description rdf:about="http://precis.rukmal.me/ontology/musk#0dee7f34-1d0b-4503-888f-d57baf2daee2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Led the development of the first commercially viable reusable orbital class rocket.</hasText>
@@ -1242,8 +1255,8 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
 <WorkExperience rdf:about="http://precis.rukmal.me/ontology/musk#we_spacex_ceo">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <employedAt rdf:resource="http://precis.rukmal.me/ontology/musk#spacex"/>
-  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#a240bccf-d6b9-4c32-b31a-c777e5c7d3cb"/>
-  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#79e3f971-be5d-46a5-bd67-983e4b1f4bef"/>
+  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#0dee7f34-1d0b-4503-888f-d57baf2daee2"/>
+  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#a48540fc-b2ed-4acf-8467-56e48cc907b9"/>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-05-01T00:00:00</hasDate>
   <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasImage>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Founder, CEO and Lead Designer</hasName>
@@ -1268,7 +1281,7 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
   <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</inState>
 </WorkExperience>
 
-<Description rdf:about="http://precis.rukmal.me/ontology/musk#537e7848-5e0f-4015-bd5c-a7dc2949a29d">
+<Description rdf:about="http://precis.rukmal.me/ontology/musk#235e16d9-d522-4b04-aff1-e4947affb6b3">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Given to people who have rendered meritorious service to humanity in the IEEE's designated fields of interest.</hasText>
@@ -1277,7 +1290,7 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
 <Award rdf:about="http://precis.rukmal.me/ontology/musk#award:ieee">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <affiliatedWith rdf:resource="http://precis.rukmal.me/ontology/musk#we_tesla_ceo"/>
-  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#537e7848-5e0f-4015-bd5c-a7dc2949a29d"/>
+  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#235e16d9-d522-4b04-aff1-e4947affb6b3"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/IEEE_Honorary_Membership</externalResource>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-01-01T00:00:00</hasDate>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEEE Honorary Membership</hasName>
@@ -1352,11 +1365,19 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/falcon-heavy</hasWebsite>
 </Project>
 
+<Description rdf:about="http://precis.rukmal.me/ontology/musk#09c08821-17e3-405f-aa50-e28260f17792">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPriority>
+  <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proposing the Hyperloop System.</hasText>
+</Description>
+
 <Publication rdf:about="http://precis.rukmal.me/ontology/musk#proj_spacex_hyperloop_alpha">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <affiliatedWith rdf:resource="http://precis.rukmal.me/ontology/musk#we_spacex_ceo"/>
+  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#09c08821-17e3-405f-aa50-e28260f17792"/>
   <relatedTo rdf:resource="http://precis.rukmal.me/ontology/musk#award:ieee"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Hyperloop</externalResource>
+  <hasAuthors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SpaceX Hyperloop Team</hasAuthors>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-08-16T00:00:00</hasDate>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperloop Alpha</hasName>
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.spacex.com/sites/spacex/files/hyperloop_alpha.pdf</hasWebsite>
@@ -1374,8 +1395,8 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
 
 <SkillGroup rdf:about="http://precis.rukmal.me/ontology/musk#sg:programming">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSkill rdf:resource="http://precis.rukmal.me/ontology/musk#sk:R"/>
   <hasSkill rdf:resource="http://precis.rukmal.me/ontology/musk#sk:python"/>
+  <hasSkill rdf:resource="http://precis.rukmal.me/ontology/musk#sk:R"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programming Languages</hasName>
 </SkillGroup>
 
@@ -1431,7 +1452,7 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Debauchery</hasName>
 </ActivityType>
 
-<Description rdf:about="http://precis.rukmal.me/ontology/musk#48617e7a-df93-4dc8-861c-3768f7127610">
+<Description rdf:about="http://precis.rukmal.me/ontology/musk#3927d4c3-b4c1-4c26-8aa2-beb1a0bd965c">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPriority>
   <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sophomore-level introduction to Macroeconomics</hasText>
@@ -1439,7 +1460,7 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
 
 <Course rdf:about="http://precis.rukmal.me/ontology/musk#course:econ201">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#48617e7a-df93-4dc8-861c-3768f7127610"/>
+  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#3927d4c3-b4c1-4c26-8aa2-beb1a0bd965c"/>
   <taughtAt rdf:resource="http://precis.rukmal.me/ontology/musk#org_upenn_wharton"/>
   <hasCourseCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">201</hasCourseCode>
   <hasDepartmentCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECON</hasDepartmentCode>

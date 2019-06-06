@@ -13,4 +13,7 @@ order_overrides:
   KnowledgeArea: 'alphabetical_D'
 item_overrides:
   Degree:
-  - 'degree_bs_physics'
+    - 'degree_bs_physics'
+    - 'degree_bs_econ'
+  ActivityType:
+    - '!ac_type:debauchery'

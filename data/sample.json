@@ -137,10 +137,14 @@
         "$type": "Publication",
         "$id": "proj_spacex_hyperloop_alpha",
         "affiliatedWith": "we_spacex_ceo",
+        "hasAuthors": "SpaceX Hyperloop Team",
         "hasDate": "2013-08-16",
         "externalResource": "http://dbpedia.org/resource/Hyperloop",
         "hasDescription": [
-
+            {
+                "hasPriority": 0,
+                "hasText": "Proposing the Hyperloop System."
+            }
         ],
         "hasWebsite": "https://www.spacex.com/sites/spacex/files/hyperloop_alpha.pdf",
         "hasName": "Hyperloop Alpha",
