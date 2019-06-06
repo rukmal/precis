@@ -133,6 +133,8 @@ class TemplateDriver():
         
         Raises:
             KeyError -- Raised when an incorrect class type or class ID is used.
+            ValueError -- Raised when inclusion and exclusion type item
+                          overrides are mixed.
         
         Returns:
             dict -- Dictionary of item overrides.
@@ -143,7 +145,7 @@ class TemplateDriver():
             return {}
 
         for item_type in self.user_prefs['item_overrides']:
-            # Getting IDs of individuals of the given type
+            # Getting IDs of individuals of the given type (from the key)
             try:
                 indv_ids = set([i.name for i in
                     config.ont_classes[item_type].instances()])
@@ -153,8 +155,48 @@ class TemplateDriver():
                 logging.error(item_type)
                 raise
             
-            if not set(self.user_prefs['item_overrides'][item_type]).issubset(
-                indv_ids):
+            
+            # Building list to check negation flag
+            negation_flag = [i[0] == '!'
+                for i in self.user_prefs['item_overrides'][item_type]]
+            
+            # Following if statement handles each of the cases where (1) all are
+            # negation IDs, (2) negation/inclusion is mixed raise error, or (3)
+            # all inclusion IDs
+
+            if all(negation_flag):
+                # All Negation
+                # Building set of IDs to be removed (i.e. removing '!')
+                negate_ids = set([i[1:]
+                    for i in self.user_prefs['item_overrides'][item_type]])
+                if negate_ids.issubset(indv_ids):
+                    # Subtracting negation IDs from all IDs to build list of IDs
+                    # to include
+                    include_ids = indv_ids.difference(negate_ids)
+                    # Casting to list and assigning to dictionary value
+                    self.user_prefs['item_overrides'][item_type] = \
+                        list(include_ids)
+                    # Skip rest, continue
+                    continue
+                # Not all negation IDs are not valid, raise error
+                message = 'Item negation ID overrides {0} for type {1} are not\
+                    valid.'.format(negate_ids, item_type)
+                logging.error(message)
+                raise KeyError(message)
+            elif any(negation_flag) and not all(negation_flag):
+                # Mixed; both inclusion and negation are used
+                # Raise error
+                message = 'Both negation and inclusion item overrides are used\
+                    for class {0}'.format(item_type)
+                logging.error(message)
+                raise ValueError(message)
+            else:
+                # All Inclusion
+                # Check if all IDs are valid, if so continue
+                if set(self.user_prefs['item_overrides'][item_type]).issubset(
+                    indv_ids):
+                    continue
+                # If not valid, raise error
                 message = 'Item ID overrides {0} for type {1} are not valid'.\
                     format(set(self.user_prefs['item_overrides'][item_type])
                     .difference(indv_ids), item_type)
