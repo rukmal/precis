@@ -64,4 +64,47 @@ Item overrides can be used to supply specific IDs of elements in the precis know
 - *Inclusion Override*: List of specific IDs to include.
 - *Exclusion Override*: List of specific IDs to exclude.
 
-Note that the usage of each these types of item overrides are mutually exclusive. That is, they cannot be used in conjunction with each other.
+Note that the usage of each these types of item overrides are mutually exclusive. That is, they cannot be used in conjunction with each other. Also note that the default behavior of the template engine - in the absence of any provided inclusion item override - is to include all applicable items in the knowledge graph.
+
+This default behavior means that the mutual exclusivity of each of these overrides does not limit their functionality, as specific lists of items (with specific IDs; *inclusion override*) can be included, as well as all items with the exception of a few (with specific IDs; *exclusion override*).
+
+The *inclusion override* is used to specify a list of specific IDs to include (as demonstrated with the `Degree` concept below), and the *exclusion override* is used to list IDs to be excluded (as demonstrated with the `ActivityType` concept below). They are differentiated by using a '!' character before the ID for exclusion, and none for inclusion. See the example below for more details:
+
+```yaml
+full_name: 'Elon Musk'
+.
+.
+.
+item_overrides:
+  Degree:
+    - 'degree_bs_physics'
+    - 'degree_bs_econ'
+  ActivityType:
+    - '!ac_type:debauchery'
+```
+
+## Full Example
+
+The following is the full example of the template instance configuration file discussed in this example. Note that this is the [same file](https://github.com/rukmal/precis/blob/master/data/sample_cv_prefs.yml) as the sample configuration file used in the quickstart guide.
+
+```yaml
+full_name: 'Elon Musk'
+address_line_1: '3500 Deer Creek Road'
+address_city_state: 'Palo Alto, CA'
+address_zip: '94304'
+address_country: 'USA'
+phone: '(800) 613-8840'
+email: 'elonmuskoffice@teslamotors.com'
+website: 'tesla.com'
+order_overrides:
+  WorkExperience: 'chron_D'
+  Award: 'chron_A'
+  SkillGroup: 'alphabetical_A'
+  KnowledgeArea: 'alphabetical_D'
+item_overrides:
+  Degree:
+    - 'degree_bs_physics'
+    - 'degree_bs_econ'
+  ActivityType:
+    - '!ac_type:debauchery'
+```
