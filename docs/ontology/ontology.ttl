@@ -7,7 +7,7 @@
 @base <http://precis.rukmal.me/ontology> .
 
 <http://precis.rukmal.me/ontology> rdf:type owl:Ontology ;
-                                    owl:versionIRI <http://precis.rukmal.me/ontology/1.5.1> ;
+                                    owl:versionIRI <http://precis.rukmal.me/ontology/1.5.2> ;
                                     <http://purl.org/dc/elements/1.1/abstract> """The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.
 
 Currently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.""" ;
@@ -15,7 +15,7 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
                                     <http://purl.org/dc/elements/1.1/title> "Precis Ontology" ;
                                     <http://purl.org/dc/terms/created> "2019-04-07T00:00:00"^^xsd:dateTime ;
                                     <http://purl.org/dc/terms/creator> <http://rukmal.me> ;
-                                    <http://purl.org/dc/terms/modified> "2019-04-19T00:00:00"^^xsd:dateTime ;
+                                    <http://purl.org/dc/terms/modified> "2019-06-07T00:00:00"^^xsd:dateTime ;
                                     <http://purl.org/ontology/bibo/doi> <http://purl.org/precis> ;
                                     <http://purl.org/vocab/vann/preferredNamespacePrefix> "precis" ;
                                     <http://purl.org/vocab/vann/preferredNamespaceUri> "http://precis.rukmal.me/ontology" ;
@@ -23,8 +23,8 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
                                     rdfs:comment """The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.
 
 Currently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.""" ;
-                                    owl:priorVersion <https://github.com/rukmal/precis/releases/download/1.5.0/precis_ontology.rdf> ;
-                                    owl:versionInfo "1.5.1" .
+                                    owl:priorVersion <https://github.com/rukmal/precis/releases/download/1.5.1/precis_ontology.rdf> ;
+                                    owl:versionInfo "1.5.2" .
 
 #################################################################
 #    Annotation properties
@@ -468,7 +468,7 @@ xsd:gYear rdf:type rdfs:Datatype .
              rdfs:domain :Description ;
              rdfs:range xsd:nonNegativeInteger ;
              rdfs:comment "Priority level of the description (used for deciding truncation in toolkit). This is automatically set to the position of the string in the input \"description\" array of descriptions, when data is loaded using the command line tool." ;
-             rdfs:label "description priority level" .
+             rdfs:label "Description priority level" .
 
 
 ###  http://precis.rukmal.me/ontology#hasStatus
@@ -479,12 +479,20 @@ xsd:gYear rdf:type rdfs:Datatype .
            rdfs:label "Publication Status" .
 
 
+###  http://precis.rukmal.me/ontology#hasSyllabus
+:hasSyllabus rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Course ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Syllabus for the course." ;
+             rdfs:label "Course syllabus" .
+
+
 ###  http://precis.rukmal.me/ontology#hasText
 :hasText rdf:type owl:DatatypeProperty ;
          rdfs:domain :Description ;
          rdfs:range xsd:string ;
          rdfs:comment "Text of the description. This should be treated as a single \"bullet point\" on a traditional Resume/CV." ;
-         rdfs:label "description text" .
+         rdfs:label "Description text" .
 
 
 ###  http://precis.rukmal.me/ontology#hasWebsite
@@ -595,6 +603,14 @@ xsd:gYear rdf:type rdfs:Datatype .
                       ] ;
            rdfs:comment "Grade (GPA; 4.0 scale) received in the course (optional for obvious reasons :))." ;
            rdfs:label "Course GPA (on a 4.0 scale)" .
+
+
+###  http://precis.rukmal.me/ontology#withInstructor
+:withInstructor rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Course ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Instructor of the course." ;
+                rdfs:label "Course instructor" .
 
 
 #################################################################
@@ -728,8 +744,16 @@ xsd:gYear rdf:type rdfs:Datatype .
                           owl:someValuesFrom xsd:string
                         ] ,
                         [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasSyllabus ;
+                          owl:someValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :withGrade ;
                           owl:someValuesFrom xsd:double
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :withInstructor ;
+                          owl:someValuesFrom xsd:string
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :hasName ;

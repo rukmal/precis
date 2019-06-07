@@ -7,7 +7,7 @@
       "undefined" : "Precis Ontology"
     },
     "iri" : "http://precis.rukmal.me/ontology",
-    "version" : "1.5.1",
+    "version" : "1.5.2",
     "author" : [ "Rukmal Weerawarana", "http://rukmal.me" ],
     "comments" : {
       "undefined" : "The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.\n\nCurrently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences."
@@ -22,7 +22,7 @@
       "priorVersion" : [ {
         "identifier" : "priorVersion",
         "language" : "undefined",
-        "value" : "https://github.com/rukmal/precis/releases/download/1.5.0/precis_ontology.rdf",
+        "value" : "https://github.com/rukmal/precis/releases/download/1.5.1/precis_ontology.rdf",
         "type" : "iri"
       } ],
       "creator" : [ {
@@ -51,19 +51,19 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2019-04-19T00:00:00",
-        "type" : "label"
-      } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "1.5.1",
+        "value" : "2019-06-07T00:00:00",
         "type" : "label"
       } ],
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "undefined",
         "value" : "The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.\n\nCurrently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.5.2",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -90,44 +90,44 @@
   "metrics" : {
     "classCount" : 18,
     "objectPropertyCount" : 18,
-    "datatypePropertyCount" : 25,
+    "datatypePropertyCount" : 27,
     "individualCount" : 0
   },
   "class" : [ {
     "id" : "0",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "1",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "2",
     "type" : "owl:unionOf"
   }, {
-    "id" : "7",
+    "id" : "3",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "11",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "12",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "8",
-    "type" : "owl:unionOf"
+    "id" : "13",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "14",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "15",
-    "type" : "rdfs:Datatype"
+    "type" : "owl:unionOf"
   }, {
     "id" : "16",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "17",
+    "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "20",
     "type" : "owl:Class"
   }, {
     "id" : "21",
     "type" : "owl:unionOf"
   }, {
-    "id" : "23",
+    "id" : "22",
     "type" : "owl:unionOf"
   }, {
     "id" : "25",
@@ -136,17 +136,11 @@
     "id" : "27",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "28",
-    "type" : "owl:unionOf"
-  }, {
     "id" : "29",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "30",
-    "type" : "owl:unionOf"
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "31",
-    "type" : "owl:unionOf"
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "32",
     "type" : "owl:unionOf"
@@ -157,252 +151,264 @@
     "id" : "40",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "43",
+    "id" : "44",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "22",
+    "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "47",
+    "id" : "48",
     "type" : "owl:Class"
   }, {
-    "id" : "11",
+    "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "54",
+    "id" : "53",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "4",
+    "id" : "55",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "66",
+    "id" : "43",
     "type" : "owl:Class"
   }, {
     "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "64",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "74",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "75",
-    "type" : "rdfs:Datatype"
-  }, {
     "id" : "76",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "52",
-    "type" : "rdfs:Literal"
+    "type" : "owl:unionOf"
   }, {
     "id" : "77",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "71",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "72",
+    "id" : "79",
     "type" : "rdfs:Datatype"
-  }, {
-    "id" : "78",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "49",
-    "type" : "owl:unionOf"
   }, {
     "id" : "50",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "51",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "45",
-    "type" : "owl:Class"
-  }, {
-    "id" : "3",
-    "type" : "owl:Class"
-  }, {
-    "id" : "83",
+    "id" : "80",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "46",
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "81",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "39",
     "type" : "rdfs:Datatype"
   }, {
+    "id" : "82",
+    "type" : "owl:unionOf"
+  }, {
     "id" : "84",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "85",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "86",
-    "type" : "rdfs:Datatype"
+    "id" : "46",
+    "type" : "owl:Class"
   }, {
-    "id" : "87",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "88",
-    "type" : "owl:unionOf"
+    "id" : "1",
+    "type" : "owl:Class"
   }, {
     "id" : "89",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "90",
     "type" : "owl:unionOf"
   }, {
+    "id" : "90",
+    "type" : "rdfs:Datatype"
+  }, {
     "id" : "91",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "93",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "34",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "95",
+    "id" : "94",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "96",
+    "id" : "95",
     "type" : "owl:unionOf"
   }, {
-    "id" : "62",
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "102",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
+    "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "122",
+    "id" : "130",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "123",
+    "id" : "131",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "155",
+    "id" : "160",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "153",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "162",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "163",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "167",
+    "id" : "165",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "169",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "173",
+    "id" : "170",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "174",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "176",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "178",
-    "type" : "rdfs:Datatype"
-  }, {
     "id" : "180",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "182",
+    "id" : "183",
     "type" : "rdfs:Datatype"
-  }, {
-    "id" : "58",
-    "type" : "owl:Class"
-  }, {
-    "id" : "10",
-    "type" : "owl:Class"
   }, {
     "id" : "185",
     "type" : "rdfs:Datatype"
   }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "189",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
     "id" : "188",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "196",
+    "id" : "192",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "19",
-    "type" : "owl:Class"
-  }, {
-    "id" : "197",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "13",
-    "type" : "owl:Class"
-  }, {
-    "id" : "199",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "201",
+    "id" : "195",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "203",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "205",
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "204",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "157",
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "206",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "208",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "210",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "213",
     "type" : "rdfs:Datatype"
+  }, {
+    "id" : "218",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "221",
+    "type" : "rdfs:Datatype"
   } ],
   "classAttribute" : [ {
+    "instances" : 0,
+    "union" : [ "1", "2" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "0"
+  }, {
+    "instances" : 0,
+    "union" : [ "4", "5" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "3"
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "4", "7", "8", "2", "9", "5", "10" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "6"
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "4", "7", "8", "2", "9", "5", "10" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "11"
+  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "0",
+    "id" : "12",
     "label" : {
       "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "1",
+    "id" : "13",
     "label" : {
       "IRI-based" : "anyURI"
     }
   }, {
     "instances" : 0,
-    "union" : [ "3", "4", "5", "6" ],
+    "union" : [ "1", "8", "5", "15" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "2"
+    "id" : "14"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "7",
-    "label" : {
-      "IRI-based" : "dateTime"
-    }
-  }, {
-    "instances" : 0,
-    "union" : [ "3", "9", "10", "4", "11", "12", "5", "6", "13" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "8"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "14",
-    "label" : {
-      "IRI-based" : "anyURI"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "15",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "16",
     "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "dateTime"
     }
   }, {
     "iri" : "http://precis.rukmal.me/ontology#Subject",
@@ -415,8 +421,8 @@
     "comment" : {
       "undefined" : "Specific subject in a Knowledge Area. This would be \"Distributed Systems\" in the Knowledge Area of \"Mathematics\", or \"Real Analysis\" in the \"Mathematics\" Knowledge Area."
     },
-    "id" : "17",
-    "superClasses" : [ "9" ]
+    "id" : "10",
+    "superClasses" : [ "17" ]
   }, {
     "iri" : "http://precis.rukmal.me/ontology#Organization",
     "baseIri" : "http://precis.rukmal.me/ontology",
@@ -428,23 +434,23 @@
     "comment" : {
       "undefined" : "An organization; this can be a company, university, a specific university department, etc."
     },
-    "id" : "12"
+    "id" : "20"
   }, {
     "instances" : 0,
-    "union" : [ "3", "10", "22", "4", "11", "19", "5", "17" ],
+    "union" : [ "1", "2" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "21"
   }, {
     "instances" : 0,
-    "union" : [ "3", "10", "22", "4", "11", "19", "5", "17" ],
+    "union" : [ "1", "17", "4", "8", "20", "5", "15", "23" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "23"
+    "id" : "22"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "25",
     "label" : {
-      "IRI-based" : "dateTime"
+      "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -454,28 +460,22 @@
       "IRI-based" : "anyURI"
     }
   }, {
-    "instances" : 0,
-    "union" : [ "10", "5" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "28"
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
   }, {
     "instances" : 0,
-    "union" : [ "3", "11" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "29"
-  }, {
-    "instances" : 0,
-    "union" : [ "3", "9", "10", "4", "12", "5", "6", "13" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "30"
-  }, {
-    "instances" : 0,
-    "union" : [ "3", "11" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "31"
-  }, {
-    "instances" : 0,
-    "union" : [ "10", "5" ],
+    "union" : [ "4", "5" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "32"
   }, {
@@ -500,7 +500,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "43",
+    "id" : "44",
     "label" : {
       "IRI-based" : "string"
     }
@@ -515,8 +515,8 @@
     "comment" : {
       "undefined" : "An individual skill. Each skill belongs to a specific SkillGroup. For example; \"Python\", \"R\", and \"Java\" would all be skills, in the \"Programming Languages\" SkillGroup."
     },
-    "id" : "22",
-    "superClasses" : [ "13" ]
+    "id" : "7",
+    "superClasses" : [ "23" ]
   }, {
     "iri" : "http://precis.rukmal.me/ontology#Certification",
     "baseIri" : "http://precis.rukmal.me/ontology",
@@ -528,8 +528,8 @@
     "comment" : {
       "undefined" : "A 'Cerficiation'; this would correspond to a traditional certification, such as a CPR Rating, or the Bloomberg Market Concepts certification."
     },
-    "id" : "47",
-    "superClasses" : [ "10" ]
+    "id" : "48",
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "http://precis.rukmal.me/ontology#Degree",
     "baseIri" : "http://precis.rukmal.me/ontology",
@@ -541,13 +541,53 @@
     "comment" : {
       "undefined" : "A Degree, which was completed at a specific institution, in a specific school and department. Optional media links to pictures can be included for rendering at the time of presentation. Records the year and month that the degree was (or is expected to be) awarded."
     },
-    "id" : "11"
+    "id" : "2"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "54",
+    "id" : "53",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "4", "8", "2", "20", "5", "15", "23" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "string"
     }
   }, {
     "iri" : "http://precis.rukmal.me/ontology#Course",
@@ -560,7 +600,7 @@
     "comment" : {
       "undefined" : "A course. This would typically be an item that is included in the \"Relevant Coursework\" section of a Resume/CV."
     },
-    "id" : "4"
+    "id" : "8"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#Talk",
     "baseIri" : "http://precis.rukmal.me/ontology",
@@ -572,7 +612,7 @@
     "comment" : {
       "undefined" : "A talk or presentation."
     },
-    "id" : "66",
+    "id" : "43",
     "superClasses" : [ "5" ]
   }, {
     "iri" : "http://precis.rukmal.me/ontology#Portfolio",
@@ -582,118 +622,60 @@
       "IRI-based" : "Portfolio",
       "undefined" : "Portfolio"
     },
-    "subClasses" : [ "62", "66", "45" ],
+    "subClasses" : [ "64", "43", "46" ],
     "comment" : {
       "undefined" : "A Portfolio item; this can be a Talk, Publication, Project, etc."
     },
     "id" : "5"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "64",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
     "instances" : 0,
-    "union" : [ "3", "10", "4", "11", "12", "5", "6", "13" ],
+    "union" : [ "1", "4", "8", "2", "20", "5", "15", "23" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "74"
+    "id" : "76"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "75",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "76",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "52",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "77",
     "label" : {
-      "IRI-based" : "anyURI"
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "string"
     }
   }, {
     "instances" : 0,
-    "union" : [ "3", "10", "4", "11", "12", "5", "6", "13" ],
+    "union" : [ "1", "4", "8", "20", "5", "15", "23" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "71"
+    "id" : "50"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "72",
+    "id" : "51",
     "label" : {
       "IRI-based" : "string"
     }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "78",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "instances" : 0,
-    "union" : [ "3", "10", "4", "12", "5", "6", "13" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "49"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "50",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#Publication",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Publication",
-      "undefined" : "Publication"
-    },
-    "comment" : {
-      "undefined" : "A publication, typically limited to peer reviewed articles."
-    },
-    "id" : "45",
-    "superClasses" : [ "5" ]
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#WorkExperience",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "WorkExperience",
-      "undefined" : "Work Experience"
-    },
-    "comment" : {
-      "undefined" : "An instance of 'Work Experience'. This would be an internship/assistantship/etc."
-    },
-    "id" : "3"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "83",
+    "id" : "80",
     "label" : {
       "IRI-based" : "nonNegativeInteger"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "46",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "81",
     "label" : {
       "IRI-based" : "string"
     }
@@ -706,51 +688,69 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "3", "10", "4", "11", "12", "5", "6", "13" ],
+    "union" : [ "1", "4", "8", "2", "20", "5", "15", "23" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "84"
+    "id" : "82"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "85",
+    "id" : "84",
     "label" : {
-      "IRI-based" : "dateTime"
+      "IRI-based" : "anyURI"
     }
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#Publication",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Publication",
+      "undefined" : "Publication"
+    },
+    "comment" : {
+      "undefined" : "A publication, typically limited to peer reviewed articles."
+    },
+    "id" : "46",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#WorkExperience",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WorkExperience",
+      "undefined" : "Work Experience"
+    },
+    "comment" : {
+      "undefined" : "An instance of 'Work Experience'. This would be an internship/assistantship/etc."
+    },
+    "id" : "1"
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "4", "5", "15" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "90",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "17", "4", "8", "2", "20", "5", "15", "23" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "91"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "86",
+    "id" : "92",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "87",
-    "label" : {
-      "IRI-based" : "anyURI"
-    }
-  }, {
-    "instances" : 0,
-    "union" : [ "3", "10", "5", "6" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "88"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "89",
-    "label" : {
-      "IRI-based" : "anyURI"
-    }
-  }, {
-    "instances" : 0,
-    "union" : [ "3", "9", "10", "4", "11", "12", "5", "6", "13" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "90"
-  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "91",
+    "id" : "93",
     "label" : {
       "IRI-based" : "string"
     }
@@ -764,15 +764,55 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "95",
+    "id" : "94",
     "label" : {
       "IRI-based" : "anyURI"
     }
   }, {
     "instances" : 0,
-    "union" : [ "3", "10", "4", "11", "5", "6" ],
+    "union" : [ "1", "4", "8", "2", "5", "15" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "96"
+    "id" : "95"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "98",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "17", "4", "8", "2", "20", "5", "15", "23" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "103",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "string"
+    }
   }, {
     "iri" : "http://precis.rukmal.me/ontology#Project",
     "baseIri" : "http://precis.rukmal.me/ontology",
@@ -784,7 +824,7 @@
     "comment" : {
       "undefined" : "A project, such as a final year report, or a video produced for a class."
     },
-    "id" : "62",
+    "id" : "64",
     "superClasses" : [ "5" ]
   }, {
     "iri" : "http://precis.rukmal.me/ontology#ActivityType",
@@ -794,59 +834,38 @@
       "IRI-based" : "ActivityType",
       "undefined" : "Activity Type"
     },
-    "subClasses" : [ "19" ],
+    "subClasses" : [ "9" ],
     "comment" : {
       "undefined" : "Type of the activity (typically a larger supergroup), such as \"Hackathon\" or \"Volunteering\"."
     },
-    "id" : "6"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "122",
-    "label" : {
-      "IRI-based" : "dateTime"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "123",
-    "label" : {
-      "IRI-based" : "dateTime"
-    }
+    "id" : "15"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "155",
-    "label" : {
-      "IRI-based" : "anyURI"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "153",
+    "id" : "130",
     "label" : {
       "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "162",
+    "id" : "131",
     "label" : {
       "IRI-based" : "dateTime"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "163",
+    "id" : "160",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "167",
+    "id" : "165",
     "label" : {
-      "IRI-based" : "dateTime"
+      "IRI-based" : "double"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -856,32 +875,46 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "173",
+    "id" : "170",
     "label" : {
-      "IRI-based" : "double"
+      "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "174",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "176",
     "label" : {
-      "IRI-based" : "anyURI"
+      "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "178",
-    "label" : {
-      "IRI-based" : "anyURI"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "180",
     "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "183",
+    "label" : {
       "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "185",
+    "label" : {
+      "IRI-based" : "dateTime"
     }
   }, {
     "iri" : "http://precis.rukmal.me/ontology#KnowledgeArea",
@@ -891,18 +924,31 @@
       "IRI-based" : "KnowledgeArea",
       "undefined" : "Knowledge Area"
     },
-    "subClasses" : [ "17" ],
+    "subClasses" : [ "10" ],
     "comment" : {
       "undefined" : "Knowledge Area parent group. This would be something along the lines of \"Mathematics\", or \"Computer Science\"."
     },
-    "id" : "9"
+    "id" : "17"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "182",
+    "id" : "189",
     "label" : {
       "IRI-based" : "string"
     }
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#Accolade",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Accolade",
+      "undefined" : "Accolade"
+    },
+    "subClasses" : [ "58", "48" ],
+    "comment" : {
+      "undefined" : "An accolade. This is either an 'Award' or a 'Certification'."
+    },
+    "id" : "4"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#Award",
     "baseIri" : "http://precis.rukmal.me/ontology",
@@ -915,27 +961,7 @@
       "undefined" : "An 'Award'; this would correspond to a traditional award, such as a Fellowship or Dean's List."
     },
     "id" : "58",
-    "superClasses" : [ "10" ]
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#Accolade",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Accolade",
-      "undefined" : "Accolade"
-    },
-    "subClasses" : [ "58", "47" ],
-    "comment" : {
-      "undefined" : "An accolade. This is either an 'Award' or a 'Certification'."
-    },
-    "id" : "10"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "185",
-    "label" : {
-      "IRI-based" : "anyURI"
-    }
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -944,9 +970,23 @@
       "IRI-based" : "anyURI"
     }
   }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "192",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "196",
+    "id" : "195",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "203",
     "label" : {
       "IRI-based" : "anyURI"
     }
@@ -961,14 +1001,14 @@
     "comment" : {
       "undefined" : "A specific activity, such as a specific hackathon or volunteering experience."
     },
-    "id" : "19",
-    "superClasses" : [ "6" ]
+    "id" : "9",
+    "superClasses" : [ "15" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "197",
+    "id" : "204",
     "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "dateTime"
     }
   }, {
     "iri" : "http://precis.rukmal.me/ontology#SkillGroup",
@@ -978,50 +1018,50 @@
       "IRI-based" : "SkillGroup",
       "undefined" : "Skill Group"
     },
-    "subClasses" : [ "22" ],
+    "subClasses" : [ "7" ],
     "comment" : {
       "undefined" : "A Skill Group. This group can contain one or more Skills. For example, \"Python\", \"R\", and \"Java\" would all be in the \"Programming Languages\" Skill Group."
     },
-    "id" : "13"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "199",
-    "label" : {
-      "IRI-based" : "string"
-    }
+    "id" : "23"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "201",
+    "id" : "206",
     "label" : {
       "IRI-based" : "anyURI"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "203",
+    "id" : "208",
     "label" : {
-      "IRI-based" : "dateTime"
+      "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "205",
+    "id" : "210",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "213",
     "label" : {
       "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#double",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "157",
+    "id" : "218",
     "label" : {
       "IRI-based" : "double"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "213",
+    "id" : "221",
     "label" : {
       "IRI-based" : "anyURI"
     }
@@ -1034,6 +1074,12 @@
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "26",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "28",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "30",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "33",
@@ -1051,22 +1097,19 @@
     "id" : "42",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "44",
+    "id" : "45",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "20",
+    "id" : "19",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "48",
+    "id" : "49",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "51",
+    "id" : "52",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "53",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "55",
+    "id" : "54",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "56",
@@ -1076,91 +1119,73 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "59",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "60",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "61",
     "type" : "rdfs:SubClassOf"
   }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "63",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "67",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "68",
-    "type" : "rdfs:SubClassOf"
+    "id" : "70",
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "69",
+    "id" : "74",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "70",
+    "id" : "75",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "36",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "73",
+    "id" : "78",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "79",
+    "id" : "83",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "80",
+    "id" : "85",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "81",
+    "id" : "86",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "82",
+    "id" : "87",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "92",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "94",
+    "id" : "88",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "97",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "98",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "100",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "101",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "102",
-    "type" : "owl:disjointWith"
   }, {
     "id" : "99",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "103",
-    "type" : "owl:disjointWith"
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "104",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "105",
     "type" : "owl:disjointWith"
   }, {
     "id" : "106",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "107",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "108",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "109",
     "type" : "owl:disjointWith"
@@ -1168,14 +1193,14 @@
     "id" : "110",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "93",
+    "id" : "107",
     "type" : "owl:objectProperty"
   }, {
     "id" : "111",
     "type" : "owl:disjointWith"
   }, {
     "id" : "112",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "113",
     "type" : "owl:disjointWith"
@@ -1195,26 +1220,35 @@
     "id" : "118",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "119",
     "type" : "owl:disjointWith"
   }, {
     "id" : "120",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "121",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "122",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "123",
+    "type" : "owl:disjointWith"
+  }, {
     "id" : "124",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "125",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "126",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "127",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "128",
     "type" : "owl:disjointWith"
@@ -1222,23 +1256,17 @@
     "id" : "129",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "130",
+    "id" : "132",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "131",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "132",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "133",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "134",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "135",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "136",
     "type" : "owl:disjointWith"
@@ -1247,19 +1275,22 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "138",
-    "type" : "owl:objectProperty"
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "139",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "140",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "141",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "142",
     "type" : "owl:disjointWith"
   }, {
     "id" : "143",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "144",
     "type" : "owl:disjointWith"
@@ -1268,69 +1299,72 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "146",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "147",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "148",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "149",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "150",
     "type" : "owl:disjointWith"
   }, {
     "id" : "151",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "152",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "153",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "154",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "155",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "156",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "157",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "158",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "159",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "160",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "161",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "162",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "163",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "164",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "165",
-    "type" : "owl:someValuesFrom"
-  }, {
     "id" : "166",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "167",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "168",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "170",
+    "id" : "171",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "171",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "139",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "172",
-    "type" : "owl:objectProperty"
+    "type" : "owl:someValuesFrom"
   }, {
-    "id" : "174",
+    "id" : "173",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "175",
@@ -1339,13 +1373,19 @@
     "id" : "177",
     "type" : "owl:someValuesFrom"
   }, {
+    "id" : "178",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "147",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "179",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "181",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "183",
+    "id" : "182",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "184",
@@ -1357,106 +1397,146 @@
     "id" : "187",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "189",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "190",
-    "type" : "owl:disjointWith"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "191",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "192",
-    "type" : "owl:disjointWith"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "193",
-    "type" : "owl:disjointWith"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "194",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "196",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "195",
-    "type" : "owl:someValuesFrom"
+    "id" : "197",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "198",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "199",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "200",
-    "type" : "owl:allValuesFrom"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "201",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "202",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "204",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "206",
+    "id" : "205",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "207",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "208",
-    "type" : "owl:objectProperty"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "209",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "210",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "211",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "212",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "214",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "215",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "216",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "217",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "219",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "220",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "222",
     "type" : "owl:someValuesFrom"
   } ],
   "propertyAttribute" : [ {
     "iri" : "http://precis.rukmal.me/ontology#hasActivity",
-    "inverse" : "20",
+    "inverse" : "19",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "19",
+    "range" : "9",
     "label" : {
       "IRI-based" : "hasActivity",
       "undefined" : "Constituent Activity"
     },
-    "domain" : "6",
+    "domain" : "15",
     "comment" : {
       "undefined" : "An 'Activity' that is a part of an 'ActivityType'."
     },
     "attributes" : [ "object" ],
     "id" : "18"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#endDate",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "25",
-    "label" : {
-      "IRI-based" : "endDate",
-      "undefined" : "endDate"
-    },
-    "domain" : "3",
-    "comment" : {
-      "undefined" : "End date of a Instance. When this is included, the 'hasDate' data property corresponds to the start date."
-    },
-    "attributes" : [ "datatype", "someValues" ],
-    "id" : "24"
-  }, {
     "iri" : "http://precis.rukmal.me/ontology#hasMedia",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "27",
+    "range" : "25",
     "label" : {
       "IRI-based" : "hasMedia",
       "undefined" : "Media"
     },
-    "domain" : "3",
+    "domain" : "1",
     "comment" : {
       "undefined" : "Additional media can be included here. For example, it could link to product/team pages, news articles, etc."
     },
     "attributes" : [ "datatype", "someValues" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#hasImage",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "hasImage",
+      "undefined" : "Image"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "URL to image related to work experience. Can be used when displaying the information at consumption."
+    },
+    "attributes" : [ "datatype", "someValues" ],
     "id" : "26"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#otherTitles",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "otherTitles",
+      "undefined" : "Other Titles"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "'Other' job titles; this property should be specified in addition to the main 'hasName' property, and is considered peripheral information."
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#endDate",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "endDate",
+      "undefined" : "endDate"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "End date of a Instance. When this is included, the 'hasDate' data property corresponds to the start date."
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "30"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasCourseCode",
     "baseIri" : "http://precis.rukmal.me/ontology",
@@ -1465,7 +1545,7 @@
       "IRI-based" : "hasCourseCode",
       "undefined" : "Course code"
     },
-    "domain" : "4",
+    "domain" : "8",
     "comment" : {
       "undefined" : "Code of the course (this would imply that an organization is referenced too). For example: 420, 690, 069, etc."
     },
@@ -1475,12 +1555,12 @@
     "iri" : "http://precis.rukmal.me/ontology#hasSubject",
     "inverse" : "36",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "17",
+    "range" : "10",
     "label" : {
       "IRI-based" : "hasSubject",
       "undefined" : "Constituent Subject"
     },
-    "domain" : "9",
+    "domain" : "17",
     "comment" : {
       "undefined" : "A subject that is a part of a 'KnowledgeArea'."
     },
@@ -1492,7 +1572,7 @@
     "range" : "39",
     "label" : {
       "IRI-based" : "hasText",
-      "undefined" : "description text"
+      "undefined" : "Description text"
     },
     "cardinality" : "1",
     "domain" : "38",
@@ -1502,211 +1582,211 @@
     "attributes" : [ "datatype" ],
     "id" : "37"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#hasImage",
+    "iri" : "http://precis.rukmal.me/ontology#externalResource",
     "baseIri" : "http://precis.rukmal.me/ontology",
     "range" : "40",
     "label" : {
-      "IRI-based" : "hasImage",
-      "undefined" : "Image"
+      "IRI-based" : "externalResource",
+      "undefined" : "External resource"
     },
-    "domain" : "3",
+    "domain" : "23",
     "comment" : {
-      "undefined" : "URL to image related to work experience. Can be used when displaying the information at consumption."
+      "undefined" : "Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields."
     },
     "attributes" : [ "datatype", "someValues" ],
     "id" : "41"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#otherTitles",
+    "iri" : "http://precis.rukmal.me/ontology#hasCollaborators",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "43",
+    "range" : "44",
     "label" : {
-      "IRI-based" : "otherTitles",
-      "undefined" : "Other Titles"
+      "IRI-based" : "hasCollaborators",
+      "undefined" : "Collaborators List"
     },
-    "domain" : "3",
+    "domain" : "43",
     "comment" : {
-      "undefined" : "'Other' job titles; this property should be specified in addition to the main 'hasName' property, and is considered peripheral information."
+      "undefined" : "List of Collaborators (Human-readable for now). Will eventually change to a mapping to a Person entity."
     },
     "attributes" : [ "datatype", "someValues" ],
     "id" : "42"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasStatus",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "46",
+    "range" : "47",
     "label" : {
       "IRI-based" : "hasStatus",
       "undefined" : "Publication Status"
     },
     "maxCardinality" : "1",
-    "domain" : "45",
+    "domain" : "46",
     "comment" : {
       "undefined" : "Status of the publication. That is, this property should reflect a paper being \"In Progress\", or \"Under Review\"."
     },
     "attributes" : [ "datatype" ],
-    "id" : "44"
+    "id" : "45"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#inActivityType",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "6",
+    "range" : "15",
     "label" : {
       "IRI-based" : "inActivityType",
       "undefined" : "Parent Activity Type"
     },
-    "domain" : "19",
+    "domain" : "9",
     "comment" : {
       "undefined" : "The ActivityType containing the Activity."
     },
     "attributes" : [ "object" ],
-    "id" : "20"
+    "id" : "19"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#inCountry",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "50",
+    "range" : "51",
     "label" : {
       "IRI-based" : "inCountry",
       "undefined" : "Country"
     },
-    "domain" : "49",
+    "domain" : "50",
     "comment" : {
       "undefined" : "Country of the entity."
     },
     "attributes" : [ "datatype" ],
-    "id" : "48"
+    "id" : "49"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#withGrade",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "52",
+    "range" : "53",
     "label" : {
       "IRI-based" : "withGrade",
       "undefined" : "Course GPA (on a 4.0 scale)"
     },
-    "domain" : "4",
+    "domain" : "8",
     "comment" : {
       "undefined" : "Grade (GPA; 4.0 scale) received in the course (optional for obvious reasons :))."
     },
     "attributes" : [ "datatype" ],
-    "id" : "51"
+    "id" : "52"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#degreeGPA",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "54",
+    "range" : "55",
     "label" : {
       "IRI-based" : "degreeGPA",
       "undefined" : "Degree GPA (on a 4.0 scale)"
     },
-    "domain" : "11",
+    "domain" : "2",
     "comment" : {
       "undefined" : "Grade (GPA; 4.0 scale) for the Degree (optional for obvious reasons :))."
     },
     "attributes" : [ "datatype" ],
-    "id" : "53"
+    "id" : "54"
+  }, {
+    "range" : "17",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "4",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasAuthors",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "15",
+    "range" : "60",
     "label" : {
       "IRI-based" : "hasAuthors",
       "undefined" : "Author List"
     },
-    "domain" : "45",
+    "domain" : "46",
     "comment" : {
       "undefined" : "List of authors (Human readable for now). This list should mirror the order of authors in the publication. Note that eventually this will be replaced by pointers to individual \"Author\" Classes."
     },
     "attributes" : [ "datatype" ],
-    "id" : "55"
-  }, {
-    "range" : "9",
-    "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "56"
-  }, {
-    "range" : "10",
-    "domain" : "58",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "57"
-  }, {
-    "range" : "10",
-    "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "59"
   }, {
-    "range" : "13",
-    "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "60"
+    "range" : "4",
+    "domain" : "48",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "range" : "23",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "62"
   }, {
     "range" : "5",
-    "domain" : "62",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "61"
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "63"
+  }, {
+    "range" : "5",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "range" : "5",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "15",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#inPublication",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "64",
+    "range" : "68",
     "label" : {
       "IRI-based" : "inPublication",
       "undefined" : "Publication Name"
     },
     "cardinality" : "1",
-    "domain" : "45",
+    "domain" : "46",
     "comment" : {
       "undefined" : "Publication name containing the specific publication. As with the other fields in the 'Publication' concept, this will probably be replaced eventually."
     },
     "attributes" : [ "datatype" ],
-    "id" : "63"
-  }, {
-    "range" : "5",
-    "domain" : "66",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "65"
-  }, {
-    "range" : "5",
-    "domain" : "45",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "67"
-  }, {
-    "range" : "6",
-    "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "68"
+    "id" : "70"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#taughtAt",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "12",
+    "range" : "20",
     "label" : {
       "IRI-based" : "taughtAt",
       "undefined" : "Organization which taught the course"
     },
-    "domain" : "4",
+    "domain" : "8",
     "comment" : {
       "undefined" : "The organization at which the course was taught. This is an optional field, but ideally if this is included, the department and course codes should be too."
     },
     "attributes" : [ "object" ],
-    "id" : "69"
+    "id" : "74"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#inCity",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "72",
+    "range" : "77",
     "label" : {
       "IRI-based" : "inCity",
       "undefined" : "City"
     },
     "cardinality" : "1",
-    "domain" : "71",
+    "domain" : "76",
     "comment" : {
       "undefined" : "The city of the entity."
     },
     "attributes" : [ "datatype" ],
-    "id" : "70"
+    "id" : "75"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#inKnowledgeArea",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "9",
+    "range" : "17",
     "label" : {
       "IRI-based" : "inKnowledgeArea",
       "undefined" : "Parent Knowledge Area"
     },
-    "domain" : "17",
+    "domain" : "10",
     "comment" : {
       "undefined" : "The knowledge area containing the subject."
     },
@@ -1715,658 +1795,644 @@
   }, {
     "iri" : "http://precis.rukmal.me/ontology#degreeSchool",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "12",
+    "range" : "20",
     "label" : {
       "IRI-based" : "degreeSchool",
       "undefined" : "School awarding the Degree"
     },
-    "domain" : "11",
+    "domain" : "2",
     "comment" : {
       "undefined" : "The School that awards the degree. For example, this would be the \"Foster School of Business\", or \"College of Arts and Sciences\"."
     },
     "attributes" : [ "object" ],
-    "id" : "73"
+    "id" : "78"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#degreeUniversity",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "12",
+    "range" : "20",
     "label" : {
       "IRI-based" : "degreeUniversity",
       "undefined" : "Organization awarding the Degree"
     },
-    "domain" : "11",
+    "domain" : "2",
     "comment" : {
       "undefined" : "The University (concept: Organization) at which the degree was awarded. This corresponds to the top-level instituion; further object properties exist to specify particular schools/departments. That is, this should point to the organization for the Univesity and not the Department. Eg: awardedAt 'University of Washington'; and should NOT be awardedAt 'Foster School of Business'."
     },
     "attributes" : [ "object" ],
-    "id" : "79"
+    "id" : "83"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#degreeDepartment",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "12",
+    "range" : "20",
     "label" : {
       "IRI-based" : "degreeDepartment",
       "undefined" : "Department awarding the Degree"
     },
-    "domain" : "11",
+    "domain" : "2",
     "comment" : {
       "undefined" : "Department awarding the degree (eg: \"Department of Financial Engineering\", or \"Department of Finance and Business Economics\")."
     },
     "attributes" : [ "object" ],
-    "id" : "80"
+    "id" : "85"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#inState",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "75",
+    "range" : "71",
     "label" : {
       "IRI-based" : "inState",
       "undefined" : "State"
     },
     "cardinality" : "1",
-    "domain" : "74",
+    "domain" : "69",
     "comment" : {
       "undefined" : "State of the entity (United States only)."
     },
     "attributes" : [ "datatype" ],
-    "id" : "81"
+    "id" : "86"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#endDate",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "7",
+    "range" : "16",
     "label" : {
       "IRI-based" : "endDate",
       "undefined" : "endDate"
     },
-    "domain" : "2",
+    "domain" : "14",
     "comment" : {
       "undefined" : "End date of a Instance. When this is included, the 'hasDate' data property corresponds to the start date."
     },
     "attributes" : [ "datatype" ],
-    "id" : "82"
+    "id" : "87"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#hasSyllabus",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "hasSyllabus",
+      "undefined" : "Course syllabus"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Syllabus for the course."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "88"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasChildOrganization",
-    "inverse" : "93",
+    "inverse" : "100",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "12",
+    "range" : "20",
     "label" : {
       "IRI-based" : "hasChildOrganization",
       "undefined" : "Child Organization"
     },
-    "domain" : "12",
+    "domain" : "20",
     "comment" : {
       "undefined" : "Child organization pointer, inverse of the 'hasParentOrganization' property."
     },
-    "attributes" : [ "transitive", "object" ],
-    "id" : "92"
+    "attributes" : [ "object", "transitive" ],
+    "id" : "99"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasDOI",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "95",
+    "range" : "94",
     "label" : {
       "IRI-based" : "hasDOI",
       "undefined" : "Digital Object Identifier (DOI) of the Publication"
     },
     "maxCardinality" : "1",
-    "domain" : "45",
+    "domain" : "46",
     "comment" : {
       "undefined" : "Digital Object Identifier (DOI) of the publication. Including this will allow for later expansion if an inference agent is ever added to get more metadata using this."
     },
     "attributes" : [ "datatype" ],
-    "id" : "94"
+    "id" : "101"
   }, {
-    "range" : "12",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "97"
+    "iri" : "http://precis.rukmal.me/ontology#withInstructor",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "withInstructor",
+      "undefined" : "Course instructor"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Instructor of the course."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "104"
+  }, {
+    "range" : "20",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "105"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasSkill",
-    "inverse" : "99",
+    "inverse" : "107",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "22",
+    "range" : "7",
     "label" : {
       "IRI-based" : "hasSkill",
       "undefined" : "Constituent Skill"
     },
-    "domain" : "13",
+    "domain" : "23",
     "comment" : {
       "undefined" : "A skill that is a part of a 'SkillGroup'."
     },
     "attributes" : [ "object" ],
-    "id" : "98"
+    "id" : "106"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasDepartmentCode",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "86",
+    "range" : "97",
     "label" : {
       "IRI-based" : "hasDepartmentCode",
       "undefined" : "Department code"
     },
-    "domain" : "4",
+    "domain" : "8",
     "comment" : {
       "undefined" : "Code of the department (this would imply that an organization is referenced too). For example: FIN, CFRM, FE, etc."
     },
     "attributes" : [ "datatype" ],
-    "id" : "100"
+    "id" : "108"
   }, {
-    "range" : "9",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "101"
+    "range" : "17",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "109"
   }, {
     "range" : "38",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "102"
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "110"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#inSkillGroup",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "13",
+    "range" : "23",
     "label" : {
       "IRI-based" : "inSkillGroup",
       "undefined" : "Parent SkillGroup"
     },
-    "domain" : "22",
+    "domain" : "7",
     "comment" : {
       "undefined" : "The SkillGroup containing the Skill."
     },
     "attributes" : [ "object" ],
-    "id" : "99"
-  }, {
-    "range" : "5",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "103"
-  }, {
-    "range" : "12",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "104"
-  }, {
-    "range" : "3",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "105"
-  }, {
-    "range" : "13",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "106"
-  }, {
-    "range" : "11",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "107"
   }, {
-    "range" : "3",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "108"
+    "range" : "5",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
   }, {
-    "range" : "9",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "109"
+    "range" : "20",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "112"
+  }, {
+    "range" : "1",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "113"
+  }, {
+    "range" : "23",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "114"
+  }, {
+    "range" : "2",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "115"
+  }, {
+    "range" : "1",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "116"
+  }, {
+    "range" : "17",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "117"
   }, {
     "range" : "38",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "110"
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "118"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasParentOrganization",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "12",
+    "range" : "20",
     "label" : {
       "IRI-based" : "hasParentOrganization",
       "undefined" : "Parent Organization"
     },
-    "domain" : "12",
+    "domain" : "20",
     "comment" : {
       "undefined" : "Pointer to a \"parent\" organization instance. For example, the \"Foster School of Business\" hasParentOrganization \"University of Washington\"."
     },
-    "attributes" : [ "transitive", "object" ],
-    "id" : "93"
+    "attributes" : [ "object", "transitive" ],
+    "id" : "100"
   }, {
     "range" : "5",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "111"
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "119"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#degreeType",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "1",
+    "range" : "13",
     "label" : {
       "IRI-based" : "degreeType",
       "undefined" : "Degree Type"
     },
-    "domain" : "11",
+    "domain" : "2",
     "comment" : {
       "undefined" : "Type of the Degree. For example, \"Bachelor of Arts\", or \"Master of Science\". This should point to a DBpedia entity corresponding to the Degree being awarded."
     },
     "attributes" : [ "datatype" ],
-    "id" : "112"
-  }, {
-    "range" : "12",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "113"
-  }, {
-    "range" : "13",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "114"
-  }, {
-    "range" : "11",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "115"
-  }, {
-    "range" : "4",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "116"
-  }, {
-    "range" : "9",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "117"
-  }, {
-    "range" : "38",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "118"
-  }, {
-    "range" : "5",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "119"
-  }, {
-    "range" : "3",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "120"
   }, {
-    "range" : "13",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "20",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "121"
+  }, {
+    "range" : "23",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
+  }, {
+    "range" : "2",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "123"
+  }, {
+    "range" : "8",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "124"
+  }, {
+    "range" : "17",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "125"
+  }, {
+    "range" : "38",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "126"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "127"
+  }, {
+    "range" : "1",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "128"
+  }, {
+    "range" : "23",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "129"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#endDate",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "123",
+    "range" : "131",
     "label" : {
       "IRI-based" : "endDate",
       "undefined" : "endDate"
     },
-    "domain" : "6",
+    "domain" : "15",
     "comment" : {
       "undefined" : "End date of a Instance. When this is included, the 'hasDate' data property corresponds to the start date."
     },
     "attributes" : [ "datatype", "someValues" ],
-    "id" : "124"
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#relatedTo",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "23",
-    "label" : {
-      "IRI-based" : "relatedTo",
-      "undefined" : "Related Concept"
-    },
-    "domain" : "21",
-    "comment" : {
-      "undefined" : "A related concept. For example, an instance of 'Award' may have a 'Project', or 'Publication' that it is related to, and vice versa."
-    },
-    "attributes" : [ "transitive", "symmetric", "object" ],
-    "id" : "125"
+    "id" : "132"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasDate",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "85",
+    "range" : "96",
     "label" : {
       "IRI-based" : "hasDate",
       "undefined" : "Date"
     },
     "cardinality" : "1",
     "minCardinality" : "1",
-    "domain" : "96",
+    "domain" : "95",
     "comment" : {
       "undefined" : "Date of the instance. This implies \"startDate\" when a range is given with \"endDate\"."
     },
     "attributes" : [ "datatype" ],
-    "id" : "126"
+    "id" : "133"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#relatedTo",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "relatedTo",
+      "undefined" : "Related Concept"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "A related concept. For example, an instance of 'Award' may have a 'Project', or 'Publication' that it is related to, and vice versa."
+    },
+    "attributes" : [ "object", "transitive", "symmetric" ],
+    "id" : "134"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#degreeConcentration",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "0",
+    "range" : "12",
     "label" : {
       "IRI-based" : "degreeConcentration",
       "undefined" : "Degree Concentration"
     },
-    "domain" : "11",
+    "domain" : "2",
     "comment" : {
       "undefined" : "Concentration of the Degree. For example, \"Finance and Business Economics\", or \"Computational Finance\". This should point to a DBpedia entity corresponding to the Degree being awarded."
     },
     "attributes" : [ "datatype" ],
-    "id" : "127"
-  }, {
-    "range" : "3",
-    "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "128"
-  }, {
-    "range" : "13",
-    "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "129"
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#hasDate",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "122",
-    "label" : {
-      "IRI-based" : "hasDate",
-      "undefined" : "Date"
-    },
-    "domain" : "6",
-    "comment" : {
-      "undefined" : "Date of the instance. This implies \"startDate\" when a range is given with \"endDate\"."
-    },
-    "attributes" : [ "datatype", "someValues" ],
-    "id" : "130"
-  }, {
-    "range" : "3",
-    "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "131"
-  }, {
-    "range" : "5",
-    "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "132"
-  }, {
-    "range" : "3",
-    "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "133"
-  }, {
-    "range" : "3",
-    "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "134"
-  }, {
-    "range" : "13",
-    "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "135"
   }, {
-    "range" : "13",
-    "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "1",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "136"
   }, {
-    "range" : "5",
-    "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "23",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "137"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#affiliatedWith",
-    "inverse" : "139",
+    "iri" : "http://precis.rukmal.me/ontology#externalResource",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "29",
+    "range" : "130",
+    "label" : {
+      "IRI-based" : "externalResource",
+      "undefined" : "External resource"
+    },
+    "domain" : "15",
+    "comment" : {
+      "undefined" : "Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields."
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "138"
+  }, {
+    "range" : "1",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "139"
+  }, {
+    "range" : "5",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "140"
+  }, {
+    "range" : "1",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "141"
+  }, {
+    "range" : "1",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "142"
+  }, {
+    "range" : "23",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "143"
+  }, {
+    "range" : "23",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "144"
+  }, {
+    "range" : "5",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "145"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#affiliatedWith",
+    "inverse" : "147",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "21",
     "label" : {
       "IRI-based" : "affiliatedWith",
       "undefined" : "Affiliation"
     },
-    "domain" : "28",
+    "domain" : "32",
     "comment" : {
       "undefined" : "Affiliation for a Portfolio Instance or Accolade Instance. Maps a given instance to an instance of 'Degree' or 'WorkExperience'."
     },
     "attributes" : [ "object" ],
-    "id" : "138"
+    "id" : "146"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasMedia",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "89",
+    "range" : "90",
     "label" : {
       "IRI-based" : "hasMedia",
       "undefined" : "Media"
     },
-    "domain" : "88",
+    "domain" : "89",
     "comment" : {
       "undefined" : "Additional media can be included here. For example, it could link to product/team pages, news articles, etc."
     },
     "attributes" : [ "datatype" ],
-    "id" : "140"
+    "id" : "148"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasWebsite",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "77",
+    "range" : "84",
     "label" : {
       "IRI-based" : "hasWebsite",
       "undefined" : "Entity website"
     },
     "cardinality" : "1",
     "minCardinality" : "1",
-    "domain" : "84",
+    "domain" : "82",
     "comment" : {
       "undefined" : "External website of the entity (not used for ontology extension; treat this as user-facing)."
     },
     "attributes" : [ "datatype" ],
-    "id" : "141"
+    "id" : "149"
   }, {
-    "range" : "12",
-    "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "142"
+    "range" : "20",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "150"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#employedAt",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "12",
+    "range" : "20",
     "label" : {
       "IRI-based" : "employedAt",
       "undefined" : "Employment Organization"
     },
-    "domain" : "3",
+    "domain" : "1",
     "comment" : {
       "undefined" : "Organization where an instance of Work Experience is taking place."
     },
     "attributes" : [ "object" ],
-    "id" : "143"
-  }, {
-    "range" : "5",
-    "domain" : "38",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "144"
-  }, {
-    "range" : "12",
-    "domain" : "38",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "145"
-  }, {
-    "range" : "3",
-    "domain" : "38",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "146"
-  }, {
-    "range" : "13",
-    "domain" : "38",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "147"
-  }, {
-    "range" : "13",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "148"
-  }, {
-    "range" : "5",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "149"
-  }, {
-    "range" : "9",
-    "domain" : "38",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "150"
-  }, {
-    "range" : "3",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "151"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#degreeConcentration",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "153",
-    "label" : {
-      "IRI-based" : "degreeConcentration",
-      "undefined" : "Degree Concentration"
-    },
-    "domain" : "11",
-    "comment" : {
-      "undefined" : "Concentration of the Degree. For example, \"Finance and Business Economics\", or \"Computational Finance\". This should point to a DBpedia entity corresponding to the Degree being awarded."
-    },
-    "attributes" : [ "datatype", "someValues" ],
+    "range" : "5",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "152"
+  }, {
+    "range" : "20",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
+  }, {
+    "range" : "1",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "154"
+  }, {
+    "range" : "23",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "155"
+  }, {
+    "range" : "23",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "156"
+  }, {
+    "range" : "5",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "157"
+  }, {
+    "range" : "17",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "158"
+  }, {
+    "range" : "1",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "159"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#inConferenceOrJournal",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "78",
+    "range" : "79",
     "label" : {
       "IRI-based" : "inConferenceOrJournal",
       "undefined" : "Conference/Journal Name"
     },
     "cardinality" : "1",
-    "domain" : "45",
+    "domain" : "46",
     "comment" : {
       "undefined" : "Conference/Journal name. This will eventually be replaced with a more semantically-correct representation of this information."
     },
     "attributes" : [ "datatype" ],
-    "id" : "154"
+    "id" : "161"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#degreeGPA",
+    "iri" : "http://precis.rukmal.me/ontology#withInstructor",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "157",
+    "range" : "160",
     "label" : {
-      "IRI-based" : "degreeGPA",
-      "undefined" : "Degree GPA (on a 4.0 scale)"
+      "IRI-based" : "withInstructor",
+      "undefined" : "Course instructor"
     },
-    "domain" : "11",
+    "domain" : "8",
     "comment" : {
-      "undefined" : "Grade (GPA; 4.0 scale) for the Degree (optional for obvious reasons :))."
+      "undefined" : "Instructor of the course."
     },
     "attributes" : [ "datatype", "someValues" ],
-    "id" : "156"
+    "id" : "162"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#degreeType",
+    "iri" : "http://precis.rukmal.me/ontology#degreeSchool",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "155",
+    "range" : "20",
     "label" : {
-      "IRI-based" : "degreeType",
-      "undefined" : "Degree Type"
+      "IRI-based" : "degreeSchool",
+      "undefined" : "School awarding the Degree"
     },
-    "domain" : "11",
+    "domain" : "2",
     "comment" : {
-      "undefined" : "Type of the Degree. For example, \"Bachelor of Arts\", or \"Master of Science\". This should point to a DBpedia entity corresponding to the Degree being awarded."
+      "undefined" : "The School that awards the degree. For example, this would be the \"Foster School of Business\", or \"College of Arts and Sciences\"."
     },
-    "attributes" : [ "datatype", "someValues" ],
-    "id" : "158"
+    "attributes" : [ "object", "someValues" ],
+    "id" : "163"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#degreeDepartment",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "degreeDepartment",
+      "undefined" : "Department awarding the Degree"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "Department awarding the degree (eg: \"Department of Financial Engineering\", or \"Department of Finance and Business Economics\")."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "164"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasName",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "91",
+    "range" : "92",
     "label" : {
       "IRI-based" : "hasName",
       "undefined" : "Human readable name"
     },
     "cardinality" : "1",
     "minCardinality" : "1",
-    "domain" : "90",
+    "domain" : "91",
     "comment" : {
       "undefined" : "Human readable name for the entity; for display. This is the primary descriptive string for the instance it is mapped to; that is, for 'WorkExperience' it would be the job title, and for 'Publication' it would be the publication title."
     },
     "attributes" : [ "datatype" ],
-    "id" : "159"
+    "id" : "166"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasImage",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "87",
+    "range" : "98",
     "label" : {
       "IRI-based" : "hasImage",
       "undefined" : "Image"
     },
-    "domain" : "3",
+    "domain" : "1",
     "comment" : {
       "undefined" : "URL to image related to work experience. Can be used when displaying the information at consumption."
     },
     "attributes" : [ "datatype" ],
-    "id" : "160"
+    "id" : "167"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#degreeDepartment",
+    "iri" : "http://precis.rukmal.me/ontology#withGrade",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "12",
+    "range" : "165",
     "label" : {
-      "IRI-based" : "degreeDepartment",
-      "undefined" : "Department awarding the Degree"
+      "IRI-based" : "withGrade",
+      "undefined" : "Course GPA (on a 4.0 scale)"
     },
-    "domain" : "11",
+    "domain" : "8",
     "comment" : {
-      "undefined" : "Department awarding the degree (eg: \"Department of Financial Engineering\", or \"Department of Finance and Business Economics\")."
-    },
-    "attributes" : [ "object", "someValues" ],
-    "id" : "161"
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#hasDepartmentCode",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "163",
-    "label" : {
-      "IRI-based" : "hasDepartmentCode",
-      "undefined" : "Department code"
-    },
-    "domain" : "4",
-    "comment" : {
-      "undefined" : "Code of the department (this would imply that an organization is referenced too). For example: FIN, CFRM, FE, etc."
-    },
-    "attributes" : [ "datatype", "someValues" ],
-    "id" : "164"
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#hasDate",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "162",
-    "label" : {
-      "IRI-based" : "hasDate",
-      "undefined" : "Date"
-    },
-    "domain" : "4",
-    "comment" : {
-      "undefined" : "Date of the instance. This implies \"startDate\" when a range is given with \"endDate\"."
-    },
-    "attributes" : [ "datatype", "someValues" ],
-    "id" : "165"
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#hasDescription",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "38",
-    "label" : {
-      "IRI-based" : "hasDescription",
-      "undefined" : "Description"
-    },
-    "domain" : "4",
-    "comment" : {
-      "undefined" : "Instance of 'Description', which describes the Thing pointing to it."
-    },
-    "attributes" : [ "object", "someValues" ],
-    "id" : "166"
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#endDate",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "167",
-    "label" : {
-      "IRI-based" : "endDate",
-      "undefined" : "endDate"
-    },
-    "domain" : "4",
-    "comment" : {
-      "undefined" : "End date of a Instance. When this is included, the 'hasDate' data property corresponds to the start date."
+      "undefined" : "Grade (GPA; 4.0 scale) received in the course (optional for obvious reasons :))."
     },
     "attributes" : [ "datatype", "someValues" ],
     "id" : "168"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#hasSyllabus",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "170",
+    "label" : {
+      "IRI-based" : "hasSyllabus",
+      "undefined" : "Course syllabus"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Syllabus for the course."
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "171"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasCourseCode",
     "baseIri" : "http://precis.rukmal.me/ontology",
@@ -2375,16 +2441,58 @@
       "IRI-based" : "hasCourseCode",
       "undefined" : "Course code"
     },
-    "domain" : "4",
+    "domain" : "8",
     "comment" : {
       "undefined" : "Code of the course (this would imply that an organization is referenced too). For example: 420, 690, 069, etc."
     },
     "attributes" : [ "datatype", "someValues" ],
-    "id" : "170"
+    "id" : "172"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#hasDescription",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "hasDescription",
+      "undefined" : "Description"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Instance of 'Description', which describes the Thing pointing to it."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "173"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#hasDate",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "174",
+    "label" : {
+      "IRI-based" : "hasDate",
+      "undefined" : "Date"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Date of the instance. This implies \"startDate\" when a range is given with \"endDate\"."
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "175"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#hasDepartmentCode",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "176",
+    "label" : {
+      "IRI-based" : "hasDepartmentCode",
+      "undefined" : "Department code"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Code of the department (this would imply that an organization is referenced too). For example: FIN, CFRM, FE, etc."
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "177"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasCollaborators",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "16",
+    "range" : "93",
     "label" : {
       "IRI-based" : "hasCollaborators",
       "undefined" : "Collaborators List"
@@ -2394,147 +2502,91 @@
       "undefined" : "List of Collaborators (Human-readable for now). Will eventually change to a mapping to a Person entity."
     },
     "attributes" : [ "datatype" ],
-    "id" : "171"
+    "id" : "178"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasObject",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "32",
+    "range" : "3",
     "label" : {
       "IRI-based" : "hasObject",
       "undefined" : "Constituent Object"
     },
-    "domain" : "31",
+    "domain" : "0",
     "comment" : {
       "undefined" : "Object that was affiliated with the Thing pointing to it. Here, \"Object\" would be typically a 'Portfolio' or 'Accolade' instance, and \"Thing\" would be a 'Degree' or 'WorkExperience' instance."
     },
     "attributes" : [ "object" ],
-    "id" : "139"
+    "id" : "147"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#awardedDegree",
-    "inverse" : "79",
+    "inverse" : "83",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "11",
+    "range" : "2",
     "label" : {
       "IRI-based" : "awardedDegree",
       "undefined" : "Degree awarded"
     },
-    "domain" : "12",
+    "domain" : "20",
     "comment" : {
       "undefined" : "The Degree which was awarded at this organization (should be a pointer to a top-level organization)."
     },
     "attributes" : [ "object" ],
-    "id" : "172"
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#withGrade",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "173",
-    "label" : {
-      "IRI-based" : "withGrade",
-      "undefined" : "Course GPA (on a 4.0 scale)"
-    },
-    "domain" : "4",
-    "comment" : {
-      "undefined" : "Grade (GPA; 4.0 scale) received in the course (optional for obvious reasons :))."
-    },
-    "attributes" : [ "datatype", "someValues" ],
-    "id" : "174"
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#taughtAt",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "12",
-    "label" : {
-      "IRI-based" : "taughtAt",
-      "undefined" : "Organization which taught the course"
-    },
-    "domain" : "4",
-    "comment" : {
-      "undefined" : "The organization at which the course was taught. This is an optional field, but ideally if this is included, the department and course codes should be too."
-    },
-    "attributes" : [ "object", "someValues" ],
-    "id" : "175"
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#externalResource",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "176",
-    "label" : {
-      "IRI-based" : "externalResource",
-      "undefined" : "External resource"
-    },
-    "domain" : "6",
-    "comment" : {
-      "undefined" : "Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields."
-    },
-    "attributes" : [ "datatype", "someValues" ],
-    "id" : "177"
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#hasMedia",
-    "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "178",
-    "label" : {
-      "IRI-based" : "hasMedia",
-      "undefined" : "Media"
-    },
-    "domain" : "6",
-    "comment" : {
-      "undefined" : "Additional media can be included here. For example, it could link to product/team pages, news articles, etc."
-    },
-    "attributes" : [ "datatype", "someValues" ],
     "id" : "179"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#externalResource",
+    "iri" : "http://precis.rukmal.me/ontology#endDate",
     "baseIri" : "http://precis.rukmal.me/ontology",
     "range" : "180",
     "label" : {
-      "IRI-based" : "externalResource",
-      "undefined" : "External resource"
+      "IRI-based" : "endDate",
+      "undefined" : "endDate"
     },
-    "domain" : "13",
+    "domain" : "8",
     "comment" : {
-      "undefined" : "Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields."
+      "undefined" : "End date of a Instance. When this is included, the 'hasDate' data property corresponds to the start date."
     },
     "attributes" : [ "datatype", "someValues" ],
     "id" : "181"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#hasCollaborators",
+    "iri" : "http://precis.rukmal.me/ontology#taughtAt",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "182",
+    "range" : "20",
     "label" : {
-      "IRI-based" : "hasCollaborators",
-      "undefined" : "Collaborators List"
+      "IRI-based" : "taughtAt",
+      "undefined" : "Organization which taught the course"
     },
-    "domain" : "66",
+    "domain" : "8",
     "comment" : {
-      "undefined" : "List of Collaborators (Human-readable for now). Will eventually change to a mapping to a Person entity."
+      "undefined" : "The organization at which the course was taught. This is an optional field, but ideally if this is included, the department and course codes should be too."
     },
-    "attributes" : [ "datatype", "someValues" ],
-    "id" : "183"
+    "attributes" : [ "object", "someValues" ],
+    "id" : "182"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#externalResource",
+    "iri" : "http://precis.rukmal.me/ontology#hasMedia",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "185",
+    "range" : "183",
     "label" : {
-      "IRI-based" : "externalResource",
-      "undefined" : "External resource"
+      "IRI-based" : "hasMedia",
+      "undefined" : "Media"
     },
-    "domain" : "22",
+    "domain" : "15",
     "comment" : {
-      "undefined" : "Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields."
+      "undefined" : "Additional media can be included here. For example, it could link to product/team pages, news articles, etc."
     },
     "attributes" : [ "datatype", "someValues" ],
     "id" : "184"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#hasDescription",
+    "iri" : "http://precis.rukmal.me/ontology#hasDate",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "38",
+    "range" : "185",
     "label" : {
-      "IRI-based" : "hasDescription",
-      "undefined" : "Description"
+      "IRI-based" : "hasDate",
+      "undefined" : "Date"
     },
-    "domain" : "13",
+    "domain" : "15",
     "comment" : {
-      "undefined" : "Instance of 'Description', which describes the Thing pointing to it."
+      "undefined" : "Date of the instance. This implies \"startDate\" when a range is given with \"endDate\"."
     },
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "datatype", "someValues" ],
     "id" : "186"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#externalResource",
@@ -2544,102 +2596,116 @@
       "IRI-based" : "externalResource",
       "undefined" : "External resource"
     },
-    "domain" : "10",
+    "domain" : "7",
     "comment" : {
       "undefined" : "Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields."
     },
     "attributes" : [ "datatype", "someValues" ],
     "id" : "187"
   }, {
-    "range" : "6",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "189"
-  }, {
-    "range" : "4",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "190"
-  }, {
-    "range" : "11",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "191"
-  }, {
-    "range" : "38",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "192"
-  }, {
-    "range" : "9",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "193"
-  }, {
-    "range" : "12",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "194"
-  }, {
-    "iri" : "http://precis.rukmal.me/ontology#hasMedia",
+    "iri" : "http://precis.rukmal.me/ontology#hasDescription",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "196",
+    "range" : "38",
     "label" : {
-      "IRI-based" : "hasMedia",
-      "undefined" : "Media"
+      "IRI-based" : "hasDescription",
+      "undefined" : "Description"
     },
-    "domain" : "10",
+    "domain" : "23",
     "comment" : {
-      "undefined" : "Additional media can be included here. For example, it could link to product/team pages, news articles, etc."
+      "undefined" : "Instance of 'Description', which describes the Thing pointing to it."
     },
-    "attributes" : [ "datatype", "someValues" ],
-    "id" : "195"
+    "attributes" : [ "object", "someValues" ],
+    "id" : "190"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasCollaborators",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "197",
+    "range" : "192",
     "label" : {
       "IRI-based" : "hasCollaborators",
       "undefined" : "Collaborators List"
     },
-    "domain" : "62",
+    "domain" : "64",
     "comment" : {
       "undefined" : "List of Collaborators (Human-readable for now). Will eventually change to a mapping to a Person entity."
     },
     "attributes" : [ "datatype", "someValues" ],
-    "id" : "198"
+    "id" : "191"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasAuthors",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "199",
+    "range" : "189",
     "label" : {
       "IRI-based" : "hasAuthors",
       "undefined" : "Author List"
     },
-    "domain" : "45",
+    "domain" : "46",
     "comment" : {
       "undefined" : "List of authors (Human readable for now). This list should mirror the order of authors in the publication. Note that eventually this will be replaced by pointers to individual \"Author\" Classes."
     },
-    "attributes" : [ "datatype", "allValues" ],
-    "id" : "200"
+    "attributes" : [ "allValues", "datatype" ],
+    "id" : "193"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasMedia",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "201",
+    "range" : "195",
     "label" : {
       "IRI-based" : "hasMedia",
       "undefined" : "Media"
     },
-    "domain" : "5",
+    "domain" : "4",
     "comment" : {
       "undefined" : "Additional media can be included here. For example, it could link to product/team pages, news articles, etc."
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "194"
+  }, {
+    "range" : "15",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "196"
+  }, {
+    "range" : "8",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "197"
+  }, {
+    "range" : "2",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "198"
+  }, {
+    "range" : "38",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "199"
+  }, {
+    "range" : "17",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "200"
+  }, {
+    "range" : "20",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "201"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#externalResource",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "203",
+    "label" : {
+      "IRI-based" : "externalResource",
+      "undefined" : "External resource"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields."
     },
     "attributes" : [ "datatype", "someValues" ],
     "id" : "202"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#endDate",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "203",
+    "range" : "204",
     "label" : {
       "IRI-based" : "endDate",
       "undefined" : "endDate"
@@ -2649,11 +2715,11 @@
       "undefined" : "End date of a Instance. When this is included, the 'hasDate' data property corresponds to the start date."
     },
     "attributes" : [ "datatype", "someValues" ],
-    "id" : "204"
+    "id" : "205"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#externalResource",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "205",
+    "range" : "206",
     "label" : {
       "IRI-based" : "externalResource",
       "undefined" : "External resource"
@@ -2663,22 +2729,64 @@
       "undefined" : "Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields."
     },
     "attributes" : [ "datatype", "someValues" ],
-    "id" : "206"
+    "id" : "207"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#externalResource",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "14",
+    "range" : "208",
+    "label" : {
+      "IRI-based" : "externalResource",
+      "undefined" : "External resource"
+    },
+    "domain" : "20",
+    "comment" : {
+      "undefined" : "Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields."
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "209"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#hasMedia",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "210",
+    "label" : {
+      "IRI-based" : "hasMedia",
+      "undefined" : "Media"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "Additional media can be included here. For example, it could link to product/team pages, news articles, etc."
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "211"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#hasParentOrganization",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasParentOrganization",
+      "undefined" : "Parent Organization"
+    },
+    "domain" : "20",
+    "comment" : {
+      "undefined" : "Pointer to a \"parent\" organization instance. For example, the \"Foster School of Business\" hasParentOrganization \"University of Washington\"."
+    },
+    "attributes" : [ "object", "transitive", "someValues" ],
+    "id" : "212"
+  }, {
+    "iri" : "http://precis.rukmal.me/ontology#externalResource",
+    "baseIri" : "http://precis.rukmal.me/ontology",
+    "range" : "103",
     "label" : {
       "IRI-based" : "externalResource",
       "undefined" : "External resource"
     },
     "minCardinality" : "1",
-    "domain" : "8",
+    "domain" : "102",
     "comment" : {
       "undefined" : "Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields."
     },
     "attributes" : [ "datatype" ],
-    "id" : "207"
+    "id" : "214"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasDescription",
     "baseIri" : "http://precis.rukmal.me/ontology",
@@ -2687,19 +2795,19 @@
       "IRI-based" : "hasDescription",
       "undefined" : "Description"
     },
-    "domain" : "30",
+    "domain" : "22",
     "comment" : {
       "undefined" : "Instance of 'Description', which describes the Thing pointing to it."
     },
     "attributes" : [ "object" ],
-    "id" : "208"
+    "id" : "215"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#hasPriority",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "83",
+    "range" : "80",
     "label" : {
       "IRI-based" : "hasPriority",
-      "undefined" : "description priority level"
+      "undefined" : "Description priority level"
     },
     "maxCardinality" : "1",
     "domain" : "38",
@@ -2707,62 +2815,62 @@
       "undefined" : "Priority level of the description (used for deciding truncation in toolkit). This is automatically set to the position of the string in the input \"description\" array of descriptions, when data is loaded using the command line tool."
     },
     "attributes" : [ "datatype" ],
-    "id" : "209"
+    "id" : "216"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#hasParentOrganization",
+    "iri" : "http://precis.rukmal.me/ontology#degreeConcentration",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "12",
+    "range" : "213",
     "label" : {
-      "IRI-based" : "hasParentOrganization",
-      "undefined" : "Parent Organization"
+      "IRI-based" : "degreeConcentration",
+      "undefined" : "Degree Concentration"
     },
-    "domain" : "12",
+    "domain" : "2",
     "comment" : {
-      "undefined" : "Pointer to a \"parent\" organization instance. For example, the \"Foster School of Business\" hasParentOrganization \"University of Washington\"."
+      "undefined" : "Concentration of the Degree. For example, \"Finance and Business Economics\", or \"Computational Finance\". This should point to a DBpedia entity corresponding to the Degree being awarded."
     },
-    "attributes" : [ "transitive", "object", "someValues" ],
-    "id" : "210"
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "217"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#degreeSchool",
+    "iri" : "http://precis.rukmal.me/ontology#degreeGPA",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "12",
+    "range" : "218",
     "label" : {
-      "IRI-based" : "degreeSchool",
-      "undefined" : "School awarding the Degree"
+      "IRI-based" : "degreeGPA",
+      "undefined" : "Degree GPA (on a 4.0 scale)"
     },
-    "domain" : "11",
+    "domain" : "2",
     "comment" : {
-      "undefined" : "The School that awards the degree. For example, this would be the \"Foster School of Business\", or \"College of Arts and Sciences\"."
+      "undefined" : "Grade (GPA; 4.0 scale) for the Degree (optional for obvious reasons :))."
     },
-    "attributes" : [ "object", "someValues" ],
-    "id" : "211"
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "219"
   }, {
     "iri" : "http://precis.rukmal.me/ontology#otherTitles",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "76",
+    "range" : "72",
     "label" : {
       "IRI-based" : "otherTitles",
       "undefined" : "Other Titles"
     },
-    "domain" : "3",
+    "domain" : "1",
     "comment" : {
       "undefined" : "'Other' job titles; this property should be specified in addition to the main 'hasName' property, and is considered peripheral information."
     },
     "attributes" : [ "datatype" ],
-    "id" : "212"
+    "id" : "220"
   }, {
-    "iri" : "http://precis.rukmal.me/ontology#externalResource",
+    "iri" : "http://precis.rukmal.me/ontology#degreeType",
     "baseIri" : "http://precis.rukmal.me/ontology",
-    "range" : "213",
+    "range" : "221",
     "label" : {
-      "IRI-based" : "externalResource",
-      "undefined" : "External resource"
+      "IRI-based" : "degreeType",
+      "undefined" : "Degree Type"
     },
-    "domain" : "12",
+    "domain" : "2",
     "comment" : {
-      "undefined" : "Reference to an external resource that describes the same entity. This would typically be a reference to an existing DBpedia concept that describes the same entity. DBpedia references are not directly used here to mitigate the fact that certain user-created entitites will not have existing concepts on DBpedia, and so that we can ensure the existence of some other descriptive fields."
+      "undefined" : "Type of the Degree. For example, \"Bachelor of Arts\", or \"Master of Science\". This should point to a DBpedia entity corresponding to the Degree being awarded."
     },
     "attributes" : [ "datatype", "someValues" ],
-    "id" : "214"
+    "id" : "222"
   } ]
 }

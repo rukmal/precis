@@ -297,13 +297,31 @@
   "@id" : "_:genid145",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://precis.rukmal.me/ontology#hasSyllabus"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid146",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#withGrade"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
-  "@id" : "_:genid146",
+  "@id" : "_:genid147",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://precis.rukmal.me/ontology#withInstructor"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid148",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -316,7 +334,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid147",
+  "@id" : "_:genid149",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -329,7 +347,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid148",
+  "@id" : "_:genid150",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#degreeDepartment"
@@ -338,7 +356,7 @@
     "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
-  "@id" : "_:genid149",
+  "@id" : "_:genid151",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#degreeSchool"
@@ -347,7 +365,7 @@
     "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
-  "@id" : "_:genid150",
+  "@id" : "_:genid152",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -360,7 +378,7 @@
     "@id" : "http://precis.rukmal.me/ontology#degreeUniversity"
   } ]
 }, {
-  "@id" : "_:genid151",
+  "@id" : "_:genid153",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#degreeConcentration"
@@ -369,7 +387,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "_:genid152",
+  "@id" : "_:genid154",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#degreeGPA"
@@ -378,7 +396,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
-  "@id" : "_:genid153",
+  "@id" : "_:genid155",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#degreeType"
@@ -387,7 +405,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "_:genid154",
+  "@id" : "_:genid156",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -400,7 +418,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid155",
+  "@id" : "_:genid157",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -413,7 +431,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid156",
+  "@id" : "_:genid158",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -426,7 +444,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid157",
+  "@id" : "_:genid159",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -437,32 +455,6 @@
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid158",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://precis.rukmal.me/ontology#hasText"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid159",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://precis.rukmal.me/ontology#hasPriority"
   } ]
 }, {
   "@id" : "_:genid16",
@@ -477,6 +469,32 @@
 }, {
   "@id" : "_:genid160",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://precis.rukmal.me/ontology#hasText"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid161",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://precis.rukmal.me/ontology#hasPriority"
+  } ]
+}, {
+  "@id" : "_:genid162",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -488,7 +506,7 @@
     "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ]
 }, {
-  "@id" : "_:genid161",
+  "@id" : "_:genid163",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -501,7 +519,7 @@
     "@id" : "http://precis.rukmal.me/ontology#hasSubject"
   } ]
 }, {
-  "@id" : "_:genid162",
+  "@id" : "_:genid164",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -514,7 +532,7 @@
     "@id" : "http://precis.rukmal.me/ontology#externalResource"
   } ]
 }, {
-  "@id" : "_:genid163",
+  "@id" : "_:genid165",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -527,7 +545,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid164",
+  "@id" : "_:genid166",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#hasParentOrganization"
@@ -536,7 +554,7 @@
     "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ]
 }, {
-  "@id" : "_:genid165",
+  "@id" : "_:genid167",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -549,7 +567,7 @@
     "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ]
 }, {
-  "@id" : "_:genid166",
+  "@id" : "_:genid168",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This should be used to add an additional descriptive string if necessary. For example, this could be a team name or a descriptive string (eg: \"Startup Company\", etc.)."
@@ -561,10 +579,10 @@
     "@id" : "http://precis.rukmal.me/ontology#Organization"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "_:genid165"
+    "@id" : "_:genid167"
   } ]
 }, {
-  "@id" : "_:genid167",
+  "@id" : "_:genid169",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#externalResource"
@@ -573,7 +591,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "_:genid168",
+  "@id" : "_:genid170",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -586,7 +604,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid169",
+  "@id" : "_:genid171",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -599,16 +617,16 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid170",
+  "@id" : "_:genid172",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#affiliatedWith"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid171"
+    "@id" : "_:genid173"
   } ]
 }, {
-  "@id" : "_:genid171",
+  "@id" : "_:genid173",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -618,7 +636,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid174",
+  "@id" : "_:genid176",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -631,7 +649,7 @@
     "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ]
 }, {
-  "@id" : "_:genid175",
+  "@id" : "_:genid177",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#endDate"
@@ -640,7 +658,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "_:genid176",
+  "@id" : "_:genid178",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#externalResource"
@@ -649,7 +667,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "_:genid177",
+  "@id" : "_:genid179",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#hasMedia"
@@ -658,7 +676,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "_:genid178",
+  "@id" : "_:genid180",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -671,7 +689,7 @@
     "@id" : "http://precis.rukmal.me/ontology#hasDate"
   } ]
 }, {
-  "@id" : "_:genid179",
+  "@id" : "_:genid181",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -684,7 +702,7 @@
     "@id" : "http://precis.rukmal.me/ontology#hasWebsite"
   } ]
 }, {
-  "@id" : "_:genid180",
+  "@id" : "_:genid182",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -697,7 +715,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid181",
+  "@id" : "_:genid183",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#hasCollaborators"
@@ -706,7 +724,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid182",
+  "@id" : "_:genid184",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -715,7 +733,7 @@
     "@id" : "http://precis.rukmal.me/ontology#hasAuthors"
   } ]
 }, {
-  "@id" : "_:genid183",
+  "@id" : "_:genid185",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -728,7 +746,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid184",
+  "@id" : "_:genid186",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -741,7 +759,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid185",
+  "@id" : "_:genid187",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -754,7 +772,7 @@
     "@id" : "http://precis.rukmal.me/ontology#hasDOI"
   } ]
 }, {
-  "@id" : "_:genid186",
+  "@id" : "_:genid188",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -767,7 +785,7 @@
     "@id" : "http://precis.rukmal.me/ontology#hasStatus"
   } ]
 }, {
-  "@id" : "_:genid187",
+  "@id" : "_:genid189",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -778,28 +796,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#inSkillGroup"
-  } ]
-}, {
-  "@id" : "_:genid188",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://precis.rukmal.me/ontology#externalResource"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
-  } ]
-}, {
-  "@id" : "_:genid189",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://precis.rukmal.me/ontology#hasName"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid19",
@@ -815,13 +811,35 @@
   "@id" : "_:genid190",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://precis.rukmal.me/ontology#externalResource"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "_:genid191",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://precis.rukmal.me/ontology#hasName"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid192",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://precis.rukmal.me/ontology#Description"
   } ]
 }, {
-  "@id" : "_:genid191",
+  "@id" : "_:genid193",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -834,7 +852,7 @@
     "@id" : "http://precis.rukmal.me/ontology#hasSkill"
   } ]
 }, {
-  "@id" : "_:genid192",
+  "@id" : "_:genid194",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#externalResource"
@@ -843,7 +861,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "_:genid193",
+  "@id" : "_:genid195",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -856,7 +874,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid194",
+  "@id" : "_:genid196",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -869,7 +887,7 @@
     "@id" : "http://precis.rukmal.me/ontology#inKnowledgeArea"
   } ]
 }, {
-  "@id" : "_:genid195",
+  "@id" : "_:genid197",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -882,7 +900,7 @@
     "@id" : "http://precis.rukmal.me/ontology#hasName"
   } ]
 }, {
-  "@id" : "_:genid196",
+  "@id" : "_:genid198",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#hasCollaborators"
@@ -891,7 +909,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid197",
+  "@id" : "_:genid199",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -904,17 +922,17 @@
     "@id" : "http://precis.rukmal.me/ontology#hasDate"
   } ]
 }, {
-  "@id" : "_:genid198",
+  "@id" : "_:genid200",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid202"
+      "@id" : "_:genid204"
     }, {
-      "@id" : "_:genid200"
+      "@id" : "_:genid202"
     } ]
   } ]
 }, {
-  "@id" : "_:genid200",
+  "@id" : "_:genid202",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -927,7 +945,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid202",
+  "@id" : "_:genid204",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -940,7 +958,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid203",
+  "@id" : "_:genid205",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -953,7 +971,7 @@
     "@id" : "http://precis.rukmal.me/ontology#hasDescription"
   } ]
 }, {
-  "@id" : "_:genid204",
+  "@id" : "_:genid206",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "http://precis.rukmal.me/ontology#Organization"
@@ -966,7 +984,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid205",
+  "@id" : "_:genid207",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#endDate"
@@ -975,7 +993,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "_:genid206",
+  "@id" : "_:genid208",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#hasImage"
@@ -984,7 +1002,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "_:genid207",
+  "@id" : "_:genid209",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#hasMedia"
@@ -993,7 +1011,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "_:genid208",
+  "@id" : "_:genid210",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://precis.rukmal.me/ontology#otherTitles"
@@ -1002,7 +1020,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid209",
+  "@id" : "_:genid211",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -1015,7 +1033,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid210",
+  "@id" : "_:genid212",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -1028,7 +1046,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid211",
+  "@id" : "_:genid213",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -1041,7 +1059,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid212",
+  "@id" : "_:genid214",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -1326,7 +1344,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2019-04-19T00:00:00"
+    "@value" : "2019-06-07T00:00:00"
   } ],
   "http://purl.org/ontology/bibo/doi" : [ {
     "@id" : "http://purl.org/precis"
@@ -1344,13 +1362,13 @@
     "@value" : "The Precis ontology is designed to encapsulate portfolio information about an individual. This includes information that would traditionally be presented in a Resume/CV. This ontology is designed to be used with the Precis toolkit; see http://precis.rukmal.me for more.\n\nCurrently, this ontology powers a templating engine to generate dyanmic resumes, but has the potential to power other personal data driven experiences."
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@id" : "https://github.com/rukmal/precis/releases/download/1.5.0/precis_ontology.rdf"
+    "@id" : "https://github.com/rukmal/precis/releases/download/1.5.1/precis_ontology.rdf"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://precis.rukmal.me/ontology/1.5.1"
+    "@id" : "http://precis.rukmal.me/ontology/1.5.2"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "1.5.1"
+    "@value" : "1.5.2"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#Accolade",
@@ -1463,6 +1481,10 @@
     "@id" : "_:genid146"
   }, {
     "@id" : "_:genid147"
+  }, {
+    "@id" : "_:genid148"
+  }, {
+    "@id" : "_:genid149"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#Degree",
@@ -1474,10 +1496,6 @@
     "@value" : "Degree"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid148"
-  }, {
-    "@id" : "_:genid149"
-  }, {
     "@id" : "_:genid150"
   }, {
     "@id" : "_:genid151"
@@ -1493,6 +1511,10 @@
     "@id" : "_:genid156"
   }, {
     "@id" : "_:genid157"
+  }, {
+    "@id" : "_:genid158"
+  }, {
+    "@id" : "_:genid159"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#Description",
@@ -1504,9 +1526,9 @@
     "@value" : "Description for a given item"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid158"
+    "@id" : "_:genid160"
   }, {
-    "@id" : "_:genid159"
+    "@id" : "_:genid161"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#KnowledgeArea",
@@ -1518,13 +1540,13 @@
     "@value" : "Knowledge Area"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid160"
-  }, {
-    "@id" : "_:genid161"
-  }, {
     "@id" : "_:genid162"
   }, {
     "@id" : "_:genid163"
+  }, {
+    "@id" : "_:genid164"
+  }, {
+    "@id" : "_:genid165"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#Organization",
@@ -1536,15 +1558,15 @@
     "@value" : "Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid164"
-  }, {
-    "@id" : "_:genid165"
+    "@id" : "_:genid166"
   }, {
     "@id" : "_:genid167"
   }, {
-    "@id" : "_:genid168"
-  }, {
     "@id" : "_:genid169"
+  }, {
+    "@id" : "_:genid170"
+  }, {
+    "@id" : "_:genid171"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#Portfolio",
@@ -1556,11 +1578,7 @@
     "@value" : "Portfolio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid170"
-  }, {
-    "@id" : "_:genid174"
-  }, {
-    "@id" : "_:genid175"
+    "@id" : "_:genid172"
   }, {
     "@id" : "_:genid176"
   }, {
@@ -1571,6 +1589,10 @@
     "@id" : "_:genid179"
   }, {
     "@id" : "_:genid180"
+  }, {
+    "@id" : "_:genid181"
+  }, {
+    "@id" : "_:genid182"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#Project",
@@ -1584,7 +1606,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://precis.rukmal.me/ontology#Portfolio"
   }, {
-    "@id" : "_:genid181"
+    "@id" : "_:genid183"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#Publication",
@@ -1598,15 +1620,15 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://precis.rukmal.me/ontology#Portfolio"
   }, {
-    "@id" : "_:genid182"
-  }, {
-    "@id" : "_:genid183"
-  }, {
     "@id" : "_:genid184"
   }, {
     "@id" : "_:genid185"
   }, {
     "@id" : "_:genid186"
+  }, {
+    "@id" : "_:genid187"
+  }, {
+    "@id" : "_:genid188"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#Skill",
@@ -1620,11 +1642,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://precis.rukmal.me/ontology#SkillGroup"
   }, {
-    "@id" : "_:genid187"
-  }, {
-    "@id" : "_:genid188"
-  }, {
     "@id" : "_:genid189"
+  }, {
+    "@id" : "_:genid190"
+  }, {
+    "@id" : "_:genid191"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#SkillGroup",
@@ -1636,13 +1658,13 @@
     "@value" : "Skill Group"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid190"
-  }, {
-    "@id" : "_:genid191"
-  }, {
     "@id" : "_:genid192"
   }, {
     "@id" : "_:genid193"
+  }, {
+    "@id" : "_:genid194"
+  }, {
+    "@id" : "_:genid195"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#Subject",
@@ -1656,9 +1678,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://precis.rukmal.me/ontology#KnowledgeArea"
   }, {
-    "@id" : "_:genid194"
+    "@id" : "_:genid196"
   }, {
-    "@id" : "_:genid195"
+    "@id" : "_:genid197"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#Talk",
@@ -1672,9 +1694,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://precis.rukmal.me/ontology#Portfolio"
   }, {
-    "@id" : "_:genid196"
+    "@id" : "_:genid198"
   }, {
-    "@id" : "_:genid197"
+    "@id" : "_:genid199"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#WorkExperience",
@@ -1686,11 +1708,7 @@
     "@value" : "Work Experience"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid198"
-  }, {
-    "@id" : "_:genid203"
-  }, {
-    "@id" : "_:genid204"
+    "@id" : "_:genid200"
   }, {
     "@id" : "_:genid205"
   }, {
@@ -1705,6 +1723,10 @@
     "@id" : "_:genid210"
   }, {
     "@id" : "_:genid211"
+  }, {
+    "@id" : "_:genid212"
+  }, {
+    "@id" : "_:genid213"
   } ]
 }, {
   "@id" : "http://precis.rukmal.me/ontology#affiliatedWith",
@@ -2103,7 +2125,7 @@
     "@id" : "http://precis.rukmal.me/ontology#Description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "description priority level"
+    "@value" : "Description priority level"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
@@ -2160,6 +2182,21 @@
     "@id" : "http://precis.rukmal.me/ontology#inKnowledgeArea"
   } ]
 }, {
+  "@id" : "http://precis.rukmal.me/ontology#hasSyllabus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Syllabus for the course."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://precis.rukmal.me/ontology#Course"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Course syllabus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "http://precis.rukmal.me/ontology#hasText",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2169,7 +2206,7 @@
     "@id" : "http://precis.rukmal.me/ontology#Description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "description text"
+    "@value" : "Description text"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -2368,6 +2405,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid117"
+  } ]
+}, {
+  "@id" : "http://precis.rukmal.me/ontology#withInstructor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instructor of the course."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://precis.rukmal.me/ontology#Course"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Course instructor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/abstract",

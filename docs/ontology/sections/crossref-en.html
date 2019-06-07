@@ -216,6 +216,8 @@ This section provides details for each class and property defined by Precis Onto
          <dd>
             <a href="#withGrade" title="http://precis.rukmal.me/ontology#withGrade">Course GPA (on a 4.0 scale)</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCourseCode" title="http://precis.rukmal.me/ontology#hasCourseCode">Course code</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#withInstructor" title="http://precis.rukmal.me/ontology#withInstructor">Course instructor</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSyllabus" title="http://precis.rukmal.me/ontology#hasSyllabus">Course syllabus</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDepartmentCode"
                title="http://precis.rukmal.me/ontology#hasDepartmentCode">Department code</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#taughtAt" title="http://precis.rukmal.me/ontology#taughtAt">Organization which taught the course</a>
@@ -297,8 +299,8 @@ This section provides details for each class and property defined by Precis Onto
          <dd/>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasPriority" title="http://precis.rukmal.me/ontology#hasPriority">description priority level</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasText" title="http://precis.rukmal.me/ontology#hasText">description text</a>
+            <a href="#hasPriority" title="http://precis.rukmal.me/ontology#hasPriority">Description priority level</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasText" title="http://precis.rukmal.me/ontology#hasText">Description text</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
@@ -1338,6 +1340,12 @@ This section provides details for each class and property defined by Precis Onto
          <a href="#withGrade" title="http://precis.rukmal.me/ontology#withGrade">Course GPA (on a 4.0 scale)</a>
       </li>
       <li>
+         <a href="#withInstructor" title="http://precis.rukmal.me/ontology#withInstructor">Course instructor</a>
+      </li>
+      <li>
+         <a href="#hasSyllabus" title="http://precis.rukmal.me/ontology#hasSyllabus">Course syllabus</a>
+      </li>
+      <li>
          <a href="#hasDate" title="http://precis.rukmal.me/ontology#hasDate">Date</a>
       </li>
       <li>
@@ -1355,10 +1363,10 @@ This section provides details for each class and property defined by Precis Onto
             title="http://precis.rukmal.me/ontology#hasDepartmentCode">Department code</a>
       </li>
       <li>
-         <a href="#hasPriority" title="http://precis.rukmal.me/ontology#hasPriority">description priority level</a>
+         <a href="#hasPriority" title="http://precis.rukmal.me/ontology#hasPriority">Description priority level</a>
       </li>
       <li>
-         <a href="#hasText" title="http://precis.rukmal.me/ontology#hasText">description text</a>
+         <a href="#hasText" title="http://precis.rukmal.me/ontology#hasText">Description text</a>
       </li>
       <li>
          <a href="#hasDOI" title="http://precis.rukmal.me/ontology#hasDOI">Digital Object Identifier (DOI) of the Publication</a>
@@ -1600,6 +1608,54 @@ This section provides details for each class and property defined by Precis Onto
          </dl>
       </div>
    </div>
+   <div class="entity" id="withInstructor">
+      <h3>Course instructor<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://precis.rukmal.me/ontology#withInstructor</p>
+      <div class="comment">
+         <span class="markdown">Instructor of the course.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://precis.rukmal.me/ontology#Course">Course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSyllabus">
+      <h3>Course syllabus<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://precis.rukmal.me/ontology#hasSyllabus</p>
+      <div class="comment">
+         <span class="markdown">Syllabus for the course.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://precis.rukmal.me/ontology#Course">Course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasDate">
       <h3>Date<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1734,7 +1790,7 @@ This section provides details for each class and property defined by Precis Onto
       </div>
    </div>
    <div class="entity" id="hasPriority">
-      <h3>description priority level<sup class="type-dp" title="data property">dp</sup>
+      <h3>Description priority level<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -1759,7 +1815,7 @@ This section provides details for each class and property defined by Precis Onto
       </div>
    </div>
    <div class="entity" id="hasText">
-      <h3>description text<sup class="type-dp" title="data property">dp</sup>
+      <h3>Description text<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
