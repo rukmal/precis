@@ -342,8 +342,10 @@
                         \textbf{(* formatPortfolioDate(aw_cert) *)} \\
                     \end{tabularx}
                 } \\
-                % Link
-                \url{(* aw_cert.hasWebsite[0] *)} \\
+                % Link (if any)
+                ((*- if aw_cert.hasWebsite is defined *))
+                    \url{(* aw_cert.hasWebsite[0] *)} \\
+                ((*- endif *))
                 % descriptions
                 ((* for desc in aw_cert.hasDescription *))
                     (* cleanText(desc) *) \\
