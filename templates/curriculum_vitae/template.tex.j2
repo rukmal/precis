@@ -268,6 +268,46 @@
     % Talks
     %---------------------------------------------
 
+    (* titleIfExists(Talk, 'Talks') *)
+
+    ((* for tlk in Talk *))
+        \begin{minipage}{\tabularxwidth}
+        \begin{tabularx}{\tabularxwidth}{X}
+            % Nested tabular to handle title and date in same column
+            {
+                \begin{tabularx}{\tabularxwidth}{@{}X r}
+                    % Talk title
+                    \textbf{(* tlk.hasName[0] *)} &
+                    % Date on the right
+                    \textbf{(* formatPortfolioDate(tlk) *)} \\
+                \end{tabularx}
+            } \\
+
+            % Collaborators
+            ((* if tlk.hasCollaborators is defined *))
+                \textit{Collaborators: (* tlk.hasCollaborators[0] *)} \\
+            ((* endif *))
+
+            % Printing website (if exists)
+            ((* if tlk.hasWebsite is defined *))
+                \url{(* tlk.hasWebsite[0] *)} \\
+            ((* endif *))
+            % Printing DOI (if exists)
+            ((* if tlk.hasDOI is defined *))
+                (* tlk.hasDOI[0] *) \\
+            ((* endif *))
+
+            % description (only using one)
+            (* cleanText(tlk.hasDescription[0]) *)
+        \end{tabularx}
+        % Add vertical space if not last iteration
+        ((* if not loop.last *))
+            \vspace{.5em}
+        ((* endif *))
+
+        \end{minipage}
+    ((* endfor *))
+
     % Knowledge Areas
     %---------------------------------------------
 
