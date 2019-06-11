@@ -285,3 +285,29 @@ class SPARQLQueries():
             }}
             """.format(target_iri=target_iri),
             initNs=self.initN)
+
+    @classmethod
+    def getRelatedNameOfType(self, target_iri: str, c_type: str) -> Query:
+        """SPARQL query to get the name of 'relatedTo` entities of a specific
+        type, given a `target_iri`, and `c_type`.
+        
+        Arguments:
+            target_iri {str} -- Target instance IRI.
+            c_type {str} -- Target type (eg: 'Skill', 'WorkExperience', etc.)
+        
+        Returns:
+            Query -- Prepared query.
+        """
+
+        logging.debug('Preparing related name query for individual {0} with\
+            type {1}'.format(target_iri, c_type))
+        
+        return prepareQuery("""
+            SELECT ?name
+            WHERE {{
+                <{target_iri}> precis:relatedTo ?targets .
+                ?targets rdf:type precis:{c_type} .
+                ?targets precis:hasName ?name .
+            }}
+            """.format(target_iri=target_iri, c_type=c_type),
+            initNs=self.initN)
