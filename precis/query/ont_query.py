@@ -219,3 +219,117 @@ class OntQuery():
             )
 
         return output
+
+
+class TemplateOntQuery():
+    """This module encapsulates generic template ontology query overrides
+    to be applied when the data object is being built for the template.
+
+    The dictionary `override_functions` serves as the registry for these
+    override functions. Currently, class-based overides can be applied. This
+    module provides functionality to both check if an override function exists
+    for a given class, and to run the override, given a class and a set of JSON
+    represented class individuals (in the format output by `precis.OntQuery`).
+    """
+
+    def __init__(self, ont: Ontology, graph: Graph):
+        """TemplateOntQuery initialization method. Binds the target ontology, and
+        RDFLib graph to class variables.
+        
+        Arguments:
+            ont {Ontology} -- Ontology to be traversed.
+            graph {Graph} -- RDFLib graph representation of the target ontology.
+        """
+
+        # Override function map
+        # (also acts as registry of these functions)
+        self.override_functions = {
+            'Project': self.overrideProject
+        }
+
+        # Assigning instance variables
+        self.graph = graph
+        self.ont = ont
+
+    def overrideExists(self, c_type: str) -> bool:
+        """Flag to check if an override function exists for a given
+        ontology class.
+        
+        Arguments:
+            c_type {str} -- Target class type.
+        
+        Returns:
+            bool -- True if override function exists, false otherwise.
+        """
+
+        return c_type in self.override_functions.keys()
+
+    def overrideByClass(self, c_type: list, class_invds: list) -> list:
+        """Function to run the registry override function over a list of JSON
+        represented class individuals, given the list of individuals and the
+        class name.
+        
+        Arguments:
+            c_type {list} -- Target class type (eg: `Degree` or `Skill`).
+            class_invds {list} -- List of JSON-represented individuals for the
+                                  given class (in the format output by
+                                  `precis.OntQuery`).
+        
+        Raises:
+            KeyError: Raised when a class is provided for which an override
+                      function does not exist.
+        
+        Returns:
+            list -- List of JSON-represented (dict) individuals,
+                    with override applied.
+        """
+
+        if c_type not in self.override_functions.keys():
+            message = 'Invalid class type {0} for template override query'.\
+                format(c_type)
+            logging.error(message)
+            raise KeyError(message)
+
+        return self.override_functions[c_type](
+            c_type=c_type,
+            class_invds=class_invds
+        )
+
+    def overrideProject(self, c_type: list, class_invds: list) -> list:
+        """Override function for the Project class.
+
+        Adds a list of alphabetically sorted Skill Names, corresponding to each
+        entity's relatedTo list, with the key 'relatedSkills'.
+        
+        Arguments:
+            c_type {list} -- Target class type (eg: `Degree` or `Skill`).
+            class_invds {list} -- List of JSON-represented individuals for the
+                                  given class (in the format output by
+                                  `precis.OntQuery`).
+        
+        Returns:
+            list -- List of JSON-represented (dict) individuals,
+                    with override applied.
+        """
+
+        # Iterating through each project; getting names of 'relatedTo' skills
+        for proj in class_invds:
+            # Isolating IRI of the current individual (not stored in JSON)
+            target_iri = self.ont.search_one(iri=''.join(
+                ['*', proj['$id']])).iri
+
+            # Building query for the object
+            proj_query = SPARQLQueries.getRelatedNameOfType(
+                target_iri=target_iri,
+                c_type='Skill'
+            )
+
+            # Running related named skill entity query
+            name_objects = self.graph.query(query_object=proj_query)
+
+            # Extracting related skill names and sorting alphabetically
+            proj['relatedSkills'] = sorted([result[0].toPython()
+                for result in name_objects])
+
+        # Returning full list (modified)
+        return class_invds

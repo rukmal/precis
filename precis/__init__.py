@@ -46,5 +46,5 @@ config.data_properties = data_properties
 
 # Importing Precis modules
 from .loader import Loader
-from .query import OntQuery
+from .query import OntQuery, TemplateOntQuery
 from . import templating
