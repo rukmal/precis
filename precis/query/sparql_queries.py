@@ -311,3 +311,30 @@ class SPARQLQueries():
             }}
             """.format(target_iri=target_iri, c_type=c_type),
             initNs=self.initN)
+
+    @classmethod
+    def getAwards(self, target_iri: str) -> Query:
+        """SPARQL query to get the name and affiliated organizations issuing
+        awards from given a `target_iri` 'relatedTo' entities.
+        
+        Arguments:
+            target_iri {str} -- Target instance IRI.
+        
+        Returns:
+            Query -- Prepared query.
+        """
+
+        logging.debug('Preparing awards query for individual {0}'.\
+            format(target_iri))
+
+        return prepareQuery("""
+            SELECT ?award_name ?org_name
+            WHERE {{
+                <{target_iri}> precis:relatedTo ?org .
+                ?org precis:hasName ?org_name .
+                ?award precis:affiliatedWith ?org .
+                ?award rdf:type precis:Award .
+                ?award precis:hasName ?award_name .
+            }}
+        """.format(target_iri=target_iri),
+        initNs=self.initN)

@@ -300,6 +300,8 @@ class TemplateOntQuery():
 
         Adds a list of alphabetically sorted Skill Names, corresponding to each
         entity's relatedTo list, with the key 'relatedSkills'.
+        Adds a list of awards, corresponding to each entity's relatedTo list,
+        with the key 'awards'.
         
         Arguments:
             c_type {list} -- Target class type (eg: `Degree` or `Skill`).
@@ -330,6 +332,21 @@ class TemplateOntQuery():
             # Extracting related skill names and sorting alphabetically
             proj['relatedSkills'] = sorted([result[0].toPython()
                 for result in name_objects])
+
+            # Building awards query
+            awards_query = SPARQLQueries.getAwards(target_iri=target_iri)
+
+            # Running awards query
+            awards_objects = self.graph.query(query_object=awards_query)
+
+            # Building dictionary of key-value pairs from org -> award
+            proj['awards'] = [
+            {
+                'award_name': i[0].toPython(),
+                'org_name': i[1].toPython()
+            }
+            for i in awards_objects]
+            print(proj['awards'])
 
         # Returning full list (modified)
         return class_invds
