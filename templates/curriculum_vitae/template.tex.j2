@@ -376,6 +376,14 @@
                 \textit{Collaborators: (* proj.hasCollaborators[0] *)} \\
             ((* endif *))
 
+            % Awards
+            ((* for award in proj.awards -*))
+                ((*- if loop.first *))
+                    \textit{Awards:}
+                ((*- endif *))
+                (* award['award_name'] ~ ' (' ~ award['org_name'] ~ ')' *)
+            ((*- endfor *))
+
             % Printing website (if exists)
             ((* if proj.hasWebsite is defined *))
                 \url{(* proj.hasWebsite[0] *)} \\
