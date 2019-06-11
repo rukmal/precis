@@ -352,6 +352,48 @@
     ((* endfor *))
 
 
+    % Projects
+    %---------------------------------------------
+
+    (* titleIfExists(Project, 'Selected Projects') *)
+
+    ((* for proj in Project *))
+
+        \begin{tabularx}{\tabularxwidth}{X}
+            % Nested tabular to handle title (fancy, with skills) and date in same row
+                {
+                    \begin{tabularx}{\tabularxwidth}{@{}X r}
+                        % First line - project name in bold, and skills/tech in brackets
+                        \textbf{(* proj.hasName[0] *)}
+                        (* '(' ~ proj.relatedSkills|join(', ') ~ ')' *) &
+                        % Date on the right
+                        \textbf{(* formatPortfolioDate(proj) *)} \\
+                    \end{tabularx}
+                } \\
+
+            % Collaborators
+            ((* if proj.hasCollaborators is defined *))
+                \textit{Collaborators: (* proj.hasCollaborators[0] *)} \\
+            ((* endif *))
+
+            % Printing website (if exists)
+            ((* if proj.hasWebsite is defined *))
+                \url{(* proj.hasWebsite[0] *)} \\
+            ((* endif *))
+
+            % description (only using one)
+            (* cleanText(proj.hasDescription[0]) *) \\
+
+        \end{tabularx}
+
+        % Add vertical space if not last iteration
+        ((* if not loop.last *))
+            \vspace{.5em}
+        ((* endif *))
+
+    ((* endfor *))
+
+
     % Awards and Certifications
     %---------------------------------------------
 
@@ -373,7 +415,7 @@
             \begin{minipage}{\tabularxwidth}
             % iterating over awards and certifications
             \begin{tabularx}{\tabularxwidth}{X}
-                % Nested tabular to handle title and date in same column
+                % Nested tabular to handle title and date in same row
                 {
                     \begin{tabularx}{\tabularxwidth}{@{}X r}
                         % Award/Certification name
@@ -440,8 +482,8 @@
         \begin{tabular}{ll}
             (* address_line_1 *) & Phone: (* phone *) \\
             (* address_city_state *) & Email: (* email *) \\
-            (* address_zip *) & Homepage: (* website *) \\
-            (* address_country *) & LinkedIn: (* linkedin *)
+            (* address_zip *) & Homepage: \url{(* website *)} \\
+            (* address_country *) & LinkedIn: \url{(* linkedin *)}
         \end{tabular}
     \end{center}
 
