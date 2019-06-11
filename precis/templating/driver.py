@@ -1,5 +1,5 @@
 from .template import PrecisTemplate
-from .. import OntQuery
+from .. import OntQuery, TemplateOntQuery
 from ..cfg import config
 
 from io import TextIOWrapper
@@ -81,6 +81,12 @@ class TemplateDriver():
         # Instantiating query agent
         self.query = OntQuery(ont=user_ont, graph=user_graph)
 
+        # Instantiating generic template-specific query agent
+        self.generic_template_query = TemplateOntQuery(
+            ont=user_ont,
+            graph=user_graph
+        )
+
         # Dictionary to store user data
         self.user_data = dict()
 
@@ -94,6 +100,13 @@ class TemplateDriver():
 
             # Getting all of type 'ont_class', with order restrictions
             class_invds = self.query.getAllOfType(c_type=ont_class, order=order)
+
+            # If override function exists for current class, run override
+            if self.generic_template_query.overrideExists(c_type=ont_class):
+                class_invds = self.generic_template_query.overrideByClass(
+                    c_type=ont_class,
+                    class_invds=class_invds
+                )
 
             # Apply item overrides (if they exist for current `ont_class`)
             if ont_class in item_overrides.keys():
