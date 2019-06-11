@@ -428,6 +428,22 @@
 
     ((* endfor *))
 
+    % Contact Information
+    %---------------------------------------------
+
+    \section{Contact Information}
+    
+    % This is to change the width between the table columns
+    \setlength{\tabcolsep}{18pt}
+
+    \begin{center}
+        \begin{tabular}{ll}
+            (* address_line_1 *) & Phone: (* phone *) \\
+            (* address_city_state *) & Email: (* email *) \\
+            (* address_zip *) & Homepage: (* website *) \\
+            (* address_country *) & LinkedIn: (* linkedin *)
+        \end{tabular}
+    \end{center}
 
 \end{document}
 

@@ -10,6 +10,7 @@ required_input:
     - 'phone'
     - 'email'
     - 'website'
+    - 'linkedin'
 required_classes:
     - 'Degree'
     - 'WorkExperience'
