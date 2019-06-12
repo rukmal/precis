@@ -365,7 +365,11 @@
                     \begin{tabularx}{\tabularxwidth}{@{}X r}
                         % First line - project name in bold, and skills/tech in brackets
                         \textbf{(* proj.hasName[0] *)}
-                        (* '(' ~ proj.relatedSkills|join(', ') ~ ')' *) &
+                        ((*- if proj.relatedSkills|length > 0 *))
+                            (* '(' ~ proj.relatedSkills|join(', ') ~ ')' *)
+                        ((*- endif *))
+                        % Alignment separator (after if so it get triggered either way)
+                        &
                         % Date on the right
                         \textbf{(* formatPortfolioDate(proj) *)} \\
                     \end{tabularx}
