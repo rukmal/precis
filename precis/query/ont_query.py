@@ -346,7 +346,6 @@ class TemplateOntQuery():
                 'org_name': i[1].toPython()
             }
             for i in awards_objects]
-            print(proj['awards'])
 
         # Returning full list (modified)
         return class_invds
