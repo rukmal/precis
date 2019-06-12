@@ -2,8 +2,6 @@
     <h2><a href="https://precis.rukmal.me/ontology">Click Here for Precis Ontology Specification</a></h2>
 </p>
 
-<iframe src="https://precis.rukmal.me/ontology/webvowl/index.html#"></iframe>
-
 ## Overview
 
 Precis is first and foremost an [Ontology for modeling personal professional metadata](https://precis.rukmal.me/ontology). That is, it provides functionality to track metadata such as Degerees, Courses, Portfolio Items (Publications, Projects, Talks), Work Experience, etc.
