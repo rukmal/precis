@@ -14,11 +14,7 @@ In addition to the Precis Ontology modeling personal metadata, the Precis toolki
 
 Each of these functions are illustrated below in the Quickstart Guide.
 
-
-This folder contains advanced documentation for specific topics in Precis.
-
-Note that the content of this documentation is not necessary to use the Precis toolkit. Return to the main [`README.md`](../README.md) for Quick Start instructions to get started.
-
+**Note: This document is still under construction**
 
 ## Advanced Documentation
 
