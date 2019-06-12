@@ -1,15 +1,10 @@
 <p align="center">
-    <a href="https://precis.rukmal.me/ontology">Click Here for Precis Ontology Specification</a>
+    <h2><a href="https://precis.rukmal.me/ontology">Click Here for Precis Ontology Specification</a></h2>
 </p>
-
-<p align="center">
-    <img src="https://raw.githubusercontent.com/rukmal/precis/master/bin/precis_logo.jpg" width="250" />
-</p>
-
 
 ## Overview
 
-Precis is first and foremost and [Ontology for modeling personal professional metadata](https://precis.rukmal.me/ontology). That is, it provides functionality to track metadata such as Degerees, Courses, Portfolio Items (Publications, Projects, Talks), Work Experience, etc.
+Precis is first and foremost an [Ontology for modeling personal professional metadata](https://precis.rukmal.me/ontology). That is, it provides functionality to track metadata such as Degerees, Courses, Portfolio Items (Publications, Projects, Talks), Work Experience, etc.
 
 In addition to the Precis Ontology modeling personal metadata, the Precis toolkit extends this Ontology by providing additional functionality, specifically:
 
@@ -29,17 +24,17 @@ Note that the content of this documentation is not necessary to use the Precis t
 
 This section is advanced documentation for specific topics in Precis.
 
-### Ontology
-
-**Note**: This is mostly out of date, but the broad strokes are accurate. Preserved for posterity.
-
-- [Precis Ontology Structure](precis_ont_structure/precis_ont_structure.md)
-
 ### Template Engine
 
 - [Template Instance Configuration Files](template_engine/configuration_files.md)
 
 A description of the underlying Precis ontology. Details each of the individual concepts, object properties and data properties comprising the ontology.
+
+### Archive
+
+**Note**: This is mostly out of date, but the broad strokes are accurate. Preserved for posterity.
+
+- [Precis Ontology Structure](precis_ont_structure/precis_ont_structure.md)
 
 
 ## Acknowledgements
