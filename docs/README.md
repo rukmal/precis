@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <img src="../bin/precis_logo.jpg" />
+    <img src="https://raw.githubusercontent.com/rukmal/precis/master/bin/precis_logo.jpg" />
 </p>
 
 
