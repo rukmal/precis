@@ -11,6 +11,7 @@ required_input:
     - 'email'
     - 'website'
     - 'linkedin'
+    - 'last_updated'
 required_classes:
     - 'Degree'
     - 'WorkExperience'

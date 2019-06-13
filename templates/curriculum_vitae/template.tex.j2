@@ -4,6 +4,7 @@
 %----------------
 
 \usepackage{enumitem}  % Advanced list settings
+\usepackage{fancyhdr}  % Fancy headers and footers
 \usepackage[T1]{fontenc}  % Expanded font encoding
 \usepackage{geometry}  % Page geometry (margins, etc.)
 \usepackage{hyperref}  % Hyperlinks
@@ -51,6 +52,26 @@
     linkcolor=blue,
     urlcolor=blue
 }
+
+
+% Header and Footer Configuration
+%--------------------------------
+
+% Changing page style to fancy
+\pagestyle{fancy}
+
+% Applying default headers and footers
+\fancyhf{}
+
+% Renewing commands for the header and footer lines
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Changing offset from the margins
+\setlength{\footskip}{0pt}
+
+\rfoot{Page \thepage}
+\AtEndDocument{\lfoot{Last updated (* last_updated *). Built with Precis (\url{https://precis.rukmal.me}).}}
 
 
 % Jinja Macros
