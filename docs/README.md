@@ -4,7 +4,7 @@
 
 ## Overview
 
-Precis is first and foremost an [Ontology for modeling personal professional metadata](https://precis.rukmal.me/ontology). That is, it provides functionality to track metadata such as Degerees, Courses, Portfolio Items (Publications, Projects, Talks), Work Experience, etc.
+Precis is (primarily) an [Ontology for modeling personal professional metadata](https://precis.rukmal.me/ontology). That is, it provides functionality to track metadata such as Degrees, Courses, Portfolio Items (Publications, Projects, Talks), Work Experience, etc.
 
 In addition to the Precis Ontology modeling personal metadata, the Precis toolkit extends this Ontology by providing additional functionality, specifically:
 
