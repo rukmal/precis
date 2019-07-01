@@ -1,0 +1,164 @@
+\documentclass[10pt]{article}
+
+% Package Imports
+%----------------
+
+\usepackage{enumitem}  % Advanced list settings
+\usepackage{fancyhdr}  % Fancy headers and footers
+\usepackage[T1]{fontenc}  % Expanded font encoding
+\usepackage{geometry}  % Page geometry (margins, etc.)
+\usepackage{hyperref}  % Hyperlinks
+\usepackage[none]{hyphenat}  % Hyphenation settings
+\usepackage{multirow}  % Multirow table
+\usepackage[defaultsans]{opensans}  % Opensans font
+\usepackage[document]{ragged2e}  % Text alignment
+\usepackage{tabularx}  % Advanced tables
+\usepackage{titlesec}  % Title formatting
+\usepackage[svgnames]{xcolor}  % Colors
+
+% LaTeX Configuration
+%---------------------
+
+% Page margins
+\geometry{top=.5in,
+          bottom=.5in,
+          left=.5in,
+          right=.5in}
+
+% Document font size
+\newcommand{\cvfontsize}{10}
+
+% Document font stuff
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\normalsize}{\fontsize{\cvfontsize}{\baselineskip}\selectfont}
+
+% Highlight color
+\newcommand{\highlightcolor}{RoyalBlue}
+
+% Reformat section
+\titleformat{\section}[block]
+{\color{\highlightcolor} \Large \bf \scshape }
+{}{0em}{}
+
+% No indentation
+\setlength{\parindent}{0pt}
+
+% Table width
+\newcommand{\tabularxwidth}{\textwidth}
+
+% Link formatting
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+
+% Header and Footer Configuration
+%--------------------------------
+
+% Changing page style to fancy
+\pagestyle{fancy}
+
+% Applying default headers and footers
+\fancyhf{}
+
+% Renewing commands for the header and footer lines
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Changing offset from the margins
+\setlength{\footskip}{0pt}
+
+% Setting footer to be "Page #" on bottom right
+\rfoot{Page \thepage}
+
+% Setting last page footer to include last updated date, and Precis signature.
+\AtEndDocument{\lfoot{Last updated (* last_updated *). Built with Precis (\url{https://precis.rukmal.me}).}}
+
+
+% Jinja Macros
+%--------------
+
+% Get state or country (state takes preference)
+((*- macro stateOrCountry(topObj) *))
+    ((*- if topObj.inState is defined *))
+        (* topObj.inState[0] *)
+    ((*- elif topObj.inCountry is defined *))
+        (* topObj.inCountry[0] *)
+   ((*- endif *)) 
+((*- endmacro *))
+
+% Get location in "City, State/Country" format
+((*- macro getLocation(topObj) *))
+    (* topObj.inCity[0] ~ ', ' ~ stateOrCountry(topObj) *)
+((*- endmacro *))
+
+% Format date (to MMM 'YY, eg: "May '19"')
+((*- macro formatDate(dateObj) *))
+    (* dateObj.strftime('%b ‘%y') *)
+((*- endmacro *))
+
+% Get date range
+((*- macro dateRange(topObj) *))
+    ((*- if topObj.endDate is defined *))
+        (* formatDate(topObj.hasDate[0]) ~ ' - ' ~ formatDate(topObj.endDate[0]) *)
+    ((*- else *))
+        (* formatDate(topObj.hasDate[0]) ~ ' - Present' *)
+    ((*- endif *))
+((*- endmacro *))
+
+% Escape special characters in text
+% Currently cleans: '$'
+((*- macro cleanText(text) *))
+    (* text|replace('$', '\$') *)
+((*- endmacro *))
+
+
+% List the contents of a nested list of lists with a delimiter
+((*- macro printListofLists(list, delimit) *))
+    ((* set sorted_list = list|sort *))
+    ((*- for l in sorted_list *))
+        ((*- if loop.last *))
+            (* l[0] *)
+        ((*- else *))
+            (* l[0] ~ delimit *)
+        ((*- endif *))
+    ((*- endfor *))
+((*- endmacro *))
+
+% Only print title if it exists
+((*- macro titleIfExists(title, titleText) *))
+    ((*- if title|length > 0 *))
+        \section{(* titleText *)}
+    ((*- endif *))
+((*- endmacro *))
+
+
+% Expand a list of objects, chaining 'hasName' together with comma delimiter
+((*- macro expandNames(topObj) *))
+    (* topObj|join(', ', attribute='hasName') *)
+((*- endmacro *))
+
+% Format a portfolio date (i.e. just the year)
+((*- macro formatPortfolioDate(topObj) *))
+    ((*- if topObj.hasDate is defined *))
+        (* topObj.hasDate[0].strftime('%Y') *)
+    ((*- endif *))
+((*- endmacro *))
+
+
+
+\begin{document}
+    % Resume Header - Name, address, website and email
+    %---------------------------------------------
+    \begin{tabularx}{\textwidth}{X r}
+        \multirow{3}{*}{\color{\highlightcolor} \huge \textbf{(* full_name *)}}
+        & {\color{\highlightcolor} (* address_line_1 *), (* address_city_state *) (* address_zip *)} \\
+        & {\color{\highlightcolor} (* phone *) $\; \bullet \;$ (* email *)} \\
+        & {\color{\highlightcolor} (* website *)} \\
+    \end{tabularx}
+
+    \noindent{\rule{\linewidth}{.2em}}
+
+\end{document}
