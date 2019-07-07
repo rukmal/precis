@@ -10,6 +10,7 @@ required_input:
     - 'phone'
     - 'email'
     - 'website'
+    - 'linkedin'
     - 'last_updated'
 required_classes:
     - 'Degree'
