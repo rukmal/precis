@@ -176,8 +176,10 @@
         \begin{tabularx}{\tabularxwidth}{X r}
             % First line - degree title and date
             \textbf{(* deg.hasName[0] *)} & \textbf{(* formatDate(deg.hasDate[0]) *)} \\
-            % Degree university (department), and location
-            \quad \textcolor{\highlightcolor}{(* deg.degreeUniversity[0][0] ~ ' - ' ~ deg.degreeSchool[0][0] *)} & (* getLocation(deg) *) \\
+            % Degree university, and location
+            \quad \textcolor{\highlightcolor}{(* deg.degreeUniversity[0][0] *)} & (* getLocation(deg) *) \\
+            % Degree school and department
+            \quad (* deg.degreeSchool[0][0] ~ ' (' ~ deg.degreeDepartment[0][0] ~ ')' *) & \\
             % Degree GPA (if any)
             ((* if deg.degreeGPA is defined *))
                 \quad \textit{GPA (4.0 Scale):} (* deg.degreeGPA[0] *)
