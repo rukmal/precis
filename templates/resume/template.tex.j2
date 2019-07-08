@@ -26,7 +26,7 @@
           right=.25in}
 
 % Document font size
-\newcommand{\cvfontsize}{9.5}
+\newcommand{\cvfontsize}{9}
 
 % Document font stuff
 \renewcommand{\familydefault}{\sfdefault}
@@ -271,8 +271,8 @@
 
             % TODO: This part can be improved in the future
             % NOTE: Assuming that both publication & conference/journal exists if one does
-            ((* if (pub.hasPublication is defined) and (pub.hasPublication[0]|length > 0) *))
-                \textit{(* pub.inPublication[0] ~ '; ' ~ pub.inConferenceOrJounral[0] *)} \\
+            ((* if (pub.inPublication is defined) and (pub.inPublication[0]|length > 0) *))
+                \textit{(* pub.inPublication[0] ~ '; ' ~ pub.inConferenceOrJournal[0] *)} \\
             ((* endif *))
             % Printing DOI (if exists)
             ((* if pub.hasDOI is defined *))
