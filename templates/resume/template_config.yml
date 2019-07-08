@@ -12,6 +12,7 @@ required_input:
     - 'website'
     - 'linkedin'
     - 'last_updated'
+    - 'max_description_priority'
 required_classes:
     - 'Degree'
     - 'WorkExperience'

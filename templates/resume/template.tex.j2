@@ -20,13 +20,13 @@
 %---------------------
 
 % Page margins
-\geometry{top=.5in,
-          bottom=.5in,
-          left=.5in,
-          right=.5in}
+\geometry{top=.3in,
+          bottom=.3in,
+          left=.25in,
+          right=.25in}
 
 % Document font size
-\newcommand{\cvfontsize}{10}
+\newcommand{\cvfontsize}{9.5}
 
 % Document font stuff
 \renewcommand{\familydefault}{\sfdefault}
@@ -152,7 +152,7 @@
 \begin{document}
     % Resume Header - Name, address, website and email
     %---------------------------------------------
-    \begin{tabularx}{\textwidth}{X r}
+    \begin{tabularx}{\textwidth}{@{}X r@{}}
         \multirow{3}{*}{\color{\highlightcolor} \huge \textbf{(* full_name *)}}
         & {\color{\highlightcolor} (* address_line_1 *), (* address_city_state *) (* address_zip *)} \\
         & {\color{\highlightcolor} (* phone *) $\; \bullet \;$ (* email *)} \\
@@ -199,6 +199,49 @@
             \vspace{.3em}
         ((* endif *))
 
+    ((* endfor *))
+
+    \vspace{-0.5em}
+
+    % Work Experience
+    %---------------------------------------------
+
+    (* titleIfExists(WorkExperience, 'Work Experience') *)
+
+    ((* for we in WorkExperience *))
+    % Put in minipage to prevent mid-entry pagebreak
+    \begin{minipage}{\tabularxwidth}
+
+        \begin{tabularx}{\tabularxwidth}{X r}
+            % First line - job title and location
+            \textbf{(* we.hasName[0] *)} & \textbf{(* we.inCity[0] ~ ', ' ~ stateOrCountry(we) *)} \\
+            % Main employment organization and date range
+            \textcolor{\highlightcolor}{(* we.employedAt[0][0] *)} & (* dateRange(we) *) \\
+            % Parent organizations (if any)
+            ((* if we.employedAt[0]|length > 1 *))
+                ((* for parent_orgset in we.employedAt *))
+                    \textit{(* parent_orgset[1:]|join('; ') *)} & \\
+                ((* endfor *))
+            ((* endif *))
+            % Other job titles
+            ((* if we.otherTitles is defined *))
+                Other Titles: (* we.otherTitles|join(', ') *) & \\
+            ((* endif *))
+        \end{tabularx}
+
+        % descriptions
+        \begin{itemize}[noitemsep, topsep=3pt, parsep=0pt, partopsep=0pt]
+            ((* for desc in we.hasDescription *))
+                \item (* cleanText(desc) *)
+            ((* endfor *))
+        \end{itemize}
+
+        % Add vertical space if not last iteration
+        ((* if not loop.last *))
+            \vspace{.5em}
+        ((* endif *))
+
+    \end{minipage}
     ((* endfor *))
 
 \end{document}
