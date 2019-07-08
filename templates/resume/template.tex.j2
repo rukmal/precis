@@ -312,4 +312,52 @@
 
     ((* endfor *))
 
+    \vspace{-0.5em}
+
+    % Publications
+    %---------------------------------------------
+
+    (* titleIfExists(Publication, 'Publications') *)
+
+    ((* for pub in Publication *))
+        \begin{minipage}{\tabularxwidth}
+        \begin{tabularx}{\tabularxwidth}{X}
+            % Nested tabular to handle title and date in same column
+            {
+                \begin{tabularx}{\tabularxwidth}{@{}X r}
+                    % Prefix with the current status (if any)
+                    ((*- if pub.hasStatus is defined *))
+                        \textit{(* '(' ~ pub.hasStatus[0] ~ ') ' *)}
+                    ((*- endif *))
+                    % Publication title
+                    \textbf{(* pub.hasName[0] *)} &
+                    % Date on the right
+                    \textbf{(* formatPortfolioDate(pub) *)} \\
+                \end{tabularx}
+            } \\
+            % Authors
+            (* pub.hasAuthors[0] *) \\
+
+            % TODO: This part can be improved in the future
+            % NOTE: Assuming that both publication & conference/journal exists if one does
+            ((* if (pub.hasPublication is defined) and (pub.hasPublication[0]|length > 0) *))
+                \textit{(* pub.inPublication[0] ~ '; ' ~ pub.inConferenceOrJounral[0] *)} \\
+            ((* endif *))
+            % Printing DOI (if exists)
+            ((* if pub.hasDOI is defined *))
+                (* pub.hasDOI[0] *) \\
+            ((* endif *))
+
+            % description (only using one)
+            (* cleanText(pub.hasDescription[0]) *)
+        \end{tabularx}
+
+        % Add vertical space if not last iteration
+        ((* if not loop.last *))
+            \vspace{.3em}
+        ((* endif *))
+
+        \end{minipage}
+    ((* endfor *))
+
 \end{document}
