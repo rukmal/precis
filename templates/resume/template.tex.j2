@@ -131,6 +131,7 @@
 ((*- macro titleIfExists(title, titleText) *))
     ((*- if title|length > 0 *))
         \section{(* titleText *)}
+        \vspace{-.5em}
     ((*- endif *))
 ((*- endmacro *))
 
@@ -169,8 +170,6 @@
     \vspace{-1em}
 
     (* titleIfExists(Degree, 'Education') *)
-
-    \vspace{-0.5em}
 
     % Iterating over degrees
     ((* for deg in Degree *))
@@ -238,10 +237,79 @@
 
         % Add vertical space if not last iteration
         ((* if not loop.last *))
-            \vspace{.5em}
+            \vspace{.3em}
         ((* endif *))
 
     \end{minipage}
+    ((* endfor *))
+
+    \vspace{-0.5em}
+
+    % Skills and Technologies
+    %---------------------------------------------
+
+    (* titleIfExists(SkillGroup, 'Skills and Technologies') *)
+
+    ((* for sg in SkillGroup *))
+        % iterating over knowledge areas
+        \begin{tabularx}{\tabularxwidth}{X}
+            % first line - knowldge area name in bold
+            \textbf{(* sg.hasName[0] *)} \\
+            % listing all constituent subjects
+            (* printListofLists(sg.hasSkill, ', ') *) \\
+        \end{tabularx}
+
+        % Add vertical space if not last iteration
+        ((* if not loop.last *))
+            \vspace{.3em}
+        ((* endif *))
+
+    ((* endfor *))
+
+    \vspace{-0.5em}
+
+    % Projects
+    %---------------------------------------------
+
+    (* titleIfExists(Project, 'Selected Projects') *)
+
+    ((* for proj in Project *))
+
+        \begin{tabularx}{\tabularxwidth}{X}
+            % Nested tabular to handle title (fancy, with skills) and date in same row
+                {
+                    \begin{tabularx}{\tabularxwidth}{@{}X r}
+                        % First line - project name in bold, and skills/tech in brackets
+                        \textbf{(* proj.hasName[0] *)}
+                        ((*- if proj.relatedSkills|length > 0 *))
+                            (* '(' ~ proj.relatedSkills|join(', ') ~ ')' *)
+                        ((*- endif *))
+                        % Printing website (if exists)
+                        ((*- if proj.hasWebsite is defined *))
+                            | \url{(* proj.hasWebsite[0] *)}
+                        ((*- endif *))
+                        % Alignment separator (after if so it get triggered either way)
+                        &
+                        % Date on the right
+                        \textbf{(* formatPortfolioDate(proj) *)} \\
+                    \end{tabularx}
+                } \\
+
+            % Collaborators
+            ((* if proj.hasCollaborators is defined *))
+                \textit{Collaborators:} (* proj.hasCollaborators[0] *)
+            ((* endif *))
+
+            % description (only using one)
+            (* cleanText(proj.hasDescription[0]) *) \\
+
+        \end{tabularx}
+
+        % Add vertical space if not last iteration
+        ((* if not loop.last *))
+            \vspace{.3em}
+        ((* endif *))
+
     ((* endfor *))
 
 \end{document}
