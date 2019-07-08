@@ -245,18 +245,42 @@
 
     \vspace{-0.5em}
 
-    % Skills and Technologies
+    % Publications
     %---------------------------------------------
 
-    (* titleIfExists(SkillGroup, 'Skills and Technologies') *)
+    (* titleIfExists(Publication, 'Publications') *)
 
-    ((* for sg in SkillGroup *))
-        % iterating over knowledge areas
+    ((* for pub in Publication *))
+        \begin{minipage}{\tabularxwidth}
         \begin{tabularx}{\tabularxwidth}{X}
-            % first line - knowldge area name in bold
-            \textbf{(* sg.hasName[0] *)} \\
-            % listing all constituent subjects
-            (* printListofLists(sg.hasSkill, ', ') *) \\
+            % Nested tabular to handle title and date in same column
+            {
+                \begin{tabularx}{\tabularxwidth}{@{}X r}
+                    % Prefix with the current status (if any)
+                    ((*- if pub.hasStatus is defined *))
+                        \textit{(* '(' ~ pub.hasStatus[0] ~ ') ' *)}
+                    ((*- endif *))
+                    % Publication title
+                    \textbf{(* pub.hasName[0] *)} &
+                    % Date on the right
+                    \textbf{(* formatPortfolioDate(pub) *)} \\
+                \end{tabularx}
+            } \\
+            % Authors
+            (* pub.hasAuthors[0] *) \\
+
+            % TODO: This part can be improved in the future
+            % NOTE: Assuming that both publication & conference/journal exists if one does
+            ((* if (pub.hasPublication is defined) and (pub.hasPublication[0]|length > 0) *))
+                \textit{(* pub.inPublication[0] ~ '; ' ~ pub.inConferenceOrJounral[0] *)} \\
+            ((* endif *))
+            % Printing DOI (if exists)
+            ((* if pub.hasDOI is defined *))
+                (* pub.hasDOI[0] *) \\
+            ((* endif *))
+
+            % description (only using one)
+            (* cleanText(pub.hasDescription[0]) *)
         \end{tabularx}
 
         % Add vertical space if not last iteration
@@ -264,6 +288,7 @@
             \vspace{.3em}
         ((* endif *))
 
+        \end{minipage}
     ((* endfor *))
 
     \vspace{-0.5em}
@@ -314,42 +339,18 @@
 
     \vspace{-0.5em}
 
-    % Publications
+    % Skills and Technologies
     %---------------------------------------------
 
-    (* titleIfExists(Publication, 'Publications') *)
+    (* titleIfExists(SkillGroup, 'Skills and Technologies') *)
 
-    ((* for pub in Publication *))
-        \begin{minipage}{\tabularxwidth}
+    ((* for sg in SkillGroup *))
+        % iterating over knowledge areas
         \begin{tabularx}{\tabularxwidth}{X}
-            % Nested tabular to handle title and date in same column
-            {
-                \begin{tabularx}{\tabularxwidth}{@{}X r}
-                    % Prefix with the current status (if any)
-                    ((*- if pub.hasStatus is defined *))
-                        \textit{(* '(' ~ pub.hasStatus[0] ~ ') ' *)}
-                    ((*- endif *))
-                    % Publication title
-                    \textbf{(* pub.hasName[0] *)} &
-                    % Date on the right
-                    \textbf{(* formatPortfolioDate(pub) *)} \\
-                \end{tabularx}
-            } \\
-            % Authors
-            (* pub.hasAuthors[0] *) \\
-
-            % TODO: This part can be improved in the future
-            % NOTE: Assuming that both publication & conference/journal exists if one does
-            ((* if (pub.hasPublication is defined) and (pub.hasPublication[0]|length > 0) *))
-                \textit{(* pub.inPublication[0] ~ '; ' ~ pub.inConferenceOrJounral[0] *)} \\
-            ((* endif *))
-            % Printing DOI (if exists)
-            ((* if pub.hasDOI is defined *))
-                (* pub.hasDOI[0] *) \\
-            ((* endif *))
-
-            % description (only using one)
-            (* cleanText(pub.hasDescription[0]) *)
+            % first line - knowldge area name in bold
+            \textbf{(* sg.hasName[0] *)} \\
+            % listing all constituent subjects
+            (* printListofLists(sg.hasSkill, ', ') *) \\
         \end{tabularx}
 
         % Add vertical space if not last iteration
@@ -357,7 +358,6 @@
             \vspace{.3em}
         ((* endif *))
 
-        \end{minipage}
     ((* endfor *))
 
 \end{document}
