@@ -98,8 +98,21 @@ class TemplateDriver():
             else:
                 order = None
 
-            # Getting all of type 'ont_class', with order restrictions
-            class_invds = self.query.getAllOfType(c_type=ont_class, order=order)
+            # Get class individuals depending on whether description priority
+            # restriction is imposed
+            # Getting all of type 'ont_class', with order and description
+            # restrictions
+            if 'max_description_priority' in self.user_prefs.keys():
+                class_invds = self.query.getAllOfType(
+                    c_type=ont_class,
+                    order=order,
+                    descr_priority=self.user_prefs['max_description_priority']
+                )
+            else:
+                class_invds = self.query.getAllOfType(
+                    c_type=ont_class,
+                    order=order
+                )
 
             # If override function exists for current class, run override
             if self.generic_template_query.overrideExists(c_type=ont_class):

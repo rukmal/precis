@@ -39,7 +39,8 @@ class OntQuery():
         self.ont = ont
         self.graph = graph
 
-    def getAllOfType(self, c_type: str, order: str=None) -> list:
+    def getAllOfType(self, c_type: str, order: str=None,
+                     descr_priority: int=int(1e10)) -> list:
         """Function to find all instances of a given class type, providing the
         option for temporally ordering the results in either ascending or
         descending order (using the `hasDate` data property).
@@ -53,6 +54,9 @@ class OntQuery():
                            ascending and descending chronological order, and
                            ascending and descending alphabetical order,
                            respecitvely (default: {None}).
+            descr_priority {int} -- Maximum priority of description items to be
+                                    extracted for individuals of a given class
+                                    (default: {int(1e10)}).
         
         Raises:
             ValueError -- Raised when the `order` is not 'chron_A', 'chron_D',
@@ -95,11 +99,15 @@ class OntQuery():
             logging.debug('Processing search result instance {0}'
                 .format(candidate_iri))
             # Getting python-ified instance data
-            output.append(self.getIndividual(individual=candidate_individual))
+            output.append(self.getIndividual(
+                individual=candidate_individual,
+                descr_priority=descr_priority
+            ))
 
         return output
 
-    def getIndividual(self, individual: ThingClass) -> dict:
+    def getIndividual(self, individual: ThingClass,
+                      descr_priority: int) -> dict:
         """Function to get metadata for a given individual.
         
         This function intelligently nests metadata from related objects
@@ -110,6 +118,7 @@ class OntQuery():
             
         Arguments:
             individual {ThingClass} -- Target individual.
+            descr_priority {int} -- Maximum description priority.
         
         Returns:
             dict -- Dictionary of metadata for the target individual.
@@ -173,7 +182,8 @@ class OntQuery():
 
         # Extracting all description text for the given individual
         descr_query = SPARQLQueries.getOrderedDescriptionText(
-            target_iri=individual_iri
+            target_iri=individual_iri,
+            max_priority=descr_priority
         )
         for descr_object in self.graph.query(query_object=descr_query):
             descr_text = descr_object[0].toPython()

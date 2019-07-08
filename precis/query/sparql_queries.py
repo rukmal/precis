@@ -235,13 +235,18 @@ class SPARQLQueries():
             initNs=self.initN)
 
     @classmethod
-    def getOrderedDescriptionText(self, target_iri: str) -> Query:
+    def getOrderedDescriptionText(self, target_iri: str,
+                                  max_priority: int=int(1e10)) -> Query:
         """SPARQL query to get description text for a given instance IRI, as
         ordered by the 'hasPriority' attribute (in ascending order, so priority
         0 > 1 > 2 > ...).
         
         Arguments:
             target_iri {str} -- Target instance IRI.
+
+        Keyword Arguments:
+            max_priority {int} -- Maximum description priority
+                                  (default: {int(1e10)}).
         
         Returns:
             Query -- Prepared query.
@@ -255,10 +260,11 @@ class SPARQLQueries():
                 WHERE {{
                     <{target_iri}> precis:hasDescription ?descr .
                     ?descr precis:hasPriority ?priority .
+                    FILTER (?priority < {max_priority}) .
                     ?descr precis:hasText ?text .
                 }}
                 ORDER BY ?priority
-            """.format(target_iri=target_iri),
+            """.format(target_iri=target_iri, max_priority=max_priority),
             initNs=self.initN)
 
     @classmethod
