@@ -53,6 +53,8 @@
     urlcolor=blue
 }
 
+% Link color command
+\newcommand{\changeurlcolor}[1]{\hypersetup{urlcolor=#1}}
 
 % Header and Footer Configuration
 %--------------------------------
@@ -263,7 +265,7 @@
                         \textit{(* '(' ~ pub.hasStatus[0] ~ ') ' *)}
                     ((*- endif *))
                     % Publication title
-                    \textbf{(* pub.hasName[0] *)} &
+                    \textbf{\changeurlcolor{black}\href{(* pub.hasWebsite[0] *)}{(* pub.hasName[0] *)}} &
                     % Date on the right
                     \textbf{(* formatPortfolioDate(pub) *)} \\
                 \end{tabularx}
