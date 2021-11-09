@@ -42,7 +42,7 @@ class config():
 
     # Template folder (relative to top-level package import)
     current_folder = os.path.dirname(os.path.realpath(__file__))
-    templates_folder = os.path.join(current_folder, '../templates/')
+    templates_folder = os.path.join(current_folder, "templates/")
 
     # Template file names
     template_files = {
