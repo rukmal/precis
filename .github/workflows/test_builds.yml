@@ -1,0 +1,24 @@
+name: Test build
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.6", "3.7", "3.8", "3.9", "3.10"]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install from setup.py
+        run: python setup.py install
+      - name: Run test scripts
+        working-directory: tests/
+        run: |
+          python loader_test.py
+          python ontquery_test.py
+          python template_test.py
