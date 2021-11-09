@@ -7,7 +7,7 @@ import unittest
 
 
 class TestTemplate(unittest.TestCase):
-    
+
     def test_validateTemplate(self):
         precis.templating.PrecisTemplate(
             template_folder=TestConfig.template_cv
@@ -45,7 +45,7 @@ class TestTemplate(unittest.TestCase):
 
         # Loading user ontology
         user_ont = get_ontology(TestConfig.sample_rdf_data).load()
-        
+
         # Casting to RDFLib graph (for template driver)
         user_graph = default_world.as_rdflib_graph()
 
