@@ -18,6 +18,6 @@ setup(
     long_description=long_description,
     url="https://github.com/rukmal/precis",
     install_requires=requirements_list,
-    package_data={"": ["templates/", "precis_ontology.rdf"]},
+    include_package_data=True,
     python_requires=">=3.6"
 )
