@@ -367,13 +367,13 @@ class Loader():
         
         ret_obj = []
 
-        for descr in descr_obj:
+        for idx, descr in enumerate(descr_obj):
             if 'hasPriority' in descr.keys():
                 priority = descr['hasPriority']
             else:
                 priority = 0
             ret_obj.append(config.ont.Description(
-                uuid4(),
+                f"{obj_id}-description-{idx}",
                 namespace=config.namespace,
                 hasPriority=priority,
                 hasText=descr['hasText']
