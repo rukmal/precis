@@ -1,6 +1,6 @@
 name: Build test artifacts
 
-on: [push]
+on: [pull_request, workflow_call]
 
 jobs:
   build_sample_artifacts:
