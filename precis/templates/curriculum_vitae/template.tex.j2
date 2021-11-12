@@ -108,6 +108,45 @@
     ((*- endif *))
 ((*- endmacro *))
 
+% Properly display the organization of a work Experience
+((*- macro displayWorkExperienceOrganization(we) *))
+    % Determining number of unique parent organizations
+    ((* set we_parent_org_list = [] *))
+    ((* for employed_org in we.employedAt *))
+        % Last element of the list corresponds to the highest level (i.e. 'parent') org
+        (*- we_parent_org_list.append(employed_org[-1]) *)
+    ((* endfor *))
+
+    ((* if we_parent_org_list|unique|list|length > 1 *))
+        % NOTE: This is for the case that there is more than one base parent organization
+        % Main employment organization and date range
+        \textcolor{\highlightcolor}{(* we.employedAt[0][0] *)} & (* dateRange(we) *) \\
+        % Parent organizations (if any)
+        ((* if we.employedAt[0]|length > 1 *))
+            ((* for parent_orgset in we.employedAt *))
+                \textit{(* parent_orgset[1:]|join('; ') *)} & \\
+            ((* endfor *))
+        ((* endif *))
+    ((* else *))
+        % NOTE: This is for the case that there is no more than one base parent organization
+        % Main employment organization and date range
+        \textcolor{\highlightcolor}{(* we.employedAt[0][-1] *)} & (* dateRange(we) *) \\
+        % Sub organizations (if any)
+        ((* if we.employedAt[0]|length > 1 *))
+            % Top level sub organization once
+            \textit{(* we.employedAt[0][0] *);}
+            ((*- for sub_orgset in we.employedAt *))
+                \textit{(* sub_orgset[1:-1]|join('; ') *)}
+                ((*- if we.employedAt|length == 2 *))
+                    ((*- if not loop.last *)) \textit{\&}((*- endif *))
+                ((*- else *))
+                    ((*- if not loop.last *)),((*- endif *))
+                ((*- endif *))
+            ((*- endfor *)) & \\
+        ((* endif *))
+    ((* endif *))
+((*- endmacro *))
+
 % Escape special characters in text
 % Currently cleans: '$'
 ((*- macro cleanText(text) *))
@@ -206,17 +245,8 @@
         \begin{tabularx}{\tabularxwidth}{X r}
             % First line - job title and location
             \textbf{(* we.hasName[0] *)} & \textbf{(* we.inCity[0] ~ ', ' ~ stateOrCountry(we) *)} \\
-            % Main employment organization and date range
-            \textcolor{\highlightcolor}{(* we.employedAt[0][-1] *)} & (* dateRange(we) *) \\
-            % Sub organizations (if any)
-            ((* if we.employedAt[0]|length > 1 *))
-                % Top level sub organization once
-                \textit{(* we.employedAt[0][0] *);}
-                ((*- for sub_orgset in we.employedAt *))
-                    \textit{(* sub_orgset[1:-1]|join('; ') *)}
-                    ((*- if not loop.last *)),((*- endif *))
-                ((*- endfor *)) & \\
-            ((* endif *))
+            % Display employment organization row
+            (* displayWorkExperienceOrganization(we) *)
             % Other job titles
             ((* if we.otherTitles is defined *))
                 Other Titles: (* we.otherTitles|join(', ') *) & \\
