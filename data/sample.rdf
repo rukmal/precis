@@ -1297,6 +1297,25 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.tesla.com/</hasWebsite>
 </Organization>
 
+<Organization rdf:about="http://precis.rukmal.me/ontology/musk#tesla:research">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasParentOrganization rdf:resource="http://precis.rukmal.me/ontology/musk#tesla"/>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tesla Research and Development</hasName>
+</Organization>
+
+<Organization rdf:about="http://precis.rukmal.me/ontology/musk#tesla:engineering">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasParentOrganization rdf:resource="http://precis.rukmal.me/ontology/musk#tesla"/>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tesla Engineering</hasName>
+</Organization>
+
+<Organization rdf:about="http://precis.rukmal.me/ontology/musk#tesla:research:design">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasParentOrganization rdf:resource="http://precis.rukmal.me/ontology/musk#tesla:research"/>
+  <hasParentOrganization rdf:resource="http://precis.rukmal.me/ontology/musk#tesla:engineering"/>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Executive Office</hasName>
+</Organization>
+
 <Description rdf:about="http://precis.rukmal.me/ontology/musk#we_tesla_ceo-description-0">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPriority>
@@ -1305,7 +1324,7 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
 
 <WorkExperience rdf:about="http://precis.rukmal.me/ontology/musk#we_tesla_ceo">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <employedAt rdf:resource="http://precis.rukmal.me/ontology/musk#tesla"/>
+  <employedAt rdf:resource="http://precis.rukmal.me/ontology/musk#tesla:research:design"/>
   <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#we_tesla_ceo-description-0"/>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-01-01T00:00:00</hasDate>
   <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasImage>
@@ -1452,8 +1471,8 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
 
 <KnowledgeArea rdf:about="http://precis.rukmal.me/ontology/musk#ka:cs">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSubject rdf:resource="http://precis.rukmal.me/ontology/musk#sub:sci_comp"/>
   <hasSubject rdf:resource="http://precis.rukmal.me/ontology/musk#sub:data_structures"/>
+  <hasSubject rdf:resource="http://precis.rukmal.me/ontology/musk#sub:sci_comp"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Science</hasName>
 </KnowledgeArea>
 
@@ -1487,8 +1506,8 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
 
 <ActivityType rdf:about="http://precis.rukmal.me/ontology/musk#ac_type:debauchery">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasActivity rdf:resource="http://precis.rukmal.me/ontology/musk#ac:420"/>
   <hasActivity rdf:resource="http://precis.rukmal.me/ontology/musk#ac:drinking"/>
+  <hasActivity rdf:resource="http://precis.rukmal.me/ontology/musk#ac:420"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Debauchery</hasName>
 </ActivityType>
 
