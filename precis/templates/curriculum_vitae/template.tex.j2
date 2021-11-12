@@ -215,7 +215,7 @@
                 ((*- for sub_orgset in we.employedAt *))
                     \textit{(* sub_orgset[1:-1]|join('; ') *)}
                     ((*- if not loop.last *)),((*- endif *))
-                ((*- endfor *)) &
+                ((*- endfor *)) & \\
             ((* endif *))
             % Other job titles
             ((* if we.otherTitles is defined *))
