@@ -28,7 +28,7 @@ A description of the underlying Precis ontology. Details each of the individual 
 
 ## Local Development
 
-The [`Makefile`](Makefile) contains useful recipes for local development.
+The [`Makefile`](../Makefile) contains useful recipes for local development.
 
 ```bash
 $ make help
