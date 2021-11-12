@@ -1297,9 +1297,16 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
   <hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.tesla.com/</hasWebsite>
 </Organization>
 
+<Description rdf:about="http://precis.rukmal.me/ontology/musk#we_tesla_ceo-description-0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPriority>
+  <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CEO of Tesla Inc.</hasText>
+</Description>
+
 <WorkExperience rdf:about="http://precis.rukmal.me/ontology/musk#we_tesla_ceo">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <employedAt rdf:resource="http://precis.rukmal.me/ontology/musk#tesla"/>
+  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#we_tesla_ceo-description-0"/>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-01-01T00:00:00</hasDate>
   <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasImage>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CEO and Product Architect</hasName>
@@ -1382,9 +1389,16 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
   <inState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</inState>
 </Degree>
 
+<Description rdf:about="http://precis.rukmal.me/ontology/musk#proj_spacex_falcon_heavy-description-0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPriority>
+  <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Falcon Heavy rocket project.</hasText>
+</Description>
+
 <Project rdf:about="http://precis.rukmal.me/ontology/musk#proj_spacex_falcon_heavy">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <affiliatedWith rdf:resource="http://precis.rukmal.me/ontology/musk#we_spacex_ceo"/>
+  <hasDescription rdf:resource="http://precis.rukmal.me/ontology/musk#proj_spacex_falcon_heavy-description-0"/>
   <externalResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Falcon_Heavy</externalResource>
   <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-06T00:00:00</hasDate>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Falcon Heavy Rocket</hasName>

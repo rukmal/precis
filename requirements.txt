@@ -12,4 +12,4 @@ pylint==2.3.1
 pyparsing==2.3.1
 python-dateutil==2.8.0
 PyYAML==5.4
-rdflib==6.0.2
+rdflib==4.2.2
