@@ -255,5 +255,22 @@
             }
         ],
         "taughtAt": "org_upenn_wharton"
+    },
+    {
+        "$type": "Talk",
+        "$id": "talk:leap_motion",
+        "hasName": "SpaceX Keynote",
+        "hasMedia": [
+            "https://fakemedia.com"
+        ],
+        "hasWebsite": "http://fakewebsite.com",
+        "affiliatedWith": "we_tesla_ceo",
+        "hasDate": "2014-04-16",
+        "hasDescription": [
+            {
+                "hasPriority": 0,
+                "hasText": "The SpaceX Keynote at the IaC."
+            }
+        ]
     }
 ]

@@ -341,11 +341,8 @@
             % Nested tabular to handle title (fancy, with skills) and date in same row
                 {
                     \begin{tabularx}{\tabularxwidth}{@{}X r}
-                        % First line - project name in bold, and skills/tech in brackets
+                        % First line - project name in bold
                         \textbf{(* proj.hasName[0] *)}
-                        ((*- if proj.relatedSkills|length > 0 *))
-                            (* '(' ~ proj.relatedSkills|join(', ') ~ ')' *)
-                        ((*- endif *))
                         % Printing website (if exists)
                         ((*- if proj.hasWebsite is defined *))
                             | \url{(* proj.hasWebsite[0] *)}
@@ -376,25 +373,47 @@
 
     \vspace{-0.5em}
 
-    % Skills and Technologies
+    % Talks
     %---------------------------------------------
 
-    (* titleIfExists(SkillGroup, 'Skills and Technologies') *)
+    (* titleIfExists(Talk, 'Selected Talks') *)
 
-    ((* for sg in SkillGroup *))
-        % iterating over knowledge areas
+    ((* for tlk in Talk *))
+        \begin{minipage}{\tabularxwidth}
         \begin{tabularx}{\tabularxwidth}{X}
-            % first line - knowldge area name in bold
-            \textbf{(* sg.hasName[0] *)} \\
-            % listing all constituent subjects
-            (* printListofLists(sg.hasSkill, ', ') *) \\
-        \end{tabularx}
+            % Nested tabular to handle title and date in same column
+            {
+                \begin{tabularx}{\tabularxwidth}{@{}X r}
+                    % Talk title
+                    \textbf{(* tlk.hasName[0] *)} &
+                    % Date on the right
+                    \textbf{(* formatPortfolioDate(tlk) *)} \\
+                \end{tabularx}
+            } \\
 
+            % Collaborators
+            ((* if tlk.hasCollaborators is defined *))
+                \textit{Collaborators: (* tlk.hasCollaborators[0] *)} \\
+            ((* endif *))
+
+            % Printing website (if exists)
+            ((* if tlk.hasWebsite is defined *))
+                \url{(* tlk.hasWebsite[0] *)} \\
+            ((* endif *))
+            % Printing DOI (if exists)
+            ((* if tlk.hasDOI is defined *))
+                (* tlk.hasDOI[0] *) \\
+            ((* endif *))
+
+            % description (only using one)
+            (* cleanText(tlk.hasDescription[0]) *)
+        \end{tabularx}
         % Add vertical space if not last iteration
         ((* if not loop.last *))
             \vspace{.3em}
         ((* endif *))
 
+        \end{minipage}
     ((* endfor *))
 
 \end{document}
