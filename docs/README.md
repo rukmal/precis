@@ -26,6 +26,18 @@ This section is advanced documentation for specific topics in Precis.
 
 A description of the underlying Precis ontology. Details each of the individual concepts, object properties and data properties comprising the ontology.
 
+## Local Development
+
+The [`Makefile`](Makefile) contains useful recipes for local development.
+
+```bash
+$ make help
+
+build_cv_from_json             Build CV LaTeX and PDF from the sample data JSON
+build_cv_from_rdf              Build CV LaTeX and PDF from the sample data RDF file
+build_rdf_from_json            Build RDF from the sample data JSON file
+```
+
 ### Archive
 
 **Note**: This is mostly out of date, but the broad strokes are accurate. Preserved for posterity.

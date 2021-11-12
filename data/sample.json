@@ -34,12 +34,32 @@
         "inCity": "San Mateo",
         "employedAt": {
             "$type": "Organization",
-            "$id": "tesla",
-            "externalResource": [
-                "http://dbpedia.org/resource/Tesla_Motors"
-            ],
-            "hasName": "Tesla Motors",
-            "hasWebsite": "https://www.tesla.com/"
+            "$id": "tesla:research:design",
+            "hasName": "Executive Office",
+            "hasParentOrganization": [
+                {
+                    "$type": "Organization",
+                    "$id": "tesla:research",
+                    "hasName": "Tesla Research and Development",
+                    "hasParentOrganization": [
+                        {
+                            "$type": "Organization",
+                            "$id": "tesla",
+                            "externalResource": [
+                                "http://dbpedia.org/resource/Tesla_Motors"
+                            ],
+                            "hasName": "Tesla Motors",
+                            "hasWebsite": "https://www.tesla.com/"
+                        }
+                    ]
+                },
+                {
+                    "$type": "Organization",
+                    "$id": "tesla:engineering",
+                    "hasName": "Tesla Engineering",
+                    "hasParentOrganization": ["tesla"]
+                }
+            ]
         },
         "hasDate": "2003-01-01",
         "hasDescription": [

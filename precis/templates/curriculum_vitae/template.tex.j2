@@ -207,12 +207,15 @@
             % First line - job title and location
             \textbf{(* we.hasName[0] *)} & \textbf{(* we.inCity[0] ~ ', ' ~ stateOrCountry(we) *)} \\
             % Main employment organization and date range
-            \textcolor{\highlightcolor}{(* we.employedAt[0][0] *)} & (* dateRange(we) *) \\
-            % Parent organizations (if any)
+            \textcolor{\highlightcolor}{(* we.employedAt[0][-1] *)} & (* dateRange(we) *) \\
+            % Sub organizations (if any)
             ((* if we.employedAt[0]|length > 1 *))
-                ((* for parent_orgset in we.employedAt *))
-                    \textit{(* parent_orgset[1:]|join('; ') *)} & \\
-                ((* endfor *))
+                % Top level sub organization once
+                \textit{(* we.employedAt[0][0] *);}
+                ((*- for sub_orgset in we.employedAt *))
+                    \textit{(* sub_orgset[1:-1]|join('; ') *)}
+                    ((*- if not loop.last *)),((*- endif *))
+                ((*- endfor *)) &
             ((* endif *))
             % Other job titles
             ((* if we.otherTitles is defined *))

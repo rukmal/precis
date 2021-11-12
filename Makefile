@@ -1,65 +1,30 @@
-.PHONY: config_encrypt config_decrypt export_deps
+.DEFAULT_GOAL := help
 
 
-##########################
-# CONFIGURATION FILES
-##########################
+# Base build recipes
+#####################
 
-# Constants
-##########################
-DECRYPTED_CONFIG_FILES= $(filter-out config/base.json config/test.json, $(wildcard config/*.json)) # Exclude base.json
-ENCRYPTED_CONFIG_FILES= $(wildcard config/*.cast5)
+.PHONY: build_cv_from_rdf
+build_cv_from_rdf: ## Build CV LaTeX and PDF from the sample data RDF file
+	cd scripts && python build_sample_cv.py
+	cd data && pdflatex cv.tex
 
-# Rules
-##########################
-# Private task for echoing instructions
-_pwd_prompt:
-	@echo "Contact Rukmal Weerawarana for decryption password."
-
-# to decrypt config vars
-config_decrypt: _pwd_prompt
-	@$(foreach f, $(ENCRYPTED_CONFIG_FILES), echo "\nDecrypting $(basename $(f))..." && openssl cast5-cbc -d -in $(f) -out $(basename $(f))${\n})
-
-# to encrypt config vars
-config_encrypt: _pwd_prompt
-	@$(foreach f, $(DECRYPTED_CONFIG_FILES), echo "\nEncrypting $(f)..." && openssl cast5-cbc -e -in $(f) -out $(f).cast5${\n})
+.PHONY: build_rdf_from_json
+build_rdf_from_json: ## Build RDF from the sample data JSON file
+	cd scripts && python build_sample_rdf.py
 
 
-##########################
-# PROJECT DEPENDENCIES
-##########################
+# Compound build recipes
+########################
 
-# Rule to generate and save the conda dependencies on for Windows deployment.
-# The packages libedit, readline, libffi, libcxx, ncurses and libcxxabi are not
-# available for windows and a thus removed from the resulting YAML file.
-export_deps_win:
-	conda env export --no-builds \
-		| grep -v -e prefix \
-		-e libedit \
-		-e readline \
-		-e libffi \
-		-e libcxx \
-		-e ncurses \
-		-e libcxxabi \
-		> conda/environment-windows.yml
+.PHONY: build_cv_from_json
+build_cv_from_json: ## Build CV LaTeX and PDF from the sample data JSON
+	$(MAKE) build_rdf_from_json
+	$(MAKE) build_cv_from_rdf
 
-# Rule to generate and save the conda dependencies for *nix deployment.
-# The 'grep -v prefix' acts to remove the user's path from the exported file.
-export_deps_nix:
-	conda env export --no-builds \
-		| grep -v prefix > conda/environment.yml
+# Util
+#######
 
-# Rule to export requirements.txt for pip.
-export_deps_pip:
-	pip freeze > requirements.txt
-
-# Parent rule to export both *nix and Windows environment files.
-export_deps: export_deps_nix export_deps_win export_deps_pip
-
-
-# Other definitions
-# =================
-define \n
-
-
-endef
+.PHONY: help
+help: # See: https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
