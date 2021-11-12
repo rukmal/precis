@@ -10,7 +10,7 @@ class TestConfig():
     test_save_location = 'data/test.rdf'  # Location to save test file
 
     # Templating tests
-    template_folder = 'templates/'
-    template_cv = 'templates/curriculum_vitae'
+    template_folder = 'precis/templates/'
+    template_cv = 'precis/templates/curriculum_vitae'
     template_prefs = 'data/sample_cv_prefs.yml'
     template_cv_out = 'data/cv.tex'

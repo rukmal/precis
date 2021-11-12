@@ -1,6 +1,6 @@
 name: Build test artifacts
 
-on: [pull_request]
+on: [push]
 
 jobs:
   build_sample_artifacts:
@@ -14,14 +14,14 @@ jobs:
       - name: Install Precis from setup.py
         run: python setup.py install
       - name: Build sample artifacts
-        working-directory: scripts/
+        working-directory: ./scripts
         run: |
           python build_sample_rdf.py
           python build_sample_cv.py
       - name: Install LaTeX
-        run: sudo apt-get --assume-yes install texlive-full
+        run: sudo apt-get --assume-yes install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
       - name: Compile sample PDFs
-        working-directory: data/
+        working-directory: ./data
         run: |
           pdflatex cv.tex
       - name: Save artifacts for review

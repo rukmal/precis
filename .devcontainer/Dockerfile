@@ -14,7 +14,7 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requ
    && rm -rf /tmp/pip-tmp
 
 # Install LaTeX
-RUN sudo apt-get --assume-yes install texlive-full
+RUN sudo apt-get --assume-yes install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

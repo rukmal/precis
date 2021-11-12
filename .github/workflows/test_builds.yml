@@ -17,7 +17,7 @@ jobs:
       - name: Install from setup.py
         run: python setup.py install
       - name: Run test scripts
-        working-directory: tests/
+        working-directory: ./tests
         run: |
           python loader_test.py
           python ontquery_test.py
