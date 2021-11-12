@@ -1,0 +1,479 @@
+\documentclass[10pt]{article}
+
+% Package Imports
+%----------------
+
+\usepackage{enumitem}  % Advanced list settings
+\usepackage{fancyhdr}  % Fancy headers and footers
+\usepackage[T1]{fontenc}  % Expanded font encoding
+\usepackage{geometry}  % Page geometry (margins, etc.)
+\usepackage{hyperref}  % Hyperlinks
+\usepackage[none]{hyphenat}  % Hyphenation settings
+\usepackage{multirow}  % Multirow table
+\usepackage[defaultsans]{opensans}  % Opensans font
+\usepackage[document]{ragged2e}  % Text alignment
+\usepackage{tabularx}  % Advanced tables
+\usepackage{titlesec}  % Title formatting
+\usepackage[svgnames]{xcolor}  % Colors
+
+% LaTeX Configuration
+%---------------------
+
+% Page margins
+\geometry{top=.5in,
+          bottom=.5in,
+          left=.5in,
+          right=.5in}
+
+% Document font size
+\newcommand{\cvfontsize}{10}
+
+% Document font stuff
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\normalsize}{\fontsize{\cvfontsize}{\baselineskip}\selectfont}
+
+% Highlight color
+\newcommand{\highlightcolor}{RoyalBlue}
+
+% Reformat section
+\titleformat{\section}[block]
+{\color{\highlightcolor} \Large \bf \scshape }
+{}{0em}{}
+
+% No indentation
+\setlength{\parindent}{0pt}
+
+% Table width
+\newcommand{\tabularxwidth}{\textwidth}
+
+% Link formatting
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+
+% Header and Footer Configuration
+%--------------------------------
+
+% Changing page style to fancy
+\pagestyle{fancy}
+
+% Applying default headers and footers
+\fancyhf{}
+
+% Renewing commands for the header and footer lines
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Changing offset from the margins
+\setlength{\footskip}{0pt}
+
+% Setting footer to be "Page #" on bottom right
+\rfoot{Page \thepage}
+
+% Setting last page footer to include last updated date, and Precis signature.
+\AtEndDocument{\lfoot{Last updated November 11, 2021. Built with Precis (\url{https://precis.rukmal.me}).}}
+
+
+% Jinja Macros
+%--------------
+
+% Get state or country (state takes preference)
+
+% Get location in "City, State/Country" format
+
+% Format date (to MMM 'YY, eg: "May '19"')
+
+% Get date range
+
+% Escape special characters in text
+% Currently cleans: '$'
+
+
+% List the contents of a nested list of lists with a delimiter
+
+% Only print title if it exists
+
+
+% Expand a list of objects, chaining 'hasName' together with comma delimiter
+
+% Format a portfolio date (i.e. just the year)
+
+\begin{document}
+    % CV Header - Name, address, website and email
+    %---------------------------------------------
+    \centerline{ \color{\highlightcolor} \huge \textbf{Elon Musk}}
+
+    \vspace{.5em}
+
+    {\color{\highlightcolor} \centerline{elonmuskoffice@teslamotors.com $\; \bullet \;$ tesla.com $\; \bullet \;$ (800) 613-8840} }
+
+    \noindent{\rule{\linewidth}{.2em}}
+
+
+    % Education
+    %---------------------------------------------
+
+    
+        \section{Education}
+
+    % Iterating over degrees
+    
+        \begin{tabularx}{\tabularxwidth}{X r}
+            % First line - degree title and date
+            \textbf{Bachelor of Science in Economics} & \textbf{
+    Jun ‘95} \\
+            % Degree university and location
+            \quad \textcolor{\highlightcolor}{University of Pennsylvania} & 
+    Philadephia, 
+        PA \\
+            % Degree school and department
+            \quad Wharton School (Department of Business Economics and Public Policy) & \\
+            % Degree GPA (if any)
+            
+            % Degree awards (if any)
+            
+        \end{tabularx}
+
+        % Add vertical space if not last iteration
+        
+            \vspace{.5em}
+        
+
+    
+        \begin{tabularx}{\tabularxwidth}{X r}
+            % First line - degree title and date
+            \textbf{Bachelor of Science in Physics} & \textbf{
+    Jun ‘95} \\
+            % Degree university and location
+            \quad \textcolor{\highlightcolor}{University of Pennsylvania} & 
+    Philadelphia, 
+        PA \\
+            % Degree school and department
+            \quad School of Arts and Science (Department of Physics and Astronomy) & \\
+            % Degree GPA (if any)
+            
+            % Degree awards (if any)
+            
+        \end{tabularx}
+
+        % Add vertical space if not last iteration
+        
+
+    
+
+    % Work Experience
+    %---------------------------------------------
+
+    
+        \section{Work Experience}
+
+    
+    % Put in minipage to prevent mid-entry pagebreak
+    \begin{minipage}{\tabularxwidth}
+
+        \begin{tabularx}{\tabularxwidth}{X r}
+            % First line - job title and location
+            \textbf{CEO and Product Architect} & \textbf{San Mateo, 
+        CA} \\
+            % Main employment organization and date range
+            \textcolor{\highlightcolor}{Tesla Motors} & 
+        
+    Jan ‘03 - Present \\
+            % Parent organizations (if any)
+            
+            % Other job titles
+            
+        \end{tabularx}
+
+        % descriptions
+        \begin{itemize}[noitemsep, topsep=3pt, parsep=0pt, partopsep=0pt]
+            
+                \item 
+    CEO of Tesla Inc.
+            
+        \end{itemize}
+
+        % Add vertical space if not last iteration
+        
+            \vspace{.5em}
+        
+
+    \end{minipage}
+    
+    % Put in minipage to prevent mid-entry pagebreak
+    \begin{minipage}{\tabularxwidth}
+
+        \begin{tabularx}{\tabularxwidth}{X r}
+            % First line - job title and location
+            \textbf{Founder, CEO and Lead Designer} & \textbf{Hawthorne, 
+        CA} \\
+            % Main employment organization and date range
+            \textcolor{\highlightcolor}{Space Exploration Technologies Corporation} & 
+        
+    May ‘02 - Present \\
+            % Parent organizations (if any)
+            
+            % Other job titles
+            
+        \end{tabularx}
+
+        % descriptions
+        \begin{itemize}[noitemsep, topsep=3pt, parsep=0pt, partopsep=0pt]
+            
+                \item 
+    Launched SpaceX.
+            
+                \item 
+    Led the development of the first commercially viable reusable orbital class rocket.
+            
+        \end{itemize}
+
+        % Add vertical space if not last iteration
+        
+
+    \end{minipage}
+    
+
+    % Publications
+    %---------------------------------------------
+
+    
+        \section{Publications}
+
+    
+        \begin{minipage}{\tabularxwidth}
+        \begin{tabularx}{\tabularxwidth}{X}
+            % Nested tabular to handle title and date in same column
+            {
+                \begin{tabularx}{\tabularxwidth}{@{}X r}
+                    % Prefix with the current status (if any)
+                    % Publication title
+                    \textbf{Hyperloop Alpha} &
+                    % Date on the right
+                    \textbf{
+        2013} \\
+                \end{tabularx}
+            } \\
+            % Authors
+            SpaceX Hyperloop Team \\
+
+            % TODO: This part can be improved in the future
+            % NOTE: Assuming that both publication & conference/journal exists if one does
+            
+            % Printing website (if exists)
+            
+                \url{https://www.spacex.com/sites/spacex/files/hyperloop_alpha.pdf} \\
+            
+            % Printing DOI (if exists)
+            
+        \end{tabularx}
+
+        % descriptions
+        \begin{itemize}[noitemsep, topsep=3pt, parsep=0pt, partopsep=0pt]
+            
+                \item 
+    Proposing the Hyperloop System.
+            
+        \end{itemize}
+
+        % Add vertical space if not last iteration
+        
+
+        \end{minipage}
+    
+
+    % Talks
+    %---------------------------------------------
+
+    
+
+    
+
+    % Knowledge Areas
+    %---------------------------------------------
+
+    
+        \section{Selected Knowledge Areas}
+
+    
+        % iterating over knowledge areas
+        \begin{tabularx}{\tabularxwidth}{X}
+            % first line - knowldge area name in bold
+            \textbf{Computer Science} \\
+            % listing all constituent subjects
+            
+    
+            Data Structures, 
+            Scientific Computing \\
+        \end{tabularx}
+
+        % Add vertical space if not last iteration
+        
+
+    
+
+
+    % Skills and Technologies
+    %---------------------------------------------
+
+    
+        \section{Skills and Technologies}
+
+    
+        % iterating over knowledge areas
+        \begin{tabularx}{\tabularxwidth}{X}
+            % first line - knowldge area name in bold
+            \textbf{Programming Languages} \\
+            % listing all constituent subjects
+            
+    
+            Python, 
+            R Language \\
+        \end{tabularx}
+
+        % Add vertical space if not last iteration
+        
+
+    
+
+
+    % Projects
+    %---------------------------------------------
+
+    
+        \section{Selected Projects}
+
+    
+
+        \begin{tabularx}{\tabularxwidth}{X}
+            % Nested tabular to handle title (fancy, with skills) and date in same row
+                {
+                    \begin{tabularx}{\tabularxwidth}{@{}X r}
+                        % First line - project name in bold, and skills/tech in brackets
+                        \textbf{Falcon Heavy Rocket}
+                        % Alignment separator (after if so it get triggered either way)
+                        &
+                        % Date on the right
+                        \textbf{
+        2018} \\
+                    \end{tabularx}
+                } \\
+
+            % Collaborators
+            
+
+            % Awards
+            
+
+            % Printing website (if exists)
+            
+                \url{https://www.spacex.com/falcon-heavy} \\
+            
+
+            % description (only using one)
+            
+    The Falcon Heavy rocket project. \\
+
+        \end{tabularx}
+
+        % Add vertical space if not last iteration
+        
+
+    
+
+
+    % Awards and Certifications
+    %---------------------------------------------
+
+    \pagebreak[3]
+
+    % Only print title if any of either exists
+    % This is done differently because of the double-section thing
+    
+        \section{Awards and Certifications}
+
+    % Global counter (over both award and certification; for spacing insertion)
+    
+
+    
+        
+            \begin{minipage}{\tabularxwidth}
+            % iterating over awards and certifications
+            \begin{tabularx}{\tabularxwidth}{X}
+                % Nested tabular to handle title and date in same row
+                {
+                    \begin{tabularx}{\tabularxwidth}{@{}X r}
+                        % Award/Certification name
+                        \textbf{IEEE Honorary Membership} &
+                        % Date on the right
+                        \textbf{
+        2015} \\
+                    \end{tabularx}
+                } \\
+                % Link (if any)
+                % descriptions
+                
+                    
+    Given to people who have rendered meritorious service to humanity in the IEEE's designated fields of interest. \\
+                
+            \end{tabularx}
+
+            % Add vertical space if not last iteration
+            
+
+            % Increment counter
+            
+
+            \end{minipage}
+        
+    
+        
+    
+
+
+
+    % Activities
+    %---------------------------------------------
+
+    % Title only if exists
+    
+        \section{Activities}
+
+    % Iterating over activity types
+    
+        \begin{tabularx}{\tabularxwidth}{X}
+            % First line - activity type name in bold
+            \textbf{Recreational Sports} \\
+            % Listing all constituent activities
+            
+    
+            Basketball, 
+            Outdoor Hiking \\
+        \end{tabularx}
+
+        % Add vertical space if not last iteration
+        
+
+    
+
+    % Contact Information
+    %---------------------------------------------
+
+    \section{Contact Information}
+    
+    % This is to change the width between the table columns
+    \setlength{\tabcolsep}{18pt}
+
+    \begin{center}
+        \begin{tabular}{ll}
+            3500 Deer Creek Road & Phone: (800) 613-8840 \\
+            Palo Alto, CA & Email: elonmuskoffice@teslamotors.com \\
+            94304 & Homepage: \url{tesla.com} \\
+            USA & LinkedIn: \url{http://linkedin.com/in/test}
+        \end{tabular}
+    \end{center}
+
+\end{document}
