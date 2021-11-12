@@ -88,6 +88,8 @@
 
 % Get date range
 
+% Properly display the organization of a work Experience
+
 % Escape special characters in text
 % Currently cleans: '$'
 
@@ -178,17 +180,30 @@
             % First line - job title and location
             \textbf{CEO and Product Architect} & \textbf{San Mateo, 
         CA} \\
-            % Main employment organization and date range
-            \textcolor{\highlightcolor}{Tesla Motors} & 
+            % Display employment organization row
+            
+    % Determining number of unique parent organizations
+    
+    
+        % Last element of the list corresponds to the highest level (i.e. 'parent') orgNone
+    
+        % Last element of the list corresponds to the highest level (i.e. 'parent') orgNone
+    
+
+    
+        % NOTE: This is for the case that there is no more than one base parent organization
+        % Main employment organization and date range
+        \textcolor{\highlightcolor}{Tesla Motors} & 
         
     Jan ‘03 - Present \\
-            % Sub organizations (if any)
-            
-                % Top level sub organization once
-                \textit{Executive Office;}
-                    \textit{Tesla Research and Development},
-                    \textit{Tesla Engineering} & \\
-            
+        % Sub organizations (if any)
+        
+            % Top level sub organization once
+            \textit{Executive Office;}
+                \textit{Tesla Research and Development} \textit{\&}
+                \textit{Tesla Engineering} & \\
+        
+    
             % Other job titles
             
         \end{tabularx}
@@ -215,12 +230,23 @@
             % First line - job title and location
             \textbf{Founder, CEO and Lead Designer} & \textbf{Hawthorne, 
         CA} \\
-            % Main employment organization and date range
-            \textcolor{\highlightcolor}{Space Exploration Technologies Corporation} & 
+            % Display employment organization row
+            
+    % Determining number of unique parent organizations
+    
+    
+        % Last element of the list corresponds to the highest level (i.e. 'parent') orgNone
+    
+
+    
+        % NOTE: This is for the case that there is no more than one base parent organization
+        % Main employment organization and date range
+        \textcolor{\highlightcolor}{Space Exploration Technologies Corporation} & 
         
     May ‘02 - Present \\
-            % Sub organizations (if any)
-            
+        % Sub organizations (if any)
+        
+    
             % Other job titles
             
         \end{tabularx}
