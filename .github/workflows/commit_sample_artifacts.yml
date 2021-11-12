@@ -1,0 +1,25 @@
+name: Commit built sample artifacts
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+
+jobs:
+  commit_sample_artifacts:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download all sample artifacts
+        uses: actions/download-artifact@v2
+        working-directory: data
+        with:
+          name: sample-resources
+      - name: Commit sample artifacts to Pull Request
+        uses: EndBug/add-and-commit@v7 # See: https://github.com/marketplace/actions/add-commit
+        with:
+          add: "data"
+          default_author: github_actions
+          commit_message: "[GitHub Actions] Commit sample artifacts"
