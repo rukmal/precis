@@ -19,7 +19,7 @@ jobs:
           python build_sample_rdf.py
           python build_sample_cv.py
       - name: Install LaTeX
-        run: sudo apt-get --assume-yes install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+        run: sudo apt-get --assume-yes install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk
       - name: Compile sample PDFs
         working-directory: ./data
         run: |

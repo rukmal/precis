@@ -18,7 +18,7 @@ RUN sudo apt-get update \
    && sudo apt-get \
       --assume-yes \
       install \
-      texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra \
+      texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk\
       default-jre
 
 # [Optional] Uncomment this section to install additional OS packages.
