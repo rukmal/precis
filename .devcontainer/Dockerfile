@@ -13,8 +13,13 @@ COPY requirements.txt /tmp/pip-tmp/
 RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
    && rm -rf /tmp/pip-tmp
 
-# Install LaTeX
-RUN sudo apt-get --assume-yes install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+# Install LaTeX and Java
+RUN sudo apt-get update \
+   && sudo apt-get \
+      --assume-yes \
+      install \
+      texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra \
+      default-jre
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
