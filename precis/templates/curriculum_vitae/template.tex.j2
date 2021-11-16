@@ -206,10 +206,10 @@
     % Iterating over degrees
     ((* for deg in Degree *))
         \begin{tabularx}{\tabularxwidth}{X r}
-            % First line - degree title and date
-            \textbf{(* deg.hasName[0] *)} & \textbf{(* formatDate(deg.hasDate[0]) *)} \\
-            % Degree university and location
-            \quad \textcolor{\highlightcolor}{(* deg.degreeUniversity[0][0] *)} & (* getLocation(deg) *) \\
+            % First line - degree title, and location
+            \textbf{(* deg.hasName[0] *)} & \textbf{(* getLocation(deg) *)} \\
+            % Degree university, and location
+            \quad \textcolor{\highlightcolor}{(* deg.degreeUniversity[0][0] *)} & (* formatDate(deg.hasDate[0]) *) \\
             % Degree school and department
             \quad (* deg.degreeSchool[0][0] ~ ' (' ~ deg.degreeDepartment[0][0] ~ ')' *) & \\
             % Degree GPA (if any)
