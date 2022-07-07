@@ -1454,8 +1454,8 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
 
 <SkillGroup rdf:about="http://precis.rukmal.me/ontology/musk#sg:programming">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSkill rdf:resource="http://precis.rukmal.me/ontology/musk#sk:R"/>
   <hasSkill rdf:resource="http://precis.rukmal.me/ontology/musk#sk:python"/>
+  <hasSkill rdf:resource="http://precis.rukmal.me/ontology/musk#sk:R"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programming Languages</hasName>
 </SkillGroup>
 
@@ -1471,8 +1471,8 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
 
 <KnowledgeArea rdf:about="http://precis.rukmal.me/ontology/musk#ka:cs">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSubject rdf:resource="http://precis.rukmal.me/ontology/musk#sub:data_structures"/>
   <hasSubject rdf:resource="http://precis.rukmal.me/ontology/musk#sub:sci_comp"/>
+  <hasSubject rdf:resource="http://precis.rukmal.me/ontology/musk#sub:data_structures"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Science</hasName>
 </KnowledgeArea>
 
@@ -1506,8 +1506,8 @@ Currently, this ontology powers a templating engine to generate dyanmic resumes,
 
 <ActivityType rdf:about="http://precis.rukmal.me/ontology/musk#ac_type:debauchery">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasActivity rdf:resource="http://precis.rukmal.me/ontology/musk#ac:drinking"/>
   <hasActivity rdf:resource="http://precis.rukmal.me/ontology/musk#ac:420"/>
+  <hasActivity rdf:resource="http://precis.rukmal.me/ontology/musk#ac:drinking"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Debauchery</hasName>
 </ActivityType>
 
