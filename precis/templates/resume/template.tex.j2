@@ -205,10 +205,47 @@
 
     \noindent{\rule{\linewidth}{.1em}}
 
-    % Education
+    % Work Experience
     %---------------------------------------------
 
     \vspace{-1em}
+
+    (* titleIfExists(WorkExperience, 'Work Experience') *)
+
+    ((* for we in WorkExperience *))
+    % Put in minipage to prevent mid-entry pagebreak
+    \begin{minipage}{\tabularxwidth}
+
+        \begin{tabularx}{\tabularxwidth}{X r}
+            % First line - job title and location
+            \textbf{(* we.hasName[0] *)} & \textbf{(* we.inCity[0] ~ ', ' ~ stateOrCountry(we) *)} \\
+            % Display employment organization row
+            (* displayWorkExperienceOrganization(we) *)
+            % Other job titles
+            ((* if we.otherTitles is defined *))
+                Other Titles: (* we.otherTitles|join(', ') *) & \\
+            ((* endif *))
+        \end{tabularx}
+
+        % descriptions
+        \begin{itemize}[noitemsep, topsep=3pt, parsep=0pt, partopsep=0pt]
+            ((* for desc in we.hasDescription *))
+                \item (* cleanText(desc) *)
+            ((* endfor *))
+        \end{itemize}
+
+        % Add vertical space if not last iteration
+        ((* if not loop.last *))
+            \vspace{.3em}
+        ((* endif *))
+
+    \end{minipage}
+    ((* endfor *))
+
+    \vspace{-0.5em}
+
+    % Education
+    %---------------------------------------------
 
     (* titleIfExists(Degree, 'Education') *)
 
@@ -241,43 +278,6 @@
             \vspace{.3em}
         ((* endif *))
 
-    ((* endfor *))
-
-    \vspace{-0.5em}
-
-    % Work Experience
-    %---------------------------------------------
-
-    (* titleIfExists(WorkExperience, 'Work Experience') *)
-
-    ((* for we in WorkExperience *))
-    % Put in minipage to prevent mid-entry pagebreak
-    \begin{minipage}{\tabularxwidth}
-
-        \begin{tabularx}{\tabularxwidth}{X r}
-            % First line - job title and location
-            \textbf{(* we.hasName[0] *)} & \textbf{(* we.inCity[0] ~ ', ' ~ stateOrCountry(we) *)} \\
-            % Display employment organization row
-            (* displayWorkExperienceOrganization(we) *)
-            % Other job titles
-            ((* if we.otherTitles is defined *))
-                Other Titles: (* we.otherTitles|join(', ') *) & \\
-            ((* endif *))
-        \end{tabularx}
-
-        % descriptions
-        \begin{itemize}[noitemsep, topsep=3pt, parsep=0pt, partopsep=0pt]
-            ((* for desc in we.hasDescription *))
-                \item (* cleanText(desc) *)
-            ((* endfor *))
-        \end{itemize}
-
-        % Add vertical space if not last iteration
-        ((* if not loop.last *))
-            \vspace{.3em}
-        ((* endif *))
-
-    \end{minipage}
     ((* endfor *))
 
     \vspace{-0.5em}
