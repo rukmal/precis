@@ -1,5 +1,5 @@
 astroid==2.2.5
-certifi==2019.3.9
+certifi==2022.12.7
 cycler==0.10.0
 decorator==4.4.0
 isodate==0.6.0
